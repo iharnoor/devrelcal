@@ -3,7 +3,8 @@
 import { useMemo, useState } from "react";
 import type { CalEvent, EventCategory, RecurringSeries, PastEvent } from "@/lib/events";
 import { formatMonth, groupByMonth } from "@/lib/utils";
-import { CategoryTag, StatusBadge, categoryColor } from "./tags";
+import { hasPitchTopic } from "@/lib/topics";
+import { CategoryTag, StatusBadge, TopicBadges, categoryColor } from "./tags";
 
 type Filter = "all" | EventCategory;
 
@@ -25,6 +26,7 @@ export default function CalendarView({
 }) {
   const [filter, setFilter] = useState<Filter>("all");
   const [showTentative, setShowTentative] = useState(true);
+  const [ragOnly, setRagOnly] = useState(false);
   const [showPast, setShowPast] = useState(false);
 
   const filteredScheduled = useMemo(
@@ -32,14 +34,15 @@ export default function CalendarView({
       scheduledEvents.filter(
         (e) =>
           (filter === "all" || e.category === filter) &&
-          (showTentative || e.status === "confirmed"),
+          (showTentative || e.status === "confirmed") &&
+          (!ragOnly || hasPitchTopic(e.topics)),
       ),
-    [scheduledEvents, filter, showTentative],
+    [scheduledEvents, filter, showTentative, ragOnly],
   );
 
   const filteredRecurring = useMemo(
-    () => recurringSeries.filter((s) => filter === "all" || s.category === filter),
-    [recurringSeries, filter],
+    () => (ragOnly ? [] : recurringSeries.filter((s) => filter === "all" || s.category === filter)),
+    [recurringSeries, filter, ragOnly],
   );
 
   const months = useMemo(() => groupByMonth(filteredScheduled), [filteredScheduled]);
@@ -62,19 +65,41 @@ export default function CalendarView({
             </button>
           ))}
         </div>
-        <label className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-ink-muted">
-          <input
-            type="checkbox"
-            checked={showTentative}
-            onChange={(e) => setShowTentative(e.target.checked)}
-            className="h-3.5 w-3.5 accent-[var(--color-accent)]"
-          />
-          Include unconfirmed
-        </label>
+        <div className="flex flex-wrap items-center gap-4">
+          <label className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-highlight">
+            <input
+              type="checkbox"
+              checked={ragOnly}
+              onChange={(e) => setRagOnly(e.target.checked)}
+              className="h-3.5 w-3.5 accent-[var(--color-highlight)]"
+            />
+            RAG / Vector DB / Graph only
+          </label>
+          <label className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-ink-muted">
+            <input
+              type="checkbox"
+              checked={showTentative}
+              onChange={(e) => setShowTentative(e.target.checked)}
+              className="h-3.5 w-3.5 accent-[var(--color-accent)]"
+            />
+            Include unconfirmed
+          </label>
+        </div>
       </div>
 
       <div className="flex flex-col gap-12">
-        {months.length === 0 && (
+        {months.length === 0 && ragOnly && (
+          <p className="font-body text-ink-muted">
+            No Bay Area conference/meetup/hackathon in this list is dedicated to RAG, vector
+            databases, or GraphRAG right now — that content mostly lives with the vendors
+            themselves. See the{" "}
+            <a href="#ecosystem" className="text-accent-2 underline decoration-dotted underline-offset-4 hover:text-ink">
+              Ecosystem section
+            </a>{" "}
+            below for those.
+          </p>
+        )}
+        {months.length === 0 && !ragOnly && (
           <p className="font-body text-ink-muted">No scheduled events match these filters.</p>
         )}
         {months.map(({ month, items }) => (
@@ -95,6 +120,7 @@ export default function CalendarView({
                       <div className="flex flex-wrap items-center gap-3">
                         <CategoryTag category={event.category} />
                         <StatusBadge status={event.status} note={event.note} />
+                        <TopicBadges topics={event.topics} />
                       </div>
                       <span className="font-mono text-xs tabular-nums text-ink-muted">
                         {event.dateLabel}
@@ -105,6 +131,9 @@ export default function CalendarView({
                     <p className="text-sm leading-relaxed text-ink">{event.description}</p>
                     {event.note && (
                       <p className="text-xs italic text-warn">{event.note}</p>
+                    )}
+                    {event.topicNote && (
+                      <p className="text-xs italic text-highlight">{event.topicNote}</p>
                     )}
                     <a
                       href={event.sourceUrl}
@@ -141,6 +170,9 @@ export default function CalendarView({
                 <p className="font-mono text-xs text-ink-muted">{series.cadence}</p>
                 <p className="text-sm text-ink-muted">{series.location}</p>
                 <p className="text-sm leading-relaxed text-ink">{series.description}</p>
+                {series.watchNote && (
+                  <p className="text-xs italic leading-relaxed text-warn">{series.watchNote}</p>
+                )}
                 <a
                   href={series.sourceUrl}
                   target="_blank"

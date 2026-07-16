@@ -1,7 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import type { VendorGroup, VendorEventFormat } from "@/lib/vendorEvents";
+import { hasPitchTopic } from "@/lib/topics";
+import { TopicBadges } from "./tags";
 
 const FORMAT_COLOR: Record<VendorEventFormat, string> = {
   "in-person": "var(--color-accent)",
@@ -29,6 +31,7 @@ function FormatTag({ format }: { format: VendorEventFormat }) {
 
 export default function EcosystemView({ groups }: { groups: VendorGroup[] }) {
   const [open, setOpen] = useState<Set<string>>(new Set());
+  const [ragOnly, setRagOnly] = useState(false);
 
   function toggle(id: string) {
     setOpen((prev) => {
@@ -39,18 +42,37 @@ export default function EcosystemView({ groups }: { groups: VendorGroup[] }) {
     });
   }
 
-  const sorted = [...groups].sort((a, b) => b.events.length - a.events.length);
+  const displayGroups = useMemo(() => {
+    if (!ragOnly) return groups;
+    return groups
+      .map((g) => ({ ...g, events: g.events.filter((e) => hasPitchTopic(e.topics)) }))
+      .filter((g) => g.events.length > 0);
+  }, [groups, ragOnly]);
+
+  const sorted = [...displayGroups].sort((a, b) => b.events.length - a.events.length);
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex justify-end">
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <label className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-highlight">
+          <input
+            type="checkbox"
+            checked={ragOnly}
+            onChange={(e) => setRagOnly(e.target.checked)}
+            className="h-3.5 w-3.5 accent-[var(--color-highlight)]"
+          />
+          RAG / Vector DB / Graph only
+        </label>
         <button
-          onClick={() => setOpen(open.size === groups.length ? new Set() : new Set(groups.map((g) => g.id)))}
+          onClick={() => setOpen(open.size === sorted.length ? new Set() : new Set(sorted.map((g) => g.id)))}
           className="font-mono text-xs uppercase tracking-wider text-ink-muted hover:text-ink cursor-pointer"
         >
-          {open.size === groups.length ? "Collapse all" : "Expand all"}
+          {open.size === sorted.length && sorted.length > 0 ? "Collapse all" : "Expand all"}
         </button>
       </div>
+      {ragOnly && sorted.length === 0 && (
+        <p className="font-body text-ink-muted">No vendor events tagged RAG/vector-DB/graph right now.</p>
+      )}
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         {sorted.map((group) => {
           const isOpen = open.has(group.id);
@@ -92,6 +114,7 @@ export default function EcosystemView({ groups }: { groups: VendorGroup[] }) {
                           {event.status === "check-source" && (
                             <span className="font-mono text-[10px] uppercase tracking-wider text-warn">Unconfirmed</span>
                           )}
+                          <TopicBadges topics={event.topics} />
                         </div>
                         <span className="font-mono text-xs tabular-nums text-ink-muted">{event.dateLabel}</span>
                       </div>

@@ -1,4 +1,6 @@
 import type { EventCategory, EventStatus } from "@/lib/events";
+import type { Topic } from "@/lib/topics";
+import { TOPIC_LABEL } from "@/lib/topics";
 
 const CATEGORY_LABEL: Record<EventCategory, string> = {
   conference: "Conference",
@@ -28,6 +30,22 @@ export function CategoryTag({ category }: { category: EventCategory }) {
         aria-hidden
       />
       {CATEGORY_LABEL[category]}
+    </span>
+  );
+}
+
+export function TopicBadges({ topics }: { topics?: Topic[] }) {
+  if (!topics || topics.length === 0) return null;
+  return (
+    <span className="inline-flex flex-wrap items-center gap-1.5">
+      {topics.map((t) => (
+        <span
+          key={t}
+          className="rounded-full border border-highlight/40 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-highlight"
+        >
+          {TOPIC_LABEL[t]}
+        </span>
+      ))}
     </span>
   );
 }

@@ -16,6 +16,8 @@
   /* confidence status */
   --color-good: #3f7a4c;
   --color-warn: #9c7318;
+  /* cross-cutting topic highlight — RAG / vector-DB / graph pitch fit */
+  --color-highlight: #8a6d0f;
 
   --shadow-card: 0 1px 0 var(--color-line);
 }
@@ -35,6 +37,7 @@
 
     --color-good: #7cc48a;
     --color-warn: #dcb35a;
+    --color-highlight: #e0c25e;
   }
 }
 
@@ -50,6 +53,7 @@
   --color-accent-3: #5b4a92;
   --color-good: #3f7a4c;
   --color-warn: #9c7318;
+  --color-highlight: #8a6d0f;
 }
 
 :root[data-theme="dark"] {
@@ -64,6 +68,7 @@
   --color-accent-3: #a494d6;
   --color-good: #7cc48a;
   --color-warn: #dcb35a;
+  --color-highlight: #e0c25e;
 }
 
 @theme inline {
@@ -78,6 +83,7 @@
   --color-accent-3: var(--color-accent-3);
   --color-good: var(--color-good);
   --color-warn: var(--color-warn);
+  --color-highlight: var(--color-highlight);
 
   --font-display: var(--font-display);
   --font-body: var(--font-body);

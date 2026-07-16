@@ -4,6 +4,7 @@ import ThemeToggle from "@/components/ThemeToggle";
 import CalendarView from "@/components/CalendarView";
 import EcosystemView from "@/components/EcosystemView";
 import Playbook from "@/components/Playbook";
+import WeeklyBrief from "@/components/WeeklyBrief";
 import {
   scheduledEvents,
   recurringSeries,
@@ -11,6 +12,7 @@ import {
   researchDate,
 } from "@/lib/events";
 import { vendorGroups } from "@/lib/vendorEvents";
+import { getWeeklyBrief } from "@/lib/brief";
 
 function countBy(category: "conference" | "meetup" | "hackathon") {
   const scheduled = scheduledEvents.filter((e) => e.category === category).length;
@@ -19,10 +21,12 @@ function countBy(category: "conference" | "meetup" | "hackathon") {
 }
 
 export default function Home() {
-  const today = new Date().toISOString().slice(0, 10);
+  const now = new Date();
+  const today = now.toISOString().slice(0, 10);
   const upcoming = scheduledEvents
     .filter((e) => e.sortDate >= today)
     .sort((a, b) => a.sortDate.localeCompare(b.sortDate))[0];
+  const briefItems = getWeeklyBrief(scheduledEvents, vendorGroups, now);
 
   return (
     <div className="mx-auto flex max-w-5xl flex-col gap-20 px-6 pb-24 pt-8 sm:px-8">
@@ -57,6 +61,8 @@ export default function Home() {
           <ThemeToggle />
         </nav>
       </header>
+
+      <WeeklyBrief items={briefItems} />
 
       <section className="flex flex-col gap-8">
         <div className="flex flex-col gap-4">

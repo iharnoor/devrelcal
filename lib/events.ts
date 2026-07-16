@@ -1,3 +1,5 @@
+import type { Topic } from "./topics";
+
 export type EventCategory = "conference" | "meetup" | "hackathon";
 export type EventStatus = "confirmed" | "tentative";
 
@@ -16,6 +18,9 @@ export interface CalEvent {
   sourceUrl: string;
   sourceLabel: string;
   note?: string;
+  /** RAG / vector-DB / GraphRAG / agent-memory relevance — HydraDB pitch or inspiration fit. */
+  topics?: Topic[];
+  topicNote?: string;
 }
 
 export interface RecurringSeries {
@@ -27,6 +32,7 @@ export interface RecurringSeries {
   description: string;
   sourceUrl: string;
   sourceLabel: string;
+  watchNote?: string;
 }
 
 export interface PastEvent {
@@ -97,6 +103,9 @@ export const scheduledEvents: CalEvent[] = [
       "Infra-focused AI conference with an attached hybrid hackathon (online heats + on-site finals).",
     sourceUrl: "https://www.ai-infra-summit.com/",
     sourceLabel: "ai-infra-summit.com",
+    topics: ["rag", "vector-db"],
+    topicNote:
+      "General AI infra conference — retrieval/vector infra is likely one track among compute/inference/networking, not the core focus. Confirm the agenda closer to the date before pitching.",
   },
   {
     id: "openai-devday-2026",
@@ -410,6 +419,9 @@ export const scheduledEvents: CalEvent[] = [
     location: "Berkeley, CA",
     description: "Summit dedicated to agentic AI systems and applications.",
     sourceUrl: "https://luma.com/agentic-ai-summit",
+    topics: ["agent-memory"],
+    topicNote:
+      "Broad agentic-AI summit, not retrieval-specific — check the agenda for memory/retrieval tracks before pitching.",
     sourceLabel: "luma.com",
   },
   {
@@ -560,11 +572,13 @@ export const recurringSeries: RecurringSeries[] = [
     name: "AGI House hackathons",
     category: "hackathon",
     cadence: "Very high frequency — reportedly up to 5 events/week",
-    location: "Bay Area",
+    location: "Hillsborough, CA (their one physical house) + Bay Area partner venues",
     description:
-      "80+ build-a-thons hosted historically (Lovable, Perplexity emerged from these); runs multiple/week with partners like OpenAI on agent-framework themes.",
-    sourceUrl: "https://agihouse.ai/",
-    sourceLabel: "agihouse.ai",
+      "80+ build-a-thons hosted historically (Lovable, Perplexity emerged from these); runs multiple/week with partners like OpenAI on agent-framework themes. Attendance is merit-based/invite-only, not open registration.",
+    sourceUrl: "https://luma.com/agi-house",
+    sourceLabel: "luma.com/agi-house",
+    watchNote:
+      "Checked directly (2026-07-16): agihouse.org/agihouse.ai is a static marketing site with no public events listing, and their linked public Luma calendar (\"Ascension — by AGI House SF\") currently shows zero posted upcoming events. Dated hackathons appear to be announced last-minute to their community rather than published in advance — re-check luma.com/agi-house close to when you need one.",
   },
   {
     id: "lablab-ai-hackathons",

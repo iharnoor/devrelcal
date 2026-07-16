@@ -1,3 +1,5 @@
+import type { Topic } from "./topics";
+
 export type VendorEventFormat = "in-person" | "virtual" | "hybrid";
 export type VendorEventStatus = "confirmed" | "check-source";
 
@@ -12,6 +14,8 @@ export interface VendorEvent {
   status: VendorEventStatus;
   sourceUrl: string;
   sourceLabel: string;
+  /** RAG / vector-DB / GraphRAG / agent-memory relevance — HydraDB pitch or inspiration fit. */
+  topics?: Topic[];
 }
 
 export interface VendorGroup {
@@ -47,6 +51,7 @@ export const vendorGroups: VendorGroup[] = [
         status: "confirmed",
         sourceUrl: "https://www.pinecone.io/community/events/",
         sourceLabel: "pinecone.io",
+        topics: ["vector-db", "rag", "agent-memory"],
       },
       {
         id: "pinecone-burn-less-tokens",
@@ -82,6 +87,7 @@ export const vendorGroups: VendorGroup[] = [
         status: "confirmed",
         sourceUrl: "https://www.pinecone.io/community/events/",
         sourceLabel: "pinecone.io",
+        topics: ["vector-db"],
       },
     ],
   },
@@ -125,6 +131,7 @@ export const vendorGroups: VendorGroup[] = [
         status: "check-source",
         sourceUrl: "https://neo4j.com/graphsummit/",
         sourceLabel: "neo4j.com/graphsummit",
+        topics: ["graphrag", "agent-memory"],
       },
       {
         id: "neo4j-graphsummit-london",
@@ -137,6 +144,7 @@ export const vendorGroups: VendorGroup[] = [
         status: "check-source",
         sourceUrl: "https://neo4j.com/graphsummit/",
         sourceLabel: "neo4j.com/graphsummit",
+        topics: ["graphrag", "agent-memory"],
       },
       {
         id: "neo4j-nodes-2026",
@@ -148,6 +156,7 @@ export const vendorGroups: VendorGroup[] = [
         status: "confirmed",
         sourceUrl: "https://neo4j.com/nodes/",
         sourceLabel: "neo4j.com/nodes",
+        topics: ["graphrag", "agent-memory"],
       },
     ],
   },
@@ -283,6 +292,7 @@ export const vendorGroups: VendorGroup[] = [
         status: "confirmed",
         sourceUrl: "https://www.mongodb.com/resources/directory/webinars",
         sourceLabel: "mongodb.com",
+        topics: ["rag"],
       },
       {
         id: "mongodb-vector-search-101",
@@ -294,6 +304,7 @@ export const vendorGroups: VendorGroup[] = [
         status: "confirmed",
         sourceUrl: "https://www.mongodb.com/resources/directory/webinars",
         sourceLabel: "mongodb.com",
+        topics: ["vector-db"],
       },
       {
         id: "mongodb-agents-emea",
@@ -305,6 +316,7 @@ export const vendorGroups: VendorGroup[] = [
         status: "confirmed",
         sourceUrl: "https://www.mongodb.com/resources/directory/webinars",
         sourceLabel: "mongodb.com",
+        topics: ["agent-memory"],
       },
       {
         id: "mongodb-atlas-confluent",
@@ -359,6 +371,7 @@ export const vendorGroups: VendorGroup[] = [
         status: "confirmed",
         sourceUrl: "https://redis.io/events/",
         sourceLabel: "redis.io",
+        topics: ["rag", "agent-memory"],
       },
     ],
   },
