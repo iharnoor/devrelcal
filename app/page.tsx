@@ -1,65 +1,146 @@
-import Image from "next/image";
+export const dynamic = "force-dynamic";
+
+import ThemeToggle from "@/components/ThemeToggle";
+import CalendarView from "@/components/CalendarView";
+import Playbook from "@/components/Playbook";
+import {
+  scheduledEvents,
+  recurringSeries,
+  pastEvents2026,
+  researchDate,
+} from "@/lib/events";
+
+function countBy(category: "conference" | "meetup" | "hackathon") {
+  const scheduled = scheduledEvents.filter((e) => e.category === category).length;
+  const recurring = recurringSeries.filter((s) => s.category === category).length;
+  return scheduled + recurring;
+}
 
 export default function Home() {
+  const today = new Date().toISOString().slice(0, 10);
+  const upcoming = scheduledEvents
+    .filter((e) => e.sortDate >= today)
+    .sort((a, b) => a.sortDate.localeCompare(b.sortDate))[0];
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="mx-auto flex max-w-5xl flex-col gap-20 px-6 pb-24 pt-8 sm:px-8">
+      <header className="flex items-center justify-between gap-4">
+        <div className="flex items-baseline gap-3">
+          <span className="font-display text-lg font-extrabold uppercase tracking-tight text-ink">
+            Agent Builders
+          </span>
+          <span className="font-mono text-xs uppercase tracking-widest text-ink-muted">
+            DevRel Calendar
+          </span>
+        </div>
+        <nav className="flex items-center gap-5">
+          <a
+            href="#calendar"
+            className="hidden font-mono text-xs uppercase tracking-wider text-ink-muted hover:text-ink sm:inline"
+          >
+            Calendar
+          </a>
+          <a
+            href="#playbook"
+            className="hidden font-mono text-xs uppercase tracking-wider text-ink-muted hover:text-ink sm:inline"
+          >
+            Playbook
+          </a>
+          <ThemeToggle />
+        </nav>
+      </header>
+
+      <section className="flex flex-col gap-8">
+        <div className="flex flex-col gap-4">
+          <h1 className="max-w-2xl font-display text-5xl font-extrabold uppercase leading-[0.95] tracking-tight text-ink sm:text-6xl">
+            Every Bay Area room where agent builders gather.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="max-w-xl text-base leading-relaxed text-ink-muted">
+            Conferences, recurring meetups, and hackathons worth tracking for DevRel work with
+            AI agent builders — plus a playbook for keeping a steady 2 in-person + 2 online
+            cadence every month.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="rounded-lg border border-accent/40 bg-surface p-4">
+            <p className="font-mono text-[11px] uppercase tracking-wider text-accent">Next up</p>
+            {upcoming ? (
+              <>
+                <p className="mt-1 font-display text-lg font-semibold text-ink">{upcoming.name}</p>
+                <p className="font-mono text-xs tabular-nums text-ink-muted">
+                  {upcoming.dateLabel} · {upcoming.location}
+                </p>
+              </>
+            ) : (
+              <p className="mt-1 text-sm text-ink-muted">All tracked dates have passed — refresh sources.</p>
+            )}
+          </div>
+          <div className="rounded-lg border border-line bg-surface p-4">
+            <p className="font-mono text-[11px] uppercase tracking-wider text-ink-muted">Conferences</p>
+            <p className="mt-1 font-display text-3xl font-semibold tabular-nums text-ink">
+              {countBy("conference")}
+            </p>
+          </div>
+          <div className="rounded-lg border border-line bg-surface p-4">
+            <p className="font-mono text-[11px] uppercase tracking-wider text-ink-muted">Meetups</p>
+            <p className="mt-1 font-display text-3xl font-semibold tabular-nums text-ink">
+              {countBy("meetup")}
+            </p>
+          </div>
+          <div className="rounded-lg border border-line bg-surface p-4">
+            <p className="font-mono text-[11px] uppercase tracking-wider text-ink-muted">Hackathons</p>
+            <p className="mt-1 font-display text-3xl font-semibold tabular-nums text-ink">
+              {countBy("hackathon")}
+            </p>
+          </div>
         </div>
-      </main>
+      </section>
+
+      <section id="calendar" className="flex scroll-mt-8 flex-col gap-6">
+        <div className="flex flex-col gap-2 border-b border-line pb-6">
+          <h2 className="font-display text-3xl font-extrabold uppercase tracking-tight text-ink">
+            Calendar
+          </h2>
+          <p className="max-w-2xl text-sm leading-relaxed text-ink-muted">
+            Researched as of{" "}
+            {new Date(researchDate + "T00:00:00").toLocaleDateString("en-US", {
+              month: "long",
+              day: "numeric",
+              year: "numeric",
+            })}
+            . Items marked <span className="text-warn">unconfirmed</span> are inferred from past
+            patterns or not yet locked in by the organizer — verify at the source link before you
+            plan around them.
+          </p>
+        </div>
+        <CalendarView
+          scheduledEvents={scheduledEvents}
+          recurringSeries={recurringSeries}
+          pastEvents={pastEvents2026}
+        />
+      </section>
+
+      <section id="playbook" className="flex scroll-mt-8 flex-col gap-6">
+        <div className="flex flex-col gap-2 border-b border-line pb-6">
+          <h2 className="font-display text-3xl font-extrabold uppercase tracking-tight text-ink">
+            Playbook
+          </h2>
+          <p className="max-w-2xl text-sm leading-relaxed text-ink-muted">
+            The goal: <span className="text-ink">2 in-person + 2 online events every month.</span>{" "}
+            Use the events above to anchor the in-person slots, and rotate through this idea bank
+            so the cadence doesn&apos;t collapse into the same four events on repeat.
+          </p>
+        </div>
+        <Playbook />
+      </section>
+
+      <footer className="flex flex-col gap-2 border-t border-line pt-6 font-mono text-xs text-ink-muted">
+        <p>
+          Event data hand-researched from organizer sources on {researchDate} — dates and venues
+          change; re-check before committing sponsorship dollars or travel.
+        </p>
+      </footer>
     </div>
   );
 }
