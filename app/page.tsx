@@ -2,6 +2,7 @@ export const dynamic = "force-dynamic";
 
 import ThemeToggle from "@/components/ThemeToggle";
 import CalendarView from "@/components/CalendarView";
+import EcosystemView from "@/components/EcosystemView";
 import Playbook from "@/components/Playbook";
 import {
   scheduledEvents,
@@ -9,6 +10,7 @@ import {
   pastEvents2026,
   researchDate,
 } from "@/lib/events";
+import { vendorGroups } from "@/lib/vendorEvents";
 
 function countBy(category: "conference" | "meetup" | "hackathon") {
   const scheduled = scheduledEvents.filter((e) => e.category === category).length;
@@ -39,6 +41,12 @@ export default function Home() {
             className="hidden font-mono text-xs uppercase tracking-wider text-ink-muted hover:text-ink sm:inline"
           >
             Calendar
+          </a>
+          <a
+            href="#ecosystem"
+            className="hidden font-mono text-xs uppercase tracking-wider text-ink-muted hover:text-ink sm:inline"
+          >
+            Ecosystem
           </a>
           <a
             href="#playbook"
@@ -119,6 +127,21 @@ export default function Home() {
           recurringSeries={recurringSeries}
           pastEvents={pastEvents2026}
         />
+      </section>
+
+      <section id="ecosystem" className="flex scroll-mt-8 flex-col gap-6">
+        <div className="flex flex-col gap-2 border-b border-line pb-6">
+          <h2 className="font-display text-3xl font-extrabold uppercase tracking-tight text-ink">
+            Ecosystem
+          </h2>
+          <p className="max-w-2xl text-sm leading-relaxed text-ink-muted">
+            Events organized by RAG, vector-database, and GraphRAG vendors — competitive and
+            partnership tracking, not agent-builder outreach. Includes virtual and global events,
+            not just Bay Area. Companies with nothing confirmed are kept as a watchlist rather than
+            dropped.
+          </p>
+        </div>
+        <EcosystemView groups={vendorGroups} />
       </section>
 
       <section id="playbook" className="flex scroll-mt-8 flex-col gap-6">
