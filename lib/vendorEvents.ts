@@ -429,4 +429,36 @@ export const vendorGroups: VendorGroup[] = [
     watchNote:
       'An open-ended "Blogathon" community content campaign is running (not a single-date event). No single confirmed live event date found in-window — events.elastic.co blocked automated fetch, so a manual check will likely surface more.',
   },
+  {
+    id: "mem0",
+    company: "Mem0",
+    category: "Agent memory layer",
+    homepageUrl: "https://mem0.ai",
+    events: [],
+    watchNote:
+      'Mem0 (open-source + managed memory layer for LLM agents — persistent cross-session context) runs an active Luma calendar (luma.com/mem0) with recurring San Francisco meetups — "Context Corner" lunch series, "Off the Record" founders\' lunch, and a "Jog Your Memory" run club — but none had a confirmed forward date at research time. Check luma.com/mem0 directly.',
+  },
+  {
+    id: "supermemory",
+    company: "Supermemory",
+    category: "Memory + RAG API",
+    homepageUrl: "https://supermemory.ai",
+    events: [
+      {
+        id: "supermemory-localhost-hackathon",
+        name: "localhost:6767 Hackathon",
+        dateLabel: "Deadline Jul 17",
+        sortDate: "2026-07-17",
+        format: "virtual",
+        description:
+          'Virtual hackathon built on "Supermemory Local" (self-hosted mode) — kicked off Jul 10, deadline extended to Jul 17.',
+        status: "confirmed",
+        sourceUrl: "https://blog.supermemory.ai",
+        sourceLabel: "blog.supermemory.ai",
+        topics: ["agent-memory", "rag"],
+      },
+    ],
+    watchNote:
+      "No dedicated events page — Supermemory (memory + RAG hybrid context API, ingests docs/Slack/Notion/Drive/GitHub into agent-ready memory) surfaces events only via its blog and X. Check blog.supermemory.ai and @supermemoryai.",
+  },
 ];
