@@ -463,6 +463,65 @@ export const scheduledEvents: CalEvent[] = [
     sourceUrl: "https://luma.com/StepSF26",
     sourceLabel: "luma.com",
   },
+  // Sourced from Eventbrite's SF Bay Area search (2026-07-17), filtered from
+  // several hundred loosely-keyword-matched results down to genuine
+  // agent-builder relevance — Eventbrite's own search is much noisier than
+  // Luma's for this audience (heavy false-positive rate on words like "rag"
+  // matching unrelated events, plus templated paid-training-course spam).
+  {
+    id: "eventbrite-ai-agents-showcase",
+    name: "AI Agents Showcase (Industry-Specific Demo Day)",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Jul 17",
+    sortDate: "2026-07-17",
+    month: "2026-07",
+    location: "Hyatt Regency San Francisco",
+    description: "Demo day for industry-specific AI agent implementations.",
+    sourceUrl: "https://www.eventbrite.com/e/ai-agents-showcase-industry-specific-customized-demo-day-tickets-1981617792160",
+    sourceLabel: "eventbrite.com",
+  },
+  {
+    id: "eventbrite-agentic-ai-workshop",
+    name: "Make Agentic AI Work for You — San Francisco",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Aug 18",
+    sortDate: "2026-08-18",
+    month: "2026-08",
+    location: "San Francisco (venue TBD)",
+    description: "Workshop on applying agentic AI patterns in practice.",
+    sourceUrl: "https://www.eventbrite.com/e/make-agentic-ai-work-for-you-san-francisco-tickets-1993595661289",
+    sourceLabel: "eventbrite.com",
+  },
+  {
+    id: "eventbrite-data-streaming-summit",
+    name: "Data Streaming Summit 2026",
+    category: "conference",
+    status: "confirmed",
+    dateLabel: "Oct 7",
+    sortDate: "2026-10-07",
+    month: "2026-10",
+    location: "Hotel Nikko San Francisco",
+    description: '"The Data Streaming + Agent Infra Conference" — real-time data pipelines feeding agent systems.',
+    sourceUrl: "https://www.eventbrite.com/e/data-streaming-summit-2026-the-data-streaming-agent-infra-conference-tickets-1990614661037",
+    sourceLabel: "eventbrite.com",
+    topics: ["agent-memory"],
+    topicNote: "Data-streaming infra for agents, not retrieval-specific — check the agenda for RAG/vector tracks before pitching.",
+  },
+  {
+    id: "eventbrite-zero-trust-ai",
+    name: "Zero Trust for AI: Securing Models, Data, and Autonomous Agents",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Oct 22",
+    sortDate: "2026-10-22",
+    month: "2026-10",
+    location: "Cloudflare, San Francisco",
+    description: "Security-focused meetup on protecting AI models, data, and autonomous agents.",
+    sourceUrl: "https://www.eventbrite.com/e/zero-trust-for-ai-securing-models-data-and-autonomous-agents-tickets-1991035587038",
+    sourceLabel: "eventbrite.com",
+  },
 ];
 
 /**
