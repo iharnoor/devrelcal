@@ -269,6 +269,20 @@ export const scheduledEvents: CalEvent[] = [
     sourceLabel: "luma.com",
   },
   {
+    id: "luma-escaping-flatland-sf",
+    name: "Escaping Flatland — SF Meetup",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Jul 18",
+    sortDate: "2026-07-18",
+    month: "2026-07",
+    location: "San Francisco",
+    description:
+      "In-person meetup tied to the Escaping Flatland AI writing series — builders discussing interfaces and model behavior.",
+    sourceUrl: "https://luma.com/7saxebo3",
+    sourceLabel: "luma.com",
+  },
+  {
     id: "luma-deeplearning-voice-hackathon",
     name: "DeepLearning.AI Voice AI Hackathon: The Complete Trip",
     category: "hackathon",
@@ -334,6 +348,20 @@ export const scheduledEvents: CalEvent[] = [
     sourceLabel: "luma.com",
   },
   {
+    id: "luma-dwarkesh-unplugged-workos",
+    name: "Dwarkesh Unplugged, presented by WorkOS",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Jul 22",
+    sortDate: "2026-07-22",
+    month: "2026-07",
+    location: "SFJAZZ, 201 Franklin St, San Francisco",
+    description:
+      "Live conversation with Dwarkesh Patel, hosted by WorkOS at SFJAZZ — AI research and builder Q&A.",
+    sourceUrl: "https://luma.com/f28a739d",
+    sourceLabel: "luma.com",
+  },
+  {
     id: "luma-omnigent-multi-agent-databricks",
     name: "Omnigent & Multi-Agent Coding Meetup @ Databricks SF",
     category: "meetup",
@@ -383,6 +411,20 @@ export const scheduledEvents: CalEvent[] = [
     location: "San Francisco",
     description: "Hackathon focused on agents that adapt/improve themselves over time.",
     sourceUrl: "https://luma.com/swarmhack",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-epoch-ai-trajectories-mixer",
+    name: "Trajectories: Epoch AI Mixer",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Jul 24",
+    sortDate: "2026-07-24",
+    month: "2026-07",
+    location: "San Francisco",
+    description:
+      "Epoch AI community mixer for researchers and practitioners tracking AI capability trajectories.",
+    sourceUrl: "https://luma.com/mtv0ajl9",
     sourceLabel: "luma.com",
   },
   {

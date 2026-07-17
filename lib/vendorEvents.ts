@@ -193,6 +193,18 @@ export const vendorGroups: VendorGroup[] = [
         sourceLabel: "langchain.com",
       },
       {
+        id: "langchain-art-of-loop-engineering",
+        name: "The Art of Loop Engineering: How to Build Agents That Improve Over Time",
+        dateLabel: "Jul 23",
+        sortDate: "2026-07-23",
+        format: "virtual",
+        description:
+          "Virtual session on iterative agent improvement loops — eval, feedback, and self-improvement patterns.",
+        status: "confirmed",
+        sourceUrl: "https://www.langchain.com/events",
+        sourceLabel: "langchain.com",
+      },
+      {
         id: "langchain-boston-meetup",
         name: "LangChain Boston Meetup — Loop Engineering and Open Models",
         dateLabel: "Jul 27",
@@ -404,6 +416,20 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://redis.io/events/",
     events: [
       {
+        id: "redis-moniepoint-meetup-london",
+        name: "Redis x Moniepoint Meetup — Building AI Agents with Real-Time Context",
+        dateLabel: "Jul 23",
+        sortDate: "2026-07-23",
+        format: "in-person",
+        location: "Moniepoint, Sea Containers House, London",
+        description:
+          "In-person London meetup on Redis Iris as a context/retrieval/memory layer for production agents.",
+        status: "confirmed",
+        sourceUrl: "https://redis.io/events/building-ai-agents-with-real-time-context/",
+        sourceLabel: "redis.io",
+        topics: ["rag", "agent-memory"],
+      },
+      {
         id: "redis-power-multistep-agents",
         name: "Power Multi-Step AI Agents with Real-Time Context",
         dateLabel: "Jul 30",
@@ -494,8 +520,8 @@ export const vendorGroups: VendorGroup[] = [
       {
         id: "mem0-context-corner",
         name: "Context Corner: A Lunch Series",
-        dateLabel: "Jul 17",
-        sortDate: "2026-07-17",
+        dateLabel: "Jul 24",
+        sortDate: "2026-07-24",
         format: "in-person",
         location: "San Francisco, CA",
         description:
