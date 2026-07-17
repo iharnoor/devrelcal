@@ -44,7 +44,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-07-16. Dates and venues sourced from
+ * Confirmed research date: 2026-07-17. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 export const scheduledEvents: CalEvent[] = [
@@ -208,50 +208,11 @@ export const scheduledEvents: CalEvent[] = [
     sourceLabel: "openai.devpost.com",
     note: "Venue unconfirmed — may not be in-person",
   },
-  // Sourced live from Luma's San Francisco Bay Area discover feed on 2026-07-16
+  // Sourced live from Luma's San Francisco Bay Area discover feed on 2026-07-17
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
   // AI/agent-relevant listings. This feed only surfaces ~6 weeks out, so
   // coverage here runs through late August — re-scrape luma.com/sf for
   // anything past that.
-  {
-    id: "luma-ai-observability-workshop",
-    name: "Workshop: Mastering AI Observability",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 16",
-    sortDate: "2026-07-16",
-    month: "2026-07",
-    location: "419 10th St, San Francisco",
-    description: "Community workshop on observability tooling and practices for AI systems.",
-    sourceUrl: "https://luma.com/ai_workshop_sf",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-latchbio-biosecurity",
-    name: "AI x Biosecurity — LatchBio Benchmark Launch",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 16",
-    sortDate: "2026-07-16",
-    month: "2026-07",
-    location: "San Francisco",
-    description: "Launch event for an AI benchmark at the intersection of biosecurity and genomics.",
-    sourceUrl: "https://luma.com/4s00vb76",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-lovable-corgi-buildathon",
-    name: "Build the Cup: Lovable x Corgi Buildathon",
-    category: "hackathon",
-    status: "confirmed",
-    dateLabel: "Jul 16",
-    sortDate: "2026-07-16",
-    month: "2026-07",
-    location: "9 Claude Ln, San Francisco",
-    description: "Buildathon co-hosted by Lovable (AI app builder) and Corgi.",
-    sourceUrl: "https://luma.com/qjqjltg8",
-    sourceLabel: "luma.com",
-  },
   {
     id: "luma-loop-engineering-hackathon",
     name: "Loop Engineering Hackathon",
@@ -263,6 +224,48 @@ export const scheduledEvents: CalEvent[] = [
     location: "San Francisco",
     description: "Hackathon centered on \"loop engineering\" — iterative agent build/eval loops.",
     sourceUrl: "https://luma.com/loophack",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-ai-2040-plan-a",
+    name: "AI 2040: Plan A with Thomas Larsen",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Jul 17",
+    sortDate: "2026-07-17",
+    month: "2026-07",
+    location: "San Francisco",
+    description:
+      "Mox-hosted talk on long-horizon AI trajectories and planning assumptions with Thomas Larsen.",
+    sourceUrl: "https://luma.com/mox-8ssq",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-cafe-cursor-sf-startups",
+    name: "Cafe Cursor San Francisco: Startup Edition",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Jul 20",
+    sortDate: "2026-07-20",
+    month: "2026-07",
+    location: "San Francisco",
+    description:
+      "Cursor community coworking session aimed at startup builders using AI coding tools.",
+    sourceUrl: "https://luma.com/cafe-cursor-sf-startups",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-foundry-live-demo-night",
+    name: "Foundry Live Demo Night",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Jul 21",
+    sortDate: "2026-07-21",
+    month: "2026-07",
+    location: "GitHub, 88 Colin P Kelly Jr St, San Francisco",
+    description:
+      "Microsoft Foundry Live demo night at GitHub — product demos from builders on Azure AI Foundry.",
+    sourceUrl: "https://luma.com/rp2vdq1g",
     sourceLabel: "luma.com",
   },
   {
@@ -637,7 +640,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Checked directly (2026-07-16): agihouse.org/agihouse.ai is a static marketing site with no public events listing, and their linked public Luma calendar (\"Ascension — by AGI House SF\") currently shows zero posted upcoming events. Dated hackathons appear to be announced last-minute to their community rather than published in advance — re-check luma.com/agi-house close to when you need one.",
+      "Checked directly (2026-07-17): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) still returns zero upcoming items via the calendar API. Dated hackathons appear to be announced last-minute to their community rather than published in advance — re-check luma.com/agi-house close to when you need one.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -723,4 +726,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-07-16";
+export const researchDate = "2026-07-17";
