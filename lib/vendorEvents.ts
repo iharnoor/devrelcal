@@ -30,7 +30,7 @@ export interface VendorGroup {
 
 /**
  * RAG / vector database / GraphRAG vendor events — competitive & partnership
- * tracking. Researched 2026-07-17 against each vendor's own events page.
+ * tracking. Researched 2026-07-18 against each vendor's own events page.
  * These are companies HydraDB competes or overlaps with, not events for
  * agent builders generally (see events.ts for that).
  */
@@ -120,7 +120,7 @@ export const vendorGroups: VendorGroup[] = [
         location: "San Francisco, CA",
         description: '"Graph technology reshaping industries" community talk.',
         status: "confirmed",
-        sourceUrl: "https://neo4j.com/events/",
+        sourceUrl: "https://neo4j.com/event/graphtalk-san-francisco/",
         sourceLabel: "neo4j.com",
       },
       {
@@ -133,11 +133,50 @@ export const vendorGroups: VendorGroup[] = [
         status: "confirmed",
         sourceUrl: "https://neo4j.com/events/",
         sourceLabel: "neo4j.com",
+        topics: ["graphrag", "agent-memory"],
+      },
+      {
+        id: "neo4j-graph-memory-automotive",
+        name: "Building Automotive Parts Intelligence using Graph Memory",
+        dateLabel: "Jul 29",
+        sortDate: "2026-07-29",
+        format: "virtual",
+        description:
+          "Session on graph memory for supply-chain resilience — direct GraphRAG / agent-memory overlap.",
+        status: "confirmed",
+        sourceUrl:
+          "https://neo4j.com/event/building-automotive-parts-intelligence-using-graph-memory-for-supply-chain-resilience/",
+        sourceLabel: "neo4j.com",
+        topics: ["graphrag", "agent-memory"],
+      },
+      {
+        id: "neo4j-ask-expert-context-graphs",
+        name: "Ask the Expert — Context Graphs and Decision Making",
+        dateLabel: "Jul 29",
+        sortDate: "2026-07-29",
+        format: "virtual",
+        description: "Expert session on context graphs for AI decision-making.",
+        status: "confirmed",
+        sourceUrl: "https://neo4j.com/event/ask-the-expert-context-graphs-and-decision-making/",
+        sourceLabel: "neo4j.com",
+        topics: ["graphrag", "agent-memory"],
+      },
+      {
+        id: "neo4j-agentsnexus-2026",
+        name: "AgentsNexus 2026",
+        dateLabel: "Sep 4",
+        sortDate: "2026-09-04",
+        format: "in-person",
+        description: "Neo4j-listed agent-focused conference stop on the events calendar.",
+        status: "confirmed",
+        sourceUrl: "https://neo4j.com/event/agentsnexus-2026/",
+        sourceLabel: "neo4j.com",
+        topics: ["agent-memory"],
       },
       {
         id: "neo4j-graphsummit-nyc",
         name: "GraphSummit NYC",
-        dateLabel: "Sep 4–5 (sources conflict — confirm exact date)",
+        dateLabel: "2026, exact date TBA",
         sortDate: "2026-09-04",
         format: "in-person",
         location: "New York, NY",
@@ -150,13 +189,13 @@ export const vendorGroups: VendorGroup[] = [
       {
         id: "neo4j-graphsummit-london",
         name: "GraphSummit London",
-        dateLabel: "2026, exact date TBA",
-        sortDate: "2026-10-01",
+        dateLabel: "Oct 6",
+        sortDate: "2026-10-06",
         format: "in-person",
         location: "London",
         description: '"Build With Graph and GenAI" — part of the GraphSummit 2026 tour.',
-        status: "check-source",
-        sourceUrl: "https://neo4j.com/graphsummit/",
+        status: "confirmed",
+        sourceUrl: "https://neo4j.com/event/graphsummit-london-4/",
         sourceLabel: "neo4j.com/graphsummit",
         topics: ["graphrag", "agent-memory"],
       },
@@ -188,6 +227,17 @@ export const vendorGroups: VendorGroup[] = [
         format: "in-person",
         location: "New York, NY",
         description: "Community meetup on meta/agent-building-agents patterns.",
+        status: "confirmed",
+        sourceUrl: "https://www.langchain.com/events",
+        sourceLabel: "langchain.com",
+      },
+      {
+        id: "langchain-fleet-ama",
+        name: "Build More with LangSmith Fleet — Summer AMA Series",
+        dateLabel: "Jul 23",
+        sortDate: "2026-07-23",
+        format: "virtual",
+        description: "LangSmith Fleet summer AMA on building and operating agents.",
         status: "confirmed",
         sourceUrl: "https://www.langchain.com/events",
         sourceLabel: "langchain.com",
@@ -316,7 +366,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Interrupt 2026 NYC/London dates previously listed here are no longer on langchain.com/events (2026-07-17 check) — only past \"Interrupt Resume NYC\" (Jun 3) appears. Re-check before planning around a fall Interrupt.",
+      "Interrupt 2026 NYC/London dates previously listed here are no longer on langchain.com/events (2026-07-18 check) — only past \"Interrupt Resume NYC\" (Jun 3) appears. Re-check before planning around a fall Interrupt.",
   },
   {
     id: "mongodb",
@@ -403,6 +453,20 @@ export const vendorGroups: VendorGroup[] = [
     category: "Vector search / RAG",
     homepageUrl: "https://redis.io/events/",
     events: [
+      {
+        id: "redis-moniepoint-meetup",
+        name: "Redis x Moniepoint Meetup",
+        dateLabel: "Jul 23",
+        sortDate: "2026-07-23",
+        format: "in-person",
+        location: "22 Upper Ground, London, UK",
+        description:
+          "London in-person meetup on moving AI from experimentation to effective delivery, co-hosted with Moniepoint.",
+        status: "confirmed",
+        sourceUrl: "https://redis.io/events/building-ai-agents-with-real-time-context/",
+        sourceLabel: "redis.io",
+        topics: ["agent-memory"],
+      },
       {
         id: "redis-power-multistep-agents",
         name: "Power Multi-Step AI Agents with Real-Time Context",
@@ -494,8 +558,8 @@ export const vendorGroups: VendorGroup[] = [
       {
         id: "mem0-context-corner",
         name: "Context Corner: A Lunch Series",
-        dateLabel: "Jul 17",
-        sortDate: "2026-07-17",
+        dateLabel: "Jul 24",
+        sortDate: "2026-07-24",
         format: "in-person",
         location: "San Francisco, CA",
         description:
@@ -519,29 +583,15 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      'Also lists "Jog Your Memory" run club + matcha (next: Aug 3) — skipped here as a social/sports meetup. Re-check luma.com/mem0 for the next Context Corner / Off the Record dates after these pass.',
+      'Also lists "Jog Your Memory" run club + matcha (next: Aug 3) — skipped here as a social/sports meetup. Context Corner Luma URL mem0-d589 advanced from Jul 17 → Jul 24 on the 2026-07-18 check; re-read luma.com/mem0 after each lunch passes.',
   },
   {
     id: "supermemory",
     company: "Supermemory",
     category: "Memory + RAG API",
     homepageUrl: "https://supermemory.ai",
-    events: [
-      {
-        id: "supermemory-localhost-hackathon",
-        name: "localhost:6767 Hackathon",
-        dateLabel: "Deadline Jul 17",
-        sortDate: "2026-07-17",
-        format: "virtual",
-        description:
-          'Virtual hackathon built on "Supermemory Local" (self-hosted mode) — kicked off Jul 10, deadline extended to Jul 17.',
-        status: "confirmed",
-        sourceUrl: "https://blog.supermemory.ai",
-        sourceLabel: "blog.supermemory.ai",
-        topics: ["agent-memory", "rag"],
-      },
-    ],
+    events: [],
     watchNote:
-      "No dedicated events page — Supermemory (memory + RAG hybrid context API, ingests docs/Slack/Notion/Drive/GitHub into agent-ready memory) surfaces events only via its blog and X. Check blog.supermemory.ai and @supermemoryai.",
+      "localhost:6767 hackathon deadline (Jul 17) has passed. No dedicated events page — Supermemory surfaces events via blog and X. Checked blog.supermemory.ai on 2026-07-18: no new dated events announced. Re-check blog.supermemory.ai and @supermemoryai.",
   },
 ];
