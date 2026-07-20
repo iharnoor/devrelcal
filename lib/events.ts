@@ -49,7 +49,7 @@ export interface PastEvent {
  * Confirmed research date: 2026-07-20. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
-export const scheduledEvents: CalEvent[] = [
+const scrapedEvents: CalEvent[] = [
   {
     id: "yc-startup-school-2026",
     name: "YC Startup School 2026",
@@ -525,6 +525,45 @@ export const scheduledEvents: CalEvent[] = [
     sourceLabel: "eventbrite.com",
   },
 ];
+
+/**
+ * Hand-added events that the automated refresh CANNOT discover on its own.
+ *
+ * The daily cron only pulls from *public* feeds — Luma's SF Bay Area discover
+ * feed and Eventbrite search. Private, invite-only, or token-gated events
+ * (e.g. a Luma link with a `?tk=…` access token) never appear there, so the
+ * only way they enter this dataset is by being dropped in here by hand.
+ *
+ * IMPORTANT for the refresh job: this array is off-limits. Rewrite the scraped
+ * blocks in `scrapedEvents` all you want, but leave these entries in place —
+ * re-scraping will never reproduce them. Store the base event URL WITHOUT the
+ * personal access token, since this list ships to a public site.
+ */
+export const directSubmissions: CalEvent[] = [
+  {
+    id: "ship-2-prod-yc-yacht-gala",
+    name: "Ship 2 Prod — YC AI Startup School Black-Tie Yacht Gala",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Jul 25–26 · exact night by invite",
+    sortDate: "2026-07-25",
+    endDate: "2026-07-26",
+    month: "2026-07",
+    location: "San Francisco (private yacht — address on RSVP)",
+    description:
+      "Invite-only black-tie gala during YC's AI Startup School — ~150 hand-selected AI founders, engineers, and investors, with product demos and lightning pitches. Hosted by SCALE by GMI (GMI Cloud + NVIDIA), presented by Resonance; sponsors include Databricks, Soma Capital, and Red Bull. High-density agent-builder crowd worth a presence at.",
+    sourceUrl: "https://luma.com/ojidqyj8",
+    sourceLabel: "luma.com",
+    note: "Invite-only, token-gated Luma link — not on any public feed; exact night within Jul 25–26 shows on your invite.",
+  },
+];
+
+/**
+ * The full calendar the app renders: everything the refresh scrapes, plus the
+ * hand-added invite-only events it can never reach. Downstream code should keep
+ * consuming this — the split above is only about what the cron may overwrite.
+ */
+export const scheduledEvents: CalEvent[] = [...scrapedEvents, ...directSubmissions];
 
 /**
  * Ongoing hosts/series with no single locked-in forward date as of the
