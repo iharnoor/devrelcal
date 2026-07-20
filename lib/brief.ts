@@ -1,6 +1,7 @@
 import type { CalEvent } from "./events";
 import type { VendorGroup } from "./vendorEvents";
 import { hasPitchTopic } from "./topics";
+import { todayInPacific } from "./utils";
 
 export interface BriefItem {
   id: string;
@@ -21,11 +22,11 @@ export function getWeeklyBrief(
   today: Date,
   days = 7,
 ): BriefItem[] {
-  const start = today.toISOString().slice(0, 10);
-  const end = new Date(today.getTime() + days * 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
+  const start = todayInPacific(today);
+  const end = todayInPacific(new Date(today.getTime() + days * 24 * 60 * 60 * 1000));
 
   const fromCalendar: BriefItem[] = scheduledEvents
-    .filter((e) => e.sortDate >= start && e.sortDate <= end)
+    .filter((e) => (e.endDate ?? e.sortDate) >= start && e.sortDate <= end)
     .map((e) => ({
       id: `cal-${e.id}`,
       name: e.name,

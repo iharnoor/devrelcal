@@ -13,20 +13,29 @@ import {
 } from "@/lib/events";
 import { vendorGroups } from "@/lib/vendorEvents";
 import { getWeeklyBrief } from "@/lib/brief";
+import { isUpcoming, todayInPacific } from "@/lib/utils";
 
-function countBy(category: "conference" | "meetup" | "hackathon") {
-  const scheduled = scheduledEvents.filter((e) => e.category === category).length;
-  const recurring = recurringSeries.filter((s) => s.category === category).length;
+function countBy(events: typeof scheduledEvents, series: typeof recurringSeries, category: "conference" | "meetup" | "hackathon") {
+  const scheduled = events.filter((e) => e.category === category).length;
+  const recurring = series.filter((s) => s.category === category).length;
   return scheduled + recurring;
 }
 
 export default function Home() {
   const now = new Date();
-  const today = now.toISOString().slice(0, 10);
-  const upcoming = scheduledEvents
-    .filter((e) => e.sortDate >= today)
-    .sort((a, b) => a.sortDate.localeCompare(b.sortDate))[0];
-  const briefItems = getWeeklyBrief(scheduledEvents, vendorGroups, now);
+  const today = todayInPacific(now);
+
+  // A day's events stay visible through their endDate, not just their start —
+  // this is the one place "already happened" gets filtered, so it can't drift
+  // out of sync the way manually pruning the data file did.
+  const activeEvents = scheduledEvents.filter((e) => isUpcoming(e, today));
+  const activeVendorGroups = vendorGroups.map((g) => ({
+    ...g,
+    events: g.events.filter((e) => isUpcoming(e, today)),
+  }));
+
+  const upcoming = [...activeEvents].sort((a, b) => a.sortDate.localeCompare(b.sortDate))[0];
+  const briefItems = getWeeklyBrief(activeEvents, activeVendorGroups, now);
 
   return (
     <div className="mx-auto flex max-w-5xl flex-col gap-20 px-6 pb-24 pt-8 sm:px-8">
@@ -93,19 +102,19 @@ export default function Home() {
           <div className="rounded-lg border border-line bg-surface p-4">
             <p className="font-mono text-[11px] uppercase tracking-wider text-ink-muted">Conferences</p>
             <p className="mt-1 font-display text-3xl font-semibold tabular-nums text-ink">
-              {countBy("conference")}
+              {countBy(activeEvents, recurringSeries, "conference")}
             </p>
           </div>
           <div className="rounded-lg border border-line bg-surface p-4">
             <p className="font-mono text-[11px] uppercase tracking-wider text-ink-muted">Meetups</p>
             <p className="mt-1 font-display text-3xl font-semibold tabular-nums text-ink">
-              {countBy("meetup")}
+              {countBy(activeEvents, recurringSeries, "meetup")}
             </p>
           </div>
           <div className="rounded-lg border border-line bg-surface p-4">
             <p className="font-mono text-[11px] uppercase tracking-wider text-ink-muted">Hackathons</p>
             <p className="mt-1 font-display text-3xl font-semibold tabular-nums text-ink">
-              {countBy("hackathon")}
+              {countBy(activeEvents, recurringSeries, "hackathon")}
             </p>
           </div>
         </div>
@@ -129,7 +138,7 @@ export default function Home() {
           </p>
         </div>
         <CalendarView
-          scheduledEvents={scheduledEvents}
+          scheduledEvents={activeEvents}
           recurringSeries={recurringSeries}
           pastEvents={pastEvents2026}
         />
@@ -147,7 +156,7 @@ export default function Home() {
             dropped.
           </p>
         </div>
-        <EcosystemView groups={vendorGroups} />
+        <EcosystemView groups={activeVendorGroups} />
       </section>
 
       <section id="playbook" className="flex scroll-mt-8 flex-col gap-6">

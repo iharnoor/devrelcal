@@ -9,8 +9,10 @@ export interface CalEvent {
   category: EventCategory;
   status: EventStatus;
   dateLabel: string;
-  /** ISO date used for sorting inside a month bucket. */
+  /** ISO date used for sorting inside a month bucket — the event's start date. */
   sortDate: string;
+  /** ISO date the event ends, for multi-day events. Defaults to sortDate when omitted. */
+  endDate?: string;
   /** "YYYY-MM" bucket this event is grouped under. */
   month: string;
   location: string;
@@ -55,6 +57,7 @@ export const scheduledEvents: CalEvent[] = [
     status: "confirmed",
     dateLabel: "Jul 18–19",
     sortDate: "2026-07-18",
+    endDate: "2026-07-19",
     month: "2026-07",
     location: "Palace of Fine Arts, San Francisco",
     description:
@@ -63,12 +66,28 @@ export const scheduledEvents: CalEvent[] = [
     sourceLabel: "agisummit.ai",
   },
   {
+    id: "open-sauce-2026",
+    name: "Open Sauce 2026",
+    category: "conference",
+    status: "confirmed",
+    dateLabel: "Jul 17–19",
+    sortDate: "2026-07-17",
+    endDate: "2026-07-19",
+    month: "2026-07",
+    location: "San Mateo County Event Center",
+    description:
+      "Technology & creator festival — homemade robots, backyard rockets, and internet-culture creators. Jul 17 is an Industry Day business summit; not AI-agent specific, but a high-density Bay Area maker/creator crowd worth a presence at.",
+    sourceUrl: "https://www.opensauce.com/",
+    sourceLabel: "opensauce.com",
+  },
+  {
     id: "yc-startup-school-2026",
     name: "YC Startup School 2026",
     category: "conference",
     status: "confirmed",
     dateLabel: "Jul 25–26",
     sortDate: "2026-07-25",
+    endDate: "2026-07-26",
     month: "2026-07",
     location: "San Francisco",
     description:
@@ -83,6 +102,7 @@ export const scheduledEvents: CalEvent[] = [
     status: "confirmed",
     dateLabel: "Aug 24–26",
     sortDate: "2026-08-24",
+    endDate: "2026-08-26",
     month: "2026-08",
     location: "San Francisco",
     description:
@@ -97,6 +117,7 @@ export const scheduledEvents: CalEvent[] = [
     status: "confirmed",
     dateLabel: "Sep 15–17",
     sortDate: "2026-09-15",
+    endDate: "2026-09-17",
     month: "2026-09",
     location: "Santa Clara Convention Center",
     description:
@@ -128,6 +149,7 @@ export const scheduledEvents: CalEvent[] = [
     status: "confirmed",
     dateLabel: "Sep 29–Oct 1",
     sortDate: "2026-09-29",
+    endDate: "2026-10-01",
     month: "2026-09",
     location: "Pier 48, San Francisco",
     description:
@@ -142,6 +164,7 @@ export const scheduledEvents: CalEvent[] = [
     status: "confirmed",
     dateLabel: "Oct 5–11",
     sortDate: "2026-10-05",
+    endDate: "2026-10-11",
     month: "2026-10",
     location: "San Francisco (citywide)",
     description:
@@ -186,6 +209,7 @@ export const scheduledEvents: CalEvent[] = [
     status: "confirmed",
     dateLabel: "Sep 15–17",
     sortDate: "2026-09-15",
+    endDate: "2026-09-17",
     month: "2026-09",
     location: "Santa Clara Convention Center (hybrid)",
     description:
