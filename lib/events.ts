@@ -51,36 +51,6 @@ export interface PastEvent {
  */
 export const scheduledEvents: CalEvent[] = [
   {
-    id: "agi-summit-2026",
-    name: "AGI Summit 2026",
-    category: "conference",
-    status: "confirmed",
-    dateLabel: "Jul 18–19",
-    sortDate: "2026-07-18",
-    endDate: "2026-07-19",
-    month: "2026-07",
-    location: "Palace of Fine Arts, San Francisco",
-    description:
-      '"The Rise of Agentic Intelligence" — 200+ speakers, tracks on agent orchestration, autonomous workflows, and vibe coding.',
-    sourceUrl: "https://agisummit.ai/",
-    sourceLabel: "agisummit.ai",
-  },
-  {
-    id: "open-sauce-2026",
-    name: "Open Sauce 2026",
-    category: "conference",
-    status: "confirmed",
-    dateLabel: "Jul 17–19",
-    sortDate: "2026-07-17",
-    endDate: "2026-07-19",
-    month: "2026-07",
-    location: "San Mateo County Event Center",
-    description:
-      "Technology & creator festival — homemade robots, backyard rockets, and internet-culture creators. Jul 17 is an Industry Day business summit; not AI-agent specific, but a high-density Bay Area maker/creator crowd worth a presence at.",
-    sourceUrl: "https://www.opensauce.com/",
-    sourceLabel: "opensauce.com",
-  },
-  {
     id: "yc-startup-school-2026",
     name: "YC Startup School 2026",
     category: "conference",
@@ -264,19 +234,6 @@ export const scheduledEvents: CalEvent[] = [
     description:
       "Microsoft Foundry Live demo night at GitHub — product demos from builders on Azure AI Foundry.",
     sourceUrl: "https://luma.com/rp2vdq1g",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-stanford-deepmind-hackathon",
-    name: "Stanford x DeepMind Hackathon",
-    category: "hackathon",
-    status: "confirmed",
-    dateLabel: "Jul 19",
-    sortDate: "2026-07-19",
-    month: "2026-07",
-    location: "Stanford, CA",
-    description: 'Student-run hackathon co-hosted with DeepMind — "Build. Ship. Win," seed-funding prize track.',
-    sourceUrl: "https://luma.com/e51fygtm",
     sourceLabel: "luma.com",
   },
   {
@@ -682,7 +639,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Checked directly (2026-07-20): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) still returns zero upcoming items via the calendar API. Dated hackathons appear to be announced last-minute to their community rather than published in advance — re-check luma.com/agi-house close to when you need one.",
+      "Checked directly (2026-07-20 afternoon PT): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) still returns zero upcoming items via the calendar API. Dated hackathons appear to be announced last-minute to their community rather than published in advance — re-check luma.com/agi-house close to when you need one.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -709,6 +666,19 @@ export const recurringSeries: RecurringSeries[] = [
 ];
 
 export const pastEvents2026: PastEvent[] = [
+  {
+    id: "agi-summit-2026",
+    name: "AGI Summit 2026",
+    dateLabel: "Jul 18–19",
+    location: "Palace of Fine Arts, San Francisco",
+  },
+  {
+    id: "open-sauce-2026",
+    name: "Open Sauce 2026",
+    dateLabel: "Jul 17–19",
+    location: "San Mateo County Event Center",
+    note: "Maker/creator festival — not AI-agent specific; kept for annual Bay Area recurrence reference",
+  },
   {
     id: "ai-engineer-worlds-fair-2026",
     name: "AI Engineer World's Fair 2026 (+ hackathon)",
