@@ -44,7 +44,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-07-18. Dates and venues sourced from
+ * Confirmed research date: 2026-07-19. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 export const scheduledEvents: CalEvent[] = [
@@ -208,7 +208,8 @@ export const scheduledEvents: CalEvent[] = [
     sourceLabel: "openai.devpost.com",
     note: "Venue unconfirmed — may not be in-person",
   },
-  // Sourced live from Luma's San Francisco Bay Area discover feed on 2026-07-18
+  // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
+  // daily through 2026-07-19.
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
   // AI/agent-relevant listings. This feed only surfaces ~6 weeks out, so
   // coverage here runs through late August — re-scrape luma.com/sf for
@@ -348,6 +349,20 @@ export const scheduledEvents: CalEvent[] = [
     sourceLabel: "luma.com",
   },
   {
+    id: "luma-forward-deployed-computer-use",
+    name: "Forward Deployed: The State of Computer Use Agents",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Jul 22",
+    sortDate: "2026-07-22",
+    month: "2026-07",
+    location: "San Francisco",
+    description:
+      "Meetup on computer-use agents — where GUI/desktop automation agents stand in production.",
+    sourceUrl: "https://luma.com/xfx7c4nw",
+    sourceLabel: "luma.com",
+  },
+  {
     id: "luma-openai-builder-lounge",
     name: "OpenAI Builder Lounge SF with Parallel",
     category: "meetup",
@@ -358,6 +373,20 @@ export const scheduledEvents: CalEvent[] = [
     location: "San Francisco",
     description: "OpenAI-affiliated builder lounge co-hosted with Parallel.",
     sourceUrl: "https://luma.com/openai-builderlounge-sf-july23-2026",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-ai-infra-builders-dstack",
+    name: "AI Infra Builders Meetup with dstack, Crusoe, and SGLang",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Jul 23",
+    sortDate: "2026-07-23",
+    month: "2026-07",
+    location: "San Francisco",
+    description:
+      "Infra builders meetup co-hosted by dstack, Crusoe, and SGLang — open-source inference and GPU cloud tooling.",
+    sourceUrl: "https://luma.com/rxsn0u0h",
     sourceLabel: "luma.com",
   },
   {
@@ -656,7 +685,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Checked directly (2026-07-18): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) still returns zero upcoming items via the calendar API. Dated hackathons appear to be announced last-minute to their community rather than published in advance — re-check luma.com/agi-house close to when you need one.",
+      "Checked directly (2026-07-19): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) still returns zero upcoming items via the calendar API. Dated hackathons appear to be announced last-minute to their community rather than published in advance — re-check luma.com/agi-house close to when you need one.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -742,4 +771,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-07-18";
+export const researchDate = "2026-07-19";

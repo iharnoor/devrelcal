@@ -30,7 +30,7 @@ export interface VendorGroup {
 
 /**
  * RAG / vector database / GraphRAG vendor events — competitive & partnership
- * tracking. Researched 2026-07-18 against each vendor's own events page.
+ * tracking. Researched 2026-07-19 against each vendor's own events page.
  * These are companies HydraDB competes or overlaps with, not events for
  * agent builders generally (see events.ts for that).
  */
@@ -55,12 +55,13 @@ export const vendorGroups: VendorGroup[] = [
       },
       {
         id: "pinecone-burn-less-tokens",
-        name: "Burn Less Tokens Meetup",
+        name: "NYC Agentic AI Meetup",
         dateLabel: "Jul 28",
         sortDate: "2026-07-28",
         format: "in-person",
         location: "New York, NY",
-        description: "Pinecone-hosted meetup on token-efficient agentic AI.",
+        description:
+          "Pinecone-hosted NYC meetup on agentic AI (listed on pinecone.io and luma.com/pinecone; previously titled Burn Less Tokens).",
         status: "confirmed",
         sourceUrl: "https://luma.com/pinecone",
         sourceLabel: "luma.com/pinecone",
@@ -162,18 +163,6 @@ export const vendorGroups: VendorGroup[] = [
         topics: ["graphrag", "agent-memory"],
       },
       {
-        id: "neo4j-agentsnexus-2026",
-        name: "AgentsNexus 2026",
-        dateLabel: "Sep 4",
-        sortDate: "2026-09-04",
-        format: "in-person",
-        description: "Neo4j-listed agent-focused conference stop on the events calendar.",
-        status: "confirmed",
-        sourceUrl: "https://neo4j.com/event/agentsnexus-2026/",
-        sourceLabel: "neo4j.com",
-        topics: ["agent-memory"],
-      },
-      {
         id: "neo4j-graphsummit-nyc",
         name: "GraphSummit NYC",
         dateLabel: "2026, exact date TBA",
@@ -187,16 +176,30 @@ export const vendorGroups: VendorGroup[] = [
         topics: ["graphrag", "agent-memory"],
       },
       {
+        id: "neo4j-agentsnexus-2026",
+        name: "AgentsNexus 2026",
+        dateLabel: "Sep 4–5",
+        sortDate: "2026-09-04",
+        format: "in-person",
+        location: "Venue TBA — confirm on neo4j.com/event/agentsnexus-2026",
+        description:
+          "Neo4j-listed agent-focused conference (AgentsNexus 2026); venue not published on the events API listing.",
+        status: "check-source",
+        sourceUrl: "https://neo4j.com/event/agentsnexus-2026/",
+        sourceLabel: "neo4j.com",
+        topics: ["graphrag", "agent-memory"],
+      },
+      {
         id: "neo4j-graphsummit-london",
         name: "GraphSummit London",
         dateLabel: "Oct 6",
         sortDate: "2026-10-06",
         format: "in-person",
-        location: "London",
+        location: "88 Wood Street, London",
         description: '"Build With Graph and GenAI" — part of the GraphSummit 2026 tour.',
         status: "confirmed",
         sourceUrl: "https://neo4j.com/event/graphsummit-london-4/",
-        sourceLabel: "neo4j.com/graphsummit",
+        sourceLabel: "neo4j.com",
         topics: ["graphrag", "agent-memory"],
       },
       {
@@ -378,7 +381,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Interrupt 2026 NYC/London dates previously listed here are no longer on langchain.com/events (2026-07-18 check) — only past \"Interrupt Resume NYC\" (Jun 3) appears. Re-check before planning around a fall Interrupt.",
+      "Interrupt 2026 NYC/London dates previously listed here are no longer on langchain.com/events (2026-07-19 check) — only past \"Interrupt Resume NYC\" (Jun 3) appears. Re-check before planning around a fall Interrupt.",
   },
   {
     id: "mongodb",
@@ -532,7 +535,7 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://weaviate.io/community/events",
     events: [],
     watchNote:
-      "Weaviate's own events page showed no scheduled events at research time. SF and NYC meetup chapters exist but had no dated 2026 sessions listed. Check weaviate.io/community/events and meetup.com/Weaviate-San-Francisco.",
+      "Weaviate's own events page showed no scheduled events at research time (2026-07-19): \"Sorry, there are no events right now.\" SF and NYC meetup chapters exist but had no dated 2026 sessions listed. Check weaviate.io/community/events and meetup.com/Weaviate-San-Francisco.",
   },
   {
     id: "chroma",
@@ -604,6 +607,6 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://supermemory.ai",
     events: [],
     watchNote:
-      "localhost:6767 hackathon deadline (Jul 17) has passed. No dedicated events page — Supermemory surfaces events via blog and X. Checked blog.supermemory.ai on 2026-07-18: no new dated events announced. Re-check blog.supermemory.ai and @supermemoryai.",
+      "No dedicated events page — Supermemory (memory + RAG hybrid context API) surfaces events via blog and X. The localhost:6767 hackathon deadline (Jul 17) has passed; no new dated Jul–Dec 2026 events found on blog.supermemory.ai as of 2026-07-19. Check blog.supermemory.ai and @supermemoryai.",
   },
 ];
