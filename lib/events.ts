@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-07-19. Dates and venues sourced from
+ * Confirmed research date: 2026-07-20. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 export const scheduledEvents: CalEvent[] = [
@@ -233,7 +233,7 @@ export const scheduledEvents: CalEvent[] = [
     note: "Venue unconfirmed — may not be in-person",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // daily through 2026-07-19.
+  // daily through 2026-07-20.
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
   // AI/agent-relevant listings. This feed only surfaces ~6 weeks out, so
   // coverage here runs through late August — re-scrape luma.com/sf for
@@ -264,33 +264,6 @@ export const scheduledEvents: CalEvent[] = [
     description:
       "Microsoft Foundry Live demo night at GitHub — product demos from builders on Azure AI Foundry.",
     sourceUrl: "https://luma.com/rp2vdq1g",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-escaping-flatland-sf",
-    name: "Escaping Flatland — SF Meetup",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 18",
-    sortDate: "2026-07-18",
-    month: "2026-07",
-    location: "San Francisco",
-    description:
-      "In-person meetup tied to the Escaping Flatland AI writing series — builders discussing interfaces and model behavior.",
-    sourceUrl: "https://luma.com/7saxebo3",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-deeplearning-voice-hackathon",
-    name: "DeepLearning.AI Voice AI Hackathon: The Complete Trip",
-    category: "hackathon",
-    status: "confirmed",
-    dateLabel: "Jul 18",
-    sortDate: "2026-07-18",
-    month: "2026-07",
-    location: "Mountain View, CA",
-    description: "DeepLearning.AI-hosted hackathon on voice AI, powered by Sabre and Vocal Bridge.",
-    sourceUrl: "https://luma.com/fmypremp",
     sourceLabel: "luma.com",
   },
   {
@@ -356,7 +329,7 @@ export const scheduledEvents: CalEvent[] = [
     location: "SFJAZZ, 201 Franklin St, San Francisco",
     description:
       "Live conversation with Dwarkesh Patel (Dwarkesh Podcast), hosted by WorkOS at SFJAZZ — AI research and builder Q&A.",
-    sourceUrl: "https://luma.com/f28a739d",
+    sourceUrl: "https://luma.com/dwarkesh-unplugged",
     sourceLabel: "luma.com",
   },
   {
@@ -709,7 +682,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Checked directly (2026-07-19): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) still returns zero upcoming items via the calendar API. Dated hackathons appear to be announced last-minute to their community rather than published in advance — re-check luma.com/agi-house close to when you need one.",
+      "Checked directly (2026-07-20): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) still returns zero upcoming items via the calendar API. Dated hackathons appear to be announced last-minute to their community rather than published in advance — re-check luma.com/agi-house close to when you need one.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -795,4 +768,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-07-19";
+export const researchDate = "2026-07-20";
