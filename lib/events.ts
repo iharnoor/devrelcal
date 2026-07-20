@@ -44,7 +44,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-07-17. Dates and venues sourced from
+ * Confirmed research date: 2026-07-18. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 export const scheduledEvents: CalEvent[] = [
@@ -208,38 +208,11 @@ export const scheduledEvents: CalEvent[] = [
     sourceLabel: "openai.devpost.com",
     note: "Venue unconfirmed — may not be in-person",
   },
-  // Sourced live from Luma's San Francisco Bay Area discover feed on 2026-07-17
+  // Sourced live from Luma's San Francisco Bay Area discover feed on 2026-07-18
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
   // AI/agent-relevant listings. This feed only surfaces ~6 weeks out, so
   // coverage here runs through late August — re-scrape luma.com/sf for
   // anything past that.
-  {
-    id: "luma-loop-engineering-hackathon",
-    name: "Loop Engineering Hackathon",
-    category: "hackathon",
-    status: "confirmed",
-    dateLabel: "Jul 17",
-    sortDate: "2026-07-17",
-    month: "2026-07",
-    location: "San Francisco",
-    description: "Hackathon centered on \"loop engineering\" — iterative agent build/eval loops.",
-    sourceUrl: "https://luma.com/loophack",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-ai-2040-plan-a",
-    name: "AI 2040: Plan A with Thomas Larsen",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 17",
-    sortDate: "2026-07-17",
-    month: "2026-07",
-    location: "San Francisco",
-    description:
-      "Mox-hosted talk on long-horizon AI trajectories and planning assumptions with Thomas Larsen.",
-    sourceUrl: "https://luma.com/mox-8ssq",
-    sourceLabel: "luma.com",
-  },
   {
     id: "luma-cafe-cursor-sf-startups",
     name: "Cafe Cursor San Francisco: Startup Edition",
@@ -357,7 +330,7 @@ export const scheduledEvents: CalEvent[] = [
     month: "2026-07",
     location: "SFJAZZ, 201 Franklin St, San Francisco",
     description:
-      "Live conversation with Dwarkesh Patel, hosted by WorkOS at SFJAZZ — AI research and builder Q&A.",
+      "Live conversation with Dwarkesh Patel (Dwarkesh Podcast), hosted by WorkOS at SFJAZZ — AI research and builder Q&A.",
     sourceUrl: "https://luma.com/f28a739d",
     sourceLabel: "luma.com",
   },
@@ -483,6 +456,20 @@ export const scheduledEvents: CalEvent[] = [
     sourceLabel: "luma.com",
   },
   {
+    id: "luma-frontier-research-club-ai-bio",
+    name: "Bay Area Frontier Research Club #16 — AI × Bio Track Launch",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Aug 5",
+    sortDate: "2026-08-05",
+    month: "2026-08",
+    location: "Stanford University",
+    description:
+      "Curated AI research dinner/talk night launching an AI × bio track — short technical talks plus critique, not a general mixer.",
+    sourceUrl: "https://luma.com/9hp5rxy8",
+    sourceLabel: "luma.com",
+  },
+  {
     id: "luma-workos-agent-night",
     name: "WorkOS Agent Night",
     category: "meetup",
@@ -513,19 +500,6 @@ export const scheduledEvents: CalEvent[] = [
   // agent-builder relevance — Eventbrite's own search is much noisier than
   // Luma's for this audience (heavy false-positive rate on words like "rag"
   // matching unrelated events, plus templated paid-training-course spam).
-  {
-    id: "eventbrite-ai-agents-showcase",
-    name: "AI Agents Showcase (Industry-Specific Demo Day)",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 17",
-    sortDate: "2026-07-17",
-    month: "2026-07",
-    location: "Hyatt Regency San Francisco",
-    description: "Demo day for industry-specific AI agent implementations.",
-    sourceUrl: "https://www.eventbrite.com/e/ai-agents-showcase-industry-specific-customized-demo-day-tickets-1981617792160",
-    sourceLabel: "eventbrite.com",
-  },
   {
     id: "eventbrite-agentic-ai-workshop",
     name: "Make Agentic AI Work for You — San Francisco",
@@ -682,7 +656,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Checked directly (2026-07-17): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) still returns zero upcoming items via the calendar API. Dated hackathons appear to be announced last-minute to their community rather than published in advance — re-check luma.com/agi-house close to when you need one.",
+      "Checked directly (2026-07-18): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) still returns zero upcoming items via the calendar API. Dated hackathons appear to be announced last-minute to their community rather than published in advance — re-check luma.com/agi-house close to when you need one.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -768,4 +742,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-07-17";
+export const researchDate = "2026-07-18";
