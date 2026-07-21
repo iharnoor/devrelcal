@@ -76,12 +76,12 @@ export default function Home() {
       <section className="flex flex-col gap-8">
         <div className="flex flex-col gap-4">
           <h1 className="max-w-2xl font-display text-5xl font-extrabold uppercase leading-[0.95] tracking-tight text-ink sm:text-6xl">
-            Every Bay Area room where agent builders gather.
+            Every Bay Area room where agent builders and startups gather.
           </h1>
           <p className="max-w-xl text-base leading-relaxed text-ink-muted">
-            Conferences, recurring meetups, and hackathons worth tracking for DevRel work with
-            AI agent builders — plus a playbook for keeping a steady 2 in-person + 2 online
-            cadence every month.
+            Conferences, recurring meetups, hackathons, and startup events worth tracking for
+            DevRel work with AI agent builders and founders — plus a playbook for keeping a
+            steady 2 in-person + 2 online cadence every month.
           </p>
         </div>
 
