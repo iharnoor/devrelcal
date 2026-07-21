@@ -30,7 +30,7 @@ export interface VendorGroup {
 
 /**
  * RAG / vector database / GraphRAG vendor events — competitive & partnership
- * tracking. Researched 2026-07-20 against each vendor's own events page.
+ * tracking. Researched 2026-07-21 against each vendor's own events page.
  * These are companies HydraDB competes or overlaps with, not events for
  * agent builders generally (see events.ts for that).
  */
@@ -202,6 +202,21 @@ export const vendorGroups: VendorGroup[] = [
         sourceUrl: "https://neo4j.com/event/graphtalk-sydney/",
         sourceLabel: "neo4j.com",
         topics: ["graphrag"],
+      },
+      {
+        id: "neo4j-graphtalk-melbourne",
+        name: "GraphTalk Melbourne: Building Production-Ready, Trustworthy AI",
+        dateLabel: "Aug 20",
+        sortDate: "2026-08-20",
+        format: "in-person",
+        location: "The George on Collins, Melbourne, Australia",
+        description:
+          "How a Neo4j knowledge graph keeps multiple AI agents aligned on shared business definitions — consistent, auditable answers across an AI stack.",
+        status: "confirmed",
+        sourceUrl:
+          "https://neo4j.com/event/graphtalk-melbourne-building-production-ready-trustworthy-ai_20aug/",
+        sourceLabel: "neo4j.com",
+        topics: ["graphrag", "agent-memory"],
       },
       {
         id: "neo4j-foundry-workshop-atlanta",
@@ -465,7 +480,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Interrupt 2026 NYC/London dates previously listed here are no longer on langchain.com/events (2026-07-20 check) — only past \"Interrupt Resume NYC\" (Jun 3) appears. Re-check before planning around a fall Interrupt.",
+      "Interrupt 2026 NYC/London dates previously listed here are no longer on langchain.com/events (2026-07-21 check) — only past \"Interrupt Resume NYC\" (Jun 3) appears. Re-check before planning around a fall Interrupt.",
   },
   {
     id: "mongodb",
@@ -617,7 +632,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Unstructured Data Meetup series (Bay Area, Hangzhou, and other regions) still has no confirmed forward dates on zilliz.com/event as of 2026-07-20. Check zilliz.com/community/unstructured-data-meetup directly.",
+      "Unstructured Data Meetup series (Bay Area, Hangzhou, and other regions) still has no confirmed forward dates on zilliz.com/event as of 2026-07-21. Check zilliz.com/community/unstructured-data-meetup directly.",
   },
   {
     id: "qdrant",
@@ -635,7 +650,7 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://weaviate.io/community/events",
     events: [],
     watchNote:
-      "Weaviate's own events page showed no scheduled events at research time (2026-07-20): \"Sorry, there are no events right now.\" SF and NYC meetup chapters exist but had no dated 2026 sessions listed. Check weaviate.io/community/events and meetup.com/Weaviate-San-Francisco.",
+      "Weaviate's own events page showed no scheduled events at research time (2026-07-21): \"Sorry, there are no events right now.\" SF and NYC meetup chapters exist but had no dated 2026 sessions listed. Check weaviate.io/community/events and meetup.com/Weaviate-San-Francisco.",
   },
   {
     id: "chroma",
@@ -698,7 +713,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      'Also lists "Jog Your Memory" run club + matcha (next: Aug 3) — skipped here as a social/sports meetup. Context Corner remains Jul 24 on luma.com/mem0-d589 as of 2026-07-20; re-read luma.com/mem0 after each lunch passes.',
+      'Also lists "Jog Your Memory" run club + matcha (next: Aug 3) — skipped here as a social/sports meetup. Context Corner remains Jul 24 on luma.com/mem0-d589 as of 2026-07-21; re-read luma.com/mem0 after each lunch passes.',
   },
   {
     id: "supermemory",
@@ -707,6 +722,6 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://supermemory.ai",
     events: [],
     watchNote:
-      "No dedicated events page — Supermemory (memory + RAG hybrid context API) surfaces events via blog and X. The localhost:6767 hackathon deadline (Jul 17) has passed; no new dated Jul–Dec 2026 events found on blog.supermemory.ai as of 2026-07-20. Check blog.supermemory.ai and @supermemoryai.",
+      "No dedicated events page — Supermemory (memory + RAG hybrid context API) surfaces events via blog and X. The localhost:6767 hackathon deadline (Jul 17) has passed; no new dated Jul–Dec 2026 events found on blog.supermemory.ai as of 2026-07-21. Check blog.supermemory.ai and @supermemoryai.",
   },
 ];

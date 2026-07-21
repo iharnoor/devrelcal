@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-07-20. Dates and venues sourced from
+ * Confirmed research date: 2026-07-21. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -203,25 +203,11 @@ const scrapedEvents: CalEvent[] = [
     note: "Venue unconfirmed — may not be in-person",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // daily through 2026-07-20.
+  // daily through 2026-07-21.
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
   // AI/agent-relevant listings. This feed only surfaces ~6 weeks out, so
   // coverage here runs through late August — re-scrape luma.com/sf for
   // anything past that.
-  {
-    id: "luma-cafe-cursor-sf-startups",
-    name: "Cafe Cursor San Francisco: Startup Edition",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 20",
-    sortDate: "2026-07-20",
-    month: "2026-07",
-    location: "San Francisco",
-    description:
-      "Cursor community coworking session aimed at startup builders using AI coding tools.",
-    sourceUrl: "https://luma.com/cafe-cursor-sf-startups",
-    sourceLabel: "luma.com",
-  },
   {
     id: "luma-foundry-live-demo-night",
     name: "Foundry Live Demo Night",
@@ -344,6 +330,20 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "luma.com",
   },
   {
+    id: "luma-voice-ai-meetup-assemblyai",
+    name: "Voice AI Meetup: Build Smarter Voice Agents",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Jul 23",
+    sortDate: "2026-07-23",
+    month: "2026-07",
+    location: "San Francisco",
+    description:
+      "AssemblyAI-hosted meetup on building voice agents — realtime speech-to-text demos and context-carryover patterns.",
+    sourceUrl: "https://luma.com/m0thk5ai",
+    sourceLabel: "luma.com",
+  },
+  {
     id: "luma-ai-eng-leaders-dinner",
     name: "AI Engineering Leaders Dinner/Networking/Talks",
     category: "meetup",
@@ -397,6 +397,20 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "luma.com",
   },
   {
+    id: "luma-sim2real-gap",
+    name: "Can We Close the Sim2Real Gap?",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Jul 29",
+    sortDate: "2026-07-29",
+    month: "2026-07",
+    location: "San Francisco",
+    description:
+      "Technical discussion on whether simulation, synthetic data, and world models can close the sim-to-real gap for physical AI.",
+    sourceUrl: "https://luma.com/cazn88f7",
+    sourceLabel: "luma.com",
+  },
+  {
     id: "luma-startup-reality-ai-industries",
     name: "Startup Reality 202: AI in Industries",
     category: "meetup",
@@ -407,6 +421,20 @@ const scrapedEvents: CalEvent[] = [
     location: "San Francisco",
     description: '"From Foundation Models to Vertical Moats" — applied-AI startup talk series.',
     sourceUrl: "https://luma.com/4g3wb753",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-auth0-stripe-hackathon",
+    name: "Built Different: Auth0 x Stripe Hackathon",
+    category: "hackathon",
+    status: "confirmed",
+    dateLabel: "Jul 30",
+    sortDate: "2026-07-30",
+    month: "2026-07",
+    location: "Okta, 100 1st St, San Francisco",
+    description:
+      "In-person hackathon with Auth0 and Stripe on provisioning and managing services (including for agents) via Stripe Projects.",
+    sourceUrl: "https://luma.com/builtdifferent-auth0-stripe",
     sourceLabel: "luma.com",
   },
   {
@@ -463,6 +491,34 @@ const scrapedEvents: CalEvent[] = [
     location: "1300 Van Ness Ave, San Francisco",
     description: "WorkOS-hosted meetup for agent builders.",
     sourceUrl: "https://luma.com/agent-night",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-modcon-2026",
+    name: "ModCon 2026: Compute Unlocked",
+    category: "conference",
+    status: "confirmed",
+    dateLabel: "Aug 18",
+    sortDate: "2026-08-18",
+    month: "2026-08",
+    location: "Grand Hyatt San Francisco",
+    description:
+      "Modular's developer conference on AI compute — compilers, accelerators, and building on Modular's stack (~300 attendees).",
+    sourceUrl: "https://luma.com/modcon",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-cerebras-supernova-2026",
+    name: "Cerebras SUPERNOVA 2026",
+    category: "conference",
+    status: "confirmed",
+    dateLabel: "Aug 18",
+    sortDate: "2026-08-18",
+    month: "2026-08",
+    location: "The Midway, 900 Marin St, San Francisco",
+    description:
+      "Cerebras flagship event for developers, founders, and infra partners — demos and talks around high-throughput AI inference.",
+    sourceUrl: "https://luma.com/cerebrassupernova26",
     sourceLabel: "luma.com",
   },
   {
@@ -678,7 +734,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Checked directly (2026-07-20 afternoon PT): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) still returns zero upcoming items via the calendar API. Dated hackathons appear to be announced last-minute to their community rather than published in advance — re-check luma.com/agi-house close to when you need one.",
+      "Checked directly (2026-07-21): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) still returns zero upcoming items via the calendar API. Dated hackathons appear to be announced last-minute to their community rather than published in advance — re-check luma.com/agi-house close to when you need one.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -777,4 +833,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-07-20";
+export const researchDate = "2026-07-21";
