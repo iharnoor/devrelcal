@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-07-21. Dates and venues sourced from
+ * Confirmed research date: 2026-07-22. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -203,51 +203,11 @@ const scrapedEvents: CalEvent[] = [
     note: "Venue unconfirmed — may not be in-person",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // daily through 2026-07-21.
+  // daily through 2026-07-22.
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
   // AI/agent-relevant listings. This feed only surfaces ~6 weeks out, so
   // coverage here runs through late August — re-scrape luma.com/sf for
   // anything past that.
-  {
-    id: "luma-foundry-live-demo-night",
-    name: "Foundry Live Demo Night",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 21",
-    sortDate: "2026-07-21",
-    month: "2026-07",
-    location: "GitHub, 88 Colin P Kelly Jr St, San Francisco",
-    description:
-      "Microsoft Foundry Live demo night at GitHub — product demos from builders on Azure AI Foundry.",
-    sourceUrl: "https://luma.com/rp2vdq1g",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-vllm-crusoe-meetup",
-    name: "vLLM x Crusoe Meetup: Production Open Source Inference",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 21",
-    sortDate: "2026-07-21",
-    month: "2026-07",
-    location: "San Francisco",
-    description: "Meetup on running open-source inference (vLLM) in production, co-hosted with Crusoe.",
-    sourceUrl: "https://luma.com/n2ftxt1s",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-openai-build-week-meetup",
-    name: "OpenAI Build Week Community Meetup — San Francisco",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 21",
-    sortDate: "2026-07-21",
-    month: "2026-07",
-    location: "San Francisco",
-    description: "Community meetup tied to OpenAI's Build Week.",
-    sourceUrl: "https://luma.com/codex-meetup-convex-jul21-2026",
-    sourceLabel: "luma.com",
-  },
   {
     id: "luma-deep-tech-startups-ai",
     name: "Deep Tech Startups in the Age of AI",
@@ -397,6 +357,48 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "luma.com",
   },
   {
+    id: "luma-physical-ai-robotics-meetup",
+    name: "Physical AI and Robotics Meetup",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Jul 28",
+    sortDate: "2026-07-28",
+    month: "2026-07",
+    location: "San Francisco",
+    description:
+      "Kickoff meetup for Bay Area builders at the intersection of robotics and physical AI — engineers, founders, and researchers.",
+    sourceUrl: "https://luma.com/isyfjno2",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-durable-multimodal-ai",
+    name: "Durable Multimodal AI Meetup with HeyGen, Vapi, and Modal",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Jul 28",
+    sortDate: "2026-07-28",
+    month: "2026-07",
+    location: "San Francisco",
+    description:
+      "Durable AI Meetup series edition on multimodal agents — voice, video, and compute beyond text, co-hosted with HeyGen, Vapi, and Modal.",
+    sourceUrl: "https://luma.com/durable-ai-july",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-minimax-intelligence-in-the-open",
+    name: "Intelligence in the Open — Reasoning, Evaluation & Long-Horizon Agents",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Jul 28",
+    sortDate: "2026-07-28",
+    month: "2026-07",
+    location: "Upscale, San Francisco",
+    description:
+      "MiniMax research series kickoff — short talks and discussion on reasoning, evaluation, and long-horizon agents for researchers and technical founders.",
+    sourceUrl: "https://luma.com/w61gmib2",
+    sourceLabel: "luma.com",
+  },
+  {
     id: "luma-sim2real-gap",
     name: "Can We Close the Sim2Real Gap?",
     category: "meetup",
@@ -421,6 +423,20 @@ const scrapedEvents: CalEvent[] = [
     location: "San Francisco",
     description: '"From Foundation Models to Vertical Moats" — applied-AI startup talk series.',
     sourceUrl: "https://luma.com/4g3wb753",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-openai-codex-meetup-8",
+    name: "OpenAI Codex Community Meetup — San Francisco #8",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Jul 30",
+    sortDate: "2026-07-30",
+    month: "2026-07",
+    location: "Sports Basement Stonestown, San Francisco",
+    description:
+      "Recurring Codex builder meetup with OpenAI guest speakers — demos and discussion for beginners and experienced Codex users.",
+    sourceUrl: "https://luma.com/h5x0pzw9",
     sourceLabel: "luma.com",
   },
   {
@@ -602,8 +618,8 @@ export const directSubmissions: CalEvent[] = [
   // The main event (Jul 25–26) is in `scrapedEvents`; this is the surrounding
   // constellation of founder/investor side-events — a dense startup magnet.
   // Curated from the community after-party directory (startupschoolafter.party,
-  // read 2026-07-21). Dates/venues are single-sourced from that directory;
-  // re-check the RSVP link before committing.
+  // read 2026-07-21; still current as of 2026-07-22). Dates/venues are
+  // single-sourced from that directory; re-check the RSVP link before committing.
   {
     id: "yc-founders-investors-cocktails",
     name: "Founders & Investors Cocktail Hours",
@@ -1083,4 +1099,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-07-21";
+export const researchDate = "2026-07-22";

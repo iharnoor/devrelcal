@@ -30,7 +30,7 @@ export interface VendorGroup {
 
 /**
  * RAG / vector database / GraphRAG vendor events — competitive & partnership
- * tracking. Researched 2026-07-21 against each vendor's own events page.
+ * tracking. Researched 2026-07-22 against each vendor's own events page.
  * These are companies HydraDB competes or overlaps with, not events for
  * agent builders generally (see events.ts for that).
  */
@@ -135,18 +135,6 @@ export const vendorGroups: VendorGroup[] = [
           "From knowledge graphs to AI agents — Neo4j session for working professionals on graph-backed intelligent systems.",
         status: "confirmed",
         sourceUrl: "https://neo4j.com/event/hyderabad-the-future-of-intelligent-systems/",
-        sourceLabel: "neo4j.com",
-        topics: ["graphrag", "agent-memory"],
-      },
-      {
-        id: "neo4j-enterprise-ai-knowledge-layer",
-        name: "Enterprise AI Knowledge Layer",
-        dateLabel: "Jul 21",
-        sortDate: "2026-07-21",
-        format: "virtual",
-        description: "Regional webinar sessions (APAC/EU/Americas) on a knowledge-layer approach to AI with Neo4j.",
-        status: "confirmed",
-        sourceUrl: "https://neo4j.com/events/",
         sourceLabel: "neo4j.com",
         topics: ["graphrag", "agent-memory"],
       },
@@ -275,6 +263,19 @@ export const vendorGroups: VendorGroup[] = [
         topics: ["graphrag", "agent-memory"],
       },
       {
+        id: "neo4j-agntcon-mcpcon-japan",
+        name: "AGNTCon + MCPCon Japan",
+        dateLabel: "Sep 10–11",
+        sortDate: "2026-09-10",
+        format: "in-person",
+        location: "Japan — venue TBA (confirm on neo4j.com/event/agntcon-mcpcon-japan)",
+        description:
+          "Agent + MCP conference Neo4j lists — agent architectures, infrastructure, and protocol tooling for the next wave of AI agents.",
+        status: "check-source",
+        sourceUrl: "https://neo4j.com/event/agntcon-mcpcon-japan/",
+        sourceLabel: "neo4j.com",
+      },
+      {
         id: "neo4j-genai-workshop-reply-aws",
         name: "Neo4j GenAI Workshop with Reply and AWS",
         dateLabel: "Sep 16",
@@ -285,6 +286,34 @@ export const vendorGroups: VendorGroup[] = [
           "Hands-on session with Neo4j, Reply, and AWS on building context-driven GenAI applications with graph technology.",
         status: "confirmed",
         sourceUrl: "https://neo4j.com/event/neo4j-genai-workshop-with-reply-and-aws_16sept/",
+        sourceLabel: "neo4j.com",
+        topics: ["graphrag"],
+      },
+      {
+        id: "neo4j-agntcon-mcpcon-europe",
+        name: "AGNTCon + MCPCon Europe",
+        dateLabel: "Sep 17–18",
+        sortDate: "2026-09-17",
+        format: "in-person",
+        location: "Europe — venue TBA (confirm on neo4j.com/event/agntcon-mcpcon-europe)",
+        description:
+          "European AGNTCon + MCPCon stop listed by Neo4j — agent architectures, infrastructure, and MCP tooling.",
+        status: "check-source",
+        sourceUrl: "https://neo4j.com/event/agntcon-mcpcon-europe/",
+        sourceLabel: "neo4j.com",
+      },
+      {
+        id: "neo4j-foundry-workshop-chicago",
+        name: "AI Hands-On Workshop with Neo4j and Microsoft Foundry — Chicago",
+        dateLabel: "Oct 1",
+        sortDate: "2026-10-01",
+        format: "in-person",
+        location: "Aon Center, Chicago, IL",
+        description:
+          "Hands-on GraphRAG pipeline workshop on Azure — Neo4j Aura integrated with Microsoft Foundry.",
+        status: "confirmed",
+        sourceUrl:
+          "https://neo4j.com/event/ai-hands-on-workshop-with-neo4j-and-microsoft-foundry-chicago/",
         sourceLabel: "neo4j.com",
         topics: ["graphrag"],
       },
@@ -300,6 +329,21 @@ export const vendorGroups: VendorGroup[] = [
         sourceUrl: "https://neo4j.com/event/graphsummit-london-4/",
         sourceLabel: "neo4j.com",
         topics: ["graphrag", "agent-memory"],
+      },
+      {
+        id: "neo4j-vienna-demo-to-production",
+        name: "From Demo to Production — Grounding AI with Knowledge Graphs (Vienna)",
+        dateLabel: "Oct 29",
+        sortDate: "2026-10-29",
+        format: "in-person",
+        location: "Vienna, Austria",
+        description:
+          "Neo4j session on grounding production AI with knowledge graphs for transparency and trust over interconnected data.",
+        status: "confirmed",
+        sourceUrl:
+          "https://neo4j.com/event/vienna-from-demo-to-production-deploying-ai-responsibly-in-a-complex-world/",
+        sourceLabel: "neo4j.com",
+        topics: ["graphrag"],
       },
       {
         id: "neo4j-nodes-2026",
@@ -321,18 +365,6 @@ export const vendorGroups: VendorGroup[] = [
     category: "Orchestration framework",
     homepageUrl: "https://www.langchain.com/events",
     events: [
-      {
-        id: "langchain-ny-meetup",
-        name: "LangChain NY Meetup — Building Agents with Agents",
-        dateLabel: "Jul 21",
-        sortDate: "2026-07-21",
-        format: "in-person",
-        location: "New York, NY",
-        description: "Community meetup on meta/agent-building-agents patterns.",
-        status: "confirmed",
-        sourceUrl: "https://www.langchain.com/events",
-        sourceLabel: "langchain.com",
-      },
       {
         id: "langchain-art-of-loop-engineering",
         name: "The Art of Loop Engineering: How to Build Agents That Improve Over Time",
@@ -480,7 +512,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Interrupt 2026 NYC/London dates previously listed here are no longer on langchain.com/events (2026-07-21 check) — only past \"Interrupt Resume NYC\" (Jun 3) appears. Re-check before planning around a fall Interrupt.",
+      "Interrupt 2026 NYC/London dates previously listed here are no longer on langchain.com/events (2026-07-22 check) — only past \"Interrupt Resume NYC\" (Jun 3) appears. Re-check before planning around a fall Interrupt.",
   },
   {
     id: "mongodb",
@@ -632,7 +664,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Unstructured Data Meetup series (Bay Area, Hangzhou, and other regions) still has no confirmed forward dates on zilliz.com/event as of 2026-07-21. Check zilliz.com/community/unstructured-data-meetup directly.",
+      "Unstructured Data Meetup series (Bay Area, Hangzhou, and other regions) still has no confirmed forward dates on zilliz.com/event as of 2026-07-22. Check zilliz.com/community/unstructured-data-meetup directly.",
   },
   {
     id: "qdrant",
@@ -650,7 +682,7 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://weaviate.io/community/events",
     events: [],
     watchNote:
-      "Weaviate's own events page showed no scheduled events at research time (2026-07-21): \"Sorry, there are no events right now.\" SF and NYC meetup chapters exist but had no dated 2026 sessions listed. Check weaviate.io/community/events and meetup.com/Weaviate-San-Francisco.",
+      "Weaviate's own events page showed no scheduled events at research time (2026-07-22): \"Sorry, there are no events right now.\" SF and NYC meetup chapters exist but had no dated 2026 sessions listed. Check weaviate.io/community/events and meetup.com/Weaviate-San-Francisco.",
   },
   {
     id: "chroma",
@@ -713,7 +745,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      'Also lists "Jog Your Memory" run club + matcha (next: Aug 3) — skipped here as a social/sports meetup. Context Corner remains Jul 24 on luma.com/mem0-d589 as of 2026-07-21; re-read luma.com/mem0 after each lunch passes.',
+      'Also lists "Jog Your Memory" run club + matcha (next: Aug 3) — skipped here as a social/sports meetup. Context Corner remains Jul 24 on luma.com/mem0-d589 as of 2026-07-22; re-read luma.com/mem0 after each lunch passes.',
   },
   {
     id: "supermemory",
@@ -722,6 +754,6 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://supermemory.ai",
     events: [],
     watchNote:
-      "No dedicated events page — Supermemory (memory + RAG hybrid context API) surfaces events via blog and X. The localhost:6767 hackathon deadline (Jul 17) has passed; no new dated Jul–Dec 2026 events found on blog.supermemory.ai as of 2026-07-21. Check blog.supermemory.ai and @supermemoryai.",
+      "No dedicated events page — Supermemory (memory + RAG hybrid context API) surfaces events via blog and X. The localhost:6767 hackathon deadline (Jul 17) has passed; no new dated Jul–Dec 2026 events found on blog.supermemory.ai as of 2026-07-22. Check blog.supermemory.ai and @supermemoryai.",
   },
 ];
