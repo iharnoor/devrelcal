@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-07-22. Dates and venues sourced from
+ * Confirmed research date: 2026-07-23. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -187,81 +187,12 @@ const scrapedEvents: CalEvent[] = [
     sourceUrl: "https://lablab.ai/ai-hackathons/ai-infra-summit-hackathon",
     sourceLabel: "lablab.ai",
   },
-  {
-    id: "openai-open-model-hackathon-2026",
-    name: "OpenAI Open Model Hackathon",
-    category: "hackathon",
-    status: "tentative",
-    dateLabel: "Registration Jul 9–21 · winners ~Aug 12",
-    sortDate: "2026-07-21",
-    month: "2026-07",
-    location: "Format/venue unclear — appears Devpost-run",
-    description:
-      "Top prize includes passes to DevDay SF. Not confirmed as an in-person Bay Area event — verify before planning around it.",
-    sourceUrl: "https://openai.devpost.com/rules",
-    sourceLabel: "openai.devpost.com",
-    note: "Venue unconfirmed — may not be in-person",
-  },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // daily through 2026-07-22.
+  // daily through 2026-07-23.
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
   // AI/agent-relevant listings. This feed only surfaces ~6 weeks out, so
   // coverage here runs through late August — re-scrape luma.com/sf for
   // anything past that.
-  {
-    id: "luma-deep-tech-startups-ai",
-    name: "Deep Tech Startups in the Age of AI",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 22",
-    sortDate: "2026-07-22",
-    month: "2026-07",
-    location: "450 Jane Stanford Way, Stanford",
-    description: 'Talk series by VC firm Fifty Years — "From Foundation Models to Vertical Moats."',
-    sourceUrl: "https://luma.com/50y-n282",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-dwarkesh-unplugged-workos",
-    name: "Dwarkesh Unplugged, presented by WorkOS",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 22",
-    sortDate: "2026-07-22",
-    month: "2026-07",
-    location: "SFJAZZ, 201 Franklin St, San Francisco",
-    description:
-      "Live conversation with Dwarkesh Patel (Dwarkesh Podcast), hosted by WorkOS at SFJAZZ — AI research and builder Q&A.",
-    sourceUrl: "https://luma.com/dwarkesh-unplugged",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-omnigent-multi-agent-databricks",
-    name: "Omnigent & Multi-Agent Coding Meetup @ Databricks SF",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 22",
-    sortDate: "2026-07-22",
-    month: "2026-07",
-    location: "San Francisco",
-    description: "Meetup on multi-agent coding systems, hosted at Databricks' SF office.",
-    sourceUrl: "https://luma.com/omnigent_multi-agent_coding",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-forward-deployed-computer-use",
-    name: "Forward Deployed: The State of Computer Use Agents",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 22",
-    sortDate: "2026-07-22",
-    month: "2026-07",
-    location: "San Francisco",
-    description:
-      "Meetup on computer-use agents — where GUI/desktop automation agents stand in production.",
-    sourceUrl: "https://luma.com/xfx7c4nw",
-    sourceLabel: "luma.com",
-  },
   {
     id: "luma-openai-builder-lounge",
     name: "OpenAI Builder Lounge SF with Parallel",
@@ -314,6 +245,20 @@ const scrapedEvents: CalEvent[] = [
     location: "1417 15th St, San Francisco",
     description: "Dinner and talks for AI engineering leaders.",
     sourceUrl: "https://luma.com/otzbqs4u",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-neural-scaling-laws-ganguli",
+    name: "The Origins of Neural Scaling Laws, with Surya Ganguli",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Jul 23",
+    sortDate: "2026-07-23",
+    month: "2026-07",
+    location: "San Francisco",
+    description:
+      "Stanford's Surya Ganguli on where LLM scaling-law exponents come from — technical talk for researchers and builders.",
+    sourceUrl: "https://luma.com/h7mi5mrn",
     sourceLabel: "luma.com",
   },
   {
@@ -454,6 +399,34 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "luma.com",
   },
   {
+    id: "luma-qualcomm-zetic-liquid-edge-ai",
+    name: "Qualcomm x ZETIC x Liquid AI: Edge AI Builders Meetup",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Jul 30",
+    sortDate: "2026-07-30",
+    month: "2026-07",
+    location: "Hanwha AI Center, 300 Grant Ave, San Francisco",
+    description:
+      "Edge-AI builders meetup spanning on-device models, hardware, and product teams — co-hosted by Qualcomm, ZETIC, and Liquid AI.",
+    sourceUrl: "https://luma.com/i3evxecn",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-dynamo-after-hours",
+    name: "Dynamo After Hours",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Jul 30",
+    sortDate: "2026-07-30",
+    month: "2026-07",
+    location: "San Francisco",
+    description:
+      "NVIDIA developer-community evening for builders working on AI systems, inference, and scale.",
+    sourceUrl: "https://luma.com/JulyDynamoAfterHours",
+    sourceLabel: "luma.com",
+  },
+  {
     id: "luma-agentic-ai-summit",
     name: "Agentic AI Summit",
     category: "conference",
@@ -504,8 +477,9 @@ const scrapedEvents: CalEvent[] = [
     dateLabel: "Aug 12",
     sortDate: "2026-08-12",
     month: "2026-08",
-    location: "1300 Van Ness Ave, San Francisco",
-    description: "WorkOS-hosted meetup for agent builders.",
+    location: "The Regency Ballroom, 1300 Van Ness Ave, San Francisco",
+    description:
+      "WorkOS-hosted evening for the agentic-AI developer community — demos and talks from people shipping agents in production.",
     sourceUrl: "https://luma.com/agent-night",
     sourceLabel: "luma.com",
   },
@@ -618,7 +592,7 @@ export const directSubmissions: CalEvent[] = [
   // The main event (Jul 25–26) is in `scrapedEvents`; this is the surrounding
   // constellation of founder/investor side-events — a dense startup magnet.
   // Curated from the community after-party directory (startupschoolafter.party,
-  // read 2026-07-21; still current as of 2026-07-22). Dates/venues are
+  // read 2026-07-21; still current as of 2026-07-23). Dates/venues are
   // single-sourced from that directory; re-check the RSVP link before committing.
   {
     id: "yc-founders-investors-cocktails",
@@ -1000,7 +974,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Checked directly (2026-07-21): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) still returns zero upcoming items via the calendar API. Dated hackathons appear to be announced last-minute to their community rather than published in advance — re-check luma.com/agi-house close to when you need one.",
+      "Checked directly (2026-07-23): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) still returns zero upcoming items via the calendar API. Dated hackathons appear to be announced last-minute to their community rather than published in advance — re-check luma.com/agi-house close to when you need one.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -1099,4 +1073,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-07-22";
+export const researchDate = "2026-07-23";
