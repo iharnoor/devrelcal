@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-07-23. Dates and venues sourced from
+ * Confirmed research date: 2026-07-24. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -188,79 +188,11 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "lablab.ai",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // daily through 2026-07-23.
+  // daily through 2026-07-24.
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
   // AI/agent-relevant listings. This feed only surfaces ~6 weeks out, so
   // coverage here runs through late August — re-scrape luma.com/sf for
   // anything past that.
-  {
-    id: "luma-openai-builder-lounge",
-    name: "OpenAI Builder Lounge SF with Parallel",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 23",
-    sortDate: "2026-07-23",
-    month: "2026-07",
-    location: "San Francisco",
-    description: "OpenAI-affiliated builder lounge co-hosted with Parallel.",
-    sourceUrl: "https://luma.com/openai-builderlounge-sf-july23-2026",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-ai-infra-builders-dstack",
-    name: "AI Infra Builders Meetup with dstack, Crusoe, and SGLang",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 23",
-    sortDate: "2026-07-23",
-    month: "2026-07",
-    location: "San Francisco",
-    description:
-      "Infra builders meetup co-hosted by dstack, Crusoe, and SGLang — open-source inference and GPU cloud tooling.",
-    sourceUrl: "https://luma.com/rxsn0u0h",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-voice-ai-meetup-assemblyai",
-    name: "Voice AI Meetup: Build Smarter Voice Agents",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 23",
-    sortDate: "2026-07-23",
-    month: "2026-07",
-    location: "San Francisco",
-    description:
-      "AssemblyAI-hosted meetup on building voice agents — realtime speech-to-text demos and context-carryover patterns.",
-    sourceUrl: "https://luma.com/m0thk5ai",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-ai-eng-leaders-dinner",
-    name: "AI Engineering Leaders Dinner/Networking/Talks",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 23",
-    sortDate: "2026-07-23",
-    month: "2026-07",
-    location: "1417 15th St, San Francisco",
-    description: "Dinner and talks for AI engineering leaders.",
-    sourceUrl: "https://luma.com/otzbqs4u",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-neural-scaling-laws-ganguli",
-    name: "The Origins of Neural Scaling Laws, with Surya Ganguli",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 23",
-    sortDate: "2026-07-23",
-    month: "2026-07",
-    location: "San Francisco",
-    description:
-      "Stanford's Surya Ganguli on where LLM scaling-law exponents come from — technical talk for researchers and builders.",
-    sourceUrl: "https://luma.com/h7mi5mrn",
-    sourceLabel: "luma.com",
-  },
   {
     id: "luma-self-evolving-agents-hackathon",
     name: "Self-Evolving Agents Hackathon",
@@ -344,6 +276,20 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "luma.com",
   },
   {
+    id: "luma-mcp-v2-release",
+    name: "MCP V2 Release Event",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Jul 28",
+    sortDate: "2026-07-28",
+    month: "2026-07",
+    location: "San Francisco",
+    description:
+      "In-person mark of the Model Context Protocol v2 final release — for builders shipping on MCP tooling and agent integrations.",
+    sourceUrl: "https://luma.com/iqs73qmu",
+    sourceLabel: "luma.com",
+  },
+  {
     id: "luma-sim2real-gap",
     name: "Can We Close the Sim2Real Gap?",
     category: "meetup",
@@ -396,6 +342,20 @@ const scrapedEvents: CalEvent[] = [
     description:
       "In-person hackathon with Auth0 and Stripe on provisioning and managing services (including for agents) via Stripe Projects.",
     sourceUrl: "https://luma.com/builtdifferent-auth0-stripe",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-workos-pieces-builder-night",
+    name: "Builder Night (WorkOS × Pieces)",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Jul 30",
+    sortDate: "2026-07-30",
+    month: "2026-07",
+    location: "San Francisco",
+    description:
+      "Live demo night for people building and evaluating infrastructure behind AI agents — co-hosted by WorkOS and Pieces.",
+    sourceUrl: "https://luma.com/715ul99e",
     sourceLabel: "luma.com",
   },
   {
@@ -592,22 +552,8 @@ export const directSubmissions: CalEvent[] = [
   // The main event (Jul 25–26) is in `scrapedEvents`; this is the surrounding
   // constellation of founder/investor side-events — a dense startup magnet.
   // Curated from the community after-party directory (startupschoolafter.party,
-  // read 2026-07-21; still current as of 2026-07-23). Dates/venues are
+  // read 2026-07-21; Jul 23 side-events pruned 2026-07-24). Dates/venues are
   // single-sourced from that directory; re-check the RSVP link before committing.
-  {
-    id: "yc-founders-investors-cocktails",
-    name: "Founders & Investors Cocktail Hours",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 23",
-    sortDate: "2026-07-23",
-    month: "2026-07",
-    location: "San Francisco (private location on RSVP)",
-    description:
-      "Founder–investor cocktail hours kicking off YC Startup School week, hosted by Alime × Bond AI.",
-    sourceUrl: "https://luma.com/axd56nxv",
-    sourceLabel: "luma.com",
-  },
   {
     id: "yc-startup-school-hackathon",
     name: "YC Startup School Hackathon",
@@ -813,6 +759,21 @@ export const directSubmissions: CalEvent[] = [
     sourceLabel: "splashthat.com",
   },
   {
+    id: "yc-vercel-warp-reducto-browserbase-afterparty",
+    name: "Startup School Afterparty (Vercel × Warp × Reducto × Browserbase)",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Jul 26",
+    sortDate: "2026-07-26",
+    month: "2026-07",
+    location: "San Francisco",
+    description:
+      "YC AI Startup School Day-2 afterparty co-hosted by Vercel, Warp, Reducto, and Browserbase — dense founder/builder room.",
+    sourceUrl: "https://luma.com/browse-l2aj",
+    sourceLabel: "luma.com",
+    note: "Public but social — the AI/agent scrape filter would skip it; kept here so it sticks.",
+  },
+  {
     id: "yc-microsoft-afterparty",
     name: "Microsoft YC AI Startup School After Party",
     category: "meetup",
@@ -974,7 +935,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Checked directly (2026-07-23): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) still returns zero upcoming items via the calendar API. Dated hackathons appear to be announced last-minute to their community rather than published in advance — re-check luma.com/agi-house close to when you need one.",
+      "Checked directly (2026-07-24): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) lists \"Jam Session 4\" (Jul 29 evening, community musicians — not a builder hackathon; skipped). Still no dated hackathons published in advance — re-check luma.com/agi-house close to when you need one.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -1073,4 +1034,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-07-23";
+export const researchDate = "2026-07-24";
