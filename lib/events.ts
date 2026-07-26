@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-07-25. Dates and venues sourced from
+ * Confirmed research date: 2026-07-26. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -188,7 +188,7 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "lablab.ai",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // daily through 2026-07-25.
+  // daily through 2026-07-26.
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
   // AI/agent-relevant listings. This feed only surfaces ~6 weeks out, so
   // coverage here runs through late August — re-scrape luma.com/sf for
@@ -417,6 +417,48 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "luma.com",
   },
   {
+    id: "luma-workos-demo-night-aug",
+    name: "Demo Night @ WorkOS (August)",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Aug 5",
+    sortDate: "2026-08-05",
+    month: "2026-08",
+    location: "WorkOS, 660 Market St, San Francisco",
+    description:
+      "Live-demo-only builder night at WorkOS — side projects, internal tools, open source, and startups; no slides or company pitches.",
+    sourceUrl: "https://luma.com/demo-night-aug2026",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-snowflake-beta-agent-hackathon",
+    name: "Snowflake × Beta Fund Agent & Token Economy Hackathon",
+    category: "hackathon",
+    status: "confirmed",
+    dateLabel: "Aug 7",
+    sortDate: "2026-08-07",
+    month: "2026-08",
+    location: "Menlo Park, CA",
+    description:
+      "Day hackathon on agent token economics — cost of intelligence, willingness-to-pay products, and Cortex Agents workflows on Snowflake.",
+    sourceUrl: "https://luma.com/beta-fdnw",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-claude-code-workshop-sf",
+    name: "Claude Code Workshop — San Francisco",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Aug 11",
+    sortDate: "2026-08-11",
+    month: "2026-08",
+    location: "San Francisco",
+    description:
+      "Hands-on workshop (with Provectus) on orchestrating coding agents with Claude Code — ship something during the session.",
+    sourceUrl: "https://luma.com/claude-code-workshop-sf-aug-11",
+    sourceLabel: "luma.com",
+  },
+  {
     id: "luma-frontier-day-sf",
     name: "Frontier Day: Building an AGI-Pilled Company",
     category: "meetup",
@@ -470,6 +512,20 @@ const scrapedEvents: CalEvent[] = [
     description:
       "Cerebras flagship event for developers, founders, and infra partners — demos and talks around high-throughput AI inference.",
     sourceUrl: "https://luma.com/cerebrassupernova26",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-agents-changing-web-parag",
+    name: "Agents Are Changing the Web with Parag Agrawal",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Aug 20",
+    sortDate: "2026-08-20",
+    month: "2026-08",
+    location: "Baseten Clubhouse, San Francisco",
+    description:
+      "Baseten Heavyweights fireside with Parag Agrawal (Parallel; formerly Twitter CEO/CTO) on how agents are changing the web.",
+    sourceUrl: "https://luma.com/sy0mt1m4",
     sourceLabel: "luma.com",
   },
   {
@@ -553,118 +609,9 @@ export const directSubmissions: CalEvent[] = [
   // The main event (Jul 25–26) is in `scrapedEvents`; this is the surrounding
   // constellation of founder/investor side-events — a dense startup magnet.
   // Curated from the community after-party directory (startupschoolafter.party)
-  // and Luma discover; Jul 23–24 side-events pruned 2026-07-25. Dates/venues
-  // are single-sourced from those listings; re-check the RSVP link before committing.
-  {
-    id: "yc-afterparty-moss-supabase-modal",
-    name: "YC AI Startup School Afterparty (Moss × Supabase × Modal)",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 25",
-    sortDate: "2026-07-25",
-    month: "2026-07",
-    location: "San Francisco",
-    description:
-      "One of the marquee Day-1 afterparties — food, drinks, and AI-builder networking, co-hosted by Moss, Supabase, Modal, and Render.",
-    sourceUrl: "https://luma.com/m4ez9liu",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "yc-roboflow-afterparty",
-    name: "YC Startup School After Party with Roboflow",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 25",
-    sortDate: "2026-07-25",
-    month: "2026-07",
-    location: "San Francisco",
-    description:
-      "Roboflow-hosted Day-1 afterparty for AI founders and engineers during YC Startup School.",
-    sourceUrl: "https://luma.com/bzdn8lr2",
-    sourceLabel: "luma.com",
-    note: "Public but social — the AI/agent scrape filter would skip it; kept here so it sticks.",
-  },
-  {
-    id: "yc-canadian-founders-showcase",
-    name: "Canadian YC Founders Showcase @ Startup School",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 25",
-    sortDate: "2026-07-25",
-    month: "2026-07",
-    location: "San Francisco",
-    description:
-      "Showcase of Canadian YC startups during Startup School — founder talks aimed at people considering joining those companies.",
-    sourceUrl: "https://luma.com/8sf0hjs0",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "yc-stripe-made-in-sf",
-    name: "Stripe — Made in San Francisco",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 25",
-    sortDate: "2026-07-25",
-    month: "2026-07",
-    location: "DrawBridge Presents, Embarcadero, San Francisco",
-    description: "Stripe-hosted founder evening during YC Startup School.",
-    sourceUrl: "https://luma.com/xggm2di5",
-    sourceLabel: "luma.com",
-    note: "Listed as sold out — track for awareness / next edition.",
-  },
-  {
-    id: "yc-posthog-afterparty",
-    name: "PostHog After Party (Day 1)",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 25",
-    sortDate: "2026-07-25",
-    month: "2026-07",
-    location: "Dogpatch, San Francisco",
-    description: "PostHog's YC Startup School Day-1 afterparty — builder crowd, casual networking.",
-    sourceUrl: "https://luma.com/posthog-sus26",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "yc-respan-mongodb-composio-afterparty",
-    name: "Respan × MongoDB × Composio Afterparty",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 25",
-    sortDate: "2026-07-25",
-    month: "2026-07",
-    location: "Mission Rock Resort, Mission Bay, San Francisco",
-    description: "Afterparty co-hosted by Respan, MongoDB, and Composio — infra/agent-adjacent founder crowd.",
-    sourceUrl: "https://luma.com/2p9zbnzn",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "yc-tavus-afterparty",
-    name: "Tavus Afterparty",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 25",
-    sortDate: "2026-07-25",
-    month: "2026-07",
-    location: "Tavus HQ, 35 Stillman St, San Francisco",
-    description: "Tavus-hosted YC Startup School afterparty at their SF headquarters.",
-    sourceUrl: "https://luma.com/tavus-jv2v",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "yc-party-in-the-presidio",
-    name: "Party in the Presidio",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 25",
-    sortDate: "2026-07-25",
-    month: "2026-07",
-    location: "Presidio of San Francisco",
-    description: "Outdoor founder party in the Presidio hosted by Adaptional.",
-    sourceUrl: "https://luma.com/ispbsl3o",
-    sourceLabel: "luma.com",
-    note: "Waitlist as of listing.",
-  },
+  // and Luma discover; Jul 23–25 side-events pruned through 2026-07-26 (Pacific).
+  // Dates/venues are single-sourced from those listings; re-check the RSVP link
+  // before committing.
   {
     id: "yc-google-deepmind-afterparty",
     name: "Google DeepMind Afterparty",
@@ -869,7 +816,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Checked directly (2026-07-25): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) lists \"Jam Session 4\" (Jul 29 evening, community musicians — not a builder hackathon; skipped). Still no dated hackathons published in advance — re-check luma.com/agi-house close to when you need one.",
+      "Checked directly (2026-07-26): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) lists \"Jam Session 4\" (Jul 29 evening, community musicians — not a builder hackathon; skipped). Still no dated hackathons published in advance — re-check luma.com/agi-house close to when you need one.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -968,4 +915,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-07-25";
+export const researchDate = "2026-07-26";

@@ -30,7 +30,7 @@ export interface VendorGroup {
 
 /**
  * RAG / vector database / GraphRAG vendor events — competitive & partnership
- * tracking. Researched 2026-07-25 against each vendor's own events page.
+ * tracking. Researched 2026-07-26 against each vendor's own events page.
  * These are companies HydraDB competes or overlaps with, not events for
  * agent builders generally (see events.ts for that).
  */
@@ -726,16 +726,85 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Unstructured Data Meetup series (Bay Area, Hangzhou, and other regions) still has no confirmed forward dates on zilliz.com/event as of 2026-07-25. BYOC webinar still Jul 29. Check zilliz.com/community/unstructured-data-meetup directly.",
+      "Unstructured Data Meetup series (Bay Area, Hangzhou, and other regions) still has no confirmed forward dates on zilliz.com/event as of 2026-07-26. BYOC webinar still Jul 29. Check zilliz.com/community/unstructured-data-meetup directly.",
   },
   {
     id: "qdrant",
     company: "Qdrant",
     category: "Vector database",
-    homepageUrl: "https://qdrant.tech/community/",
-    events: [],
+    homepageUrl: "https://qdrant.tech/events/",
+    events: [
+      {
+        id: "qdrant-self-improving-ai-sf",
+        name: "Engineering Self-Improving AI Systems",
+        dateLabel: "Jul 29",
+        sortDate: "2026-07-29",
+        format: "in-person",
+        location: "AWS Loft, San Francisco",
+        description:
+          "Meetup on the workflows, boundaries, and infrastructure around production AI agents — not just building a single agent.",
+        status: "confirmed",
+        sourceUrl: "https://qdrant.tech/events/",
+        sourceLabel: "qdrant.tech",
+      },
+      {
+        id: "qdrant-twelvelabs-video-embeddings",
+        name: "TwelveLabs + Qdrant: Video Embeddings and Search",
+        dateLabel: "Jul 29",
+        sortDate: "2026-07-29",
+        format: "in-person",
+        location: "Bellevue, WA",
+        description:
+          "Meetup on multimodal video embeddings for AI search/retrieval — text, audio, and video embeddings, including edge/robotics search.",
+        status: "confirmed",
+        sourceUrl: "https://qdrant.tech/events/",
+        sourceLabel: "qdrant.tech",
+        topics: ["vector-db", "rag"],
+      },
+      {
+        id: "qdrant-sf-community-meetup",
+        name: "Qdrant SF Community Meetup",
+        dateLabel: "Aug 25",
+        sortDate: "2026-08-25",
+        format: "in-person",
+        location: "San Francisco, CA",
+        description:
+          "Save-the-date community demo night for AI engineers and researchers in San Francisco.",
+        status: "check-source",
+        sourceUrl: "https://qdrant.tech/events/",
+        sourceLabel: "qdrant.tech",
+        topics: ["vector-db"],
+      },
+      {
+        id: "qdrant-hard-negatives-nyc",
+        name: "Hard Negatives: AI Engineers Debate & Game Night",
+        dateLabel: "Aug 26",
+        sortDate: "2026-08-26",
+        format: "in-person",
+        location: "Sugar Mouse NYC, New York, NY",
+        description:
+          "Debate/game night for AI engineers (provocations include “RAG is dead”) — community mixer with retrieval themes, not a technical deep dive.",
+        status: "confirmed",
+        sourceUrl: "https://qdrant.tech/events/",
+        sourceLabel: "qdrant.tech",
+      },
+      {
+        id: "qdrant-berlin-community-meetup",
+        name: "Qdrant Berlin Community Meetup",
+        dateLabel: "Sep 16",
+        sortDate: "2026-09-16",
+        format: "in-person",
+        location: "Berlin, Germany",
+        description:
+          "Save-the-date evening at Qdrant HQ — engineering conversations and practical demos.",
+        status: "check-source",
+        sourceUrl: "https://qdrant.tech/events/",
+        sourceLabel: "qdrant.tech",
+        topics: ["vector-db"],
+      },
+    ],
     watchNote:
-      "Qdrant's flagship Vector Space Day 2026 already ran Jun 11 in San Francisco — no second 2026 edition confirmed yet (last year's second leg was Berlin in September, so one may still land in this window). The biweekly \"Getting Started\" livestream continues but without specific forward dates. Check qdrant.tech/blog and qdrant.tech/community.",
+      "Upcoming dated list refreshed from qdrant.tech/events (2026-07-26). SF Aug 25 and Berlin Sep 16 are still save-the-dates — confirm venue/agenda closer to the day. Vector Space Day SF already ran Jun 11.",
   },
   {
     id: "weaviate",
@@ -744,7 +813,7 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://weaviate.io/community/events",
     events: [],
     watchNote:
-      "Weaviate's own events page showed no scheduled events at research time (2026-07-25): \"Sorry, there are no events right now.\" SF and NYC meetup chapters exist but had no dated 2026 sessions listed. Check weaviate.io/community/events and meetup.com/Weaviate-San-Francisco.",
+      "Weaviate's own events page showed no scheduled events at research time (2026-07-26): \"Sorry, there are no events right now.\" SF and NYC meetup chapters exist but had no dated 2026 sessions listed. Check weaviate.io/community/events and meetup.com/Weaviate-San-Francisco.",
   },
   {
     id: "chroma",
@@ -807,7 +876,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      'Also lists "Jog Your Memory" run club + matcha (next: Aug 3) — skipped here as a social/sports meetup. Context Corner still Jul 30 on luma.com/mem0-d589 as of 2026-07-25; Off the Record still Jul 29. Re-read luma.com/mem0 after each lunch passes.',
+      'Also lists "Jog Your Memory" run club + matcha (next: Aug 3) — skipped here as a social/sports meetup. Context Corner still Jul 30 on luma.com/mem0-d589 as of 2026-07-26; Off the Record still Jul 29. Re-read luma.com/mem0 after each lunch passes.',
   },
   {
     id: "supermemory",
@@ -816,6 +885,6 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://supermemory.ai",
     events: [],
     watchNote:
-      "No dedicated events page — Supermemory (memory + RAG hybrid context API) surfaces events via blog and X. The localhost:6767 hackathon deadline (Jul 17) has passed; no new dated Jul–Dec 2026 events found on blog.supermemory.ai as of 2026-07-25. Check blog.supermemory.ai and @supermemoryai.",
+      "No dedicated events page — Supermemory (memory + RAG hybrid context API) surfaces events via blog and X. The localhost:6767 hackathon deadline (Jul 17) has passed; no new dated Jul–Dec 2026 events found on blog.supermemory.ai as of 2026-07-26. Check blog.supermemory.ai and @supermemoryai.",
   },
 ];
