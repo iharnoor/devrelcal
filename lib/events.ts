@@ -46,25 +46,10 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-07-26. Dates and venues sourced from
+ * Confirmed research date: 2026-07-27. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
-  {
-    id: "yc-startup-school-2026",
-    name: "YC Startup School 2026",
-    category: "conference",
-    status: "confirmed",
-    dateLabel: "Jul 25–26",
-    sortDate: "2026-07-25",
-    endDate: "2026-07-26",
-    month: "2026-07",
-    location: "San Francisco",
-    description:
-      "YC's flagship builder event — general startup-school format, heavily AI-weighted this cycle. Not agent-specific but dense with agent-building founders.",
-    sourceUrl: "https://events.ycombinator.com/startup-school-2026",
-    sourceLabel: "events.ycombinator.com",
-  },
   {
     id: "ray-summit-2026",
     name: "Ray Summit 2026",
@@ -188,24 +173,11 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "lablab.ai",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // daily through 2026-07-26.
+  // daily through 2026-07-27.
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
   // AI/agent-relevant listings. This feed only surfaces ~6 weeks out, so
   // coverage here runs through late August — re-scrape luma.com/sf for
   // anything past that.
-  {
-    id: "luma-robotics-physical-ai-summit",
-    name: "Robotics × Physical AI Founder-Investor Summit",
-    category: "conference",
-    status: "confirmed",
-    dateLabel: "Jul 26",
-    sortDate: "2026-07-26",
-    month: "2026-07",
-    location: "Stanford, CA",
-    description: "Founder/investor summit at the intersection of robotics and physical AI.",
-    sourceUrl: "https://luma.com/u8j9b0a6",
-    sourceLabel: "luma.com",
-  },
   {
     id: "luma-physical-ai-robotics-meetup",
     name: "Physical AI and Robotics Meetup",
@@ -261,6 +233,21 @@ const scrapedEvents: CalEvent[] = [
       "MiniMax research series kickoff — short talks and discussion on reasoning, evaluation, and long-horizon agents for researchers and technical founders.",
     sourceUrl: "https://luma.com/w61gmib2",
     sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-ai-nerd-meetup",
+    name: "AI Nerd Meet Up",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Jul 28",
+    sortDate: "2026-07-28",
+    month: "2026-07",
+    location: "San Francisco",
+    description:
+      "Invite-only monthly for technical founders and AI leaders — small-group discussion of practical cutting-edge AI (11th edition; rotating startup hosts).",
+    sourceUrl: "https://luma.com/kdgxf1fs",
+    sourceLabel: "luma.com",
+    note: "Invite-only",
   },
   {
     id: "luma-mcp-v2-release",
@@ -428,6 +415,20 @@ const scrapedEvents: CalEvent[] = [
     description:
       "Live-demo-only builder night at WorkOS — side projects, internal tools, open source, and startups; no slides or company pitches.",
     sourceUrl: "https://luma.com/demo-night-aug2026",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-alphasignal-pizza-agent-challenge",
+    name: "AlphaSignal's Pizza Agent Challenge",
+    category: "hackathon",
+    status: "confirmed",
+    dateLabel: "Aug 6",
+    sortDate: "2026-08-06",
+    month: "2026-08",
+    location: "San Francisco",
+    description:
+      "Live 90-minute timed challenge: build an AI agent that orders a pizza from scratch — $2,500 prize, no prep or pre-built demos.",
+    sourceUrl: "https://luma.com/o0id5abn",
     sourceLabel: "luma.com",
   },
   {
@@ -606,81 +607,9 @@ const scrapedEvents: CalEvent[] = [
  */
 export const directSubmissions: CalEvent[] = [
   // ── YC AI Startup School 2026 week (Jul 23–27) ──────────────────────────
-  // The main event (Jul 25–26) is in `scrapedEvents`; this is the surrounding
-  // constellation of founder/investor side-events — a dense startup magnet.
-  // Curated from the community after-party directory (startupschoolafter.party)
-  // and Luma discover; Jul 23–25 side-events pruned through 2026-07-26 (Pacific).
-  // Dates/venues are single-sourced from those listings; re-check the RSVP link
-  // before committing.
-  {
-    id: "yc-google-deepmind-afterparty",
-    name: "Google DeepMind Afterparty",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 26",
-    sortDate: "2026-07-26",
-    month: "2026-07",
-    location: "The Pearl, 601 19th St, San Francisco",
-    description:
-      "Google DeepMind × Google Cloud Day-2 afterparty — music, food, and founder conversations. A top-tier room for startup + AI-builder reach.",
-    sourceUrl: "https://rsvp.withgoogle.com/events/gdm-yc-sus-afterparty-2026",
-    sourceLabel: "withgoogle.com",
-  },
-  {
-    id: "yc-aws-afterparty",
-    name: "AWS YC Startup School Afterparty",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 26",
-    sortDate: "2026-07-26",
-    month: "2026-07",
-    location: "Exploratorium, Pier 15, San Francisco",
-    description: "AWS-hosted Day-2 afterparty at the Exploratorium — large-scale founder networking.",
-    sourceUrl: "https://awsycstartupschoolafterparty.splashthat.com/",
-    sourceLabel: "splashthat.com",
-  },
-  {
-    id: "yc-vercel-warp-reducto-browserbase-afterparty",
-    name: "Startup School Afterparty (Vercel × Warp × Reducto × Browserbase)",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 26",
-    sortDate: "2026-07-26",
-    month: "2026-07",
-    location: "San Francisco",
-    description:
-      "YC AI Startup School Day-2 afterparty co-hosted by Vercel, Warp, Reducto, and Browserbase — dense founder/builder room.",
-    sourceUrl: "https://luma.com/browse-l2aj",
-    sourceLabel: "luma.com",
-    note: "Public but social — the AI/agent scrape filter would skip it; kept here so it sticks.",
-  },
-  {
-    id: "yc-microsoft-afterparty",
-    name: "Microsoft YC AI Startup School After Party",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 26",
-    sortDate: "2026-07-26",
-    month: "2026-07",
-    location: "San Francisco",
-    description: "Microsoft for Startups Day-2 afterparty for YC Startup School founders.",
-    sourceUrl: "https://microsoftforstartups.eventbuilder.com/events/11f1376c3b274120be33071c025a25a9",
-    sourceLabel: "eventbuilder.com",
-    note: "Waitlist as of listing.",
-  },
-  {
-    id: "yc-fondo-afterparty",
-    name: "YC Startup School Afterparty @ Fondo",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 26",
-    sortDate: "2026-07-26",
-    month: "2026-07",
-    location: "Union Square, San Francisco",
-    description: "Fondo-hosted Day-2 afterparty in Union Square.",
-    sourceUrl: "https://luma.com/fondo_yc_startup_school_afterparty",
-    sourceLabel: "luma.com",
-  },
+  // The main event (Jul 25–26) moved to pastEvents2026 on 2026-07-27; this is
+  // the remaining post-school founder side-event. Jul 23–26 side-events pruned
+  // through 2026-07-27 (Pacific). Dates/venues single-sourced from RSVP links.
   {
     id: "yc-founder-rooftop-gala",
     name: "Founder Rooftop Gala",
@@ -816,7 +745,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Checked directly (2026-07-26): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) lists \"Jam Session 4\" (Jul 29 evening, community musicians — not a builder hackathon; skipped). Still no dated hackathons published in advance — re-check luma.com/agi-house close to when you need one.",
+      "Checked directly (2026-07-27): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) lists \"Jam Session 4\" (Jul 29 evening, community musicians — not a builder hackathon; skipped). Still no dated hackathons published in advance — re-check luma.com/agi-house close to when you need one.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -843,6 +772,13 @@ export const recurringSeries: RecurringSeries[] = [
 ];
 
 export const pastEvents2026: PastEvent[] = [
+  {
+    id: "yc-startup-school-2026",
+    name: "YC Startup School 2026",
+    dateLabel: "Jul 25–26",
+    location: "San Francisco",
+    note: "Flagship YC builder event — heavily AI-weighted; annual recurrence reference",
+  },
   {
     id: "agi-summit-2026",
     name: "AGI Summit 2026",
@@ -915,4 +851,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-07-26";
+export const researchDate = "2026-07-27";
