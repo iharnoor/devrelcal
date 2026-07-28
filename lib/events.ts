@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-07-27. Dates and venues sourced from
+ * Confirmed research date: 2026-07-28. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -173,7 +173,7 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "lablab.ai",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // daily through 2026-07-27.
+  // daily through 2026-07-28.
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
   // AI/agent-relevant listings. This feed only surfaces ~6 weeks out, so
   // coverage here runs through late August — re-scrape luma.com/sf for
@@ -275,6 +275,20 @@ const scrapedEvents: CalEvent[] = [
     description:
       "Technical discussion on whether simulation, synthetic data, and world models can close the sim-to-real gap for physical AI.",
     sourceUrl: "https://luma.com/cazn88f7",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-mastra-mongodb-agent-hour",
+    name: "Agent (After) Hour: Building Production Agents with Mastra + MongoDB",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Jul 29",
+    sortDate: "2026-07-29",
+    month: "2026-07",
+    location: "Motoring Coffee, 1525 Union St, San Francisco",
+    description:
+      "Evening talks and lightning demos on shipping production AI agents — co-hosted by Mastra and MongoDB for developers building or planning agents.",
+    sourceUrl: "https://luma.com/mastra-vulp",
     sourceLabel: "luma.com",
   },
   {
@@ -607,22 +621,8 @@ const scrapedEvents: CalEvent[] = [
  */
 export const directSubmissions: CalEvent[] = [
   // ── YC AI Startup School 2026 week (Jul 23–27) ──────────────────────────
-  // The main event (Jul 25–26) moved to pastEvents2026 on 2026-07-27; this is
-  // the remaining post-school founder side-event. Jul 23–26 side-events pruned
-  // through 2026-07-27 (Pacific). Dates/venues single-sourced from RSVP links.
-  {
-    id: "yc-founder-rooftop-gala",
-    name: "Founder Rooftop Gala",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 27",
-    sortDate: "2026-07-27",
-    month: "2026-07",
-    location: "San Francisco rooftop (address on RSVP)",
-    description: "Post-Startup-School rooftop founder gala hosted by Vivian Cai × Plain.",
-    sourceUrl: "https://luma.com/z9teb942",
-    sourceLabel: "luma.com",
-  },
+  // Main event → pastEvents2026; Jul 23–27 side-events (including Founder
+  // Rooftop Gala) pruned through 2026-07-28 Pacific once their dates passed.
 ];
 
 /**
@@ -745,7 +745,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Checked directly (2026-07-27): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) lists \"Jam Session 4\" (Jul 29 evening, community musicians — not a builder hackathon; skipped). Still no dated hackathons published in advance — re-check luma.com/agi-house close to when you need one.",
+      "Checked directly (2026-07-28): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) lists \"Jam Session 4\" (Jul 29 evening, community musicians — not a builder hackathon; skipped). Still no dated hackathons published in advance — re-check luma.com/agi-house close to when you need one.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -851,4 +851,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-07-27";
+export const researchDate = "2026-07-28";
