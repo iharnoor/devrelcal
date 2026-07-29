@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-07-28. Dates and venues sourced from
+ * Confirmed research date: 2026-07-29. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -173,96 +173,11 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "lablab.ai",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // daily through 2026-07-28.
+  // daily through 2026-07-29.
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
   // AI/agent-relevant listings. This feed only surfaces ~6 weeks out, so
   // coverage here runs through late August — re-scrape luma.com/sf for
-  // anything past that.
-  {
-    id: "luma-physical-ai-robotics-meetup",
-    name: "Physical AI and Robotics Meetup",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 28",
-    sortDate: "2026-07-28",
-    month: "2026-07",
-    location: "San Francisco",
-    description:
-      "Kickoff meetup for Bay Area builders at the intersection of robotics and physical AI — engineers, founders, and researchers.",
-    sourceUrl: "https://luma.com/isyfjno2",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-circle-pantera-agentic-economy",
-    name: "Circle × Pantera: The Agentic Economy",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 28",
-    sortDate: "2026-07-28",
-    month: "2026-07",
-    location: "Stanford, CA",
-    description:
-      "Evening on AI agents in the economy, presented by Circle, Pantera Capital, and Stanford Open Lab.",
-    sourceUrl: "https://luma.com/sgs5pubk",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-durable-multimodal-ai",
-    name: "Durable Multimodal AI Meetup with HeyGen, Vapi, and Modal",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 28",
-    sortDate: "2026-07-28",
-    month: "2026-07",
-    location: "San Francisco",
-    description:
-      "Durable AI Meetup series edition on multimodal agents — voice, video, and compute beyond text, co-hosted with HeyGen, Vapi, and Modal.",
-    sourceUrl: "https://luma.com/durable-ai-july",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-minimax-intelligence-in-the-open",
-    name: "Intelligence in the Open — Reasoning, Evaluation & Long-Horizon Agents",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 28",
-    sortDate: "2026-07-28",
-    month: "2026-07",
-    location: "Upscale, San Francisco",
-    description:
-      "MiniMax research series kickoff — short talks and discussion on reasoning, evaluation, and long-horizon agents for researchers and technical founders.",
-    sourceUrl: "https://luma.com/w61gmib2",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-ai-nerd-meetup",
-    name: "AI Nerd Meet Up",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 28",
-    sortDate: "2026-07-28",
-    month: "2026-07",
-    location: "San Francisco",
-    description:
-      "Invite-only monthly for technical founders and AI leaders — small-group discussion of practical cutting-edge AI (11th edition; rotating startup hosts).",
-    sourceUrl: "https://luma.com/kdgxf1fs",
-    sourceLabel: "luma.com",
-    note: "Invite-only",
-  },
-  {
-    id: "luma-mcp-v2-release",
-    name: "MCP V2 Release Event",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 28",
-    sortDate: "2026-07-28",
-    month: "2026-07",
-    location: "San Francisco",
-    description:
-      "In-person mark of the Model Context Protocol v2 final release — for builders shipping on MCP tooling and agent integrations.",
-    sourceUrl: "https://luma.com/iqs73qmu",
-    sourceLabel: "luma.com",
-  },
+  // anything past that. Jul 28 one-offs pruned after Pacific day passed.
   {
     id: "luma-sim2real-gap",
     name: "Can We Close the Sim2Real Gap?",
@@ -623,6 +538,7 @@ export const directSubmissions: CalEvent[] = [
   // ── YC AI Startup School 2026 week (Jul 23–27) ──────────────────────────
   // Main event → pastEvents2026; Jul 23–27 side-events (including Founder
   // Rooftop Gala) pruned through 2026-07-28 Pacific once their dates passed.
+  // No new invite-only keepers added 2026-07-29.
 ];
 
 /**
@@ -745,7 +661,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Checked directly (2026-07-28): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) lists \"Jam Session 4\" (Jul 29 evening, community musicians — not a builder hackathon; skipped). Still no dated hackathons published in advance — re-check luma.com/agi-house close to when you need one.",
+      "Checked directly (2026-07-29): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) still lists only \"Jam Session 4\" (Jul 29 evening, community musicians — not a builder hackathon; skipped). Still no dated hackathons published in advance — re-check luma.com/agi-house close to when you need one.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -851,4 +767,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-07-28";
+export const researchDate = "2026-07-29";

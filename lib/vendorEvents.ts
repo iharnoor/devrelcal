@@ -30,7 +30,7 @@ export interface VendorGroup {
 
 /**
  * RAG / vector database / GraphRAG vendor events — competitive & partnership
- * tracking. Researched 2026-07-28 against each vendor's own events page.
+ * tracking. Researched 2026-07-29 against each vendor's own events page.
  * These are companies HydraDB competes or overlaps with, not events for
  * agent builders generally (see events.ts for that).
  */
@@ -52,19 +52,6 @@ export const vendorGroups: VendorGroup[] = [
         sourceUrl: "https://www.pinecone.io/community/events/",
         sourceLabel: "pinecone.io",
         topics: ["vector-db", "rag", "agent-memory"],
-      },
-      {
-        id: "pinecone-burn-less-tokens",
-        name: "NYC Agentic AI Meetup",
-        dateLabel: "Jul 28",
-        sortDate: "2026-07-28",
-        format: "in-person",
-        location: "New York, NY",
-        description:
-          "Pinecone-hosted NYC meetup on agentic AI (listed on pinecone.io and luma.com/pinecone; previously titled Burn Less Tokens).",
-        status: "confirmed",
-        sourceUrl: "https://luma.com/pinecone",
-        sourceLabel: "luma.com/pinecone",
       },
       {
         id: "pinecone-tallahassee-n8n",
@@ -93,12 +80,13 @@ export const vendorGroups: VendorGroup[] = [
         sourceLabel: "luma.com/pinecone",
       },
       {
-        id: "pinecone-access-control",
-        name: "Deep Dive: Access Control",
-        dateLabel: "Aug 12",
-        sortDate: "2026-08-12",
+        id: "pinecone-access-granted",
+        name: "Access Granted: Enterprise Security with Pinecone",
+        dateLabel: "Aug 19",
+        sortDate: "2026-08-19",
         format: "virtual",
-        description: "Product deep-dive webinar on Pinecone's access control features.",
+        description:
+          "Product deep-dive webinar on Pinecone enterprise security / access control (listed as Access Granted on pinecone.io and luma.com/pinecone; previously titled Deep Dive: Access Control).",
         status: "confirmed",
         sourceUrl: "https://www.pinecone.io/community/events/",
         sourceLabel: "pinecone.io",
@@ -151,6 +139,20 @@ export const vendorGroups: VendorGroup[] = [
           "https://neo4j.com/event/the-next-wave-of-ai-insights-from-ai-engineer-worlds-fair-july-30/",
         sourceLabel: "neo4j.com",
         topics: ["graphrag", "agent-memory"],
+      },
+      {
+        id: "neo4j-going-meta-s03e11",
+        name: "Going Meta S03E11 — Semantics, Knowledge Graphs and All Things AI",
+        dateLabel: "Aug 4",
+        sortDate: "2026-08-04",
+        format: "virtual",
+        description:
+          "Recurring Going Meta series episode on semantics, knowledge graphs, and AI — GraphRAG-adjacent knowledge-graph deep dive.",
+        status: "confirmed",
+        sourceUrl:
+          "https://neo4j.com/event/going-meta-s03e11-a-series-on-semantics-knowledge-graphs-and-all-things-ai/",
+        sourceLabel: "neo4j.com",
+        topics: ["graphrag"],
       },
       {
         id: "neo4j-context-graphs-webinar",
@@ -416,6 +418,20 @@ export const vendorGroups: VendorGroup[] = [
         topics: ["graphrag"],
       },
       {
+        id: "neo4j-virtual-workshop-genai-fundamentals",
+        name: "Neo4j Virtual Workshop: Generative AI Fundamentals with Neo4j",
+        dateLabel: "Nov 4",
+        sortDate: "2026-11-04",
+        format: "virtual",
+        description:
+          "Hands-on virtual workshop on grounding GenAI with knowledge graphs — GraphRAG patterns for more accurate, explainable enterprise AI apps.",
+        status: "confirmed",
+        sourceUrl:
+          "https://neo4j.com/event/neo4j-virtual-workshop-generative-ai-fundamentals-with-neo4j_nov4/",
+        sourceLabel: "neo4j.com",
+        topics: ["graphrag"],
+      },
+      {
         id: "neo4j-nodes-2026",
         name: "NODES 2026",
         dateLabel: "Nov 12",
@@ -441,6 +457,20 @@ export const vendorGroups: VendorGroup[] = [
         sourceLabel: "neo4j.com",
         topics: ["graphrag"],
       },
+      {
+        id: "neo4j-virtual-workshop-graph-reasoning",
+        name: "Neo4j Virtual Workshop: Graph Reasoning with Neo4j Virtual Graph",
+        dateLabel: "Nov 25",
+        sortDate: "2026-11-25",
+        format: "virtual",
+        description:
+          "Virtual workshop on querying warehouse data (Snowflake, Databricks, BigQuery) as a graph via Neo4j Virtual Graph — graph reasoning without data movement.",
+        status: "confirmed",
+        sourceUrl:
+          "https://neo4j.com/event/neo4j-virtual-workshop-graph-reasoning-with-neo4j-virtual-graph_nov25/",
+        sourceLabel: "neo4j.com",
+        topics: ["graphrag"],
+      },
     ],
   },
   {
@@ -449,20 +479,6 @@ export const vendorGroups: VendorGroup[] = [
     category: "Orchestration framework",
     homepageUrl: "https://www.langchain.com/events",
     events: [
-      {
-        id: "langchain-sf-meetup",
-        name: "LangChain SF Meetup — LLM Wikis / Agent Memory",
-        dateLabel: "Jul 28",
-        sortDate: "2026-07-28",
-        format: "in-person",
-        location: "San Francisco, CA",
-        description:
-          "Community meetup on LLM wikis and giving agents memory — direct overlap with HydraDB's territory.",
-        status: "confirmed",
-        sourceUrl: "https://www.langchain.com/events",
-        sourceLabel: "langchain.com",
-        topics: ["agent-memory"],
-      },
       {
         id: "langchain-dc-meetup",
         name: "Washington DC LangChain Meetup",
@@ -628,6 +644,45 @@ export const vendorGroups: VendorGroup[] = [
         sourceLabel: "mongodb.com",
       },
       {
+        id: "mongodb-vector-search-fundamentals-sgt",
+        name: "Vector Search Fundamentals (SGT)",
+        dateLabel: "Sep 10, 2pm SGT",
+        sortDate: "2026-09-10",
+        format: "virtual",
+        description:
+          "APAC-timezone webinar on MongoDB Vector Search for meaning-based retrieval — embeddings, indexing, and vector search fundamentals.",
+        status: "confirmed",
+        sourceUrl: "https://www.mongodb.com/resources/webinars",
+        sourceLabel: "mongodb.com",
+        topics: ["vector-db", "rag"],
+      },
+      {
+        id: "mongodb-rag-webinar-sgt",
+        name: "RAG with MongoDB (SGT)",
+        dateLabel: "Sep 17, 2pm SGT",
+        sortDate: "2026-09-17",
+        format: "virtual",
+        description:
+          "APAC-timezone webinar on building retrieval-augmented generation apps with MongoDB — chunking, retrievers, and RAG architecture.",
+        status: "confirmed",
+        sourceUrl: "https://www.mongodb.com/resources/webinars",
+        sourceLabel: "mongodb.com",
+        topics: ["rag", "vector-db"],
+      },
+      {
+        id: "mongodb-ai-agents-sgt",
+        name: "AI Agents with MongoDB (SGT)",
+        dateLabel: "Sep 24, 10am SGT",
+        sortDate: "2026-09-24",
+        format: "virtual",
+        description:
+          "APAC-timezone capstone webinar on building AI agents with MongoDB — tools, decision-making, and memory.",
+        status: "confirmed",
+        sourceUrl: "https://www.mongodb.com/resources/webinars",
+        sourceLabel: "mongodb.com",
+        topics: ["agent-memory"],
+      },
+      {
         id: "mongodb-vector-search-fundamentals",
         name: "Vector Search Fundamentals",
         dateLabel: "Oct 1, 11am ET",
@@ -668,7 +723,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "MongoDB.local's flagship regional conference series didn't have confirmed Jul–Dec city dates at research time — check mongodb.com/events directly. Jul 22–23 Vector Search / AI Agents / Atlas+Confluent sessions have passed.",
+      "MongoDB.local's flagship regional conference series didn't have confirmed Jul–Dec city dates at research time — check mongodb.com/events directly. Jul 22–23 Vector Search / AI Agents / Atlas+Confluent sessions have passed. APAC (SGT) Vector Search / RAG / AI Agents series Sep 10 / 17 / 24 confirmed alongside the Oct ET series as of 2026-07-29.",
   },
   {
     id: "redis",
@@ -727,7 +782,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Unstructured Data Meetup series (Bay Area, Hangzhou, and other regions) still has no confirmed forward dates on zilliz.com/event as of 2026-07-28. BYOC webinar still Jul 29. Check zilliz.com/community/unstructured-data-meetup directly.",
+      "Unstructured Data Meetup series (Bay Area, Hangzhou, and other regions) still has no confirmed forward dates on zilliz.com/event as of 2026-07-29. BYOC webinar still Jul 29. Check zilliz.com/community/unstructured-data-meetup directly.",
   },
   {
     id: "qdrant",
@@ -747,20 +802,6 @@ export const vendorGroups: VendorGroup[] = [
         status: "confirmed",
         sourceUrl: "https://qdrant.tech/events/",
         sourceLabel: "qdrant.tech",
-      },
-      {
-        id: "qdrant-twelvelabs-video-embeddings",
-        name: "TwelveLabs + Qdrant: Video Embeddings and Search",
-        dateLabel: "Jul 28",
-        sortDate: "2026-07-28",
-        format: "in-person",
-        location: "Bellevue, WA",
-        description:
-          "Meetup on multimodal video embeddings for AI search/retrieval — text, audio, and video embeddings, including edge/robotics search.",
-        status: "confirmed",
-        sourceUrl: "https://qdrant.tech/events/",
-        sourceLabel: "qdrant.tech",
-        topics: ["vector-db", "rag"],
       },
       {
         id: "qdrant-sf-community-meetup",
@@ -805,7 +846,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Upcoming dated list refreshed from qdrant.tech/events (2026-07-28). TwelveLabs Bellevue is Jul 28 (evening PT) per page JSON-LD — was previously listed as Jul 29. SF Aug 25 and Berlin Sep 16 are still save-the-dates — confirm venue/agenda closer to the day. Vector Space Day SF already ran Jun 11.",
+      "Upcoming dated list refreshed from qdrant.tech/events (2026-07-29). TwelveLabs Bellevue (Jul 28) pruned after Pacific day passed. SF Aug 25 and Berlin Sep 16 are still save-the-dates — confirm venue/agenda closer to the day. August Discord Office Hours (Aug 20) skipped as a Discord hangout, not a dated product event. Vector Space Day SF already ran Jun 11.",
   },
   {
     id: "weaviate",
@@ -814,7 +855,7 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://weaviate.io/community/events",
     events: [],
     watchNote:
-      "Weaviate's own events page showed no scheduled events at research time (2026-07-28): \"Sorry, there are no events right now.\" SF and NYC meetup chapters exist but had no dated 2026 sessions listed. Check weaviate.io/community/events and meetup.com/Weaviate-San-Francisco.",
+      "Weaviate's own events page showed no scheduled events at research time (2026-07-29): \"Sorry, there are no events right now.\" SF and NYC meetup chapters exist but had no dated 2026 sessions listed. Check weaviate.io/community/events and meetup.com/Weaviate-San-Francisco.",
   },
   {
     id: "chroma",
@@ -832,7 +873,7 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://www.llamaindex.ai/blog",
     events: [],
     watchNote:
-      "No confirmed dated Jul–Dec 2026 events found — LlamaIndex's most recent confirmed item was a Jun 30 webinar, just before this window. Their blog/newsletter is the primary events channel; check llamaindex.ai/blog monthly. Re-checked 2026-07-28.",
+      "No confirmed dated Jul–Dec 2026 events found — LlamaIndex's most recent confirmed item was a Jun 30 webinar, just before this window. Their blog/newsletter is the primary events channel; check llamaindex.ai/blog monthly. Re-checked 2026-07-29.",
   },
   {
     id: "elastic",
@@ -877,7 +918,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      'Also lists "Jog Your Memory" run club + matcha (next: Aug 3) — skipped here as a social/sports meetup. Context Corner still Jul 30 on luma.com/mem0-d589 as of 2026-07-28; Off the Record still Jul 29. Re-read luma.com/mem0 after each lunch passes.',
+      'Also lists "Jog Your Memory" run club + matcha (next: Aug 3) — skipped here as a social/sports meetup. Context Corner still Jul 30 on luma.com/mem0-d589 as of 2026-07-29; Off the Record still Jul 29. Re-read luma.com/mem0 after each lunch passes.',
   },
   {
     id: "supermemory",
@@ -886,6 +927,6 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://supermemory.ai",
     events: [],
     watchNote:
-      "No dedicated events page — Supermemory (memory + RAG hybrid context API) surfaces events via blog and X. The localhost:6767 hackathon deadline (Jul 17) has passed; no new dated Jul–Dec 2026 events found on blog.supermemory.ai as of 2026-07-28. Check blog.supermemory.ai and @supermemoryai.",
+      "No dedicated events page — Supermemory (memory + RAG hybrid context API) surfaces events via blog and X. The localhost:6767 hackathon deadline (Jul 17) has passed; no new dated Jul–Dec 2026 events found on blog.supermemory.ai as of 2026-07-29. Check blog.supermemory.ai and @supermemoryai.",
   },
 ];
