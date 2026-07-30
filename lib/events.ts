@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-07-29. Dates and venues sourced from
+ * Confirmed research date: 2026-07-30. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -173,39 +173,11 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "lablab.ai",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // daily through 2026-07-29.
+  // daily through 2026-07-30.
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
   // AI/agent-relevant listings. This feed only surfaces ~6 weeks out, so
   // coverage here runs through late August — re-scrape luma.com/sf for
-  // anything past that. Jul 28 one-offs pruned after Pacific day passed.
-  {
-    id: "luma-sim2real-gap",
-    name: "Can We Close the Sim2Real Gap?",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 29",
-    sortDate: "2026-07-29",
-    month: "2026-07",
-    location: "San Francisco",
-    description:
-      "Technical discussion on whether simulation, synthetic data, and world models can close the sim-to-real gap for physical AI.",
-    sourceUrl: "https://luma.com/cazn88f7",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-mastra-mongodb-agent-hour",
-    name: "Agent (After) Hour: Building Production Agents with Mastra + MongoDB",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 29",
-    sortDate: "2026-07-29",
-    month: "2026-07",
-    location: "Motoring Coffee, 1525 Union St, San Francisco",
-    description:
-      "Evening talks and lightning demos on shipping production AI agents — co-hosted by Mastra and MongoDB for developers building or planning agents.",
-    sourceUrl: "https://luma.com/mastra-vulp",
-    sourceLabel: "luma.com",
-  },
+  // anything past that. Jul 29 one-offs pruned after Pacific day passed.
   {
     id: "luma-startup-reality-ai-industries",
     name: "Startup Reality 202: AI in Industries",
@@ -319,6 +291,20 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "luma.com",
   },
   {
+    id: "luma-software-mansion-ai-mobile",
+    name: "AI & Mobile Meetup by Software Mansion",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Aug 4",
+    sortDate: "2026-08-04",
+    month: "2026-08",
+    location: "The American Bookbinders Museum, 355 Clementina St, San Francisco",
+    description:
+      "Developer meetup on how coding agents change mobile engineering workflows — talks from Expo, Software Mansion, and Runbook ahead of RevenueCat Shipathon.",
+    sourceUrl: "https://luma.com/kgddqkx2",
+    sourceLabel: "luma.com",
+  },
+  {
     id: "luma-frontier-research-club-ai-bio",
     name: "Bay Area Frontier Research Club #16 — AI × Bio Track Launch",
     category: "meetup",
@@ -415,6 +401,37 @@ const scrapedEvents: CalEvent[] = [
       "WorkOS-hosted evening for the agentic-AI developer community — demos and talks from people shipping agents in production.",
     sourceUrl: "https://luma.com/agent-night",
     sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-ai-engineers-tech-talk-aug",
+    name: "AI Engineers Tech Talk — August",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Aug 12",
+    sortDate: "2026-08-12",
+    month: "2026-08",
+    location: "San Francisco",
+    description:
+      "Monthly SF AI-engineering talk night — practitioners share real-world LLM and ML project work, not product pitches.",
+    sourceUrl: "https://luma.com/kzwpdbs5",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-persistent-context-sprint",
+    name: "The Persistent Context Sprint Hackathon (MongoDB .Local Build Fest)",
+    category: "hackathon",
+    status: "confirmed",
+    dateLabel: "Aug 13",
+    sortDate: "2026-08-13",
+    month: "2026-08",
+    location: "San Francisco",
+    description:
+      "Day sprint at MongoDB .Local Build Fest on AI apps with agent memory — models that remember, retrieve context, and act over application data.",
+    sourceUrl: "https://luma.com/3ck0cd9g",
+    sourceLabel: "luma.com",
+    topics: ["agent-memory"],
+    topicNote:
+      "Explicit agent-memory / persistent-context build theme — strong HydraDB pitch fit.",
   },
   {
     id: "luma-modcon-2026",
@@ -538,7 +555,7 @@ export const directSubmissions: CalEvent[] = [
   // ── YC AI Startup School 2026 week (Jul 23–27) ──────────────────────────
   // Main event → pastEvents2026; Jul 23–27 side-events (including Founder
   // Rooftop Gala) pruned through 2026-07-28 Pacific once their dates passed.
-  // No new invite-only keepers added 2026-07-29.
+  // No new invite-only keepers added 2026-07-30.
 ];
 
 /**
@@ -661,7 +678,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Checked directly (2026-07-29): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) still lists only \"Jam Session 4\" (Jul 29 evening, community musicians — not a builder hackathon; skipped). Still no dated hackathons published in advance — re-check luma.com/agi-house close to when you need one.",
+      "Checked directly (2026-07-30): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) still has no dated upcoming events (Jam Session 4 on Jul 29 has passed). Still no dated hackathons published in advance — re-check luma.com/agi-house close to when you need one.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -767,4 +784,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-07-29";
+export const researchDate = "2026-07-30";
