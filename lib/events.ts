@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-07-30. Dates and venues sourced from
+ * Confirmed research date: 2026-07-31. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -173,92 +173,37 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "lablab.ai",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // daily through 2026-07-30.
+  // daily through 2026-07-31.
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
   // AI/agent-relevant listings. This feed only surfaces ~6 weeks out, so
   // coverage here runs through late August — re-scrape luma.com/sf for
-  // anything past that. Jul 29 one-offs pruned after Pacific day passed.
+  // anything past that. Jul 30 one-offs pruned after Pacific day passed.
   {
-    id: "luma-startup-reality-ai-industries",
-    name: "Startup Reality 202: AI in Industries",
+    id: "luma-intent-adaptive-intelligence",
+    name: "INTENT Research Series: Frontiers of Adaptive Intelligence",
     category: "meetup",
     status: "confirmed",
-    dateLabel: "Jul 30",
-    sortDate: "2026-07-30",
+    dateLabel: "Jul 31",
+    sortDate: "2026-07-31",
     month: "2026-07",
     location: "San Francisco",
-    description: '"From Foundation Models to Vertical Moats" — applied-AI startup talk series.',
-    sourceUrl: "https://luma.com/4g3wb753",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-openai-codex-meetup-8",
-    name: "OpenAI Codex Community Meetup — San Francisco #8",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 30",
-    sortDate: "2026-07-30",
-    month: "2026-07",
-    location: "Sports Basement Stonestown, San Francisco",
     description:
-      "Recurring Codex builder meetup with OpenAI guest speakers — demos and discussion for beginners and experienced Codex users.",
-    sourceUrl: "https://luma.com/h5x0pzw9",
+      "Research talk night on continual learning, self-improving agent harnesses, and context systems that keep adapting after deploy.",
+    sourceUrl: "https://luma.com/l666hxiw",
     sourceLabel: "luma.com",
   },
   {
-    id: "luma-auth0-stripe-hackathon",
-    name: "Built Different: Auth0 x Stripe Hackathon",
+    id: "luma-a1mobile-voice-ai-hackathon",
+    name: "a1mobile Voice AI 1-Day Hackathon",
     category: "hackathon",
     status: "confirmed",
-    dateLabel: "Jul 30",
-    sortDate: "2026-07-30",
-    month: "2026-07",
-    location: "Okta, 100 1st St, San Francisco",
-    description:
-      "In-person hackathon with Auth0 and Stripe on provisioning and managing services (including for agents) via Stripe Projects.",
-    sourceUrl: "https://luma.com/builtdifferent-auth0-stripe",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-workos-pieces-builder-night",
-    name: "Builder Night (WorkOS × Pieces)",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 30",
-    sortDate: "2026-07-30",
+    dateLabel: "Jul 31",
+    sortDate: "2026-07-31",
     month: "2026-07",
     location: "San Francisco",
     description:
-      "Live demo night for people building and evaluating infrastructure behind AI agents — co-hosted by WorkOS and Pieces.",
-    sourceUrl: "https://luma.com/715ul99e",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-qualcomm-zetic-liquid-edge-ai",
-    name: "Qualcomm x ZETIC x Liquid AI: Edge AI Builders Meetup",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 30",
-    sortDate: "2026-07-30",
-    month: "2026-07",
-    location: "Hanwha AI Center, 300 Grant Ave, San Francisco",
-    description:
-      "Edge-AI builders meetup spanning on-device models, hardware, and product teams — co-hosted by Qualcomm, ZETIC, and Liquid AI.",
-    sourceUrl: "https://luma.com/i3evxecn",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-dynamo-after-hours",
-    name: "Dynamo After Hours",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 30",
-    sortDate: "2026-07-30",
-    month: "2026-07",
-    location: "San Francisco",
-    description:
-      "NVIDIA developer-community evening for builders working on AI systems, inference, and scale.",
-    sourceUrl: "https://luma.com/JulyDynamoAfterHours",
+      "12-hour voice-agent hackathon — build an agent that completes a real-world task with a verifiable side effect; $4,000 in prizes.",
+    sourceUrl: "https://luma.com/f8cratbb",
     sourceLabel: "luma.com",
   },
   {
@@ -347,6 +292,20 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "luma.com",
   },
   {
+    id: "luma-factory-opensource-evening",
+    name: "Open-Source Evening with MiniMax, Moonshot, Baseten, Modal & Factory",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Aug 6",
+    sortDate: "2026-08-06",
+    month: "2026-08",
+    location: "Factory HQ, 475 Brannan St, San Francisco",
+    description:
+      "Lightning talks on running and fine-tuning open-weight models in production — MiniMax, Moonshot, Baseten, Modal, and Factory.",
+    sourceUrl: "https://luma.com/factoryai-2rsc",
+    sourceLabel: "luma.com",
+  },
+  {
     id: "luma-snowflake-beta-agent-hackathon",
     name: "Snowflake × Beta Fund Agent & Token Economy Hackathon",
     category: "hackathon",
@@ -358,6 +317,20 @@ const scrapedEvents: CalEvent[] = [
     description:
       "Day hackathon on agent token economics — cost of intelligence, willingness-to-pay products, and Cortex Agents workflows on Snowflake.",
     sourceUrl: "https://luma.com/beta-fdnw",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-voiceos-hack",
+    name: "Hack with VoiceOS",
+    category: "hackathon",
+    status: "confirmed",
+    dateLabel: "Aug 9",
+    sortDate: "2026-08-09",
+    month: "2026-08",
+    location: "Frontier Tower, 995 Market St, San Francisco",
+    description:
+      "Day hackathon building voice-first apps on VoiceOS — pitch to YC judges; OpenAI credits and cash prizes.",
+    sourceUrl: "https://luma.com/pxdhdo4a",
     sourceLabel: "luma.com",
   },
   {
@@ -488,6 +461,20 @@ const scrapedEvents: CalEvent[] = [
     sourceUrl: "https://luma.com/StepSF26",
     sourceLabel: "luma.com",
   },
+  {
+    id: "luma-agi-house-gpu-energy-agents",
+    name: "Energy Optimization of GPUs through Self-Improving Agents",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Sep 22",
+    sortDate: "2026-09-22",
+    month: "2026-09",
+    location: "AGI House SF, 170 St. Germain Ave, San Francisco",
+    description:
+      "AGI House evening on self-improving agents that tune inference serving for lower energy per request — Traversaal / energy.traversaal.ai architecture deep dive.",
+    sourceUrl: "https://luma.com/agi-6kg1",
+    sourceLabel: "luma.com",
+  },
   // Sourced from Eventbrite's SF Bay Area search (2026-07-17), filtered from
   // several hundred loosely-keyword-matched results down to genuine
   // agent-builder relevance — Eventbrite's own search is much noisier than
@@ -555,7 +542,7 @@ export const directSubmissions: CalEvent[] = [
   // ── YC AI Startup School 2026 week (Jul 23–27) ──────────────────────────
   // Main event → pastEvents2026; Jul 23–27 side-events (including Founder
   // Rooftop Gala) pruned through 2026-07-28 Pacific once their dates passed.
-  // No new invite-only keepers added 2026-07-30.
+  // No new invite-only keepers added 2026-07-31.
 ];
 
 /**
@@ -678,7 +665,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Checked directly (2026-07-30): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) still has no dated upcoming events (Jam Session 4 on Jul 29 has passed). Still no dated hackathons published in advance — re-check luma.com/agi-house close to when you need one.",
+      "Checked directly (2026-07-31): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) lists Sep 22 Energy Optimization of GPUs through Self-Improving Agents (tracked in scheduledEvents) plus an Aug 11 leadership masterclass (skipped — not an AI-agent build event). Still no dated hackathons published in advance — re-check luma.com/agi-house close to when you need one.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -784,4 +771,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-07-30";
+export const researchDate = "2026-07-31";
