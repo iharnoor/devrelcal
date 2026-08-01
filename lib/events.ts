@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-07-31. Dates and venues sourced from
+ * Confirmed research date: 2026-08-01. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -173,39 +173,12 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "lablab.ai",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // daily through 2026-07-31.
+  // daily through 2026-08-01.
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
   // AI/agent-relevant listings. This feed only surfaces ~6 weeks out, so
   // coverage here runs through late August — re-scrape luma.com/sf for
-  // anything past that. Jul 30 one-offs pruned after Pacific day passed.
-  {
-    id: "luma-intent-adaptive-intelligence",
-    name: "INTENT Research Series: Frontiers of Adaptive Intelligence",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Jul 31",
-    sortDate: "2026-07-31",
-    month: "2026-07",
-    location: "San Francisco",
-    description:
-      "Research talk night on continual learning, self-improving agent harnesses, and context systems that keep adapting after deploy.",
-    sourceUrl: "https://luma.com/l666hxiw",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-a1mobile-voice-ai-hackathon",
-    name: "a1mobile Voice AI 1-Day Hackathon",
-    category: "hackathon",
-    status: "confirmed",
-    dateLabel: "Jul 31",
-    sortDate: "2026-07-31",
-    month: "2026-07",
-    location: "San Francisco",
-    description:
-      "12-hour voice-agent hackathon — build an agent that completes a real-world task with a verifiable side effect; $4,000 in prizes.",
-    sourceUrl: "https://luma.com/f8cratbb",
-    sourceLabel: "luma.com",
-  },
+  // anything past that. Jul 31 INTENT / a1mobile Voice AI pruned after
+  // Pacific day passed.
   {
     id: "luma-agentic-ai-summit",
     name: "Agentic AI Summit",
@@ -247,6 +220,20 @@ const scrapedEvents: CalEvent[] = [
     description:
       "Developer meetup on how coding agents change mobile engineering workflows — talks from Expo, Software Mansion, and Runbook ahead of RevenueCat Shipathon.",
     sourceUrl: "https://luma.com/kgddqkx2",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-gmi-model-routing-agents",
+    name: "The Model Question: Routing Models for Production Agents",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Aug 4",
+    sortDate: "2026-08-04",
+    month: "2026-08",
+    location: "Notion HQ, 685 Market St, San Francisco",
+    description:
+      "Demo night on evaluating, selecting, and routing models for production agents — quality, cost, latency, and reliability trade-offs from five shipping teams.",
+    sourceUrl: "https://luma.com/gmicloud-384l",
     sourceLabel: "luma.com",
   },
   {
@@ -449,6 +436,20 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "luma.com",
   },
   {
+    id: "luma-mistral-vibe-hackathon",
+    name: "Mistral Vibe Hackathon",
+    category: "hackathon",
+    status: "confirmed",
+    dateLabel: "Aug 23",
+    sortDate: "2026-08-23",
+    month: "2026-08",
+    location: "San Francisco (venue shared with selected participants)",
+    description:
+      "One-day Mistral-hosted hackathon (8:30am–8pm) — application-reviewed teams of 1–4; Mistral credits for top finishes.",
+    sourceUrl: "https://luma.com/mistral-summer-vibe-hackathon-sf",
+    sourceLabel: "luma.com",
+  },
+  {
     id: "luma-step-sf-festival",
     name: "Step SF 2026: The AI & Tech Startup Festival",
     category: "conference",
@@ -542,7 +543,7 @@ export const directSubmissions: CalEvent[] = [
   // ── YC AI Startup School 2026 week (Jul 23–27) ──────────────────────────
   // Main event → pastEvents2026; Jul 23–27 side-events (including Founder
   // Rooftop Gala) pruned through 2026-07-28 Pacific once their dates passed.
-  // No new invite-only keepers added 2026-07-31.
+  // No new invite-only keepers added 2026-08-01.
 ];
 
 /**
@@ -665,7 +666,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Checked directly (2026-07-31): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) lists Sep 22 Energy Optimization of GPUs through Self-Improving Agents (tracked in scheduledEvents) plus an Aug 11 leadership masterclass (skipped — not an AI-agent build event). Still no dated hackathons published in advance — re-check luma.com/agi-house close to when you need one.",
+      "Checked directly (2026-08-01): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) lists Sep 22 Energy Optimization of GPUs through Self-Improving Agents (tracked in scheduledEvents) plus an Aug 11 leadership masterclass (skipped — not an AI-agent build event). Still no dated hackathons published in advance — re-check luma.com/agi-house close to when you need one.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -771,4 +772,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-07-31";
+export const researchDate = "2026-08-01";
