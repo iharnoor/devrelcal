@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-08-02. Dates and venues sourced from
+ * Confirmed research date: 2026-08-05. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -173,53 +173,14 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "lablab.ai",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // daily through 2026-08-02.
+  // daily through 2026-08-05.
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
   // AI/agent-relevant listings. This feed only surfaces ~6 weeks out, so
   // coverage here runs through late August — re-scrape luma.com/sf for
-  // anything past that. Aug 1 Agentic AI Summit → pastEvents2026 after
-  // Pacific day passed.
-  {
-    id: "luma-baseten-demo-night",
-    name: "Built on Baseten | AI Demo Night",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Aug 4",
-    sortDate: "2026-08-04",
-    month: "2026-08",
-    location: "San Francisco",
-    description: "Demo night for products built on Baseten's inference infrastructure.",
-    sourceUrl: "https://luma.com/b4y2veki",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-software-mansion-ai-mobile",
-    name: "AI & Mobile Meetup by Software Mansion",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Aug 4",
-    sortDate: "2026-08-04",
-    month: "2026-08",
-    location: "The American Bookbinders Museum, 355 Clementina St, San Francisco",
-    description:
-      "Developer meetup on how coding agents change mobile engineering workflows — talks from Expo, Software Mansion, and Runbook ahead of RevenueCat Shipathon.",
-    sourceUrl: "https://luma.com/kgddqkx2",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-gmi-model-routing-agents",
-    name: "The Model Question: Routing Models for Production Agents",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Aug 4",
-    sortDate: "2026-08-04",
-    month: "2026-08",
-    location: "Notion HQ, 685 Market St, San Francisco",
-    description:
-      "Demo night on evaluating, selecting, and routing models for production agents — quality, cost, latency, and reliability trade-offs from five shipping teams.",
-    sourceUrl: "https://luma.com/gmicloud-384l",
-    sourceLabel: "luma.com",
-  },
+  // anything past that. Aug 4 one-offs (Baseten demo night, Software Mansion
+  // AI & Mobile, GMI model-routing) pruned after Pacific day passed. No new
+  // agent/RAG keepers on the 2026-08-05 scrape (World Labs world-model meetup
+  // skipped — spatial/world-models, not agent/retrieval).
   {
     id: "luma-frontier-research-club-ai-bio",
     name: "Bay Area Frontier Research Club #16 — AI × Bio Track Launch",
@@ -555,7 +516,7 @@ export const directSubmissions: CalEvent[] = [
   // ── YC AI Startup School 2026 week (Jul 23–27) ──────────────────────────
   // Main event → pastEvents2026; Jul 23–27 side-events (including Founder
   // Rooftop Gala) pruned through 2026-07-28 Pacific once their dates passed.
-  // No new invite-only keepers added 2026-08-02.
+  // No new invite-only keepers added 2026-08-05.
 ];
 
 /**
@@ -678,7 +639,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Checked directly (2026-08-02): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) lists Sep 22 Energy Optimization of GPUs through Self-Improving Agents (tracked in scheduledEvents) plus an Aug 11 leadership masterclass (skipped — not an AI-agent build event). Still no dated hackathons published in advance — re-check luma.com/agi-house close to when you need one.",
+      "Checked directly (2026-08-05): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) lists Sep 22 Energy Optimization of GPUs through Self-Improving Agents (tracked in scheduledEvents) plus an Aug 10 leadership/power masterclass (skipped — not an AI-agent build event). Still no dated hackathons published in advance — re-check luma.com/agi-house close to when you need one.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -791,4 +752,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-08-02";
+export const researchDate = "2026-08-05";
