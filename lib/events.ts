@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-08-05. Dates and venues sourced from
+ * Confirmed research date: 2026-08-06. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -173,42 +173,14 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "lablab.ai",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // daily through 2026-08-05.
+  // daily through 2026-08-06.
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
   // AI/agent-relevant listings. This feed only surfaces ~6 weeks out, so
   // coverage here runs through late August — re-scrape luma.com/sf for
-  // anything past that. Aug 4 one-offs (Baseten demo night, Software Mansion
-  // AI & Mobile, GMI model-routing) pruned after Pacific day passed. No new
-  // agent/RAG keepers on the 2026-08-05 scrape (World Labs world-model meetup
-  // skipped — spatial/world-models, not agent/retrieval).
-  {
-    id: "luma-frontier-research-club-ai-bio",
-    name: "Bay Area Frontier Research Club #16 — AI × Bio Track Launch",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Aug 5",
-    sortDate: "2026-08-05",
-    month: "2026-08",
-    location: "Stanford University",
-    description:
-      "Curated AI research dinner/talk night launching an AI × bio track — short technical talks plus critique, not a general mixer.",
-    sourceUrl: "https://luma.com/9hp5rxy8",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-workos-demo-night-aug",
-    name: "Demo Night @ WorkOS (August)",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Aug 5",
-    sortDate: "2026-08-05",
-    month: "2026-08",
-    location: "WorkOS, 660 Market St, San Francisco",
-    description:
-      "Live-demo-only builder night at WorkOS — side projects, internal tools, open source, and startups; no slides or company pitches.",
-    sourceUrl: "https://luma.com/demo-night-aug2026",
-    sourceLabel: "luma.com",
-  },
+  // anything past that. Aug 5 one-offs (Frontier Research Club AI×Bio,
+  // WorkOS Demo Night) pruned after Pacific day passed. New 2026-08-06:
+  // SkyRL Meetup (y4ahouh6, Aug 18). World Labs world-model meetup still
+  // skipped — spatial/world-models, not agent/retrieval.
   {
     id: "luma-alphasignal-pizza-agent-challenge",
     name: "AlphaSignal's Pizza Agent Challenge",
@@ -395,6 +367,20 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "luma.com",
   },
   {
+    id: "luma-skyrl-meetup",
+    name: "SkyRL Meetup",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Aug 18",
+    sortDate: "2026-08-18",
+    month: "2026-08",
+    location: "San Francisco (Yerba Buena)",
+    description:
+      "UC Berkeley Sky Lab / Anyscale meetup on SkyRL — open-source agentic reinforcement learning for training and adapting foundation-model agents.",
+    sourceUrl: "https://luma.com/y4ahouh6",
+    sourceLabel: "luma.com",
+  },
+  {
     id: "luma-agents-changing-web-parag",
     name: "Agents Are Changing the Web with Parag Agrawal",
     category: "meetup",
@@ -516,7 +502,7 @@ export const directSubmissions: CalEvent[] = [
   // ── YC AI Startup School 2026 week (Jul 23–27) ──────────────────────────
   // Main event → pastEvents2026; Jul 23–27 side-events (including Founder
   // Rooftop Gala) pruned through 2026-07-28 Pacific once their dates passed.
-  // No new invite-only keepers added 2026-08-05.
+  // No new invite-only keepers added 2026-08-06.
 ];
 
 /**
@@ -639,7 +625,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Checked directly (2026-08-05): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) lists Sep 22 Energy Optimization of GPUs through Self-Improving Agents (tracked in scheduledEvents) plus an Aug 10 leadership/power masterclass (skipped — not an AI-agent build event). Still no dated hackathons published in advance — re-check luma.com/agi-house close to when you need one.",
+      "Checked directly (2026-08-06): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) lists Sep 22 Energy Optimization of GPUs through Self-Improving Agents (tracked in scheduledEvents) plus an Aug 10 leadership/power masterclass (skipped — not an AI-agent build event). Still no dated hackathons published in advance — re-check luma.com/agi-house close to when you need one.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -752,4 +738,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-08-05";
+export const researchDate = "2026-08-06";
