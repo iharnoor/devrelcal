@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-08-06. Dates and venues sourced from
+ * Confirmed research date: 2026-08-07. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -173,56 +173,18 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "lablab.ai",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // daily through 2026-08-06.
+  // daily through 2026-08-07.
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
   // AI/agent-relevant listings. This feed only surfaces ~6 weeks out, so
-  // coverage here runs through late August — re-scrape luma.com/sf for
-  // anything past that. Aug 5 one-offs (Frontier Research Club AI×Bio,
-  // WorkOS Demo Night) pruned after Pacific day passed. New 2026-08-06:
-  // SkyRL Meetup (y4ahouh6, Aug 18). World Labs world-model meetup still
-  // skipped — spatial/world-models, not agent/retrieval.
-  {
-    id: "luma-alphasignal-pizza-agent-challenge",
-    name: "AlphaSignal's Pizza Agent Challenge",
-    category: "hackathon",
-    status: "confirmed",
-    dateLabel: "Aug 6",
-    sortDate: "2026-08-06",
-    month: "2026-08",
-    location: "San Francisco",
-    description:
-      "Live 90-minute timed challenge: build an AI agent that orders a pizza from scratch — $2,500 prize, no prep or pre-built demos.",
-    sourceUrl: "https://luma.com/o0id5abn",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-factory-opensource-evening",
-    name: "Open-Source Evening with MiniMax, Moonshot, Baseten, Modal & Factory",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Aug 6",
-    sortDate: "2026-08-06",
-    month: "2026-08",
-    location: "Factory HQ, 475 Brannan St, San Francisco",
-    description:
-      "Lightning talks on running and fine-tuning open-weight models in production — MiniMax, Moonshot, Baseten, Modal, and Factory.",
-    sourceUrl: "https://luma.com/factoryai-2rsc",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-agent-infra-night",
-    name: "Agent Infra Night",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Aug 6",
-    sortDate: "2026-08-06",
-    month: "2026-08",
-    location: "SoMa, San Francisco",
-    description:
-      "Demo night for agent infrastructure — live demos from AgentMail, Telnyx, Composio, and HeyGen HyperFrames on mail, voice, integrations, and HTML-composed video agents.",
-    sourceUrl: "https://luma.com/6uaouoxj",
-    sourceLabel: "luma.com",
-  },
+  // coverage here runs through early September — re-scrape luma.com/sf for
+  // anything past that. Aug 6 one-offs (AlphaSignal Pizza Agent Challenge,
+  // Factory Open-Source Evening, Agent Infra Night) pruned after Pacific day
+  // passed. New 2026-08-07: Demo Night SF Postman+Supabase+Vercel
+  // (august-SF-supabase-vercel-postman, Aug 27); Agentic + AI Night
+  // (agenticaiobsnightsf-9-1, Sep 1). Mistral Vibe date corrected to Aug 22
+  // (was Aug 23). Claude Impact Lab (claude-7lr5) skipped — community
+  // jobs-impact build day, not agent/retrieval. Creative Coding Night /
+  // Continual Learning reading group / Connected Stack still skipped.
   {
     id: "luma-snowflake-beta-agent-hackathon",
     name: "Snowflake × Beta Fund Agent & Token Economy Hackathon",
@@ -399,8 +361,8 @@ const scrapedEvents: CalEvent[] = [
     name: "Mistral Vibe Hackathon",
     category: "hackathon",
     status: "confirmed",
-    dateLabel: "Aug 23",
-    sortDate: "2026-08-23",
+    dateLabel: "Aug 22",
+    sortDate: "2026-08-22",
     month: "2026-08",
     location: "San Francisco (venue shared with selected participants)",
     description:
@@ -419,6 +381,34 @@ const scrapedEvents: CalEvent[] = [
     location: "900 Marin St, San Francisco",
     description: "Multi-track AI and tech startup festival.",
     sourceUrl: "https://luma.com/StepSF26",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-demo-night-postman-supabase-vercel",
+    name: "Demo Night SF: Ship AI Apps with Postman + Supabase + Vercel",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Aug 27",
+    sortDate: "2026-08-27",
+    month: "2026-08",
+    location: "CANOPY Jackson Square, 595 Pacific Ave, San Francisco",
+    description:
+      "Postman Agents and APIs developer meetup — live demos shipping AI apps with Postman, Supabase, and Vercel.",
+    sourceUrl: "https://luma.com/august-SF-supabase-vercel-postman",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-agentic-ai-night-governance",
+    name: "Agentic + AI Night: Multi-Agent Governance and Security",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Sep 1",
+    sortDate: "2026-09-01",
+    month: "2026-09",
+    location: "Terra Gallery, 511 Harrison St, San Francisco",
+    description:
+      "Multi-track SF meetup on multi-agent governance, security, and observability — coordinating agents (Claude Code, Codex, custom) via the Omnigent meta-harness.",
+    sourceUrl: "https://luma.com/agenticaiobsnightsf-9-1",
     sourceLabel: "luma.com",
   },
   {
@@ -502,7 +492,7 @@ export const directSubmissions: CalEvent[] = [
   // ── YC AI Startup School 2026 week (Jul 23–27) ──────────────────────────
   // Main event → pastEvents2026; Jul 23–27 side-events (including Founder
   // Rooftop Gala) pruned through 2026-07-28 Pacific once their dates passed.
-  // No new invite-only keepers added 2026-08-06.
+  // No new invite-only keepers added 2026-08-07.
 ];
 
 /**
@@ -521,7 +511,7 @@ export const recurringSeries: RecurringSeries[] = [
     id: "ai-tinkerers-sf",
     name: "AI Tinkerers — San Francisco",
     category: "meetup",
-    cadence: "Monthly (next confirmed: Aug 9, Founders Inc)",
+    cadence: "Monthly — next SF date TBA (Aug 9 Founders Inc listing no longer on site as of 2026-08-07)",
     location: "San Francisco",
     description:
       "Hands-on demo nights for engineers/founders building AI agents, RAG, voice, and coding agents.",
@@ -625,7 +615,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Checked directly (2026-08-06): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) lists Sep 22 Energy Optimization of GPUs through Self-Improving Agents (tracked in scheduledEvents) plus an Aug 10 leadership/power masterclass (skipped — not an AI-agent build event). Still no dated hackathons published in advance — re-check luma.com/agi-house close to when you need one.",
+      "Checked directly (2026-08-07): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) lists Sep 22 Energy Optimization of GPUs through Self-Improving Agents (tracked in scheduledEvents) plus an Aug 10 leadership/power masterclass (skipped — not an AI-agent build event). Still no dated hackathons published in advance — re-check luma.com/agi-house close to when you need one.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -738,4 +728,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-08-06";
+export const researchDate = "2026-08-07";
