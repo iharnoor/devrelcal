@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-08-07. Dates and venues sourced from
+ * Confirmed research date: 2026-08-09. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -173,32 +173,16 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "lablab.ai",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // daily through 2026-08-07.
+  // daily through 2026-08-09.
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
   // AI/agent-relevant listings. This feed only surfaces ~6 weeks out, so
   // coverage here runs through early September — re-scrape luma.com/sf for
-  // anything past that. Aug 6 one-offs (AlphaSignal Pizza Agent Challenge,
-  // Factory Open-Source Evening, Agent Infra Night) pruned after Pacific day
-  // passed. New 2026-08-07: Demo Night SF Postman+Supabase+Vercel
-  // (august-SF-supabase-vercel-postman, Aug 27); Agentic + AI Night
-  // (agenticaiobsnightsf-9-1, Sep 1). Mistral Vibe date corrected to Aug 22
-  // (was Aug 23). Claude Impact Lab (claude-7lr5) skipped — community
-  // jobs-impact build day, not agent/retrieval. Creative Coding Night /
-  // Continual Learning reading group / Connected Stack still skipped.
-  {
-    id: "luma-snowflake-beta-agent-hackathon",
-    name: "Snowflake × Beta Fund Agent & Token Economy Hackathon",
-    category: "hackathon",
-    status: "confirmed",
-    dateLabel: "Aug 7",
-    sortDate: "2026-08-07",
-    month: "2026-08",
-    location: "Menlo Park, CA",
-    description:
-      "Day hackathon on agent token economics — cost of intelligence, willingness-to-pay products, and Cortex Agents workflows on Snowflake.",
-    sourceUrl: "https://luma.com/beta-fdnw",
-    sourceLabel: "luma.com",
-  },
+  // anything past that. Aug 7 Snowflake × Beta Fund Agent & Token Economy
+  // Hackathon pruned after Pacific day passed. New 2026-08-09: Bay Area
+  // Frontier Research Club #19 Agents in Production (cx2f0q8r, Aug 26 PT).
+  // AGI House GPU-agents URL updated to gpuenergyoptimization (still Sep 22
+  // PT). Physical AI Sprint / Physical AI Rally / World Labs / Connected
+  // Stack / CorpGov / Biopharma Hack Day still skipped.
   {
     id: "luma-voiceos-hack",
     name: "Hack with VoiceOS",
@@ -371,6 +355,20 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "luma.com",
   },
   {
+    id: "luma-frontier-research-club-agents-prod",
+    name: "Bay Area Frontier Research Club #19 — Agents in Production",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Aug 26",
+    sortDate: "2026-08-26",
+    month: "2026-08",
+    location: "Menlo Park, CA",
+    description:
+      "UC Berkeley researchers present Measuring Agents in Production (ICML 2026 oral), then a fireside on self-improving agents — concrete notes on how production agent systems are built, evaluated, and operated.",
+    sourceUrl: "https://luma.com/cx2f0q8r",
+    sourceLabel: "luma.com",
+  },
+  {
     id: "luma-step-sf-festival",
     name: "Step SF 2026: The AI & Tech Startup Festival",
     category: "conference",
@@ -422,7 +420,7 @@ const scrapedEvents: CalEvent[] = [
     location: "AGI House SF, 170 St. Germain Ave, San Francisco",
     description:
       "AGI House evening on self-improving agents that tune inference serving for lower energy per request — Traversaal / energy.traversaal.ai architecture deep dive.",
-    sourceUrl: "https://luma.com/agi-6kg1",
+    sourceUrl: "https://luma.com/gpuenergyoptimization",
     sourceLabel: "luma.com",
   },
   // Sourced from Eventbrite's SF Bay Area search (2026-07-17), filtered from
@@ -492,7 +490,7 @@ export const directSubmissions: CalEvent[] = [
   // ── YC AI Startup School 2026 week (Jul 23–27) ──────────────────────────
   // Main event → pastEvents2026; Jul 23–27 side-events (including Founder
   // Rooftop Gala) pruned through 2026-07-28 Pacific once their dates passed.
-  // No new invite-only keepers added 2026-08-07.
+  // No new invite-only keepers added 2026-08-09.
 ];
 
 /**
@@ -511,7 +509,7 @@ export const recurringSeries: RecurringSeries[] = [
     id: "ai-tinkerers-sf",
     name: "AI Tinkerers — San Francisco",
     category: "meetup",
-    cadence: "Monthly — next SF date TBA (Aug 9 Founders Inc listing no longer on site as of 2026-08-07)",
+    cadence: "Monthly — next SF date TBA (homepage still shows no dated SF session as of 2026-08-09; Aug 19 “Next” badge is NYC)",
     location: "San Francisco",
     description:
       "Hands-on demo nights for engineers/founders building AI agents, RAG, voice, and coding agents.",
@@ -615,7 +613,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Checked directly (2026-08-07): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) lists Sep 22 Energy Optimization of GPUs through Self-Improving Agents (tracked in scheduledEvents) plus an Aug 10 leadership/power masterclass (skipped — not an AI-agent build event). Still no dated hackathons published in advance — re-check luma.com/agi-house close to when you need one.",
+      "Checked directly (2026-08-09): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) lists Sep 22 PT Energy Optimization of GPUs through Self-Improving Agents (luma.com/gpuenergyoptimization, tracked in scheduledEvents; prior slug agi-6kg1 is gone) plus an Aug 10 leadership/power masterclass (skipped — not an AI-agent build event). Still no dated hackathons published in advance — re-check luma.com/agi-house close to when you need one.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -728,4 +726,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-08-07";
+export const researchDate = "2026-08-09";
