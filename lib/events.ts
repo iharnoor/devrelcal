@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-08-09. Dates and venues sourced from
+ * Confirmed research date: 2026-08-10. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -173,30 +173,16 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "lablab.ai",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // daily through 2026-08-09.
+  // daily through 2026-08-10.
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
   // AI/agent-relevant listings. This feed only surfaces ~6 weeks out, so
   // coverage here runs through early September — re-scrape luma.com/sf for
-  // anything past that. Aug 7 Snowflake × Beta Fund Agent & Token Economy
-  // Hackathon pruned after Pacific day passed. New 2026-08-09: Bay Area
-  // Frontier Research Club #19 Agents in Production (cx2f0q8r, Aug 26 PT).
-  // AGI House GPU-agents URL updated to gpuenergyoptimization (still Sep 22
-  // PT). Physical AI Sprint / Physical AI Rally / World Labs / Connected
-  // Stack / CorpGov / Biopharma Hack Day still skipped.
-  {
-    id: "luma-voiceos-hack",
-    name: "Hack with VoiceOS",
-    category: "hackathon",
-    status: "confirmed",
-    dateLabel: "Aug 9",
-    sortDate: "2026-08-09",
-    month: "2026-08",
-    location: "Frontier Tower, 995 Market St, San Francisco",
-    description:
-      "Day hackathon building voice-first apps on VoiceOS — pitch to YC judges; OpenAI credits and cash prizes.",
-    sourceUrl: "https://luma.com/pxdhdo4a",
-    sourceLabel: "luma.com",
-  },
+  // anything past that. Aug 9 Hack with VoiceOS pruned after Pacific day
+  // passed. No new AI-agent/RAG keepers on the discover feed today (AiOS
+  // Meetup = Apple on-device; Cursor Leverage Launch = personal-site build;
+  // AI Infra Kebab = networking mixer — all skipped). Physical AI Sprint /
+  // Physical AI Rally / World Labs / Connected Stack / CorpGov / Biopharma
+  // Hack Day still skipped.
   {
     id: "luma-claude-code-workshop-sf",
     name: "Claude Code Workshop — San Francisco",
@@ -490,7 +476,7 @@ export const directSubmissions: CalEvent[] = [
   // ── YC AI Startup School 2026 week (Jul 23–27) ──────────────────────────
   // Main event → pastEvents2026; Jul 23–27 side-events (including Founder
   // Rooftop Gala) pruned through 2026-07-28 Pacific once their dates passed.
-  // No new invite-only keepers added 2026-08-09.
+  // No new invite-only keepers added 2026-08-10.
 ];
 
 /**
@@ -509,7 +495,7 @@ export const recurringSeries: RecurringSeries[] = [
     id: "ai-tinkerers-sf",
     name: "AI Tinkerers — San Francisco",
     category: "meetup",
-    cadence: "Monthly — next SF date TBA (homepage still shows no dated SF session as of 2026-08-09; Aug 19 “Next” badge is NYC)",
+    cadence: "Monthly — next SF date TBA (homepage still shows no dated SF session as of 2026-08-10; Aug 19 “Next” badge is NYC)",
     location: "San Francisco",
     description:
       "Hands-on demo nights for engineers/founders building AI agents, RAG, voice, and coding agents.",
@@ -613,7 +599,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Checked directly (2026-08-09): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) lists Sep 22 PT Energy Optimization of GPUs through Self-Improving Agents (luma.com/gpuenergyoptimization, tracked in scheduledEvents; prior slug agi-6kg1 is gone) plus an Aug 10 leadership/power masterclass (skipped — not an AI-agent build event). Still no dated hackathons published in advance — re-check luma.com/agi-house close to when you need one.",
+      "Checked directly (2026-08-10): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) lists Sep 22 PT Energy Optimization of GPUs through Self-Improving Agents (luma.com/gpuenergyoptimization, tracked in scheduledEvents; prior slug agi-6kg1 is gone) plus an Aug 10 leadership/power masterclass (skipped — not an AI-agent build event). Still no dated hackathons published in advance — re-check luma.com/agi-house close to when you need one.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -726,4 +712,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-08-09";
+export const researchDate = "2026-08-10";
