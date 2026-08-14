@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-08-13. Dates and venues sourced from
+ * Confirmed research date: 2026-08-14. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -173,32 +173,18 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "lablab.ai",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // daily through 2026-08-13.
+  // daily through 2026-08-14.
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
   // AI/agent-relevant listings. This feed only surfaces ~6 weeks out, so
-  // coverage here runs through early September — re-scrape luma.com/sf for
-  // anything past that. Pruned Aug 11–12 meetups after Pacific day passed.
-  // Added Claude Code Workshop (Aug 20) and vLLM × NVIDIA Dynamo (Aug 24).
-  // Still skipping Physical AI Sprint / Rally, AiOS Meetup, Cursor Leverage
-  // Launch, AI Infra Kebab, Lumafield manufacturing open house, Gamma launch
-  // party, Founders 5k, Biopharma / AI-for-Science demos, CorpGov, etc.
-  {
-    id: "luma-persistent-context-sprint",
-    name: "The Persistent Context Sprint Hackathon (MongoDB .Local Build Fest)",
-    category: "hackathon",
-    status: "confirmed",
-    dateLabel: "Aug 13",
-    sortDate: "2026-08-13",
-    month: "2026-08",
-    location: "San Francisco",
-    description:
-      "Day sprint at MongoDB .Local Build Fest on AI apps with agent memory — models that remember, retrieve context, and act over application data.",
-    sourceUrl: "https://luma.com/3ck0cd9g",
-    sourceLabel: "luma.com",
-    topics: ["agent-memory"],
-    topicNote:
-      "Explicit agent-memory / persistent-context build theme — strong HydraDB pitch fit.",
-  },
+  // coverage here runs through mid-September — re-scrape luma.com/sf for
+  // anything past that. Pruned Persistent Context Sprint (Aug 13) after
+  // Pacific day passed. Added SF Database Meetup (Aug 19), Open Models /
+  // Production Agents (Aug 20), Bay Area DSPy Meetup (Aug 26), AGI House
+  // AI Debates Hackathon (Sep 5), Llama Lounge 26 (Sep 10), and Open Model
+  // Hack (Sep 12). Still skipping Physical AI Sprint / Rally, Claude Science
+  // Demo Night, Grok Bot / Cursor product build nights, Who Will Own The
+  // Intelligence Layer mixer, AiOS Meetup, AI Infra Kebab, Lumafield, Gamma
+  // launch, Founders 5k, Biopharma / AI-for-Science demos, CorpGov, etc.
   {
     id: "luma-moonlight-gemini-hack",
     name: "Moonlighting with Gemini + Exa — 3 Hour Hack",
@@ -256,6 +242,20 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "luma.com",
   },
   {
+    id: "luma-sf-database-meetup-aug",
+    name: "The SF Database Meetup — August",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Aug 19",
+    sortDate: "2026-08-19",
+    month: "2026-08",
+    location: "PlanetScale, 108 Natoma St, San Francisco",
+    description:
+      "PlanetScale-hosted lightning talks on data systems — including giving agents SQL, document stores on SQL, and Postgres analytics rewrites.",
+    sourceUrl: "https://luma.com/fxqt8zra",
+    sourceLabel: "luma.com",
+  },
+  {
     id: "luma-claude-code-workshop-sf-aug20",
     name: "Claude Code Workshop — San Francisco",
     category: "meetup",
@@ -267,6 +267,20 @@ const scrapedEvents: CalEvent[] = [
     description:
       "Hands-on workshop (with Provectus) on orchestrating coding agents with Claude Code — ship something during the session.",
     sourceUrl: "https://luma.com/claude-code-workshop-sf-aug-20",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-open-models-production-agents",
+    name: "Open Models, Production Agents: The New Economics of AI-Native Engineering",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Aug 20",
+    sortDate: "2026-08-20",
+    month: "2026-08",
+    location: "San Francisco",
+    description:
+      "Evening on open models vs closed coding agents for production software engineering — cost/quality tradeoffs with models like Kimi, GLM, and MiniMax.",
+    sourceUrl: "https://luma.com/o9tv62y5",
     sourceLabel: "luma.com",
   },
   {
@@ -309,6 +323,20 @@ const scrapedEvents: CalEvent[] = [
     description:
       "Evening tech talks from the vLLM community and NVIDIA Dynamo on serving LLMs at scale — inference optimization and distributed serving during vLLM conference week.",
     sourceUrl: "https://luma.com/r8o604o0",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-bay-area-dspy-meetup",
+    name: "Bay Area DSPy Meetup",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Aug 26",
+    sortDate: "2026-08-26",
+    month: "2026-08",
+    location: "San Francisco",
+    description:
+      "Quarterly DSPy community meetup — lightning talks on DSPy/GEPA features and optimization tricks for structured LLM programs.",
+    sourceUrl: "https://luma.com/61qrnbs7",
     sourceLabel: "luma.com",
   },
   {
@@ -364,6 +392,48 @@ const scrapedEvents: CalEvent[] = [
     description:
       "Multi-track SF meetup on multi-agent governance, security, and observability — coordinating agents (Claude Code, Codex, custom) via the Omnigent meta-harness.",
     sourceUrl: "https://luma.com/agenticaiobsnightsf-9-1",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-agi-house-ai-debates-hackathon",
+    name: "The AI Debates Hackathon",
+    category: "hackathon",
+    status: "confirmed",
+    dateLabel: "Sep 5",
+    sortDate: "2026-09-05",
+    month: "2026-09",
+    location: "AGI House SF, 170 St. Germain Ave, San Francisco",
+    description:
+      "AGI House Saturday hackathon — build a voice agent that debates AI ethics/risk live, then compete in public forum rounds judged by humans.",
+    sourceUrl: "https://luma.com/aidebates",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-llama-lounge-26",
+    name: "Llama Lounge 26: The AI Startup Event Series @ Microsoft",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Sep 10",
+    sortDate: "2026-09-10",
+    month: "2026-09",
+    location: "Microsoft, 1045 La Avenida St, Mountain View",
+    description:
+      "AI startup demo-floor evening at Microsoft MV — founders, investors, and corporate AI buyers; registration approval required.",
+    sourceUrl: "https://luma.com/llamalounge26",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-open-model-hack",
+    name: "Open Model Hack — Gradient × Google DeepMind",
+    category: "hackathon",
+    status: "confirmed",
+    dateLabel: "Sep 12",
+    sortDate: "2026-09-12",
+    month: "2026-09",
+    location: "San Francisco",
+    description:
+      "Day hack with Gradient and Google DeepMind for engineers and founders building with the latest open models — inference, fine-tuning, and production performance comparisons.",
+    sourceUrl: "https://luma.com/openmodelhack",
     sourceLabel: "luma.com",
   },
   {
@@ -447,7 +517,7 @@ export const directSubmissions: CalEvent[] = [
   // ── YC AI Startup School 2026 week (Jul 23–27) ──────────────────────────
   // Main event → pastEvents2026; Jul 23–27 side-events (including Founder
   // Rooftop Gala) pruned through 2026-07-28 Pacific once their dates passed.
-  // No new invite-only keepers added 2026-08-13.
+  // No new invite-only keepers added 2026-08-14.
 ];
 
 /**
@@ -570,7 +640,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Checked directly (2026-08-13): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) still lists Sep 22 PT Energy Optimization of GPUs through Self-Improving Agents (luma.com/gpuenergyoptimization, tracked in scheduledEvents). Still no dated hackathons published in advance — re-check luma.com/agi-house close to when you need one.",
+      "Checked directly (2026-08-14): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) lists Sep 5 The AI Debates Hackathon (luma.com/aidebates) and Sep 22 Energy Optimization of GPUs through Self-Improving Agents (luma.com/gpuenergyoptimization) — both tracked in scheduledEvents. Still sparse advance dating overall — re-check luma.com/agi-house close to when you need one.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -683,4 +753,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-08-13";
+export const researchDate = "2026-08-14";
