@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-08-14. Dates and venues sourced from
+ * Confirmed research date: 2026-08-16. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -173,18 +173,16 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "lablab.ai",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // daily through 2026-08-14.
+  // daily through 2026-08-16.
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
   // AI/agent-relevant listings. This feed only surfaces ~6 weeks out, so
-  // coverage here runs through mid-September — re-scrape luma.com/sf for
-  // anything past that. Pruned Persistent Context Sprint (Aug 13) after
-  // Pacific day passed. Added SF Database Meetup (Aug 19), Open Models /
-  // Production Agents (Aug 20), Bay Area DSPy Meetup (Aug 26), AGI House
-  // AI Debates Hackathon (Sep 5), Llama Lounge 26 (Sep 10), and Open Model
-  // Hack (Sep 12). Still skipping Physical AI Sprint / Rally, Claude Science
-  // Demo Night, Grok Bot / Cursor product build nights, Who Will Own The
-  // Intelligence Layer mixer, AiOS Meetup, AI Infra Kebab, Lumafield, Gamma
-  // launch, Founders 5k, Biopharma / AI-for-Science demos, CorpGov, etc.
+  // coverage here runs through mid-October — re-scrape luma.com/sf for
+  // anything past that. Added The AI Dev Stack (Aug 18), Durable AI: Agent
+  // Context is Everything (Aug 26), and Open Source AI Summit SF (Aug 28).
+  // Still skipping Physical AI Sprint / Rally / Embodied AI Night, Claude
+  // Science Demo Night, Grok Bot build nights, Who Will Own The Intelligence
+  // Layer mixer, Salt Bread Maxxing, AI Infra Kebab, Lumafield, CorpGov,
+  // WorkOS Demo Night (not AI-framed), etc.
   {
     id: "luma-moonlight-gemini-hack",
     name: "Moonlighting with Gemini + Exa — 3 Hour Hack",
@@ -239,6 +237,20 @@ const scrapedEvents: CalEvent[] = [
     description:
       "UC Berkeley Sky Lab / Anyscale meetup on SkyRL — open-source agentic reinforcement learning for training and adapting foundation-model agents.",
     sourceUrl: "https://luma.com/y4ahouh6",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-ai-dev-stack",
+    name: "The AI Dev Stack: Beyond Code w/ Antimetal, Fireworks, Braintrust & Browserbase",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Aug 18",
+    sortDate: "2026-08-18",
+    month: "2026-08",
+    location: "San Francisco (Union Square)",
+    description:
+      "Lightning talks and demos from Antimetal, Fireworks, Braintrust, and Browserbase on the AI development stack beyond coding agents — triage, evals, inference, and browser automation.",
+    sourceUrl: "https://luma.com/ai-dev-stack",
     sourceLabel: "luma.com",
   },
   {
@@ -354,6 +366,21 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "luma.com",
   },
   {
+    id: "luma-durable-ai-agent-context",
+    name: "Durable AI: Agent Context is Everything",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Aug 26",
+    sortDate: "2026-08-26",
+    month: "2026-08",
+    location: "San Francisco",
+    description:
+      "Temporal-hosted Durable AI meetup on production agent context — talks/demos on giving agents fresh history and fast retrieval (speakers include Retriever AI, Neo4j, PromptQL, and others).",
+    sourceUrl: "https://luma.com/durable-ai-august",
+    sourceLabel: "luma.com",
+    topics: ["agent-memory", "rag"],
+  },
+  {
     id: "luma-step-sf-festival",
     name: "Step SF 2026: The AI & Tech Startup Festival",
     category: "conference",
@@ -378,6 +405,20 @@ const scrapedEvents: CalEvent[] = [
     description:
       "Postman Agents and APIs developer meetup — live demos shipping AI apps with Anthropic, Postman, Supabase, and Vercel.",
     sourceUrl: "https://luma.com/august-SF-supabase-vercel-postman",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-open-source-ai-summit-sf",
+    name: "Open Source AI Summit SF",
+    category: "conference",
+    status: "confirmed",
+    dateLabel: "Aug 28",
+    sortDate: "2026-08-28",
+    month: "2026-08",
+    location: "House by Edge & Node, San Francisco",
+    description:
+      "Buildplanet / NEAR AI half-day seminar on open-source AI frontier work — confirmed speakers include Matt White (PyTorch), Illia Polosukhin (NEAR), and Lukasz Kaiser.",
+    sourceUrl: "https://luma.com/buildp-c5h9",
     sourceLabel: "luma.com",
   },
   {
@@ -517,7 +558,7 @@ export const directSubmissions: CalEvent[] = [
   // ── YC AI Startup School 2026 week (Jul 23–27) ──────────────────────────
   // Main event → pastEvents2026; Jul 23–27 side-events (including Founder
   // Rooftop Gala) pruned through 2026-07-28 Pacific once their dates passed.
-  // No new invite-only keepers added 2026-08-14.
+  // No new invite-only keepers added 2026-08-16.
 ];
 
 /**
@@ -536,7 +577,7 @@ export const recurringSeries: RecurringSeries[] = [
     id: "ai-tinkerers-sf",
     name: "AI Tinkerers — San Francisco",
     category: "meetup",
-    cadence: "Monthly — next builder/RAG demo night TBA (homepage lists Aug 26 SF GTM Engineering Demo Night w/ Attio — skipped as GTM/revenue; Columbus Sep 7 is not SF)",
+    cadence: "Monthly — next builder/RAG demo night TBA (homepage still lists Aug 26 SF GTM Engineering Demo Night w/ Attio — skipped as GTM/revenue)",
     location: "San Francisco",
     description:
       "Hands-on demo nights for engineers/founders building AI agents, RAG, voice, and coding agents.",
@@ -640,7 +681,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Checked directly (2026-08-14): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) lists Sep 5 The AI Debates Hackathon (luma.com/aidebates) and Sep 22 Energy Optimization of GPUs through Self-Improving Agents (luma.com/gpuenergyoptimization) — both tracked in scheduledEvents. Still sparse advance dating overall — re-check luma.com/agi-house close to when you need one.",
+      "Checked directly (2026-08-16): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) still lists Sep 5 The AI Debates Hackathon (luma.com/aidebates) and Sep 22 Energy Optimization of GPUs through Self-Improving Agents (luma.com/gpuenergyoptimization) — both tracked in scheduledEvents. Still sparse advance dating overall — re-check luma.com/agi-house close to when you need one.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -753,4 +794,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-08-14";
+export const researchDate = "2026-08-16";
