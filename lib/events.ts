@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-08-16. Dates and venues sourced from
+ * Confirmed research date: 2026-08-20. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -173,100 +173,17 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "lablab.ai",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // daily through 2026-08-16.
+  // daily through 2026-08-20.
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
   // AI/agent-relevant listings. This feed only surfaces ~6 weeks out, so
   // coverage here runs through mid-October — re-scrape luma.com/sf for
-  // anything past that. Added The AI Dev Stack (Aug 18), Durable AI: Agent
-  // Context is Everything (Aug 26), and Open Source AI Summit SF (Aug 28).
-  // Still skipping Physical AI Sprint / Rally / Embodied AI Night, Claude
-  // Science Demo Night, Grok Bot build nights, Who Will Own The Intelligence
-  // Layer mixer, Salt Bread Maxxing, AI Infra Kebab, Lumafield, CorpGov,
-  // WorkOS Demo Night (not AI-framed), etc.
-  {
-    id: "luma-moonlight-gemini-hack",
-    name: "Moonlighting with Gemini + Exa — 3 Hour Hack",
-    category: "hackathon",
-    status: "confirmed",
-    dateLabel: "Aug 17",
-    sortDate: "2026-08-17",
-    month: "2026-08",
-    location: "WorkOS, 660 Market St, San Francisco",
-    description:
-      "Invite-only Build Club evening hack lab with Gemini and Exa — three hours for AI engineers and technical founders to ship a side project (credits, food, and cash prizes for top finishes).",
-    sourceUrl: "https://luma.com/buildclub-ua0n",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-modcon-2026",
-    name: "ModCon 2026: Compute Unlocked",
-    category: "conference",
-    status: "confirmed",
-    dateLabel: "Aug 18",
-    sortDate: "2026-08-18",
-    month: "2026-08",
-    location: "Grand Hyatt San Francisco",
-    description:
-      "Modular's developer conference on AI compute — compilers, accelerators, and building on Modular's stack (~300 attendees).",
-    sourceUrl: "https://luma.com/modcon",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-cerebras-supernova-2026",
-    name: "Cerebras SUPERNOVA 2026",
-    category: "conference",
-    status: "confirmed",
-    dateLabel: "Aug 18",
-    sortDate: "2026-08-18",
-    month: "2026-08",
-    location: "The Midway, 900 Marin St, San Francisco",
-    description:
-      "Cerebras flagship event for developers, founders, and infra partners — demos and talks around high-throughput AI inference.",
-    sourceUrl: "https://luma.com/cerebrassupernova26",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-skyrl-meetup",
-    name: "SkyRL Meetup",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Aug 18",
-    sortDate: "2026-08-18",
-    month: "2026-08",
-    location: "San Francisco (Yerba Buena)",
-    description:
-      "UC Berkeley Sky Lab / Anyscale meetup on SkyRL — open-source agentic reinforcement learning for training and adapting foundation-model agents.",
-    sourceUrl: "https://luma.com/y4ahouh6",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-ai-dev-stack",
-    name: "The AI Dev Stack: Beyond Code w/ Antimetal, Fireworks, Braintrust & Browserbase",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Aug 18",
-    sortDate: "2026-08-18",
-    month: "2026-08",
-    location: "San Francisco (Union Square)",
-    description:
-      "Lightning talks and demos from Antimetal, Fireworks, Braintrust, and Browserbase on the AI development stack beyond coding agents — triage, evals, inference, and browser automation.",
-    sourceUrl: "https://luma.com/ai-dev-stack",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-sf-database-meetup-aug",
-    name: "The SF Database Meetup — August",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Aug 19",
-    sortDate: "2026-08-19",
-    month: "2026-08",
-    location: "PlanetScale, 108 Natoma St, San Francisco",
-    description:
-      "PlanetScale-hosted lightning talks on data systems — including giving agents SQL, document stores on SQL, and Postgres analytics rewrites.",
-    sourceUrl: "https://luma.com/fxqt8zra",
-    sourceLabel: "luma.com",
-  },
+  // anything past that. Pruned Aug 17–19 meetups/hacks; ModCon + Cerebras
+  // SUPERNOVA moved to pastEvents2026. Added AGI House AI for Good Hackathon
+  // (Aug 22) and Recursive Self Improvement Hack: Evals (Aug 23). Still
+  // skipping Physical AI Rally / Embodied AI Night, Claude Science Demo
+  // Night, Grok Bot build nights, Who Will Own The Intelligence Layer,
+  // AI Infra Kebab, Lumafield, WorkOS Demo Night (not AI-framed), Escaping
+  // Flatland book club, Inception Studio showcase, etc.
   {
     id: "luma-claude-code-workshop-sf-aug20",
     name: "Claude Code Workshop — San Francisco",
@@ -321,6 +238,34 @@ const scrapedEvents: CalEvent[] = [
     description:
       "One-day Mistral-hosted hackathon (8:30am–8pm) — application-reviewed teams of 1–4; Mistral credits for top finishes.",
     sourceUrl: "https://luma.com/mistral-summer-vibe-hackathon-sf",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-agi-house-ai-for-good",
+    name: "AI for Good Hackathon",
+    category: "hackathon",
+    status: "confirmed",
+    dateLabel: "Aug 22",
+    sortDate: "2026-08-22",
+    month: "2026-08",
+    location: "AGI House SF, 170 St. Germain Ave, San Francisco",
+    description:
+      "AGI House Saturday build day on accessibility, health, food access, and nonprofit software challenges — teams form on-site and demo by evening.",
+    sourceUrl: "https://luma.com/aiforgoodhackathon",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-rsi-hack-evals",
+    name: "Recursive Self Improvement Hack: Evals",
+    category: "hackathon",
+    status: "confirmed",
+    dateLabel: "Aug 23",
+    sortDate: "2026-08-23",
+    month: "2026-08",
+    location: "San Francisco",
+    description:
+      "Sundai day hack on recursive self-improvement via harness engineering — focus on evals as the bottleneck for self-improving agent loops.",
+    sourceUrl: "https://luma.com/rkum5o5l",
     sourceLabel: "luma.com",
   },
   {
@@ -496,19 +441,7 @@ const scrapedEvents: CalEvent[] = [
   // agent-builder relevance — Eventbrite's own search is much noisier than
   // Luma's for this audience (heavy false-positive rate on words like "rag"
   // matching unrelated events, plus templated paid-training-course spam).
-  {
-    id: "eventbrite-agentic-ai-workshop",
-    name: "Make Agentic AI Work for You — San Francisco",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Aug 18",
-    sortDate: "2026-08-18",
-    month: "2026-08",
-    location: "San Francisco (venue TBD)",
-    description: "Workshop on applying agentic AI patterns in practice.",
-    sourceUrl: "https://www.eventbrite.com/e/make-agentic-ai-work-for-you-san-francisco-tickets-1993595661289",
-    sourceLabel: "eventbrite.com",
-  },
+  // Agentic AI workshop (Aug 18) pruned after Pacific day passed (2026-08-20).
   {
     id: "eventbrite-data-streaming-summit",
     name: "Data Streaming Summit 2026",
@@ -558,7 +491,7 @@ export const directSubmissions: CalEvent[] = [
   // ── YC AI Startup School 2026 week (Jul 23–27) ──────────────────────────
   // Main event → pastEvents2026; Jul 23–27 side-events (including Founder
   // Rooftop Gala) pruned through 2026-07-28 Pacific once their dates passed.
-  // No new invite-only keepers added 2026-08-16.
+  // No new invite-only keepers added 2026-08-20.
 ];
 
 /**
@@ -577,7 +510,8 @@ export const recurringSeries: RecurringSeries[] = [
     id: "ai-tinkerers-sf",
     name: "AI Tinkerers — San Francisco",
     category: "meetup",
-    cadence: "Monthly — next builder/RAG demo night TBA (homepage still lists Aug 26 SF GTM Engineering Demo Night w/ Attio — skipped as GTM/revenue)",
+    cadence:
+      "Monthly — next builder/RAG demo night TBA (homepage still lists Aug 26 SF GTM Engineering Demo Night w/ Attio — skipped as GTM/revenue)",
     location: "San Francisco",
     description:
       "Hands-on demo nights for engineers/founders building AI agents, RAG, voice, and coding agents.",
@@ -681,7 +615,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Checked directly (2026-08-16): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) still lists Sep 5 The AI Debates Hackathon (luma.com/aidebates) and Sep 22 Energy Optimization of GPUs through Self-Improving Agents (luma.com/gpuenergyoptimization) — both tracked in scheduledEvents. Still sparse advance dating overall — re-check luma.com/agi-house close to when you need one.",
+      "Checked directly (2026-08-20): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) lists Aug 22 AI for Good Hackathon (luma.com/aiforgoodhackathon), Sep 5 The AI Debates Hackathon (luma.com/aidebates), and Sep 22 Energy Optimization of GPUs through Self-Improving Agents (luma.com/gpuenergyoptimization) — all tracked in scheduledEvents. Still sparse advance dating overall — re-check luma.com/agi-house close to when you need one.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -708,6 +642,20 @@ export const recurringSeries: RecurringSeries[] = [
 ];
 
 export const pastEvents2026: PastEvent[] = [
+  {
+    id: "modcon-2026",
+    name: "ModCon 2026: Compute Unlocked",
+    dateLabel: "Aug 18",
+    location: "Grand Hyatt San Francisco",
+    note: "Modular developer conference on AI compute — kept for annual Bay Area recurrence reference",
+  },
+  {
+    id: "cerebras-supernova-2026",
+    name: "Cerebras SUPERNOVA 2026",
+    dateLabel: "Aug 18",
+    location: "The Midway, San Francisco",
+    note: "Cerebras flagship inference/developer event — kept for annual Bay Area recurrence reference",
+  },
   {
     id: "agentic-ai-summit-2026",
     name: "Agentic AI Summit",
@@ -794,4 +742,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-08-16";
+export const researchDate = "2026-08-20";

@@ -30,7 +30,7 @@ export interface VendorGroup {
 
 /**
  * RAG / vector database / GraphRAG vendor events — competitive & partnership
- * tracking. Researched 2026-08-16 against each vendor's own events page.
+ * tracking. Researched 2026-08-20 against each vendor's own events page.
  * These are companies HydraDB competes or overlaps with, not events for
  * agent builders generally (see events.ts for that).
  */
@@ -54,17 +54,30 @@ export const vendorGroups: VendorGroup[] = [
         topics: ["vector-db", "rag", "agent-memory"],
       },
       {
-        id: "pinecone-access-granted",
-        name: "Access Granted: Enterprise Security with Pinecone",
-        dateLabel: "Aug 19",
-        sortDate: "2026-08-19",
-        format: "virtual",
+        id: "pinecone-la-agentic-meetup-sep",
+        name: "LA Agentic AI Meetup hosted by Pinecone",
+        dateLabel: "Sep 8",
+        sortDate: "2026-09-08",
+        format: "in-person",
+        location: "Los Angeles, CA",
         description:
-          "Product deep-dive webinar on Pinecone enterprise security / access control (listed as Access Granted on pinecone.io and luma.com/pinecone; previously titled Deep Dive: Access Control).",
+          "Monthly Pinecone-hosted LA meetup for agentic builders — demos and informal conversation (listed on luma.com/pinecone as of 2026-08-20).",
         status: "confirmed",
-        sourceUrl: "https://www.pinecone.io/community/events/",
-        sourceLabel: "pinecone.io",
-        topics: ["vector-db"],
+        sourceUrl: "https://luma.com/wzf6hq1d",
+        sourceLabel: "luma.com/pinecone",
+      },
+      {
+        id: "pinecone-la-agentic-meetup-tech-week",
+        name: "LA Agentic AI Meetup hosted by Pinecone: LA Tech Week Edition",
+        dateLabel: "Oct 13",
+        sortDate: "2026-10-13",
+        format: "in-person",
+        location: "Los Angeles, CA",
+        description:
+          "Pinecone LA agentic meetup during LA Tech Week (Oct 12–18 window) — builders and demos (listed on luma.com/pinecone as of 2026-08-20).",
+        status: "confirmed",
+        sourceUrl: "https://luma.com/nptafwdo",
+        sourceLabel: "luma.com/pinecone",
       },
     ],
   },
@@ -132,6 +145,20 @@ export const vendorGroups: VendorGroup[] = [
         topics: ["graphrag", "rag", "agent-memory"],
       },
       {
+        id: "neo4j-genai-fundamentals-aug25",
+        name: "Neo4j & Generative AI Fundamentals Workshop",
+        dateLabel: "Aug 25",
+        sortDate: "2026-08-25",
+        format: "virtual",
+        description:
+          "Hands-on virtual workshop on building RAG and GraphRAG applications with Neo4j for more accurate, context-aware AI (listed on neo4j.com/events as of 2026-08-20).",
+        status: "confirmed",
+        sourceUrl:
+          "https://neo4j.com/event/neo4j-generative-ai-fundamentals-workshop_25aug/",
+        sourceLabel: "neo4j.com",
+        topics: ["graphrag", "rag"],
+      },
+      {
         id: "neo4j-tokyo-knowledge-design",
         name: "Knowledge Design in the AI Era — Tokyo",
         dateLabel: "Aug 26",
@@ -186,6 +213,20 @@ export const vendorGroups: VendorGroup[] = [
         sourceUrl: "https://neo4j.com/event/pune-graphdb-user-group-august-meetup/",
         sourceLabel: "neo4j.com",
         topics: ["graphrag"],
+      },
+      {
+        id: "neo4j-knowledge-graphs-enterprise-verdict",
+        name: "Knowledge Graphs for Enterprise AI: The Independent Verdict",
+        dateLabel: "Sep 1",
+        sortDate: "2026-09-01",
+        format: "virtual",
+        description:
+          "Fireside with UK National Innovation Centre for Data researchers on how GraphRAG improves AI accuracy for trustworthy enterprise systems — APAC/Europe timezone repeats also listed Sep 1 on neo4j.com/events.",
+        status: "confirmed",
+        sourceUrl:
+          "https://neo4j.com/event/knowledge-graphs-for-enterprise-ai-the-independent-verdict-sept-1/",
+        sourceLabel: "neo4j.com",
+        topics: ["graphrag", "rag"],
       },
       {
         id: "neo4j-bengaluru-agentic-workshop",
@@ -319,7 +360,7 @@ export const vendorGroups: VendorGroup[] = [
         format: "in-person",
         location: "New York, NY",
         description:
-          "Flagship regional GraphRAG/AI-ready-data conference — knowledge layer for enterprise AI context, memory, and reasoning (neo4j.com/events lists Sep 17 as of 2026-08-16).",
+          "Flagship regional GraphRAG/AI-ready-data conference — knowledge layer for enterprise AI context, memory, and reasoning (neo4j.com/events lists Sep 17 as of 2026-08-20).",
         status: "confirmed",
         sourceUrl: "https://neo4j.com/event/graphsummit-new-york-3/",
         sourceLabel: "neo4j.com",
@@ -363,7 +404,7 @@ export const vendorGroups: VendorGroup[] = [
         format: "in-person",
         location: "Google Building MP3, 1170 Bordeaux Dr, Sunnyvale, CA",
         description:
-          "Hands-on Bay Area workshop pairing Neo4j with Google Cloud Gemini Enterprise — load a real dataset, then build AI agents that use a knowledge graph (listed on neo4j.com/events as of 2026-08-16).",
+          "Hands-on Bay Area workshop pairing Neo4j with Google Cloud Gemini Enterprise — load a real dataset, then build AI agents that use a knowledge graph (listed on neo4j.com/events as of 2026-08-20).",
         status: "confirmed",
         sourceUrl:
           "https://neo4j.com/event/ai-hands-on-workshop-with-neo4j-and-google-gemini-sunnyvale/",
@@ -520,19 +561,7 @@ export const vendorGroups: VendorGroup[] = [
         sortDate: "2026-08-26",
         format: "virtual",
         description:
-          "Virtual LangSmith AMA — product Q&A for teams building and evaluating agents (listed on langchain.com/events as of 2026-08-16).",
-        status: "confirmed",
-        sourceUrl: "https://www.langchain.com/events",
-        sourceLabel: "langchain.com",
-      },
-      {
-        id: "langchain-workday-deep-agents",
-        name: "Workday Workshop: Building and Evaluating Deep Agents",
-        dateLabel: "Aug 27",
-        sortDate: "2026-08-27",
-        format: "virtual",
-        description:
-          "Virtual Workday workshop on building and evaluating deep agents — listed on langchain.com/events as of 2026-08-16.",
+          "Virtual LangSmith AMA — product Q&A for teams building and evaluating agents (listed on langchain.com/events as of 2026-08-20).",
         status: "confirmed",
         sourceUrl: "https://www.langchain.com/events",
         sourceLabel: "langchain.com",
@@ -556,7 +585,7 @@ export const vendorGroups: VendorGroup[] = [
         sortDate: "2026-09-02",
         format: "virtual",
         description:
-          "Virtual LangChain session on the learning loop for improving agents — listed on langchain.com/events as of 2026-08-16.",
+          "Virtual LangChain session on the learning loop for improving agents — listed on langchain.com/events as of 2026-08-20.",
         status: "confirmed",
         sourceUrl: "https://www.langchain.com/events",
         sourceLabel: "langchain.com",
@@ -569,6 +598,18 @@ export const vendorGroups: VendorGroup[] = [
         format: "in-person",
         location: "Hamburg, Germany",
         description: "Hamburg community meetup on building production agents — listed on langchain.com/events.",
+        status: "confirmed",
+        sourceUrl: "https://www.langchain.com/events",
+        sourceLabel: "langchain.com",
+      },
+      {
+        id: "langchain-agent-harnesses-deep-agents-101",
+        name: "Agent Harnesses & Deep Agents 101",
+        dateLabel: "Sep 17",
+        sortDate: "2026-09-17",
+        format: "virtual",
+        description:
+          "Virtual LangChain session on agent harnesses and deep agents — listed on langchain.com/events as of 2026-08-20.",
         status: "confirmed",
         sourceUrl: "https://www.langchain.com/events",
         sourceLabel: "langchain.com",
@@ -605,7 +646,7 @@ export const vendorGroups: VendorGroup[] = [
         format: "in-person",
         location: "Los Angeles, CA",
         description:
-          "Product roadshow stop for LangSmith — Building Agents with Agents (listed on langchain.com/events as of 2026-08-16).",
+          "Product roadshow stop for LangSmith — Building Agents with Agents (listed on langchain.com/events as of 2026-08-20).",
         status: "confirmed",
         sourceUrl: "https://www.langchain.com/events",
         sourceLabel: "langchain.com",
@@ -809,7 +850,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "MongoDB.local's flagship regional conference series didn't have confirmed Jul–Dec city dates at research time — check mongodb.com/events directly. Jul 22–23 Vector Search / AI Agents / Atlas+Confluent and Jul 29 AI System Design sessions have passed. Aug 4 AI Coding webinar pruned after Pacific day passed. Observability / Governance / Evaluating Agentic AI Platform webinar series (Sep 9 / 16 / 23 ET) — leave topics unset (ops/governance, not retrieval). APAC (SGT) Sep 10 / 17 / 24, Oct ET, and Oct BST (Oct 6 / 13 / 20) Vector Search / RAG / AI Agents series still confirmed as of 2026-08-16.",
+      "MongoDB.local's flagship regional conference series didn't have confirmed Jul–Dec city dates at research time — check mongodb.com/events directly. Jul 22–23 Vector Search / AI Agents / Atlas+Confluent and Jul 29 AI System Design sessions have passed. Aug 4 AI Coding webinar pruned after Pacific day passed. Observability / Governance / Evaluating Agentic AI Platform webinar series (Sep 9 / 16 / 23 ET) — leave topics unset (ops/governance, not retrieval). APAC (SGT) Sep 10 / 17 / 24, Oct ET, and Oct BST (Oct 6 / 13 / 20) Vector Search / RAG / AI Agents series still confirmed as of 2026-08-20.",
   },
   {
     id: "redis",
@@ -824,7 +865,7 @@ export const vendorGroups: VendorGroup[] = [
         sortDate: "2026-09-09",
         format: "virtual",
         description:
-          "Redis office hours on context engineering for agents — agent memory and retrieval context patterns (still listed 2026-09-09 9:00–10:00 AM PT as of 2026-08-16).",
+          "Redis office hours on context engineering for agents — agent memory and retrieval context patterns (still listed 2026-09-09 9:00–10:00 AM PT as of 2026-08-20).",
         status: "confirmed",
         sourceUrl: "https://redis.io/resources/videos/office-hours-context-engineering/",
         sourceLabel: "redis.io",
@@ -839,16 +880,16 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://zilliz.com/event",
     events: [
       {
-        id: "zilliz-milvus-3-full-text-search",
-        name: "Faster and More Powerful Full-Text Search with Milvus 3.0",
-        dateLabel: "Aug 19, 11am PT",
-        sortDate: "2026-08-19",
+        id: "zilliz-migrate-elasticsearch-opensearch-milvus",
+        name: "Migrating from Elasticsearch/OpenSearch to Milvus",
+        dateLabel: "Sep 2, 11am PT",
+        sortDate: "2026-09-02",
         format: "virtual",
         description:
-          "Zilliz webinar comparing Elasticsearch and Milvus full-text search with live side-by-side queries (listed isPast:false on zilliz.com/event as of 2026-08-16).",
+          "Zilliz webinar on migrating search workloads from Elasticsearch/OpenSearch to Milvus (listed isPast:false on zilliz.com/event as of 2026-08-20). Aug 19 Milvus 3.0 full-text webinar pruned after Pacific day passed.",
         status: "confirmed",
         sourceUrl:
-          "https://zilliz.com/event/faster-more-powerful-full-text-search-milvus-3-0",
+          "https://zilliz.com/event/migrating-from-elasticsearch-opensearch-to-milvus",
         sourceLabel: "zilliz.com",
         topics: ["vector-db"],
       },
@@ -902,7 +943,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Upcoming dated list refreshed from qdrant.tech/events (2026-08-16). Engineering Self-Improving AI Systems (Jul 29, AWS Loft SF) pruned after Pacific day passed. SF Aug 25 title still “AI Debate Night” and Berlin Sep 16 remain save-the-dates — confirm venue/agenda closer to the day. August Discord Office Hours (Aug 20) and OpenAI Codex Fast Hacks Tokyo (Aug 27) skipped. Vector Space Meetup / Day already ran Jun 11.",
+      "Upcoming dated list refreshed from qdrant.tech/events (2026-08-20). Engineering Self-Improving AI Systems (Jul 29, AWS Loft SF) pruned after Pacific day passed. SF Aug 25 title still “AI Debate Night” and Berlin Sep 16 remain save-the-dates — confirm venue/agenda closer to the day. August Discord Office Hours (Aug 20) and OpenAI Codex Fast Hacks Tokyo (Aug 27) skipped. Vector Space Meetup / Day already ran Jun 11.",
   },
   {
     id: "weaviate",
@@ -911,7 +952,7 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://weaviate.io/community/events",
     events: [],
     watchNote:
-      "Weaviate's own events page showed no scheduled events at research time (2026-08-16): \"Sorry, there are no events right now.\" SF and NYC meetup chapters exist but had no dated 2026 sessions listed. Check weaviate.io/community/events and meetup.com/Weaviate-San-Francisco.",
+      "Weaviate's own events page showed no scheduled events at research time (2026-08-20): \"Sorry, there are no events right now.\" SF and NYC meetup chapters exist but had no dated 2026 sessions listed. Check weaviate.io/community/events and meetup.com/Weaviate-San-Francisco.",
   },
   {
     id: "chroma",
@@ -929,7 +970,7 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://www.llamaindex.ai/blog",
     events: [],
     watchNote:
-      "No confirmed dated Jul–Dec 2026 events found — LlamaIndex's most recent confirmed item was a Jun 30 webinar, just before this window. Their blog/newsletter is the primary events channel; check llamaindex.ai/blog monthly. Re-checked 2026-08-16.",
+      "No confirmed dated Jul–Dec 2026 events found — LlamaIndex's most recent confirmed item was a Jun 30 webinar, just before this window. Their blog/newsletter is the primary events channel; check llamaindex.ai/blog monthly. Re-checked 2026-08-20.",
   },
   {
     id: "elastic",
@@ -947,6 +988,20 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://mem0.ai",
     events: [
       {
+        id: "mem0-agents-in-context-dinner",
+        name: "Agents in Context: a Dinner on Memory, Context, and Connectors",
+        dateLabel: "Aug 26",
+        sortDate: "2026-08-26",
+        format: "in-person",
+        location: "San Francisco, CA",
+        description:
+          "Small approval-gated Mem0 dinner for engineering leaders on production agent memory/context and connectors like MCP (listed on luma.com/mem0 as of 2026-08-20).",
+        status: "confirmed",
+        sourceUrl: "https://luma.com/mem0-22d7",
+        sourceLabel: "luma.com/mem0",
+        topics: ["agent-memory"],
+      },
+      {
         id: "mem0-memory-for-llms-aug27",
         name: "Memory for LLMs",
         dateLabel: "Aug 27",
@@ -954,7 +1009,7 @@ export const vendorGroups: VendorGroup[] = [
         format: "in-person",
         location: "Sunnyvale, CA",
         description:
-          "Evening technical talks on LLM memory — persistent, context-aware applications beyond the context window (listed on luma.com/mem0 as of 2026-08-16).",
+          "Evening technical talks on LLM memory — persistent, context-aware applications beyond the context window (listed on luma.com/mem0 as of 2026-08-20).",
         status: "confirmed",
         sourceUrl: "https://luma.com/ey4era2u",
         sourceLabel: "luma.com/mem0",
@@ -962,7 +1017,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Re-checked luma.com/mem0 (cal-URD2cnrxGOxlBjx) on 2026-08-16: Context Corner Aug 14 pruned after Pacific day passed; Memory for LLMs evening Aug 27 in Sunnyvale still tracked above. Jog Your Memory run club + matcha (Aug 17) still skipped as social. Re-read the calendar after each lunch cadence.",
+      "Re-checked luma.com/mem0 (cal-URD2cnrxGOxlBjx) on 2026-08-20: added Agents in Context dinner Aug 26 (SF); Memory for LLMs evening Aug 27 in Sunnyvale still tracked above. Jog Your Memory run club + matcha (Sep 11) still skipped as social. Re-read the calendar after each cadence change.",
   },
   {
     id: "supermemory",
@@ -971,6 +1026,6 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://supermemory.ai",
     events: [],
     watchNote:
-      "No dedicated events page — Supermemory (memory + RAG hybrid context API) surfaces events via blog and X. The localhost:6767 hackathon deadline (Jul 17) has passed; no new dated Jul–Dec 2026 events found on blog.supermemory.ai as of 2026-08-16. Check blog.supermemory.ai and @supermemoryai.",
+      "No dedicated events page — Supermemory (memory + RAG hybrid context API) surfaces events via blog and X. The localhost:6767 hackathon deadline (Jul 17) has passed; no new dated Jul–Dec 2026 events found on blog.supermemory.ai as of 2026-08-20. Check blog.supermemory.ai and @supermemoryai.",
   },
 ];
