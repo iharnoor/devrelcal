@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-08-20. Dates and venues sourced from
+ * Confirmed research date: 2026-08-22. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -173,59 +173,17 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "lablab.ai",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // daily through 2026-08-20.
+  // daily through 2026-08-22.
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
   // AI/agent-relevant listings. This feed only surfaces ~6 weeks out, so
   // coverage here runs through mid-October — re-scrape luma.com/sf for
-  // anything past that. Pruned Aug 17–19 meetups/hacks; ModCon + Cerebras
-  // SUPERNOVA moved to pastEvents2026. Added AGI House AI for Good Hackathon
-  // (Aug 22) and Recursive Self Improvement Hack: Evals (Aug 23). Still
-  // skipping Physical AI Rally / Embodied AI Night, Claude Science Demo
-  // Night, Grok Bot build nights, Who Will Own The Intelligence Layer,
-  // AI Infra Kebab, Lumafield, WorkOS Demo Night (not AI-framed), Escaping
-  // Flatland book club, Inception Studio showcase, etc.
-  {
-    id: "luma-claude-code-workshop-sf-aug20",
-    name: "Claude Code Workshop — San Francisco",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Aug 20",
-    sortDate: "2026-08-20",
-    month: "2026-08",
-    location: "San Francisco",
-    description:
-      "Hands-on workshop (with Provectus) on orchestrating coding agents with Claude Code — ship something during the session.",
-    sourceUrl: "https://luma.com/claude-code-workshop-sf-aug-20",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-open-models-production-agents",
-    name: "Open Models, Production Agents: The New Economics of AI-Native Engineering",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Aug 20",
-    sortDate: "2026-08-20",
-    month: "2026-08",
-    location: "San Francisco",
-    description:
-      "Evening on open models vs closed coding agents for production software engineering — cost/quality tradeoffs with models like Kimi, GLM, and MiniMax.",
-    sourceUrl: "https://luma.com/o9tv62y5",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-agents-changing-web-parag",
-    name: "Agents Are Changing the Web with Parag Agrawal",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Aug 20",
-    sortDate: "2026-08-20",
-    month: "2026-08",
-    location: "Baseten Clubhouse, San Francisco",
-    description:
-      "Baseten Heavyweights fireside with Parag Agrawal (Parallel; formerly Twitter CEO/CTO) on how agents are changing the web.",
-    sourceUrl: "https://luma.com/sy0mt1m4",
-    sourceLabel: "luma.com",
-  },
+  // anything past that. Pruned Aug 20 Claude Code / open-models / Parag
+  // Agrawal meetups after Pacific day passed. Added Mistral × SGLang meetup
+  // (Aug 25) and Healthcare AI Hackathon (Sep 26). Still skipping Physical
+  // AI / Embodied AI Night, Spatial Intelligence 3D hackathon, Dogathon,
+  // GTM/sales agent nights, Who Will Own The Intelligence Layer, AI Infra
+  // Kebab, Lumafield, WorkOS Demo Night (not AI-framed), Escaping Flatland,
+  // Supabase Select, etc.
   {
     id: "luma-mistral-vibe-hackathon",
     name: "Mistral Vibe Hackathon",
@@ -276,10 +234,24 @@ const scrapedEvents: CalEvent[] = [
     dateLabel: "Aug 24",
     sortDate: "2026-08-24",
     month: "2026-08",
-    location: "Convene, 100 Stockton / 40 O'Farrell St, San Francisco",
+    location: "Saluhall SF, 945 Market St Fl 2, San Francisco",
     description:
       "Evening tech talks from the vLLM community and NVIDIA Dynamo on serving LLMs at scale — inference optimization and distributed serving during vLLM conference week.",
     sourceUrl: "https://luma.com/r8o604o0",
+    sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-mistral-sglang-hf-meetup",
+    name: "Mistral Meetup with SGLang and Hugging Face",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Aug 25",
+    sortDate: "2026-08-25",
+    month: "2026-08",
+    location: "San Francisco",
+    description:
+      "Evening with Mistral, SGLang, and Hugging Face — technical demos on open-model serving/inference stacks plus informal networking.",
+    sourceUrl: "https://luma.com/summer-meetup-mistral-sglang",
     sourceLabel: "luma.com",
   },
   {
@@ -436,6 +408,20 @@ const scrapedEvents: CalEvent[] = [
     sourceUrl: "https://luma.com/gpuenergyoptimization",
     sourceLabel: "luma.com",
   },
+  {
+    id: "luma-healthcare-ai-hackathon",
+    name: "Healthcare AI Hackathon",
+    category: "hackathon",
+    status: "confirmed",
+    dateLabel: "Sep 26",
+    sortDate: "2026-09-26",
+    month: "2026-09",
+    location: "AWS Builder Loft, 525 Market St, San Francisco",
+    description:
+      "One-day healthcare AI build day with OpenAI, AWS, and health/VC partners — engineers and clinicians ship product prototypes; cash prizes for top teams.",
+    sourceUrl: "https://luma.com/e9z9vuxz",
+    sourceLabel: "luma.com",
+  },
   // Sourced from Eventbrite's SF Bay Area search (2026-07-17), filtered from
   // several hundred loosely-keyword-matched results down to genuine
   // agent-builder relevance — Eventbrite's own search is much noisier than
@@ -491,7 +477,7 @@ export const directSubmissions: CalEvent[] = [
   // ── YC AI Startup School 2026 week (Jul 23–27) ──────────────────────────
   // Main event → pastEvents2026; Jul 23–27 side-events (including Founder
   // Rooftop Gala) pruned through 2026-07-28 Pacific once their dates passed.
-  // No new invite-only keepers added 2026-08-20.
+  // No new invite-only keepers added 2026-08-22.
 ];
 
 /**
@@ -511,7 +497,7 @@ export const recurringSeries: RecurringSeries[] = [
     name: "AI Tinkerers — San Francisco",
     category: "meetup",
     cadence:
-      "Monthly — next builder/RAG demo night TBA (homepage still lists Aug 26 SF GTM Engineering Demo Night w/ Attio — skipped as GTM/revenue)",
+      "Monthly — next builder/RAG demo night TBA (sf.aitinkerers.org still lists Aug 26 SF GTM Engineering Demo Night w/ Attio — skipped as GTM/revenue)",
     location: "San Francisco",
     description:
       "Hands-on demo nights for engineers/founders building AI agents, RAG, voice, and coding agents.",
@@ -615,7 +601,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Checked directly (2026-08-20): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) lists Aug 22 AI for Good Hackathon (luma.com/aiforgoodhackathon), Sep 5 The AI Debates Hackathon (luma.com/aidebates), and Sep 22 Energy Optimization of GPUs through Self-Improving Agents (luma.com/gpuenergyoptimization) — all tracked in scheduledEvents. Still sparse advance dating overall — re-check luma.com/agi-house close to when you need one.",
+      "Checked directly (2026-08-22): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) still lists Aug 22 AI for Good Hackathon (luma.com/aiforgoodhackathon), Sep 5 The AI Debates Hackathon (luma.com/aidebates), and Sep 22 Energy Optimization of GPUs through Self-Improving Agents (luma.com/gpuenergyoptimization) — all tracked in scheduledEvents. Still sparse advance dating overall — re-check luma.com/agi-house close to when you need one.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -742,4 +728,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-08-20";
+export const researchDate = "2026-08-22";
