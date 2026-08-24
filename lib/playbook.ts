@@ -30,7 +30,8 @@ export const cadenceTemplate: CadenceSlot[] = [
     week: "Week 2",
     mode: "in-person",
     label: "Ride an existing meetup",
-    detail: "Sponsor a slot at AI Tinkerers, AICamp, or an AWS Gen AI Loft session — borrowed audience, low setup cost.",
+    detail:
+      "Sponsor a slot at AI Tinkerers, AICamp, Voice AI Space, or an AWS Gen AI Loft session — borrowed audience of people already shipping voice.",
   },
   {
     week: "Week 3",
@@ -54,9 +55,9 @@ export const ideaBank: IdeaCard[] = [
     effort: "medium",
     cadenceFit: "Owned monthly anchor",
     description:
-      "Host 20–40 agent builders at your office or a co-working space for a hands-on session — laptops open, live coding, TAs roaming.",
+      "Host 20–40 voice-agent builders at your office or a co-working space for a hands-on session — laptops open, live mics, TAs roaming.",
     example:
-      'e.g. "Give your agent a memory that survives restarts" — build a stateful agent against HydraDB live, ship a working demo by the end of the night.',
+      'e.g. "Make the agent actually hear the caller" — wire Universal-3.5 Pro Realtime into a LiveKit or Pipecat loop, ship a working listen-think-speak demo by the end of the night.',
   },
   {
     id: "meetup-slot",
@@ -65,20 +66,20 @@ export const ideaBank: IdeaCard[] = [
     effort: "low",
     cadenceFit: "Easiest second in-person slot most months",
     description:
-      "Don't run the room — rent 15–20 minutes of it. Bring a demo, not a pitch, to a meetup that already has the audience assembled.",
+      "Don't run the room — rent 15–20 minutes of it. Bring a demo, not a pitch, to a meetup that already has voice-agent builders assembled.",
     example:
-      "A 15-minute lightning talk at AI Tinkerers SF or AICamp on a debugging story from a real customer integration.",
+      "A 15-minute lightning talk at AI Tinkerers SF or AICamp on a production WER/interruption story from a real customer integration.",
   },
   {
     id: "hackathon-bounty",
     mode: "in-person",
     title: "Hackathon sponsor table + bounty",
     effort: "high",
-    cadenceFit: "Quarterly, timed to AGI House / lablab.ai / summit hackathons",
+    cadenceFit: "Quarterly, timed to AGI House / VapiCon / Voice Agents Forum",
     description:
-      "Sponsor a challenge track with a prize, staff a table with 1–2 engineers for live support, and require the winning entry to actually use your product.",
+      "Sponsor a challenge track with a prize, staff a table with 1–2 engineers for live support, and require the winning entry to actually use streaming STT.",
     example:
-      "\"Best agent with durable memory\" bounty at an AGI House hackathon — judged live, winner demos on your blog next week.",
+      '"Best voice agent that handles barge-in" bounty at an AGI House or VapiCon hack day — judged live, winner demos on the AssemblyAI blog next week.',
   },
   {
     id: "founder-dinner",
@@ -87,9 +88,9 @@ export const ideaBank: IdeaCard[] = [
     effort: "low",
     cadenceFit: "Good relationship-depth swap-in when a build night doesn't fit",
     description:
-      "10–15 people, invite-only, no slides. Structured discussion prompts about what's actually breaking in their agent stacks.",
+      "10–15 people, invite-only, no slides. Structured discussion prompts about what's actually breaking in their voice stacks.",
     example:
-      'A "State & memory in production agents" dinner with 12 engineering leads from companies already building on your platform.',
+      'A "Latency budgets in production voice agents" dinner with 12 engineering leads from companies already building on streaming STT.',
   },
   {
     id: "conference-talk",
@@ -98,9 +99,9 @@ export const ideaBank: IdeaCard[] = [
     effort: "high",
     cadenceFit: "1–2x/quarter, not a monthly slot",
     description:
-      "Apply to speak at Ray Summit, AI Infra Summit, or The AI Conference — reach is much larger than a meetup but lead time is 2–3 months.",
+      "Apply to speak at Voice Agents Forum, VapiCon, or The AI Conference — reach is much larger than a meetup but lead time is 2–3 months.",
     example:
-      "A submitted CFP for AI Infra Summit (Sep 15–17) on agent state/memory patterns at scale.",
+      "A submitted CFP for VapiCon (Nov 11–12) on streaming STT patterns that survive noisy calls, accents, and mid-sentence code-switching.",
   },
   {
     id: "office-hours",
@@ -110,7 +111,8 @@ export const ideaBank: IdeaCard[] = [
     cadenceFit: "Owned monthly (or biweekly) anchor",
     description:
       "Recurring live Q&A on Discord/YouTube with an engineer on call — bring real questions, debug live, no deck.",
-    example: '"Ask the HydraDB team anything" — 30 minutes, same time every month, recorded and clipped afterward.',
+    example:
+      '"Ask the AssemblyAI voice-agents team anything" — 30 minutes, same time every month, recorded and clipped afterward.',
   },
   {
     id: "deep-dive-webinar",
@@ -120,7 +122,8 @@ export const ideaBank: IdeaCard[] = [
     cadenceFit: "Monthly content anchor",
     description:
       "A recorded or live walkthrough of one pattern, done properly — architecture diagram, real code, real tradeoffs.",
-    example: '"Agent memory architecture: what actually needs to persist, and what doesn\'t" — 40-minute deep dive + Q&A.',
+    example:
+      '"Turn-taking, barge-in, and endpointing: what the STT layer owes the rest of the voice-agent stack" — 40-minute deep dive + Q&A.',
   },
   {
     id: "async-challenge",
@@ -130,7 +133,8 @@ export const ideaBank: IdeaCard[] = [
     cadenceFit: "Good virtual stand-in for a hackathon, ~quarterly",
     description:
       "A themed weekend challenge — submissions via GitHub/Discord over 3–5 days, judged async, winners announced on a livestream.",
-    example: '"Build the fastest agent recall loop" weekend challenge, judged by response latency + correctness.',
+    example:
+      '"Build the tightest listen-think-speak loop" weekend challenge, judged by time-to-first-audio + interruption handling.',
   },
   {
     id: "ama-spaces",
@@ -140,7 +144,8 @@ export const ideaBank: IdeaCard[] = [
     cadenceFit: "Easiest second online slot most months",
     description:
       "Bring a customer or partner who's shipped something real and let the audience ask them anything for 30 minutes.",
-    example: "An X Spaces with a startup's founding engineer on migrating their agent's memory layer to HydraDB in production.",
+    example:
+      "An X Spaces with a startup's founding engineer on swapping their voice agent's STT layer to Universal-3.5 Pro Realtime in production.",
   },
   {
     id: "interview-series",
@@ -149,7 +154,8 @@ export const ideaBank: IdeaCard[] = [
     effort: "medium",
     cadenceFit: "Evergreen — batch-record several, release monthly",
     description:
-      "Short recorded conversations with people actually building agents — publish as a YouTube/podcast series with lasting SEO value.",
-    example: '"How we built it" — a 20-minute recorded conversation with an agent-builder customer, released monthly.',
+      "Short recorded conversations with people actually shipping voice agents — publish as a YouTube/podcast series with lasting SEO value.",
+    example:
+      '"How we built it" — a 20-minute recorded conversation with a voice-agent customer, released monthly.',
   },
 ];

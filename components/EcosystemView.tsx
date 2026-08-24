@@ -31,7 +31,7 @@ function FormatTag({ format }: { format: VendorEventFormat }) {
 
 export default function EcosystemView({ groups }: { groups: VendorGroup[] }) {
   const [open, setOpen] = useState<Set<string>>(new Set());
-  const [ragOnly, setRagOnly] = useState(false);
+  const [pitchOnly, setPitchOnly] = useState(false);
 
   function toggle(id: string) {
     setOpen((prev) => {
@@ -43,11 +43,11 @@ export default function EcosystemView({ groups }: { groups: VendorGroup[] }) {
   }
 
   const displayGroups = useMemo(() => {
-    if (!ragOnly) return groups;
+    if (!pitchOnly) return groups;
     return groups
       .map((g) => ({ ...g, events: g.events.filter((e) => hasPitchTopic(e.topics)) }))
       .filter((g) => g.events.length > 0);
-  }, [groups, ragOnly]);
+  }, [groups, pitchOnly]);
 
   const sorted = [...displayGroups].sort((a, b) => b.events.length - a.events.length);
 
@@ -57,11 +57,11 @@ export default function EcosystemView({ groups }: { groups: VendorGroup[] }) {
         <label className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-highlight">
           <input
             type="checkbox"
-            checked={ragOnly}
-            onChange={(e) => setRagOnly(e.target.checked)}
+            checked={pitchOnly}
+            onChange={(e) => setPitchOnly(e.target.checked)}
             className="h-3.5 w-3.5 accent-[var(--color-highlight)]"
           />
-          RAG / Vector DB / Graph only
+          Voice agents / STT only
         </label>
         <button
           onClick={() => setOpen(open.size === sorted.length ? new Set() : new Set(sorted.map((g) => g.id)))}
@@ -70,8 +70,8 @@ export default function EcosystemView({ groups }: { groups: VendorGroup[] }) {
           {open.size === sorted.length && sorted.length > 0 ? "Collapse all" : "Expand all"}
         </button>
       </div>
-      {ragOnly && sorted.length === 0 && (
-        <p className="font-body text-ink-muted">No vendor events tagged RAG/vector-DB/graph right now.</p>
+      {pitchOnly && sorted.length === 0 && (
+        <p className="font-body text-ink-muted">No vendor events tagged STT / voice agents right now.</p>
       )}
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         {sorted.map((group) => {
