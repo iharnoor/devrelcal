@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-08-23. Dates and venues sourced from
+ * Confirmed research date: 2026-08-24. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -173,32 +173,19 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "lablab.ai",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // daily through 2026-08-23.
+  // daily through 2026-08-24.
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
   // AI/agent-relevant listings. This feed only surfaces ~6 weeks out, so
   // coverage here runs through mid-October — re-scrape luma.com/sf for
-  // anything past that. Pruned Aug 22 Mistral Vibe + AGI House AI for Good
-  // hackathons after Pacific day passed. Added All Things Agent Setups
-  // (Sep 15). Still skipping Physical AI / Embodied AI Night, Spatial
-  // Intelligence 3D hackathon, Dogathon, GTM/sales agent nights, Who Will
-  // Own The Intelligence Layer, AI Infra Kebab, Lumafield, WorkOS Demo
-  // Night (not AI-framed), Escaping Flatland, Supabase Select, Humongous
-  // AI Meetup (cocktail mixer), Agentworld lecture, AI Philosophy Nights,
-  // AI Filmmaking hackathon, etc.
-  {
-    id: "luma-rsi-hack-evals",
-    name: "Recursive Self Improvement Hack: Evals",
-    category: "hackathon",
-    status: "confirmed",
-    dateLabel: "Aug 23",
-    sortDate: "2026-08-23",
-    month: "2026-08",
-    location: "San Francisco",
-    description:
-      "Sundai day hack on recursive self-improvement via harness engineering — focus on evals as the bottleneck for self-improving agent loops.",
-    sourceUrl: "https://luma.com/rkum5o5l",
-    sourceLabel: "luma.com",
-  },
+  // anything past that. Pruned Aug 23 RSI Hack: Evals after Pacific day
+  // passed. Added Learning Layer HippoRAG paper club (Aug 25). Still
+  // skipping Physical AI / Embodied AI Night, Spatial Intelligence 3D
+  // hackathon, Dogathon, GTM/sales agent nights, Who Will Own The
+  // Intelligence Layer, AI Infra Kebab, Lumafield, WorkOS Demo Night
+  // (not AI-framed), Escaping Flatland, Supabase Select, Humongous AI
+  // Meetup (cocktail mixer), Agentworld lecture, AI Philosophy Nights,
+  // AI Filmmaking hackathon, Fireworks×LangChain happy hour, open_inference
+  // happy hour, Frontier Research Club #20 (biology), etc.
   {
     id: "luma-vllm-nvidia-dynamo-meetup",
     name: "vLLM × NVIDIA Dynamo Meetup",
@@ -226,6 +213,21 @@ const scrapedEvents: CalEvent[] = [
       "Evening with Mistral, SGLang, and Hugging Face — technical demos on open-model serving/inference stacks plus informal networking.",
     sourceUrl: "https://luma.com/summer-meetup-mistral-sglang",
     sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-learning-layer-hipporag",
+    name: "Learning Layer Paper Reading Club — HippoRAG",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Aug 25",
+    sortDate: "2026-08-25",
+    month: "2026-08",
+    location: "Homebrew Club, 111 Maiden Ln #540, San Francisco",
+    description:
+      "Paper club on HippoRAG — neurobiologically inspired long-term memory for LLMs that links multi-hop retrieval across documents instead of ranking passages independently.",
+    sourceUrl: "https://luma.com/xqcy38hs",
+    sourceLabel: "luma.com",
+    topics: ["rag", "agent-memory", "graphrag"],
   },
   {
     id: "luma-bay-area-dspy-meetup",
@@ -464,7 +466,7 @@ export const directSubmissions: CalEvent[] = [
   // ── YC AI Startup School 2026 week (Jul 23–27) ──────────────────────────
   // Main event → pastEvents2026; Jul 23–27 side-events (including Founder
   // Rooftop Gala) pruned through 2026-07-28 Pacific once their dates passed.
-  // No new invite-only keepers added 2026-08-23.
+  // No new invite-only keepers added 2026-08-24.
 ];
 
 /**
@@ -588,7 +590,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Checked directly (2026-08-23): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) now lists Sep 5 The AI Debates Hackathon (luma.com/aidebates) and Sep 22 Energy Optimization of GPUs through Self-Improving Agents (luma.com/gpuenergyoptimization) — both tracked in scheduledEvents. Aug 22 AI for Good Hackathon has passed and was pruned. Still sparse advance dating overall — re-check luma.com/agi-house close to when you need one.",
+      "Checked directly (2026-08-24): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) still lists Sep 5 The AI Debates Hackathon (luma.com/aidebates) and Sep 22 Energy Optimization of GPUs through Self-Improving Agents (luma.com/gpuenergyoptimization) — both tracked in scheduledEvents. Still sparse advance dating overall — re-check luma.com/agi-house close to when you need one.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -715,4 +717,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-08-23";
+export const researchDate = "2026-08-24";
