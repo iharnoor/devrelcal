@@ -178,12 +178,13 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "lablab.ai",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // daily through 2026-08-25 (UTC; Pacific still 2026-08-24 evening).
+  // 2026-08-25 (UTC afternoon / Pacific morning).
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
   // AI / voice-agent-relevant listings. This feed only surfaces ~6 weeks out, so
   // coverage here runs through mid-October — re-scrape luma.com/sf for
-  // anything past that. ~86 discover entries across 4 pages; no newly
-  // announced Bay Area voice/STT/voice-agent rooms vs 2026-08-24 stamp.
+  // anything past that. ~83 discover entries across 4 pages; no newly
+  // announced Bay Area voice/STT/voice-agent rooms vs earlier 2026-08-25 stamp.
+  // Pruned Aug 24 vLLM × NVIDIA Dynamo meetup once Pacific day passed.
   // Still skipping Physical AI / Embodied AI Night, Spatial Intelligence
   // 3D hackathon, Dogathon, GTM/sales agent nights, Who Will Own The
   // Intelligence Layer, AI Infra Kebab, Lumafield, WorkOS Demo Night
@@ -191,22 +192,9 @@ const scrapedEvents: CalEvent[] = [
   // Meetup (cocktail mixer), Agentworld lecture, AI Philosophy Nights,
   // AI Filmmaking hackathon, Fireworks×LangChain happy hour, open_inference
   // happy hour, Frontier Research Club #20 (biology), Mem0 Memory for LLMs
-  // (agent-memory, not speech), etc. Keep HippoRAG / graph-memory paper
-  // clubs on the calendar as optional rooms, untagged.
-  {
-    id: "luma-vllm-nvidia-dynamo-meetup",
-    name: "vLLM × NVIDIA Dynamo Meetup",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Aug 24",
-    sortDate: "2026-08-24",
-    month: "2026-08",
-    location: "Saluhall SF, 945 Market St Fl 2, San Francisco",
-    description:
-      "Evening tech talks from the vLLM community and NVIDIA Dynamo on serving LLMs at scale — inference optimization and distributed serving during vLLM conference week.",
-    sourceUrl: "https://luma.com/r8o604o0",
-    sourceLabel: "luma.com",
-  },
+  // (agent-memory, not speech), Factory×Reducto×Exa FDE talks, etc. Keep
+  // HippoRAG / graph-memory paper clubs on the calendar as optional rooms,
+  // untagged.
   {
     id: "luma-mistral-sglang-hf-meetup",
     name: "Mistral Meetup with SGLang and Hugging Face",
@@ -652,7 +640,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Checked directly (2026-08-25): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) still lists Sep 5 The AI Debates Hackathon (luma.com/aidebates) and Sep 22 Energy Optimization of GPUs through Self-Improving Agents (luma.com/gpuenergyoptimization) — both tracked in scheduledEvents. Still sparse advance dating overall — re-check luma.com/agi-house close to when you need one.",
+      "Re-checked 2026-08-25 (Pacific morning): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) still lists only Sep 5 The AI Debates Hackathon (luma.com/aidebates) and Sep 22 Energy Optimization of GPUs through Self-Improving Agents (luma.com/gpuenergyoptimization) — both tracked in scheduledEvents. Still sparse advance dating overall — re-check luma.com/agi-house close to when you need one.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -687,7 +675,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://www.voiceaispace.com/events",
     sourceLabel: "voiceaispace.com",
     watchNote:
-      "Checked 2026-08-25: Sep 2 Voice AI Live with Cartesia, Sep 10 Cartesia Farm to Table, Nov 5 Voice Agents Forum, Nov 11 VapiCon are the dated SF/global voice items — tracked on the calendar / ecosystem. Also surfaces UK Conversations-in-the-AI-era builder meetups (Manchester Sep 3 / Nov 4, London Oct 14) and Twilio Assemble London Nov 19 — see vendorEvents.",
+      "Re-checked 2026-08-25: Sep 2 Voice AI Live with Cartesia, Sep 10 Cartesia Farm to Table, Nov 5 Voice Agents Forum (Luma voiceagentssf — voiceaispace still mis-lists Sep 16), Nov 11 VapiCon are the dated SF/global voice items — tracked on the calendar / ecosystem. Also surfaces UK Conversations-in-the-AI-era builder meetups (Manchester Sep 3 / Nov 4, London Oct 14), London coffee-cowork nights (skip), Hardware Hack Day London Aug 30 (hardware, skip), and Twilio Assemble London Nov 19 — see vendorEvents.",
   },
 ];
 

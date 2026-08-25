@@ -30,7 +30,7 @@ export interface VendorGroup {
 
 /**
  * Speech / voice-AI vendor events — competitive & partnership tracking for
- * AssemblyAI. Researched 2026-08-25 against each vendor's own events page.
+ * AssemblyAI. Re-researched 2026-08-25 (Pacific morning) against each vendor's own events page.
  * These are companies that compete or overlap on STT, TTS, streaming audio, or
  * voice-agent platforms — not the Bay Area builder calendar (see events.ts).
  */
@@ -71,7 +71,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Re-checked Deepgram Luma calendar cal-qHEDltsO0Gr0WtD (2026-08-25): only the Genesys lounge (Sep 2) and London Voice AI Exchange (Sep 10) remain dated. Ship It / Founders’ Studio SoMa nights have passed. Recurring SoMa build nights are the pattern to watch — re-read luma.com/deepgram weekly. Flux TTS free-build promo runs through Sep 12. Deepgram is also a diamond sponsor at VapiCon (Nov 11–12).",
+      "Re-checked Deepgram Luma calendar cal-qHEDltsO0Gr0WtD (2026-08-25 Pacific morning): only the Genesys lounge (Sep 2) and London Voice AI Exchange (Sep 10) remain dated — no new SoMa build nights announced. deepgram.com/events 404s; Luma remains the source of truth. Flux TTS free-build promo runs through Sep 12. Deepgram is also a diamond sponsor at VapiCon (Nov 11–12).",
   },
   {
     id: "cartesia",
