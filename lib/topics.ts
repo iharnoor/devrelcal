@@ -1,14 +1,19 @@
-export type Topic = "rag" | "vector-db" | "graphrag" | "agent-memory";
+export type Topic = "stt" | "tts" | "voice-agents" | "streaming" | "audio-intel";
 
 export const TOPIC_LABEL: Record<Topic, string> = {
-  rag: "RAG",
-  "vector-db": "Vector DB",
-  graphrag: "GraphRAG",
-  "agent-memory": "Agent Memory",
+  stt: "STT",
+  tts: "TTS",
+  "voice-agents": "Voice Agents",
+  streaming: "Streaming",
+  "audio-intel": "Audio Intel",
 };
 
-/** Any event carrying one of these topics is a HydraDB pitch/inspiration fit. */
-export const PITCH_TOPICS: Topic[] = ["rag", "vector-db", "graphrag", "agent-memory"];
+/**
+ * Pitch/inspiration fit for AssemblyAI DevRel — rooms where speech-to-text,
+ * streaming transcription, audio intelligence, or production voice agents are
+ * the actual subject, not a side mention.
+ */
+export const PITCH_TOPICS: Topic[] = ["stt", "voice-agents", "streaming", "audio-intel"];
 
 export function hasPitchTopic(topics: Topic[] | undefined): boolean {
   return !!topics && topics.some((t) => PITCH_TOPICS.includes(t));

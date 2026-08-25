@@ -16,7 +16,7 @@
   /* confidence status */
   --color-good: #3f7a4c;
   --color-warn: #9c7318;
-  /* cross-cutting topic highlight — RAG / vector-DB / graph pitch fit */
+  /* cross-cutting topic highlight — STT / voice-agent / streaming pitch fit */
   --color-highlight: #8a6d0f;
 
   --shadow-card: 0 1px 0 var(--color-line);

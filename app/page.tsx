@@ -42,10 +42,10 @@ export default function Home() {
       <header className="flex items-center justify-between gap-4">
         <div className="flex items-baseline gap-3">
           <span className="font-display text-lg font-extrabold uppercase tracking-tight text-ink">
-            Agent Builders
+            Voice Agents
           </span>
           <span className="font-mono text-xs uppercase tracking-widest text-ink-muted">
-            DevRel Calendar
+            AssemblyAI DevRel
           </span>
         </div>
         <nav className="flex items-center gap-5">
@@ -76,12 +76,13 @@ export default function Home() {
       <section className="flex flex-col gap-8">
         <div className="flex flex-col gap-4">
           <h1 className="max-w-2xl font-display text-5xl font-extrabold uppercase leading-[0.95] tracking-tight text-ink sm:text-6xl">
-            Every Bay Area room where agent builders and startups gather.
+            Every Bay Area room where voice-agent builders gather.
           </h1>
           <p className="max-w-xl text-base leading-relaxed text-ink-muted">
             Conferences, recurring meetups, hackathons, and startup events worth tracking for
-            DevRel work with AI agent builders and founders — plus a playbook for keeping a
-            steady 2 in-person + 2 online cadence every month.
+            AssemblyAI DevRel with teams shipping speech-to-text, streaming audio, and
+            production voice agents — plus a playbook for keeping a steady 2 in-person + 2
+            online cadence every month.
           </p>
         </div>
 
@@ -150,10 +151,11 @@ export default function Home() {
             Ecosystem
           </h2>
           <p className="max-w-2xl text-sm leading-relaxed text-ink-muted">
-            Events organized by RAG, vector-database, and GraphRAG vendors — competitive and
-            partnership tracking, not agent-builder outreach. Includes virtual and global events,
-            not just Bay Area. Companies with nothing confirmed are kept as a watchlist rather than
-            dropped.
+            Events organized by STT, TTS, and voice-agent vendors — Deepgram, Cartesia,
+            ElevenLabs, Smallest AI, and the rest of the speech stack. Competitive and
+            partnership tracking, not builder outreach. Includes virtual and global events,
+            not just Bay Area. Companies with nothing confirmed are kept as a watchlist rather
+            than dropped.
           </p>
         </div>
         <EcosystemView groups={activeVendorGroups} />

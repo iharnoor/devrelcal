@@ -20,7 +20,7 @@ export interface CalEvent {
   sourceUrl: string;
   sourceLabel: string;
   note?: string;
-  /** RAG / vector-DB / GraphRAG / agent-memory relevance — HydraDB pitch or inspiration fit. */
+  /** STT / TTS / streaming / voice-agent / audio-intel relevance — AssemblyAI pitch or inspiration fit. */
   topics?: Topic[];
   topicNote?: string;
 }
@@ -79,9 +79,8 @@ const scrapedEvents: CalEvent[] = [
       "Infra-focused AI conference with an attached hybrid hackathon (online heats + on-site finals).",
     sourceUrl: "https://www.ai-infra-summit.com/",
     sourceLabel: "ai-infra-summit.com",
-    topics: ["rag", "vector-db"],
     topicNote:
-      "General AI infra conference — retrieval/vector infra is likely one track among compute/inference/networking, not the core focus. Confirm the agenda closer to the date before pitching.",
+      "General AI infra conference — speech/voice tracks are possible among compute/inference/networking, not the core focus. Confirm the agenda closer to the date before pitching.",
   },
   {
     id: "openai-devday-2026",
@@ -93,9 +92,12 @@ const scrapedEvents: CalEvent[] = [
     month: "2026-09",
     location: "Fort Mason, San Francisco",
     description:
-      "OpenAI's flagship developer conference — technical sessions, hands-on demos, workshops. Keynote livestreamed.",
+      "OpenAI's flagship developer conference — technical sessions, hands-on demos, workshops. Keynote livestreamed. Realtime / voice-agent API sessions are the pitch-fit rooms if they repeat the 2025 pattern.",
     sourceUrl: "https://openai.com/index/devday-2026/",
     sourceLabel: "openai.com",
+    topics: ["voice-agents", "streaming"],
+    topicNote:
+      "Pitch fit only if the agenda includes Realtime, speech, or voice-agent sessions — confirm closer to the date.",
   },
   {
     id: "the-ai-conference-2026",
@@ -108,9 +110,12 @@ const scrapedEvents: CalEvent[] = [
     month: "2026-09",
     location: "Pier 48, San Francisco",
     description:
-      "Vendor-neutral technical conference on AGI, LLMs, agentic AI, and infra. ~5,500 attendees, 120+ speakers.",
+      "Vendor-neutral technical conference on AGI, LLMs, agentic AI, and infra. ~5,500 attendees, 120+ speakers. Voice-agent builders show up; speech tracks are not guaranteed.",
     sourceUrl: "https://aiconference.com/",
     sourceLabel: "aiconference.com",
+    topics: ["voice-agents"],
+    topicNote:
+      "Broad agentic-AI conference — check the agenda for speech/voice tracks before treating it as a dedicated STT room.",
   },
   {
     id: "a16z-tech-week-2026",
@@ -175,17 +180,17 @@ const scrapedEvents: CalEvent[] = [
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
   // daily through 2026-08-24.
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
-  // AI/agent-relevant listings. This feed only surfaces ~6 weeks out, so
+  // AI / voice-agent-relevant listings. This feed only surfaces ~6 weeks out, so
   // coverage here runs through mid-October — re-scrape luma.com/sf for
   // anything past that. Pruned Aug 23 RSI Hack: Evals after Pacific day
-  // passed. Added Learning Layer HippoRAG paper club (Aug 25). Still
-  // skipping Physical AI / Embodied AI Night, Spatial Intelligence 3D
-  // hackathon, Dogathon, GTM/sales agent nights, Who Will Own The
+  // passed. Still skipping Physical AI / Embodied AI Night, Spatial Intelligence
+  // 3D hackathon, Dogathon, GTM/sales agent nights, Who Will Own The
   // Intelligence Layer, AI Infra Kebab, Lumafield, WorkOS Demo Night
   // (not AI-framed), Escaping Flatland, Supabase Select, Humongous AI
   // Meetup (cocktail mixer), Agentworld lecture, AI Philosophy Nights,
   // AI Filmmaking hackathon, Fireworks×LangChain happy hour, open_inference
-  // happy hour, Frontier Research Club #20 (biology), etc.
+  // happy hour, Frontier Research Club #20 (biology), etc. Keep HippoRAG /
+  // graph-memory paper clubs on the calendar as optional rooms, untagged.
   {
     id: "luma-vllm-nvidia-dynamo-meetup",
     name: "vLLM × NVIDIA Dynamo Meetup",
@@ -224,10 +229,9 @@ const scrapedEvents: CalEvent[] = [
     month: "2026-08",
     location: "Homebrew Club, 111 Maiden Ln #540, San Francisco",
     description:
-      "Paper club on HippoRAG — neurobiologically inspired long-term memory for LLMs that links multi-hop retrieval across documents instead of ranking passages independently.",
+      "Paper club on HippoRAG — neurobiologically inspired long-term memory for LLMs that links multi-hop retrieval across documents instead of ranking passages independently. Adjacent agent-memory room, not a speech/voice pitch.",
     sourceUrl: "https://luma.com/xqcy38hs",
     sourceLabel: "luma.com",
-    topics: ["rag", "agent-memory", "graphrag"],
   },
   {
     id: "luma-bay-area-dspy-meetup",
@@ -267,10 +271,9 @@ const scrapedEvents: CalEvent[] = [
     month: "2026-08",
     location: "San Francisco",
     description:
-      "Temporal-hosted Durable AI meetup on production agent context — talks/demos on giving agents fresh history and fast retrieval (speakers include Retriever AI, Neo4j, PromptQL, and others).",
+      "Temporal-hosted Durable AI meetup on production agent context — talks/demos on giving agents fresh history and fast retrieval (speakers include Retriever AI, Neo4j, PromptQL, and others). Adjacent orchestration room, not a speech/voice pitch.",
     sourceUrl: "https://luma.com/durable-ai-august",
     sourceLabel: "luma.com",
-    topics: ["agent-memory", "rag"],
   },
   {
     id: "luma-step-sf-festival",
@@ -337,9 +340,10 @@ const scrapedEvents: CalEvent[] = [
     month: "2026-09",
     location: "AGI House SF, 170 St. Germain Ave, San Francisco",
     description:
-      "AGI House Saturday hackathon — build a voice agent that debates AI ethics/risk live, then compete in public forum rounds judged by humans.",
+      "AGI House Saturday hackathon — build a voice agent that debates AI ethics/risk live, then compete in public forum rounds judged by humans. Direct STT/streaming pitch: every team needs ears for the live debate loop.",
     sourceUrl: "https://luma.com/aidebates",
     sourceLabel: "luma.com",
+    topics: ["voice-agents", "stt", "streaming"],
   },
   {
     id: "luma-llama-lounge-26",
@@ -407,15 +411,18 @@ const scrapedEvents: CalEvent[] = [
     month: "2026-09",
     location: "AWS Builder Loft, 525 Market St, San Francisco",
     description:
-      "One-day healthcare AI build day with OpenAI, AWS, and health/VC partners — engineers and clinicians ship product prototypes; cash prizes for top teams.",
+      "One-day healthcare AI build day with OpenAI, AWS, and health/VC partners — engineers and clinicians ship product prototypes; cash prizes for top teams. Medical transcription / ambient-scribe teams are the STT pitch.",
     sourceUrl: "https://luma.com/e9z9vuxz",
     sourceLabel: "luma.com",
+    topics: ["stt", "audio-intel"],
+    topicNote:
+      "Pitch fit if teams are capturing clinical audio — confirm tracks closer to the date; not every healthcare prototype needs speech.",
   },
   // Sourced from Eventbrite's SF Bay Area search (2026-07-17), filtered from
   // several hundred loosely-keyword-matched results down to genuine
-  // agent-builder relevance — Eventbrite's own search is much noisier than
-  // Luma's for this audience (heavy false-positive rate on words like "rag"
-  // matching unrelated events, plus templated paid-training-course spam).
+  // voice-agent / speech-AI relevance — Eventbrite's own search is much noisier
+  // than Luma's for this audience (heavy false-positive rate on words like
+  // "voice" matching unrelated events, plus templated paid-training-course spam).
   // Agentic AI workshop (Aug 18) pruned after Pacific day passed (2026-08-20).
   {
     id: "eventbrite-data-streaming-summit",
@@ -426,11 +433,11 @@ const scrapedEvents: CalEvent[] = [
     sortDate: "2026-10-07",
     month: "2026-10",
     location: "Hotel Nikko San Francisco",
-    description: '"The Data Streaming + Agent Infra Conference" — real-time data pipelines feeding agent systems.',
+    description: '"The Data Streaming + Agent Infra Conference" — real-time data pipelines feeding agent systems. Streaming audio/STT is a possible overlap, not the headline.',
     sourceUrl: "https://www.eventbrite.com/e/data-streaming-summit-2026-the-data-streaming-agent-infra-conference-tickets-1990614661037",
     sourceLabel: "eventbrite.com",
-    topics: ["agent-memory"],
-    topicNote: "Data-streaming infra for agents, not retrieval-specific — check the agenda for RAG/vector tracks before pitching.",
+    topics: ["streaming"],
+    topicNote: "Data-streaming infra for agents — check the agenda for speech/audio tracks before pitching.",
   },
   {
     id: "eventbrite-zero-trust-ai",
@@ -452,10 +459,13 @@ const scrapedEvents: CalEvent[] = [
  * own. Two kinds live here:
  *   1. Private / invite-only / token-gated events (e.g. a Luma `?tk=…` link) —
  *      never on any public feed, so structurally undiscoverable.
- *   2. Public startup events that the daily scrape's AI/agent relevance filter
- *      would drop as false negatives — founder mixers, afterparties, picnics,
- *      investor cocktails. These read as "social," not "AI," to a keyword scrape
- *      but are exactly the startup rooms we want (goal: startup attention).
+ *   2. Public startup events that the daily scrape's voice-agent relevance
+ *      filter would drop as false negatives — founder mixers, afterparties,
+ *      picnics, investor cocktails. These read as "social," not "voice AI,"
+ *      to a keyword scrape but are rooms where voice-agent founders actually
+ *      gather (goal: voice-agent builder attention).
+ *   3. Flagship voice-AI conferences and owned AssemblyAI events the generic
+ *      Bay Area scrape can miss (Voice Agents Forum, VapiCon, NYC meetup).
  *
  * IMPORTANT for the refresh job: this array is off-limits. Rewrite the scraped
  * blocks in `scrapedEvents` all you want, but leave these entries in place —
@@ -466,7 +476,54 @@ export const directSubmissions: CalEvent[] = [
   // ── YC AI Startup School 2026 week (Jul 23–27) ──────────────────────────
   // Main event → pastEvents2026; Jul 23–27 side-events (including Founder
   // Rooftop Gala) pruned through 2026-07-28 Pacific once their dates passed.
-  // No new invite-only keepers added 2026-08-24.
+  // Voice-agent keepers added 2026-08-24: owned NYC meetup + two flagship
+  // Bay Area voice conferences the generic Luma scrape can miss.
+  {
+    id: "assemblyai-nyc-voice-ai-meetup-sep",
+    name: "NYC Voice AI Meetup: Build Smarter Voice Agents",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Sep 1",
+    sortDate: "2026-09-01",
+    month: "2026-09",
+    location: "New York, NY (owned AssemblyAI × LiveKit event)",
+    description:
+      "Owned AssemblyAI meetup with LiveKit and Boardy — live demo of Universal-3.5 Pro Realtime (context carryover, conversation memory, Voice Focus) plus a production panel with Boardy and Flagler Health. NYC, not Bay Area; on the calendar so cadence planning can see the owned slot.",
+    sourceUrl: "https://luma.com/v4fbpqof",
+    sourceLabel: "luma.com",
+    topics: ["stt", "voice-agents", "streaming"],
+  },
+  {
+    id: "voice-agents-forum-2026",
+    name: "Voice Agents Forum",
+    category: "conference",
+    status: "confirmed",
+    dateLabel: "Sep 16",
+    sortDate: "2026-09-16",
+    month: "2026-09",
+    location: "Digital Jungle SF, 972 Mission St, San Francisco",
+    description:
+      "One-day AAIF / MLOps Community forum for teams shipping voice agents in production — latency, turn-taking, barge-in, evaluation, observability, human handoff. Highest-signal Bay Area room this fall before VapiCon.",
+    sourceUrl: "https://luma.com/voiceagentssf",
+    sourceLabel: "luma.com",
+    topics: ["voice-agents", "stt", "streaming"],
+  },
+  {
+    id: "vapicon-2026",
+    name: "VapiCon 2026 — The Frontier Voice AI Summit",
+    category: "conference",
+    status: "confirmed",
+    dateLabel: "Nov 11–12",
+    sortDate: "2026-11-11",
+    endDate: "2026-11-12",
+    month: "2026-11",
+    location: "Festival Pavilion, Fort Mason, San Francisco",
+    description:
+      "The dedicated voice-AI summit — ~1,200 builders, product leaders, and operators. Deepgram is a diamond sponsor; Cartesia’s CEO is on the speaker list; AssemblyAI’s Dylan Fox is on the hosted-voices lineup. Parallel builder + business tracks.",
+    sourceUrl: "https://www.vapicon.ai/",
+    sourceLabel: "vapicon.ai",
+    topics: ["voice-agents", "stt", "tts", "streaming"],
+  },
 ];
 
 /**
@@ -486,10 +543,10 @@ export const recurringSeries: RecurringSeries[] = [
     name: "AI Tinkerers — San Francisco",
     category: "meetup",
     cadence:
-      "Monthly — next builder/RAG demo night TBA (sf.aitinkerers.org still lists Aug 26 SF GTM Engineering Demo Night w/ Attio — skipped as GTM/revenue)",
+      "Monthly — next builder/voice demo night TBA (sf.aitinkerers.org still lists Aug 26 SF GTM Engineering Demo Night w/ Attio — skipped as GTM/revenue)",
     location: "San Francisco",
     description:
-      "Hands-on demo nights for engineers/founders building AI agents, RAG, voice, and coding agents.",
+      "Hands-on demo nights for engineers/founders building AI agents, voice agents, and coding agents. Recurring borrowed audience for an STT lightning talk.",
     sourceUrl: "https://sf.aitinkerers.org/",
     sourceLabel: "sf.aitinkerers.org",
   },
@@ -510,7 +567,7 @@ export const recurringSeries: RecurringSeries[] = [
     cadence: "Monthly, hundreds of attendees",
     location: "SOMA / Mission Bay",
     description:
-      "GenAI/LLM infra deep dives. Recent sessions covered LlamaIndex, agent evals, and real-time voice AI.",
+      "GenAI/LLM infra deep dives. Recent sessions covered agent evals and real-time voice AI — a regular borrowed room for streaming-STT talks.",
     sourceUrl: "https://www.aicamp.ai/event/events",
     sourceLabel: "aicamp.ai",
   },
@@ -520,7 +577,7 @@ export const recurringSeries: RecurringSeries[] = [
     category: "meetup",
     cadence: "Monthly",
     location: "San Francisco",
-    description: "General AI/LLM/agentic-AI talks and workshops.",
+    description: "General AI/LLM/agentic-AI talks and workshops — scan each month’s agenda for speech/voice sessions.",
     sourceUrl: "https://www.meetup.com/sfbay-ai/",
     sourceLabel: "meetup.com/sfbay-ai",
   },
@@ -563,7 +620,8 @@ export const recurringSeries: RecurringSeries[] = [
     category: "meetup",
     cadence: "Weekly mixers (Palo Alto) · monthly panels (SF)",
     location: "Palo Alto / San Francisco",
-    description: "Agent-focused business and networking series.",
+    description:
+      "Agent-focused business and networking series — useful when the month’s theme tilts toward voice/CX agents.",
     sourceUrl: "https://luma.com/0fcptipy",
     sourceLabel: "luma.com",
   },
@@ -574,7 +632,7 @@ export const recurringSeries: RecurringSeries[] = [
     cadence: "Recurring — multiple sessions/month",
     location: "525 Market St, San Francisco",
     description:
-      "Hands-on agent-building sessions (Bedrock, AgentCore, LangGraph); has hosted Gen AI Developer Day and Agents of Impact Summit.",
+      "Hands-on agent-building sessions (Bedrock, AgentCore, LangGraph); has hosted Gen AI Developer Day and Agents of Impact Summit. Watch for Amazon Connect / contact-center voice sessions.",
     sourceUrl:
       "https://aws.amazon.com/startups/lp/aws-gen-ai-loft-san-francisco",
     sourceLabel: "aws.amazon.com",
@@ -586,7 +644,7 @@ export const recurringSeries: RecurringSeries[] = [
     cadence: "Very high frequency — reportedly up to 5 events/week",
     location: "Hillsborough, CA (their one physical house) + Bay Area partner venues",
     description:
-      "80+ build-a-thons hosted historically (Lovable, Perplexity emerged from these); runs multiple/week with partners like OpenAI on agent-framework themes. Attendance is merit-based/invite-only, not open registration.",
+      "80+ build-a-thons hosted historically (Lovable, Perplexity emerged from these); runs multiple/week with partners like OpenAI. Attendance is merit-based/invite-only. Sep 5 The AI Debates Hackathon is a voice-agent build — the highest-signal AGI House slot this window.",
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
@@ -613,6 +671,19 @@ export const recurringSeries: RecurringSeries[] = [
       'Periodic in-person builder days (e.g. "Claude Opus 4.8 Build Day," ~300 founders). Check anthropic.com/events for the next one.',
     sourceUrl: "https://www.anthropic.com/events",
     sourceLabel: "anthropic.com",
+  },
+  {
+    id: "voice-ai-space",
+    name: "Voice AI Space",
+    category: "meetup",
+    cadence: "Global mixers + city meetups — no single locked cadence",
+    location: "San Francisco / NYC / London / remote",
+    description:
+      "Community calendar dedicated to voice AI (voiceaispace.com/events). SF mixers, Vapi-hosted Voice AI Live sessions, and competitor dinners surface here first — check weekly.",
+    sourceUrl: "https://www.voiceaispace.com/events",
+    sourceLabel: "voiceaispace.com",
+    watchNote:
+      "Checked 2026-08-24: Sep 2 Voice AI Live with Cartesia, Sep 10 Cartesia Farm to Table, Sep 16 Voice Agents Forum, Nov 11 VapiCon are the dated items — those are tracked on the calendar / ecosystem rather than duplicated here.",
   },
 ];
 

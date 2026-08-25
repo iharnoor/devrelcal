@@ -26,7 +26,7 @@ export default function CalendarView({
 }) {
   const [filter, setFilter] = useState<Filter>("all");
   const [showTentative, setShowTentative] = useState(true);
-  const [ragOnly, setRagOnly] = useState(false);
+  const [pitchOnly, setPitchOnly] = useState(false);
   const [showPast, setShowPast] = useState(false);
 
   const filteredScheduled = useMemo(
@@ -35,14 +35,14 @@ export default function CalendarView({
         (e) =>
           (filter === "all" || e.category === filter) &&
           (showTentative || e.status === "confirmed") &&
-          (!ragOnly || hasPitchTopic(e.topics)),
+          (!pitchOnly || hasPitchTopic(e.topics)),
       ),
-    [scheduledEvents, filter, showTentative, ragOnly],
+    [scheduledEvents, filter, showTentative, pitchOnly],
   );
 
   const filteredRecurring = useMemo(
-    () => (ragOnly ? [] : recurringSeries.filter((s) => filter === "all" || s.category === filter)),
-    [recurringSeries, filter, ragOnly],
+    () => (pitchOnly ? [] : recurringSeries.filter((s) => filter === "all" || s.category === filter)),
+    [recurringSeries, filter, pitchOnly],
   );
 
   const months = useMemo(() => groupByMonth(filteredScheduled), [filteredScheduled]);
@@ -69,11 +69,11 @@ export default function CalendarView({
           <label className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-highlight">
             <input
               type="checkbox"
-              checked={ragOnly}
-              onChange={(e) => setRagOnly(e.target.checked)}
+              checked={pitchOnly}
+              onChange={(e) => setPitchOnly(e.target.checked)}
               className="h-3.5 w-3.5 accent-[var(--color-highlight)]"
             />
-            RAG / Vector DB / Graph only
+            Voice agents / STT only
           </label>
           <label className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-ink-muted">
             <input
@@ -88,18 +88,18 @@ export default function CalendarView({
       </div>
 
       <div className="flex flex-col gap-12">
-        {months.length === 0 && ragOnly && (
+        {months.length === 0 && pitchOnly && (
           <p className="font-body text-ink-muted">
-            No Bay Area conference/meetup/hackathon in this list is dedicated to RAG, vector
-            databases, or GraphRAG right now — that content mostly lives with the vendors
-            themselves. See the{" "}
+            No Bay Area conference/meetup/hackathon in this list is tagged as a speech-to-text
+            or voice-agent pitch right now — competitor-hosted sessions mostly live with the
+            vendors themselves. See the{" "}
             <a href="#ecosystem" className="text-accent-2 underline decoration-dotted underline-offset-4 hover:text-ink">
               Ecosystem section
             </a>{" "}
             below for those.
           </p>
         )}
-        {months.length === 0 && !ragOnly && (
+        {months.length === 0 && !pitchOnly && (
           <p className="font-body text-ink-muted">No scheduled events match these filters.</p>
         )}
         {months.map(({ month, items }) => (

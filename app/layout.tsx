@@ -21,9 +21,9 @@ const mono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Agent Builders DevRel Calendar",
+  title: "Voice Agents DevRel Calendar",
   description:
-    "Bay Area AI-agent conferences, meetups, and hackathons to track — plus a playbook for hitting 2 in-person + 2 online events every month.",
+    "Bay Area voice-agent conferences, meetups, and hackathons to track for AssemblyAI DevRel — plus competitor events from Deepgram, Cartesia, ElevenLabs, and Smallest AI, and a playbook for hitting 2 in-person + 2 online events every month.",
 };
 
 export default function RootLayout({
