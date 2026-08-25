@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-08-24. Dates and venues sourced from
+ * Confirmed research date: 2026-08-25. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -178,19 +178,21 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "lablab.ai",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // daily through 2026-08-24.
+  // daily through 2026-08-25 (UTC; Pacific still 2026-08-24 evening).
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
   // AI / voice-agent-relevant listings. This feed only surfaces ~6 weeks out, so
   // coverage here runs through mid-October — re-scrape luma.com/sf for
-  // anything past that. Pruned Aug 23 RSI Hack: Evals after Pacific day
-  // passed. Still skipping Physical AI / Embodied AI Night, Spatial Intelligence
+  // anything past that. ~86 discover entries across 4 pages; no newly
+  // announced Bay Area voice/STT/voice-agent rooms vs 2026-08-24 stamp.
+  // Still skipping Physical AI / Embodied AI Night, Spatial Intelligence
   // 3D hackathon, Dogathon, GTM/sales agent nights, Who Will Own The
   // Intelligence Layer, AI Infra Kebab, Lumafield, WorkOS Demo Night
   // (not AI-framed), Escaping Flatland, Supabase Select, Humongous AI
   // Meetup (cocktail mixer), Agentworld lecture, AI Philosophy Nights,
   // AI Filmmaking hackathon, Fireworks×LangChain happy hour, open_inference
-  // happy hour, Frontier Research Club #20 (biology), etc. Keep HippoRAG /
-  // graph-memory paper clubs on the calendar as optional rooms, untagged.
+  // happy hour, Frontier Research Club #20 (biology), Mem0 Memory for LLMs
+  // (agent-memory, not speech), etc. Keep HippoRAG / graph-memory paper
+  // clubs on the calendar as optional rooms, untagged.
   {
     id: "luma-vllm-nvidia-dynamo-meetup",
     name: "vLLM × NVIDIA Dynamo Meetup",
@@ -478,6 +480,8 @@ export const directSubmissions: CalEvent[] = [
   // Rooftop Gala) pruned through 2026-07-28 Pacific once their dates passed.
   // Voice-agent keepers added 2026-08-24: owned NYC meetup + two flagship
   // Bay Area voice conferences the generic Luma scrape can miss.
+  // 2026-08-25: Voice Agents Forum date corrected to Nov 5 (was Sep 16) per
+  // live Luma event/get for voiceagentssf.
   {
     id: "assemblyai-nyc-voice-ai-meetup-sep",
     name: "NYC Voice AI Meetup: Build Smarter Voice Agents",
@@ -498,12 +502,12 @@ export const directSubmissions: CalEvent[] = [
     name: "Voice Agents Forum",
     category: "conference",
     status: "confirmed",
-    dateLabel: "Sep 16",
-    sortDate: "2026-09-16",
-    month: "2026-09",
+    dateLabel: "Nov 5",
+    sortDate: "2026-11-05",
+    month: "2026-11",
     location: "Digital Jungle SF, 972 Mission St, San Francisco",
     description:
-      "One-day AAIF / MLOps Community forum for teams shipping voice agents in production — latency, turn-taking, barge-in, evaluation, observability, human handoff. Highest-signal Bay Area room this fall before VapiCon.",
+      "One-day AAIF Community forum for teams shipping voice agents in production — latency, turn-taking, barge-in, evaluation, observability, human handoff. Highest-signal Bay Area room the week before VapiCon (Luma lists Nov 5, 9am–5:30pm PT as of 2026-08-25).",
     sourceUrl: "https://luma.com/voiceagentssf",
     sourceLabel: "luma.com",
     topics: ["voice-agents", "stt", "streaming"],
@@ -648,7 +652,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Checked directly (2026-08-24): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) still lists Sep 5 The AI Debates Hackathon (luma.com/aidebates) and Sep 22 Energy Optimization of GPUs through Self-Improving Agents (luma.com/gpuenergyoptimization) — both tracked in scheduledEvents. Still sparse advance dating overall — re-check luma.com/agi-house close to when you need one.",
+      "Checked directly (2026-08-25): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) still lists Sep 5 The AI Debates Hackathon (luma.com/aidebates) and Sep 22 Energy Optimization of GPUs through Self-Improving Agents (luma.com/gpuenergyoptimization) — both tracked in scheduledEvents. Still sparse advance dating overall — re-check luma.com/agi-house close to when you need one.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -683,7 +687,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://www.voiceaispace.com/events",
     sourceLabel: "voiceaispace.com",
     watchNote:
-      "Checked 2026-08-24: Sep 2 Voice AI Live with Cartesia, Sep 10 Cartesia Farm to Table, Sep 16 Voice Agents Forum, Nov 11 VapiCon are the dated items — those are tracked on the calendar / ecosystem rather than duplicated here.",
+      "Checked 2026-08-25: Sep 2 Voice AI Live with Cartesia, Sep 10 Cartesia Farm to Table, Nov 5 Voice Agents Forum, Nov 11 VapiCon are the dated SF/global voice items — tracked on the calendar / ecosystem. Also surfaces UK Conversations-in-the-AI-era builder meetups (Manchester Sep 3 / Nov 4, London Oct 14) and Twilio Assemble London Nov 19 — see vendorEvents.",
   },
 ];
 
@@ -788,4 +792,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-08-24";
+export const researchDate = "2026-08-25";
