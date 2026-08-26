@@ -93,8 +93,8 @@ export default function CalendarView({
             No Bay Area conference/meetup/hackathon in this list is tagged as a speech-to-text
             or voice-agent pitch right now — competitor-hosted sessions mostly live with the
             vendors themselves. See the{" "}
-            <a href="#ecosystem" className="text-accent-2 underline decoration-dotted underline-offset-4 hover:text-ink">
-              Ecosystem section
+            <a href="#competitor-calendar" className="text-accent-2 underline decoration-dotted underline-offset-4 hover:text-ink">
+              Competitor Calendar
             </a>{" "}
             above for those.
           </p>

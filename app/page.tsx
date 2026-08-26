@@ -50,10 +50,10 @@ export default function Home() {
         </div>
         <nav className="flex items-center gap-5">
           <a
-            href="#ecosystem"
+            href="#competitor-calendar"
             className="hidden font-mono text-xs uppercase tracking-wider text-ink-muted hover:text-ink sm:inline"
           >
-            Ecosystem
+            Competitor Calendar
           </a>
           <a
             href="#calendar"
@@ -73,10 +73,10 @@ export default function Home() {
 
       <WeeklyBrief items={briefItems} />
 
-      <section id="ecosystem" className="flex scroll-mt-8 flex-col gap-6">
+      <section id="competitor-calendar" className="flex scroll-mt-8 flex-col gap-6">
         <div className="flex flex-col gap-2 border-b border-line pb-6">
           <h2 className="font-display text-3xl font-extrabold uppercase tracking-tight text-ink">
-            Ecosystem
+            Competitor Calendar
           </h2>
           <p className="max-w-2xl text-sm leading-relaxed text-ink-muted">
             Events organized by STT, TTS, and voice-agent vendors — Deepgram, Cartesia,

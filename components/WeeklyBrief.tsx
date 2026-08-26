@@ -34,7 +34,7 @@ export default function WeeklyBrief({ items }: { items: BriefItem[] }) {
                 )}
               </div>
               <span className="shrink-0 font-mono text-[10px] uppercase tracking-wider text-ink-muted">
-                {item.source === "calendar" ? item.sourceLabel : `${item.sourceLabel} · ecosystem`}
+                {item.source === "calendar" ? item.sourceLabel : `${item.sourceLabel} · competitors`}
               </span>
             </li>
           ))}
