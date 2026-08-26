@@ -50,16 +50,16 @@ export default function Home() {
         </div>
         <nav className="flex items-center gap-5">
           <a
-            href="#calendar"
-            className="hidden font-mono text-xs uppercase tracking-wider text-ink-muted hover:text-ink sm:inline"
-          >
-            Calendar
-          </a>
-          <a
             href="#ecosystem"
             className="hidden font-mono text-xs uppercase tracking-wider text-ink-muted hover:text-ink sm:inline"
           >
             Ecosystem
+          </a>
+          <a
+            href="#calendar"
+            className="hidden font-mono text-xs uppercase tracking-wider text-ink-muted hover:text-ink sm:inline"
+          >
+            Calendar
           </a>
           <a
             href="#playbook"
@@ -72,6 +72,22 @@ export default function Home() {
       </header>
 
       <WeeklyBrief items={briefItems} />
+
+      <section id="ecosystem" className="flex scroll-mt-8 flex-col gap-6">
+        <div className="flex flex-col gap-2 border-b border-line pb-6">
+          <h2 className="font-display text-3xl font-extrabold uppercase tracking-tight text-ink">
+            Ecosystem
+          </h2>
+          <p className="max-w-2xl text-sm leading-relaxed text-ink-muted">
+            Events organized by STT, TTS, and voice-agent vendors — Deepgram, Cartesia,
+            ElevenLabs, Smallest AI, and the rest of the speech stack. Competitive and
+            partnership tracking, not builder outreach. Includes virtual and global events,
+            not just Bay Area. Companies with nothing confirmed are kept as a watchlist rather
+            than dropped.
+          </p>
+        </div>
+        <EcosystemView groups={activeVendorGroups} />
+      </section>
 
       <section className="flex flex-col gap-8">
         <div className="flex flex-col gap-4">
@@ -143,22 +159,6 @@ export default function Home() {
           recurringSeries={recurringSeries}
           pastEvents={pastEvents2026}
         />
-      </section>
-
-      <section id="ecosystem" className="flex scroll-mt-8 flex-col gap-6">
-        <div className="flex flex-col gap-2 border-b border-line pb-6">
-          <h2 className="font-display text-3xl font-extrabold uppercase tracking-tight text-ink">
-            Ecosystem
-          </h2>
-          <p className="max-w-2xl text-sm leading-relaxed text-ink-muted">
-            Events organized by STT, TTS, and voice-agent vendors — Deepgram, Cartesia,
-            ElevenLabs, Smallest AI, and the rest of the speech stack. Competitive and
-            partnership tracking, not builder outreach. Includes virtual and global events,
-            not just Bay Area. Companies with nothing confirmed are kept as a watchlist rather
-            than dropped.
-          </p>
-        </div>
-        <EcosystemView groups={activeVendorGroups} />
       </section>
 
       <section id="playbook" className="flex scroll-mt-8 flex-col gap-6">

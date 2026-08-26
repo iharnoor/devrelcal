@@ -96,7 +96,7 @@ export default function CalendarView({
             <a href="#ecosystem" className="text-accent-2 underline decoration-dotted underline-offset-4 hover:text-ink">
               Ecosystem section
             </a>{" "}
-            below for those.
+            above for those.
           </p>
         )}
         {months.length === 0 && !pitchOnly && (
