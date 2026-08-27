@@ -46,25 +46,10 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-08-26. Dates and venues sourced from
+ * Confirmed research date: 2026-08-27. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
-  {
-    id: "ray-summit-2026",
-    name: "Ray Summit 2026",
-    category: "conference",
-    status: "confirmed",
-    dateLabel: "Aug 24–26",
-    sortDate: "2026-08-24",
-    endDate: "2026-08-26",
-    month: "2026-08",
-    location: "San Francisco",
-    description:
-      "Anyscale's distributed-AI conference — training day Aug 24, keynotes/breakouts Aug 25–26. Heavy focus on training foundation models and LLM/RL workloads on Ray.",
-    sourceUrl: "https://www.anyscale.com/ray-summit/2026",
-    sourceLabel: "anyscale.com",
-  },
   {
     id: "ai-infra-summit-2026",
     name: "AI Infra Summit 2026",
@@ -178,66 +163,23 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "lablab.ai",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // 2026-08-26 (UTC afternoon / Pacific morning).
+  // 2026-08-27 (UTC afternoon / Pacific morning).
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
   // AI / voice-agent-relevant listings. This feed only surfaces ~6 weeks out, so
   // coverage here runs through mid-October — re-scrape luma.com/sf for
-  // anything past that. ~80 discover entries across 4 pages. Voice-specific
-  // search also found Ship a Voice Agent workshop (leverage-0gfk, Sep 17) —
-  // not on the generic discover feed. Pruned Aug 25 Mistral×SGLang×HF meetup
-  // and HippoRAG paper club once Pacific day passed (not moved to pastEvents).
+  // anything past that. ~74 discover entries across 3 pages. Voice-specific
+  // search found Guava Voice AI Hackathon Build Night (678a9u02, Aug 29) —
+  // not on the generic discover feed — plus prior Ship a Voice Agent workshop
+  // (leverage-0gfk, Sep 17). Pruned Ray Summit (→ pastEvents) and Aug 26
+  // DSPy / Frontier Research Club #19 / Durable AI once Pacific day passed.
   // Still skipping Physical AI / Embodied AI Night, Spatial Intelligence
-  // 3D hackathon, Next Interface wearables hackathon, Dogathon, GTM/sales
-  // agent nights (incl. AI Tinkerers SF Aug 26 GTM), Who Will Own The
-  // Intelligence Layer, AI Infra Kebab, Lumafield, WorkOS Demo Night
-  // (not AI-framed), Escaping Flatland, Supabase Select, Humongous AI
+  // 3D hackathon, Next Interface wearables hackathon (AIHardware), Dogathon,
+  // GTM/sales agent nights, Who Will Own The Intelligence Layer, WorkOS Demo
+  // Night (not AI-framed), Escaping Flatland, Supabase Select, Humongous AI
   // Meetup (cocktail mixer), Agentworld lecture, AI Philosophy Nights,
-  // AI Filmmaking hackathon, Computer-Use Agents Night, Fireworks×LangChain
-  // happy hour, open_inference happy hour, Frontier Research Club #20
-  // (biology), Mem0 Memory for LLMs (agent-memory, not speech),
-  // Factory×Reducto×Exa FDE talks, etc.
-  {
-    id: "luma-bay-area-dspy-meetup",
-    name: "Bay Area DSPy Meetup",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Aug 26",
-    sortDate: "2026-08-26",
-    month: "2026-08",
-    location: "San Francisco",
-    description:
-      "Quarterly DSPy community meetup — lightning talks on DSPy/GEPA features and optimization tricks for structured LLM programs.",
-    sourceUrl: "https://luma.com/61qrnbs7",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-frontier-research-club-agents-prod",
-    name: "Bay Area Frontier Research Club #19 — Agents in Production",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Aug 26",
-    sortDate: "2026-08-26",
-    month: "2026-08",
-    location: "Menlo Park, CA",
-    description:
-      "UC Berkeley researchers present Measuring Agents in Production (ICML 2026 oral), then a fireside on self-improving agents — concrete notes on how production agent systems are built, evaluated, and operated.",
-    sourceUrl: "https://luma.com/cx2f0q8r",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "luma-durable-ai-agent-context",
-    name: "Durable AI: Agent Context is Everything",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Aug 26",
-    sortDate: "2026-08-26",
-    month: "2026-08",
-    location: "San Francisco",
-    description:
-      "Temporal-hosted Durable AI meetup on production agent context — talks/demos on giving agents fresh history and fast retrieval (speakers include Retriever AI, Neo4j, PromptQL, and others). Adjacent orchestration room, not a speech/voice pitch.",
-    sourceUrl: "https://luma.com/durable-ai-august",
-    sourceLabel: "luma.com",
-  },
+  // AI Filmmaking hackathon, Computer-Use Agents Night, Mem0 Memory for LLMs,
+  // Factory×Reducto×Exa FDE talks, Codex Community Hackathon (coding-agent,
+  // not voice), stale 2025 Luma slugs (builders-sep26, suhy8sgz), etc.
   {
     id: "luma-step-sf-festival",
     name: "Step SF 2026: The AI & Tech Startup Festival",
@@ -266,6 +208,20 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "luma.com",
   },
   {
+    id: "luma-eve-agent-build-night-sf",
+    name: "eve eves | Agent Build Night | SF",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Aug 27",
+    sortDate: "2026-08-27",
+    month: "2026-08",
+    location: "San Francisco",
+    description:
+      "Vercel-hosted hands-on agent build night — guided workshop to ship a working eve agent with Supabase integrations, then open demos and product feedback. Strong agent-builder room; not a speech/voice pitch.",
+    sourceUrl: "https://luma.com/eveSF",
+    sourceLabel: "luma.com",
+  },
+  {
     id: "luma-open-source-ai-summit-sf",
     name: "Open Source AI Summit SF",
     category: "conference",
@@ -278,6 +234,21 @@ const scrapedEvents: CalEvent[] = [
       "Buildplanet / NEAR AI half-day seminar on open-source AI frontier work — confirmed speakers include Matt White (PyTorch), Illia Polosukhin (NEAR), and Lukasz Kaiser.",
     sourceUrl: "https://luma.com/buildp-c5h9",
     sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-guava-voice-ai-hackathon-sf",
+    name: "Guava Voice AI Hackathon: Build Night SF",
+    category: "hackathon",
+    status: "confirmed",
+    dateLabel: "Aug 29, 5:30–9:30pm PT",
+    sortDate: "2026-08-29",
+    month: "2026-08",
+    location: "House of AI, 40 Boardman Pl, San Francisco",
+    description:
+      "One-evening in-person voice-agent hackathon hosted by Guava (voice platform for regulated industries) — build, ship, and demo a voice AI agent the same night; cash prizes up to $3,000. Highest-signal new Bay Area voice-builder slot found 2026-08-27.",
+    sourceUrl: "https://luma.com/678a9u02",
+    sourceLabel: "luma.com",
+    topics: ["voice-agents", "stt", "streaming"],
   },
   {
     id: "luma-agentic-ai-night-governance",
@@ -335,6 +306,21 @@ const scrapedEvents: CalEvent[] = [
       "Day hack with Gradient and Google DeepMind for engineers and founders building with the latest open models — inference, fine-tuning, and production performance comparisons.",
     sourceUrl: "https://luma.com/openmodelhack",
     sourceLabel: "luma.com",
+  },
+  {
+    id: "ai-tinkerers-agents-everywhere-hackathon-sf",
+    name: "AI Tinkerers — Agents, Everywhere: Beyond The Chatbot (Global Hackathon)",
+    category: "hackathon",
+    status: "confirmed",
+    dateLabel: "Sep 12, 10am–5pm",
+    sortDate: "2026-09-12",
+    month: "2026-09",
+    location: "San Francisco (AI Tinkerers SF chapter)",
+    description:
+      "AI Tinkerers global agent hackathon day — build agent prototypes that plug into existing tools/channels beyond chat UIs; OpenAI, CopilotKit, and OpenRouter listed as supporters. Strong agent-builder attendance; voice is a plausible use case but not the stated theme (no topic tag until a voice track is confirmed).",
+    sourceUrl:
+      "https://sf.aitinkerers.org/p/agents-everywhere-beyond-the-chatbot-global-hackathon",
+    sourceLabel: "sf.aitinkerers.org",
   },
   {
     id: "luma-all-things-agent-setups",
@@ -523,7 +509,7 @@ export const recurringSeries: RecurringSeries[] = [
     name: "AI Tinkerers — San Francisco",
     category: "meetup",
     cadence:
-      "Monthly — next builder/voice demo night TBA (sf.aitinkerers.org still lists Aug 26 SF GTM Engineering Demo Night w/ Attio — skipped as GTM/revenue)",
+      "Monthly — next dated builder slot: Sep 12 Agents, Everywhere global hackathon (tracked in scheduledEvents); Aug 26 SF GTM Engineering Demo Night has passed (skipped as GTM/revenue)",
     location: "San Francisco",
     description:
       "Hands-on demo nights for engineers/founders building AI agents, voice agents, and coding agents. Recurring borrowed audience for an STT lightning talk.",
@@ -628,7 +614,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Re-checked 2026-08-26 (Pacific morning): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) still lists only Sep 5 The AI Debates Hackathon (luma.com/aidebates) and Sep 22 Energy Optimization of GPUs through Self-Improving Agents (luma.com/gpuenergyoptimization) — both tracked in scheduledEvents. Still sparse advance dating overall — re-check luma.com/agi-house close to when you need one.",
+      "Re-checked 2026-08-27 (Pacific morning): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) still lists only Sep 5 The AI Debates Hackathon (luma.com/aidebates) and Sep 22 Energy Optimization of GPUs through Self-Improving Agents (luma.com/gpuenergyoptimization) — both tracked in scheduledEvents. Still sparse advance dating overall — re-check luma.com/agi-house close to when you need one.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -663,11 +649,18 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://www.voiceaispace.com/events",
     sourceLabel: "voiceaispace.com",
     watchNote:
-      "Re-checked 2026-08-26: Sep 2 Voice AI Live with Cartesia, Sep 10 Cartesia Farm to Table, Sep 17 Ship a Voice Agent workshop (luma.com/leverage-0gfk — found via voice search, not discover), Nov 5 Voice Agents Forum (Luma voiceagentssf — voiceaispace still mis-lists Sep 16), Nov 11 VapiCon are the dated SF/global voice items — tracked on the calendar / ecosystem. Also surfaces UK Conversations-in-the-AI-era builder meetups (Manchester Sep 3 / Nov 4, London Oct 14), London coffee-cowork nights (skip), Hardware Hack Day London Aug 30 (hardware, skip), and Twilio Assemble London Nov 19 — see vendorEvents. Past VOICE AI Gathering SF (Aug 20) and Cartesia Whiskey Tasting (Gurugram) remain past.",
+      "Re-checked 2026-08-27: Sep 2 Voice AI Live with Cartesia, Sep 10 Cartesia Farm to Table, Sep 17 Ship a Voice Agent workshop (luma.com/leverage-0gfk), Nov 5 Voice Agents Forum (Luma voiceagentssf — voiceaispace still mis-lists Sep 16), Nov 11 VapiCon are the dated SF/global voice items — tracked on the calendar / ecosystem. New Bay Area voice build night not yet on voiceaispace: Guava Voice AI Hackathon Aug 29 (luma.com/678a9u02). Also surfaces UK Conversations-in-the-AI-era builder meetups (Manchester Sep 3 / Nov 4, London Oct 14), London coffee-cowork nights (skip), and Twilio Assemble London Nov 19 — see vendorEvents. Past VOICE AI Gathering SF (Aug 20) and Cartesia Whiskey Tasting (Gurugram) remain past.",
   },
 ];
 
 export const pastEvents2026: PastEvent[] = [
+  {
+    id: "ray-summit-2026",
+    name: "Ray Summit 2026",
+    dateLabel: "Aug 24–26",
+    location: "San Francisco",
+    note: "Anyscale distributed-AI / Ray conference — kept for annual Bay Area recurrence reference",
+  },
   {
     id: "modcon-2026",
     name: "ModCon 2026: Compute Unlocked",
@@ -768,4 +761,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-08-26";
+export const researchDate = "2026-08-27";
