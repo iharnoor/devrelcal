@@ -30,7 +30,7 @@ export interface VendorGroup {
 
 /**
  * Speech / voice-AI vendor events — competitive & partnership tracking for
- * AssemblyAI. Re-researched 2026-08-28 (Pacific morning) against each vendor's own events page.
+ * AssemblyAI. Re-researched 2026-08-29 (Pacific morning) against each vendor's own events page.
  * These are companies that compete or overlap on STT, TTS, streaming audio, or
  * voice-agent platforms — not the Bay Area builder calendar (see events.ts).
  */
@@ -86,7 +86,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Re-checked Deepgram Luma calendar cal-qHEDltsO0Gr0WtD (2026-08-28 Pacific morning): still only the Genesys lounge (Sep 2) and London Voice AI Exchange (Sep 10) on Luma — no new SoMa build nights. Hatch Conference Berlin/online Designing for Voices workshop (Sep 18) still confirmed. deepgram.com/events 404s; Luma + partner conference pages remain the source of truth. Skipped FS/TEC Grapevine TX (Sep 23–25, restaurant vertical sponsor) and Deepgram×Nytro sales-enablement webinar (Oct 19) as non-developer rooms. Flux TTS free-build promo runs through Sep 12. Deepgram remains a diamond sponsor at VapiCon (Nov 11–12).",
+      "Re-checked Deepgram Luma calendar cal-qHEDltsO0Gr0WtD (2026-08-29 Pacific morning): still only the Genesys lounge (Sep 2) and London Voice AI Exchange (Sep 10) on Luma — no new SoMa build nights. Hatch Conference Berlin/online Designing for Voices workshop (Sep 18) still confirmed. deepgram.com/events 404s; Luma + partner conference pages remain the source of truth. Skipped FS/TEC Grapevine TX (Sep 23–25, restaurant vertical), Deepgram×Nytro sales webinar (Oct 19), and stale 2025 Deepgram+Bedrock SA workshop (rtb86f4x) as non-current/non-developer rooms. Flux TTS free-build promo runs through Sep 12. Deepgram remains a diamond sponsor at VapiCon (Nov 11–12).",
   },
   {
     id: "cartesia",
@@ -137,7 +137,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Cartesia Luma calendar (cal-EeDJt2cPbgGca1W) as of 2026-08-28 lists Voice AI Live Sep 2 and Farm to Table Sep 10 only. Bengaluru socials without locked public dates may still appear — confirm before planning. Cartesia’s CEO remains on the VapiCon speaker list.",
+      "Cartesia Luma calendar (cal-EeDJt2cPbgGca1W) as of 2026-08-29 lists Voice AI Live Sep 2 and Farm to Table Sep 10 only. Bengaluru socials without locked public dates may still appear — confirm before planning. Cartesia’s CEO remains on the VapiCon speaker list.",
   },
   {
     id: "elevenlabs",
@@ -203,7 +203,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "RAISE Paris booth (Jul 8–9) has passed. London Summit stop listed as Feb 11, 2026 on the summit page is past. No upcoming webinars listed on elevenlabs.io/webinars as of 2026-08-28. SF Summit last ran Nov 11, 2025 — watch for a 2026 SF date on elevenlabs.io/events/elevenlabs-summit.",
+      "RAISE Paris booth (Jul 8–9) has passed. London Summit stop listed as Feb 11, 2026 on the summit page is past. No upcoming webinars listed on elevenlabs.io/webinars as of 2026-08-29. Summit page still lists Bengaluru Oct 6 and New York Nov 11 for 2026. SF Summit last ran Nov 11, 2025 — watch for a 2026 SF date on elevenlabs.io/events/elevenlabs-summit.",
   },
   {
     id: "vapi",
@@ -241,7 +241,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Vapi Luma calendar cal-9jzVoVZclDCewDU (2026-08-28) lists Voice AI Live with Cartesia (Sep 2, tracked under Cartesia), new HumanX Amsterdam enterprise after-hours (Sep 23, luma.com/d7jixwna), and the BCN executive dinner (Sep 23). VapiCon 2026 (Nov 11–12, Fort Mason SF) is tracked on the main calendar — Deepgram diamond sponsor; Cartesia CEO on the speaker list. Platform customers often evaluate Vapi alongside AssemblyAI STT.",
+      "Vapi Luma calendar cal-9jzVoVZclDCewDU (2026-08-29) lists Voice AI Live with Cartesia (Sep 2, tracked under Cartesia), HumanX Amsterdam enterprise after-hours (Sep 23, luma.com/d7jixwna), and the BCN executive dinner (Sep 23). VapiCon 2026 (Nov 11–12, Fort Mason SF) is tracked on the main calendar — Deepgram diamond sponsor; Cartesia CEO on the speaker list. Platform customers often evaluate Vapi alongside AssemblyAI STT.",
   },
   {
     id: "twilio",
@@ -265,7 +265,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Twilio UK Luma calendar also surfaces Ryan Britnell’s Conversations-in-the-AI-era / coffee cowork meetups (Manchester Sep 3 & Nov 4, London Oct 14) — community builder rooms adjacent to Twilio, not Twilio-owned product events. SIGNAL San Francisco 2026 is past (on-demand on signal.twilio.com/2026 as of 2026-08-28; 2027 interest form live). Watch twilio.com and Assemble announcements for US/Bay Area dates.",
+      "Twilio UK Luma calendar also surfaces Ryan Britnell’s Conversations-in-the-AI-era / coffee cowork meetups (Manchester Sep 3 & Nov 4, London Oct 14) plus Twilio Dev User Group London (Sep 17, luma.com/f6jbqbec) — community builder rooms adjacent to Twilio, not Twilio-owned product nights except Assemble. SIGNAL San Francisco 2026 is past (on-demand on signal.twilio.com/2026 as of 2026-08-29; 2027 interest form live). Watch twilio.com and Assemble announcements for US/Bay Area dates.",
   },
   {
     id: "agora",
@@ -298,7 +298,7 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://livekit.io/",
     events: [],
     watchNote:
-      "No dedicated public events page (livekit.io/events 404 as of 2026-08-28). LiveKit co-hosts AssemblyAI’s NYC Voice AI Meetup Sep 1 (tracked on the main calendar). Surfaces via Luma user LiveKit_Events and partner hackathons — re-check weekly around voice-agent forums.",
+      "No dedicated public events page (livekit.io/events 404 as of 2026-08-29). LiveKit co-hosts AssemblyAI’s NYC Voice AI Meetup Sep 1 (tracked on the main calendar). Surfaces via Luma user LiveKit_Events and partner hackathons — re-check weekly around voice-agent forums.",
   },
   {
     id: "retell",
