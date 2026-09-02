@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-09-01. Dates and venues sourced from
+ * Confirmed research date: 2026-09-02. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -163,36 +163,21 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "lablab.ai",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // 2026-09-01 (UTC afternoon / Pacific morning).
+  // 2026-09-02 (UTC afternoon / Pacific morning).
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
   // AI / voice-agent-relevant listings. This feed only surfaces ~6 weeks out, so
   // coverage here runs through late October — re-scrape luma.com/sf for
-  // anything past that. 68 discover entries across 3 pages. No new high-signal
-  // Bay Area builder rooms vs 2026-08-31 — still tracking Ship a Voice Agent
+  // anything past that. 66 discover entries across 3 pages. Discover itself
+  // had no new high-signal voice rooms; AGI House calendar added Voice AI
+  // Hackathon (voiceaihackathon, Sep 19). Still tracking Ship a Voice Agent
   // (leverage-0gfk, Sep 17), CoreWeave Hacks Agent Loops (coreweavehacks,
-  // Sep 12–13), TrueFoundry Agent Harness (Sep 19), Multi-Model Hackathon @
-  // AWS Builders Loft (beta-79jb, Oct 23). Skipped Humongous AI Meetup
-  // (lyzw2vit, Sep 16 — generic social), Next Interface / AIHardware hackathon
-  // (Sep 20, wearables), AGI House The Data Goldmine (datagoldmine, Sep 17),
-  // Physical/Spatial/Next Interface hackathons, Grok @bot nights / RSI House
-  // harness Sundays, Vercel/Plain agent fireside, Claude Coworkshop (Sep 21),
-  // Agentworld lecture (Sep 11), Agentic PM Kickoff, Agents in Sales,
-  // AI Filmmaking hackathon, stale 2025 Luma slugs, etc. Sep 1 same-day items
-  // (Agentic + AI Night, owned NYC Voice AI Meetup) kept — prune after Pacific day ends.
-  {
-    id: "luma-agentic-ai-night-governance",
-    name: "Agentic + AI Night: Multi-Agent Governance and Security",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Sep 1",
-    sortDate: "2026-09-01",
-    month: "2026-09",
-    location: "Terra Gallery, 511 Harrison St, San Francisco",
-    description:
-      "Multi-track SF meetup on multi-agent governance, security, and observability — coordinating agents (Claude Code, Codex, custom) via the Omnigent meta-harness.",
-    sourceUrl: "https://luma.com/agenticaiobsnightsf-9-1",
-    sourceLabel: "luma.com",
-  },
+  // Sep 12–13), TrueFoundry Agent Harness (Sep 19), AI Debates (aidebates,
+  // Sep 20), Multi-Model Hackathon @ AWS Builders Loft (beta-79jb, Oct 23).
+  // Skipped Humongous AI Meetup, Next Interface / AIHardware, Data Goldmine,
+  // AI Productivity Stack (aiproductivitystack), Vercel/Plain fireside,
+  // Grok @bot nights, Agentic PM / Agents in Sales, Spatial 3D / Filmmaking
+  // hackathons, Daytona×SambaNova San Jose builders (general AI eng), etc.
+  // Pruned Sep 1 Agentic + AI Night and owned NYC Voice AI Meetup after Pacific day.
   {
     id: "luma-llama-lounge-26",
     name: "Llama Lounge 26: The AI Startup Event Series @ Microsoft",
@@ -294,6 +279,21 @@ const scrapedEvents: CalEvent[] = [
     sourceUrl:
       "https://luma.com/truefoundry-agent-harness-hackathon-sep19-2026",
     sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-agi-house-voice-ai-hackathon",
+    name: "Voice AI Hackathon: SambaNova + General Compute + Infinity + Hume",
+    category: "hackathon",
+    status: "confirmed",
+    dateLabel: "Sep 19, 10am–8:30pm PT",
+    sortDate: "2026-09-19",
+    month: "2026-09",
+    location: "AGI House SF, 170 St. Germain Ave, San Francisco",
+    description:
+      "AGI House Saturday voice-agent hackathon on SambaNova SN50 inference with Hume voice/emotion models — keynotes from SambaNova/Infinity/General Compute/Hume, then a full-day build sprint with free compute/voice credits. Same calendar day as TrueFoundry Agent Harness (South Bay) and the day before AI Debates at the same house.",
+    sourceUrl: "https://luma.com/voiceaihackathon",
+    sourceLabel: "luma.com",
+    topics: ["voice-agents", "stt", "tts", "streaming"],
   },
   {
     id: "luma-agi-house-ai-debates-hackathon",
@@ -421,6 +421,7 @@ export const directSubmissions: CalEvent[] = [
   // 2026-08-25: Voice Agents Forum date corrected to Nov 5 (was Sep 16) per
   // live Luma event/get for voiceagentssf.
   // 2026-08-28: owned online AssemblyAI × lablab Voice Agent Hackathon (Sep 1–30).
+  // 2026-09-02: pruned owned NYC Voice AI Meetup (Sep 1) after Pacific day → pastEvents2026.
   {
     id: "assemblyai-voice-agent-hackathon-lablab-sep",
     name: "AssemblyAI — Voice Agent Hackathon (lablab.ai)",
@@ -437,21 +438,6 @@ export const directSubmissions: CalEvent[] = [
       "https://lablab.ai/ai-hackathons/assemblyai-voice-agent-hackathon",
     sourceLabel: "lablab.ai",
     topics: ["voice-agents", "stt", "streaming"],
-  },
-  {
-    id: "assemblyai-nyc-voice-ai-meetup-sep",
-    name: "NYC Voice AI Meetup: Build Smarter Voice Agents",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Sep 1",
-    sortDate: "2026-09-01",
-    month: "2026-09",
-    location: "New York, NY (owned AssemblyAI × LiveKit event)",
-    description:
-      "Owned AssemblyAI meetup with LiveKit and Boardy — live demo of Universal-3.5 Pro Realtime (context carryover, conversation memory, Voice Focus) plus a production panel with Boardy and Flagler Health. NYC, not Bay Area; on the calendar so cadence planning can see the owned slot.",
-    sourceUrl: "https://luma.com/v4fbpqof",
-    sourceLabel: "luma.com",
-    topics: ["stt", "voice-agents", "streaming"],
   },
   {
     id: "voice-agents-forum-2026",
@@ -604,11 +590,11 @@ export const recurringSeries: RecurringSeries[] = [
     cadence: "Very high frequency — reportedly up to 5 events/week",
     location: "Hillsborough, CA (their one physical house) + Bay Area partner venues",
     description:
-      "80+ build-a-thons hosted historically (Lovable, Perplexity emerged from these); runs multiple/week with partners like OpenAI. Attendance is merit-based/invite-only. Sep 20 The AI Debates Hackathon is a voice-agent build — the highest-signal AGI House slot this window.",
+      "80+ build-a-thons hosted historically (Lovable, Perplexity emerged from these); runs multiple/week with partners like OpenAI. Attendance is merit-based/invite-only. Sep 19 Voice AI Hackathon + Sep 20 The AI Debates Hackathon is a back-to-back voice-agent weekend — highest-signal AGI House cluster this window.",
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Re-checked 2026-09-01 (Pacific morning): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) still lists Sep 20 The AI Debates Hackathon (luma.com/aidebates) and Sep 22 Energy Optimization of GPUs through Self-Improving Agents (luma.com/gpuenergyoptimization) — both tracked in scheduledEvents. Also lists The Data Goldmine (datagoldmine, Sep 17 evening) — skipped (training-data / frontier-lab seller talk, not a builder voice room). AGI House also strategic-sponsors CoreWeave Hacks Agent Loops (Sep 12–13, luma.com/coreweavehacks) at CoreWeave SF. Still sparse advance dating overall — re-check luma.com/agi-house close to when you need one.",
+      "Re-checked 2026-09-02 (Pacific morning): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) now lists NEW Sep 19 Voice AI Hackathon (luma.com/voiceaihackathon; SambaNova + General Compute + Infinity + Hume) plus Sep 20 The AI Debates Hackathon (luma.com/aidebates) and Sep 22 evening Energy Optimization of GPUs (luma.com/gpuenergyoptimization) — all three tracked in scheduledEvents. Also lists AI Productivity Stack (aiproductivitystack, Sep 5) and The Data Goldmine (datagoldmine, Sep 17 evening) — both skipped (personal-agent life-stack talk / training-data seller room). AGI House also strategic-sponsors CoreWeave Hacks Agent Loops (Sep 12–13, luma.com/coreweavehacks) at CoreWeave SF. Sep 19–20 is a back-to-back AGI House voice weekend — highest near-term SF DevRel cluster.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -643,11 +629,18 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://www.voiceaispace.com/events",
     sourceLabel: "voiceaispace.com",
     watchNote:
-      "Re-checked 2026-09-01: Sep 2 Voice AI Live with Cartesia, Sep 9 Cartesia Field Notes India webinar (qyt0fc3o), Sep 10 Cartesia Farm to Table, Sep 17 Ship a Voice Agent workshop (luma.com/leverage-0gfk), Sep 20 AI Debates Hackathon (aidebates), Oct 29 Deepgram Speak '26 (deepgram.com/speak — SF Aviary), Nov 5 Voice Agents Forum (Luma voiceagentssf — voiceaispace / somo.social still mis-list Sep 16), Nov 11 VapiCon are the dated SF/global voice items — tracked on the calendar / ecosystem. Multi-Model Hackathon @ AWS Builders Loft Oct 23 (luma.com/beta-79jb) on main calendar. Guava Voice AI Hackathon Aug 29 (luma.com/678a9u02) remains in pastEvents2026. Owned online AssemblyAI × lablab Voice Agent Hackathon Sep 1–30 tracked in directSubmissions. Also surfaces UK Conversations-in-the-AI-era builder meetups (Manchester Sep 3 / Nov 4, London Oct 14 / Dec 3), London coffee-cowork nights (skip), and Twilio Assemble London Nov 19 — see vendorEvents. Past VOICE AI Gathering SF (Aug 20) and Cartesia Whiskey Tasting (Gurugram) remain past.",
+      "Re-checked 2026-09-02: Sep 2 Voice AI Live with Cartesia (same-day), Sep 9 Cartesia Field Notes India webinar (qyt0fc3o), Sep 10 Cartesia Farm to Table, Sep 17 Ship a Voice Agent workshop (luma.com/leverage-0gfk), Sep 19 NEW AGI House Voice AI Hackathon (voiceaihackathon), Sep 20 AI Debates Hackathon (aidebates), Oct 29 Deepgram Speak '26 (deepgram.com/speak — SF Aviary), Nov 5 Voice Agents Forum (Luma voiceagentssf — aggregators still mis-list Sep 16), Nov 11 VapiCon, Nov 18 Voice AI Summit London (luma.com/voiceaisummit — Voice AI Space / London, not Bay Area). Multi-Model Hackathon @ AWS Builders Loft Oct 23 (luma.com/beta-79jb) on main calendar. Guava Voice AI Hackathon Aug 29 and owned NYC Voice AI Meetup Sep 1 remain in pastEvents2026. Owned online AssemblyAI × lablab Voice Agent Hackathon Sep 1–30 still in directSubmissions. Also surfaces UK Conversations-in-the-AI-era builder meetups, London coffee-cowork nights (skip), Twilio Assemble London Nov 19, and Vapi×Deepgram Web Summit Mixer Nov 2 — see vendorEvents.",
   },
 ];
 
 export const pastEvents2026: PastEvent[] = [
+  {
+    id: "assemblyai-nyc-voice-ai-meetup-sep-2026",
+    name: "NYC Voice AI Meetup: Build Smarter Voice Agents",
+    dateLabel: "Sep 1",
+    location: "New York, NY (AssemblyAI × LiveKit)",
+    note: "Owned AssemblyAI × LiveKit NYC voice-agent meetup — kept for cadence / likely recurrence planning",
+  },
   {
     id: "guava-voice-ai-hackathon-sf-2026",
     name: "Guava Voice AI Hackathon: Build Night SF",
@@ -762,4 +755,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-09-01";
+export const researchDate = "2026-09-02";
