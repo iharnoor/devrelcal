@@ -30,7 +30,7 @@ export interface VendorGroup {
 
 /**
  * Speech / voice-AI vendor events — competitive & partnership tracking for
- * AssemblyAI. Re-researched 2026-09-02 (Pacific morning) against each vendor's own events page.
+ * AssemblyAI. Re-researched 2026-09-03 (Pacific morning) against each vendor's own events page.
  * These are companies that compete or overlap on STT, TTS, streaming audio, or
  * voice-agent platforms — not the Bay Area builder calendar (see events.ts).
  */
@@ -41,20 +41,6 @@ export const vendorGroups: VendorGroup[] = [
     category: "STT / TTS / Voice Agent API",
     homepageUrl: "https://luma.com/deepgram",
     events: [
-      {
-        id: "deepgram-genesys-xperience-lounge",
-        name: "The Real-Time Lounge @ Genesys Xperience",
-        dateLabel: "Sep 2, 6–8pm PT",
-        sortDate: "2026-09-02",
-        format: "in-person",
-        location: "Las Vegas, NV (Genesys Xperience week at Wynn)",
-        description:
-          "Deepgram-hosted evening lounge during Genesys Xperience — contact-center and real-time voice-agent buyers. Luma lists the lounge itself as Sep 2 6–8pm PT (conference runs Sep 1–3); luma.com/real-time-lounge as of 2026-08-25.",
-        status: "confirmed",
-        sourceUrl: "https://luma.com/real-time-lounge",
-        sourceLabel: "luma.com/deepgram",
-        topics: ["stt", "voice-agents", "streaming"],
-      },
       {
         id: "deepgram-london-voice-ai-exchange",
         name: "London Voice AI Exchange",
@@ -128,7 +114,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Re-checked 2026-09-02 (Pacific morning): Luma cal-qHEDltsO0Gr0WtD still only Genesys lounge (Sep 2 evening PT — same-day) + London Voice AI Exchange (Sep 10). deepgram.com/speak still live for Speak '26 (Oct 29, The Aviary SF). NEW on Vapi calendar: Vapi×Deepgram Web Summit Mixer (Nov 2, Lisbon, luma.com/vapi-t98x). Vapi×Deepgram BCN sunset drinks (Sep 22, luma.com/aisummit-w7qr) still confirmed. Hatch Designing for Voices (Sep 18) still live. deepgram.com/events 404s; workshops.deepgram.com undated lab guides only. Skipped FS/TEC Grapevine TX, Nytro sales webinar, AWS-partner webinar Sep 14, Fleet Week yacht social (vapi-l8kw), and stale 2025 Bedrock workshops. Flux TTS free-build promo through Sep 12. Remains diamond sponsor at VapiCon (Nov 11–12).",
+      "Re-checked 2026-09-03: Genesys Xperience lounge (Sep 2, Las Vegas) has passed — removed from dated list. Luma cal-qHEDltsO0Gr0WtD now shows only London Voice AI Exchange (Sep 10) as upcoming. deepgram.com/speak still live for Speak '26 (Oct 29, The Aviary SF). Vapi×Deepgram BCN sunset drinks (Sep 22, luma.com/aisummit-w7qr) + Web Summit Mixer (Nov 2, Lisbon, luma.com/vapi-t98x) still confirmed. Hatch Designing for Voices (Sep 18) still live. deepgram.com/events 404s; workshops.deepgram.com undated lab guides only. Deepgram is silver sponsor at AI Summit Barcelona (Sep 22–23, speaking slot Tue Sep 22). Remains diamond sponsor at VapiCon (Nov 11–12).",
   },
   {
     id: "cartesia",
@@ -136,19 +122,6 @@ export const vendorGroups: VendorGroup[] = [
     category: "TTS / real-time voice models",
     homepageUrl: "https://luma.com/cartesia",
     events: [
-      {
-        id: "cartesia-vapi-voice-ai-live",
-        name: "Voice AI Live: Multilingual Voice Agents with Cartesia",
-        dateLabel: "Sep 2, 10:30am PT",
-        sortDate: "2026-09-02",
-        format: "virtual",
-        description:
-          "Vapi × Cartesia Voice AI Live — choosing STT+TTS voice models for multilingual agents on Vapi (transcription quality, conversation quality in production). Confirmed on luma.com/jnb3cfym (YouTube) as of 2026-08-25.",
-        status: "confirmed",
-        sourceUrl: "https://luma.com/jnb3cfym",
-        sourceLabel: "luma.com",
-        topics: ["tts", "voice-agents", "stt"],
-      },
       {
         id: "cartesia-field-notes-voice-ai-india",
         name: "[Webinar] Field Notes: Voice AI in India",
@@ -165,8 +138,8 @@ export const vendorGroups: VendorGroup[] = [
       {
         id: "cartesia-farm-to-table-sep",
         name: "Farm to Table with Cartesia",
-        dateLabel: "Sep 10, 6:30pm PT",
-        sortDate: "2026-09-10",
+        dateLabel: "Sep 11, 6:30pm PT",
+        sortDate: "2026-09-11",
         format: "in-person",
         location: "San Francisco, CA",
         description:
@@ -192,7 +165,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Cartesia Luma calendar (cal-EeDJt2cPbgGca1W) as of 2026-09-02 lists Voice AI Live Sep 2 (same-day), Field Notes: Voice AI in India webinar Sep 9 (qyt0fc3o), and Farm to Table Sep 10. Bengaluru socials without locked public dates may still appear — confirm before planning. Cartesia’s CEO remains on the VapiCon speaker list.",
+      "Re-checked 2026-09-03: Cartesia Luma calendar (cal-EeDJt2cPbgGca1W) now lists Field Notes: Voice AI in India webinar Sep 9 (qyt0fc3o) and Farm to Table Sep 11 (date moved from Sep 10). Voice AI Live with Vapi (Sep 2) has passed. Maven AI Builders Summit session with Cartesia DevRel Sep 10 still confirmed. Cartesia CEO remains on the VapiCon speaker list.",
   },
   {
     id: "elevenlabs",
@@ -243,6 +216,19 @@ export const vendorGroups: VendorGroup[] = [
         topics: ["tts", "voice-agents", "stt"],
       },
       {
+        id: "elevenlabs-startup-grant-demo-day",
+        name: "ElevenLabs Startup Grant Demo Day",
+        dateLabel: "Oct 21",
+        sortDate: "2026-10-21",
+        format: "virtual",
+        description:
+          "Live pitches from 11 founders in the ElevenLabs Startup Grant program — real voice-AI products, cash prizes ($33k/$22k/$11k), and winners pitch again at the 11/11 Summit NYC. Window into the voice-agent startup cohort ElevenLabs is cultivating.",
+        status: "confirmed",
+        sourceUrl: "https://elevenlabs.io/webinars/elevenlabs-startup-grant-demo-day",
+        sourceLabel: "elevenlabs.io",
+        topics: ["tts", "voice-agents"],
+      },
+      {
         id: "elevenlabs-chatbot-summit-amsterdam",
         name: "ElevenLabs @ Chatbot Summit Amsterdam",
         dateLabel: "Nov 26",
@@ -258,7 +244,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "RAISE Paris booth (Jul 8–9) has passed. London Summit stop listed as Feb 11, 2026 on the summit page is past. No upcoming webinars listed on elevenlabs.io/webinars as of 2026-09-02. Summit page still lists Bengaluru Oct 6 and New York Nov 11 for 2026; Finovate Fall booth Sep 9–11 still on elevenlabs.io/events. SF Summit last ran Nov 11, 2025 — watch for a 2026 SF date on elevenlabs.io/events/elevenlabs-summit. Note: Deepgram Speak '26 (Oct 29 SF) is a same-market competitive calendar day two weeks before ElevenLabs NYC Summit / VapiCon week.",
+      "Re-checked 2026-09-03: ElevenLabs events page still lists Finovate Fall (Sep 9–11 NYC), Summit Bengaluru (Oct 6), and Summit NYC (Nov 11). NEW: Startup Grant Demo Day webinar Oct 21 with 11 live founder pitches. Chatbot Summit Amsterdam (Nov 26) still confirmed. No upcoming webinars on elevenlabs.io/webinars beyond the demo day and a Cadence Healthcare behind-the-agent session. SF Summit last ran Nov 11, 2025; watch for 2026 SF date. Deepgram Speak (Oct 29 SF) is a competitive same-market calendar day two weeks before ElevenLabs NYC Summit / VapiCon week.",
   },
   {
     id: "vapi",
@@ -296,7 +282,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Vapi Luma calendar cal-9jzVoVZclDCewDU (2026-09-02) lists Voice AI Live with Cartesia (Sep 2, tracked under Cartesia), HumanX Amsterdam enterprise after-hours (Sep 23, luma.com/d7jixwna), BCN executive dinner (Sep 23), NEW Vapi×Deepgram Web Summit Mixer (Nov 2, Lisbon — tracked under Deepgram), and VapiCon (Nov 11). Same Barcelona week: Vapi×Deepgram sunset drinks Sep 22 (luma.com/aisummit-w7qr — tracked under Deepgram). Skipped Fleet Week yacht social (vapi-l8kw, Oct 8) and early-stage technical sales dinner (vapi-du29, Sep 25). Separate “Vapi Meetups” calendar cal-rrrRDu4F2ibs5Bo had no upcoming dated entries. VapiCon 2026 (Nov 11–12, Fort Mason SF) is tracked on the main calendar — Deepgram diamond sponsor; Cartesia CEO on the speaker list. Platform customers often evaluate Vapi alongside AssemblyAI STT.",
+      "Re-checked 2026-09-03: Vapi Luma calendar cal-9jzVoVZclDCewDU now lists HumanX Amsterdam enterprise after-hours (Sep 23, luma.com/d7jixwna), BCN executive dinner (Sep 23), early-stage sales dinner (Sep 25, skipped), Fleet Week yacht (Oct 8, skipped), Vapi×Deepgram Web Summit Mixer (Nov 2, Lisbon — tracked under Deepgram), and VapiCon (Nov 11). Voice AI Live with Cartesia (Sep 2) has passed. VapiCon 2026 (Nov 11–12, Fort Mason SF) is tracked on the main calendar — Deepgram diamond sponsor; Cartesia CEO on the speaker list.",
   },
   {
     id: "twilio",

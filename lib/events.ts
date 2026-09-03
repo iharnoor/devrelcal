@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-09-02. Dates and venues sourced from
+ * Confirmed research date: 2026-09-03. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -163,28 +163,26 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "lablab.ai",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // 2026-09-02 (UTC afternoon / Pacific morning).
+  // 2026-09-03 (UTC afternoon / Pacific morning).
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
-  // AI / voice-agent-relevant listings. This feed only surfaces ~6 weeks out, so
-  // coverage here runs through late October — re-scrape luma.com/sf for
-  // anything past that. 66 discover entries across 3 pages. Discover itself
-  // had no new high-signal voice rooms; AGI House calendar added Voice AI
-  // Hackathon (voiceaihackathon, Sep 19). Still tracking Ship a Voice Agent
-  // (leverage-0gfk, Sep 17), CoreWeave Hacks Agent Loops (coreweavehacks,
-  // Sep 12–13), TrueFoundry Agent Harness (Sep 19), AI Debates (aidebates,
-  // Sep 20), Multi-Model Hackathon @ AWS Builders Loft (beta-79jb, Oct 23).
-  // Skipped Humongous AI Meetup, Next Interface / AIHardware, Data Goldmine,
-  // AI Productivity Stack (aiproductivitystack), Vercel/Plain fireside,
-  // Grok @bot nights, Agentic PM / Agents in Sales, Spatial 3D / Filmmaking
-  // hackathons, Daytona×SambaNova San Jose builders (general AI eng), etc.
-  // Pruned Sep 1 Agentic + AI Night and owned NYC Voice AI Meetup after Pacific day.
+  // AI / voice-agent-relevant listings. 25 discover entries on page 1 (page 2
+  // empty — feed contracted from 3 pages to 1 as early-Sep events cleared).
+  // No new high-signal voice rooms in discover. Llama Lounge 26 date moved
+  // Sep 10 → Sep 11 per discover feed. AGI House calendar (cal-Lv1pgYv5ITFR4tC)
+  // unchanged: Voice AI Hackathon Sep 19, AI Debates Sep 20, GPU Energy Sep 22.
+  // All other tracked events confirmed at same dates. Skipped: Grok Bot build
+  // night (women, Sep 4), Physical AI / Skild (Sep 4), Spatial 3D Hackathon
+  // (Sep 5), AI Philosophy Nights (Sep 4), Cafe Cowork (Sep 5), Agentic PM
+  // Kickoff (Sep 10), Agents in Sales fireside (Sep 10), Mahjong Party (Sep 11),
+  // Designing with AI / Amplitude (Sep 11), SF Database Meetup (Sep 11),
+  // Startup Pitch Night (Sep 11).
   {
     id: "luma-llama-lounge-26",
     name: "Llama Lounge 26: The AI Startup Event Series @ Microsoft",
     category: "meetup",
     status: "confirmed",
-    dateLabel: "Sep 10",
-    sortDate: "2026-09-10",
+    dateLabel: "Sep 11",
+    sortDate: "2026-09-11",
     month: "2026-09",
     location: "Microsoft, 1045 La Avenida St, Mountain View",
     description:
@@ -594,7 +592,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Re-checked 2026-09-02 (Pacific morning): public Luma calendar cal-Lv1pgYv5ITFR4tC (\"Ascension — by AGI House SF\" / luma.com/agi-house) now lists NEW Sep 19 Voice AI Hackathon (luma.com/voiceaihackathon; SambaNova + General Compute + Infinity + Hume) plus Sep 20 The AI Debates Hackathon (luma.com/aidebates) and Sep 22 evening Energy Optimization of GPUs (luma.com/gpuenergyoptimization) — all three tracked in scheduledEvents. Also lists AI Productivity Stack (aiproductivitystack, Sep 5) and The Data Goldmine (datagoldmine, Sep 17 evening) — both skipped (personal-agent life-stack talk / training-data seller room). AGI House also strategic-sponsors CoreWeave Hacks Agent Loops (Sep 12–13, luma.com/coreweavehacks) at CoreWeave SF. Sep 19–20 is a back-to-back AGI House voice weekend — highest near-term SF DevRel cluster.",
+      "Re-checked 2026-09-03: public Luma calendar cal-Lv1pgYv5ITFR4tC now lists AI Productivity Stack (Sep 5, skipped), Data Goldmine (Sep 18, skipped), Voice AI Hackathon (Sep 19, voiceaihackathon), AI Debates (Sep 20, aidebates), and Energy Optimization of GPUs (Sep 22/23 UTC = Sep 22 PT, gpuenergyoptimization). Sep 19–20 is a back-to-back AGI House voice weekend — highest near-term SF DevRel cluster. CoreWeave Hacks Agent Loops (Sep 12–13, coreweavehacks) at CoreWeave SF also has AGI House strategic sponsorship.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -629,7 +627,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://www.voiceaispace.com/events",
     sourceLabel: "voiceaispace.com",
     watchNote:
-      "Re-checked 2026-09-02: Sep 2 Voice AI Live with Cartesia (same-day), Sep 9 Cartesia Field Notes India webinar (qyt0fc3o), Sep 10 Cartesia Farm to Table, Sep 17 Ship a Voice Agent workshop (luma.com/leverage-0gfk), Sep 19 NEW AGI House Voice AI Hackathon (voiceaihackathon), Sep 20 AI Debates Hackathon (aidebates), Oct 29 Deepgram Speak '26 (deepgram.com/speak — SF Aviary), Nov 5 Voice Agents Forum (Luma voiceagentssf — aggregators still mis-list Sep 16), Nov 11 VapiCon, Nov 18 Voice AI Summit London (luma.com/voiceaisummit — Voice AI Space / London, not Bay Area). Multi-Model Hackathon @ AWS Builders Loft Oct 23 (luma.com/beta-79jb) on main calendar. Guava Voice AI Hackathon Aug 29 and owned NYC Voice AI Meetup Sep 1 remain in pastEvents2026. Owned online AssemblyAI × lablab Voice Agent Hackathon Sep 1–30 still in directSubmissions. Also surfaces UK Conversations-in-the-AI-era builder meetups, London coffee-cowork nights (skip), Twilio Assemble London Nov 19, and Vapi×Deepgram Web Summit Mixer Nov 2 — see vendorEvents.",
+      "Re-checked 2026-09-03: Sep 2 events (Voice AI Live with Cartesia, Deepgram Genesys lounge) have passed. Upcoming: Sep 9 Cartesia Field Notes India webinar, Sep 11 Cartesia Farm to Table (date moved from Sep 10), Sep 17 Ship a Voice Agent workshop (luma.com/leverage-0gfk), Sep 19 AGI House Voice AI Hackathon, Sep 20 AI Debates, Oct 29 Deepgram Speak SF, Nov 5 Voice Agents Forum, Nov 11 VapiCon, Nov 18 Voice AI Summit London. Owned online AssemblyAI × lablab Voice Agent Hackathon Sep 1–30 still in directSubmissions.",
   },
 ];
 
@@ -755,4 +753,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-09-02";
+export const researchDate = "2026-09-03";
