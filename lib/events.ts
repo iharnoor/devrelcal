@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-09-03. Dates and venues sourced from
+ * Confirmed research date: 2026-09-04. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -163,26 +163,28 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "lablab.ai",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // 2026-09-03 (UTC afternoon / Pacific morning).
+  // 2026-09-04 (UTC afternoon / Pacific morning).
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
-  // AI / voice-agent-relevant listings. 25 discover entries on page 1 (page 2
-  // empty — feed contracted from 3 pages to 1 as early-Sep events cleared).
-  // No new high-signal voice rooms in discover. Llama Lounge 26 date moved
-  // Sep 10 → Sep 11 per discover feed. AGI House calendar (cal-Lv1pgYv5ITFR4tC)
-  // unchanged: Voice AI Hackathon Sep 19, AI Debates Sep 20, GPU Energy Sep 22.
-  // All other tracked events confirmed at same dates. Skipped: Grok Bot build
-  // night (women, Sep 4), Physical AI / Skild (Sep 4), Spatial 3D Hackathon
-  // (Sep 5), AI Philosophy Nights (Sep 4), Cafe Cowork (Sep 5), Agentic PM
-  // Kickoff (Sep 10), Agents in Sales fireside (Sep 10), Mahjong Party (Sep 11),
-  // Designing with AI / Amplitude (Sep 11), SF Database Meetup (Sep 11),
-  // Startup Pitch Night (Sep 11).
+  // AI / voice-agent-relevant listings. 77 discover entries across 4 pages.
+  // NEW: Audio Layer 3.0 Voice x Robotics (Sep 15, uxmg18ib) via voiceaispace —
+  // not on Bay Area discover. Date corrections via event/get: Llama Lounge 26
+  // Sep 11 → Sep 10; Cartesia Farm to Table Sep 11 → Sep 10 (vendor file).
+  // AGI House calendar: Data Goldmine moved Sep 18 → Sep 17 (still skipped);
+  // Voice AI Hackathon Sep 19, AI Debates Sep 20, GPU Energy Sep 22 unchanged.
+  // TrueFoundry venue now published (3120 Scott Blvd, Santa Clara). CoreWeave
+  // Hacks now lists TypeSafe AI alongside W&B / AGI House. Skipped: Cafe Cowork,
+  // Spatial 3D Hackathon, Blinkko wearable launch, Agentic PM Kickoff, Agents in
+  // Sales, Mahjong Party, Designing with AI / Amplitude, Startup Pitch Night,
+  // Physical AI Hardware Meetup, AI Filmmaking Hackathon, Humongous AI Meetup,
+  // Real-Time Video Agents Hack (VAST — video not voice), Runtime by Modal,
+  // Claude Coworkshop, GenMedia Conference, builders-sep26 (2025 slug trap).
   {
     id: "luma-llama-lounge-26",
     name: "Llama Lounge 26: The AI Startup Event Series @ Microsoft",
     category: "meetup",
     status: "confirmed",
-    dateLabel: "Sep 11",
-    sortDate: "2026-09-11",
+    dateLabel: "Sep 10",
+    sortDate: "2026-09-10",
     month: "2026-09",
     location: "Microsoft, 1045 La Avenida St, Mountain View",
     description:
@@ -206,7 +208,7 @@ const scrapedEvents: CalEvent[] = [
   },
   {
     id: "ai-tinkerers-agents-everywhere-hackathon-sf",
-    name: "AI Tinkerers — Agents, Everywhere: Beyond The Chatbot (Global Hackathon)",
+    name: "AI Tinkerers — Agents, Everywhere: Bots, Channels, & More (Global Hackathon)",
     category: "hackathon",
     status: "confirmed",
     dateLabel: "Sep 12, 10am–5pm",
@@ -221,7 +223,7 @@ const scrapedEvents: CalEvent[] = [
   },
   {
     id: "luma-coreweave-agent-loops-hackathon",
-    name: "CoreWeave Hacks: Agent Loops Hackathon with Weights & Biases and AGI House",
+    name: "CoreWeave Hacks: Agent Loops Hackathon with Weights & Biases, AGI House, and TypeSafe AI",
     category: "hackathon",
     status: "confirmed",
     dateLabel: "Sep 12–13",
@@ -230,7 +232,7 @@ const scrapedEvents: CalEvent[] = [
     month: "2026-09",
     location: "400 Alabama St ste 202, San Francisco",
     description:
-      "Two-day in-person agent hackathon (CoreWeave × Weights & Biases × AGI House) — build autonomous agent loops that reason, act, and self-correct; $20k+ prize pool. Strong agent-infra builder room; voice is a plausible use case but not the stated theme.",
+      "Two-day in-person agent hackathon (CoreWeave × Weights & Biases × AGI House × TypeSafe AI) — build autonomous agent loops that reason, act, and self-correct; $20k+ prize pool. Strong agent-infra builder room; voice is a plausible use case but not the stated theme.",
     sourceUrl: "https://luma.com/coreweavehacks",
     sourceLabel: "luma.com",
   },
@@ -247,6 +249,21 @@ const scrapedEvents: CalEvent[] = [
       "Lightning-demo evening at Sentry HQ — builders show the agent harnesses and setups they actually use (framework, laptop vs remote, and what makes each stack work).",
     sourceUrl: "https://luma.com/allthings-kj2x",
     sourceLabel: "luma.com",
+  },
+  {
+    id: "luma-audio-layer-voice-x-robotics",
+    name: "The Audio Layer 3.0: Voice x Robotics",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Sep 15, 6–9pm PT",
+    sortDate: "2026-09-15",
+    month: "2026-09",
+    location: "Tavus office, 35 Stillman St, San Francisco",
+    description:
+      "ai-coustics Audio Layer evening at Tavus HQ — demos plus a voice×robotics panel (Tavus, ai-coustics, LiveKit GM Robotics, Gradium, Lightberry) on real-world audio reliability, STT/turn-taking under noise, and conversational agents in physical systems. Same night as All Things Agent Setups at Sentry.",
+    sourceUrl: "https://luma.com/uxmg18ib",
+    sourceLabel: "luma.com",
+    topics: ["voice-agents", "stt", "streaming", "audio-intel"],
   },
   {
     id: "luma-ship-voice-agent-workshop",
@@ -271,7 +288,7 @@ const scrapedEvents: CalEvent[] = [
     dateLabel: "Sep 19, 9:30am–8pm PT",
     sortDate: "2026-09-19",
     month: "2026-09",
-    location: "South Bay (venue TBD for approved attendees)",
+    location: "3120 Scott Blvd, Santa Clara",
     description:
       "Full-day TrueFoundry × HackerSquad hackathon on production agent harnesses — model routing, MCP tool access, observability, evals, guardrails, and deployment. Strong agent-infra builder room; voice is a plausible use case but not the stated theme.",
     sourceUrl:
@@ -487,7 +504,7 @@ export const recurringSeries: RecurringSeries[] = [
     name: "AI Tinkerers — San Francisco",
     category: "meetup",
     cadence:
-      "Monthly — next dated builder slot: Sep 12 Agents, Everywhere global hackathon (tracked in scheduledEvents); same weekend as CoreWeave Hacks Agent Loops (Sep 12–13)",
+      "Monthly — next dated builder slot: Sep 12 Agents, Everywhere: Bots, Channels, & More global hackathon (tracked in scheduledEvents); same weekend as CoreWeave Hacks Agent Loops (Sep 12–13)",
     location: "San Francisco",
     description:
       "Hands-on demo nights for engineers/founders building AI agents, voice agents, and coding agents. Recurring borrowed audience for an STT lightning talk.",
@@ -592,7 +609,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Re-checked 2026-09-03: public Luma calendar cal-Lv1pgYv5ITFR4tC now lists AI Productivity Stack (Sep 5, skipped), Data Goldmine (Sep 18, skipped), Voice AI Hackathon (Sep 19, voiceaihackathon), AI Debates (Sep 20, aidebates), and Energy Optimization of GPUs (Sep 22/23 UTC = Sep 22 PT, gpuenergyoptimization). Sep 19–20 is a back-to-back AGI House voice weekend — highest near-term SF DevRel cluster. CoreWeave Hacks Agent Loops (Sep 12–13, coreweavehacks) at CoreWeave SF also has AGI House strategic sponsorship.",
+      "Re-checked 2026-09-04: public Luma calendar cal-Lv1pgYv5ITFR4tC lists AI Productivity Stack (Sep 5, skipped), Data Goldmine (now Sep 17, skipped — moved from Sep 18), Voice AI Hackathon (Sep 19, voiceaihackathon), AI Debates (Sep 20, aidebates), and Energy Optimization of GPUs (Sep 22 PT, gpuenergyoptimization). Sep 19–20 remains the back-to-back AGI House voice weekend. CoreWeave Hacks Agent Loops (Sep 12–13, coreweavehacks) at CoreWeave SF still lists AGI House sponsorship (+ TypeSafe AI).",
   },
   {
     id: "lablab-ai-hackathons",
@@ -627,7 +644,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://www.voiceaispace.com/events",
     sourceLabel: "voiceaispace.com",
     watchNote:
-      "Re-checked 2026-09-03: Sep 2 events (Voice AI Live with Cartesia, Deepgram Genesys lounge) have passed. Upcoming: Sep 9 Cartesia Field Notes India webinar, Sep 11 Cartesia Farm to Table (date moved from Sep 10), Sep 17 Ship a Voice Agent workshop (luma.com/leverage-0gfk), Sep 19 AGI House Voice AI Hackathon, Sep 20 AI Debates, Oct 29 Deepgram Speak SF, Nov 5 Voice Agents Forum, Nov 11 VapiCon, Nov 18 Voice AI Summit London. Owned online AssemblyAI × lablab Voice Agent Hackathon Sep 1–30 still in directSubmissions.",
+      "Re-checked 2026-09-04: NEW Sep 15 Audio Layer 3.0 Voice x Robotics (luma.com/uxmg18ib, Tavus SF — LiveKit on panel). Cartesia Farm to Table corrected back to Sep 10 (was briefly listed Sep 11). Still upcoming: Sep 9 Cartesia Field Notes India, Sep 17 Ship a Voice Agent (leverage-0gfk), Sep 19–20 AGI House voice weekend, Oct 29 Deepgram Speak SF, Nov 5 Voice Agents Forum, Nov 11 VapiCon, Nov 18 Voice AI Summit London. Do not trust voiceaispace’s Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5. Skip builders-sep26 (2025). Owned AssemblyAI × lablab Voice Agent Hackathon Sep 1–30 still in directSubmissions.",
   },
 ];
 
@@ -753,4 +770,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-09-03";
+export const researchDate = "2026-09-04";
