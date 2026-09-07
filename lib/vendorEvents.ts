@@ -30,7 +30,7 @@ export interface VendorGroup {
 
 /**
  * Speech / voice-AI vendor events — competitive & partnership tracking for
- * AssemblyAI. Re-researched 2026-09-06 (Pacific morning) against each vendor's own events page.
+ * AssemblyAI. Re-researched 2026-09-07 (Pacific morning) against each vendor's own events page.
  * These are companies that compete or overlap on STT, TTS, streaming audio, or
  * voice-agent platforms — not the Bay Area builder calendar (see events.ts).
  */
@@ -85,6 +85,20 @@ export const vendorGroups: VendorGroup[] = [
         topics: ["voice-agents"],
       },
       {
+        id: "deepgram-london-customer-interaction",
+        name: "Voice AI: Shaping the Next Frontier of Customer Interaction",
+        dateLabel: "Oct 1, 6:00–8:30pm BST",
+        sortDate: "2026-10-01",
+        format: "in-person",
+        location: "London, United Kingdom (venue on registration)",
+        description:
+          "Deepgram × Pipecat × frog (Capgemini Invent) London evening on Voice AI for customer interaction — fireside with Deepgram VP Eng Kris Efland plus enterprise CX/engineering leaders on voice-first design, conversational apps, and adoption at scale. New on Deepgram Luma cal-qHEDltsO0Gr0WtD (luma.com/prkbq50k) as of 2026-09-07; Pipecat co-host is a strong EU framework-distribution signal after the Sep 10 London Voice AI Exchange.",
+        status: "confirmed",
+        sourceUrl: "https://luma.com/prkbq50k",
+        sourceLabel: "luma.com",
+        topics: ["voice-agents", "stt", "streaming"],
+      },
+      {
         id: "deepgram-speak-26",
         name: "Deepgram Speak '26",
         dateLabel: "Oct 29, 8am–6pm PT",
@@ -114,7 +128,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Re-checked 2026-09-06: Genesys Xperience lounge (Sep 2, Las Vegas) remains past. Luma cal-qHEDltsO0Gr0WtD still shows only London Voice AI Exchange (Sep 10). deepgram.com/speak still live for Speak '26 (Oct 29, The Aviary SF). Vapi×Deepgram BCN sunset drinks (Sep 22, luma.com/aisummit-w7qr) + Web Summit Mixer (Nov 2, Lisbon, luma.com/vapi-t98x) still confirmed. Hatch Designing for Voices (Sep 18) still live. deepgram.com/events 404s; workshops.deepgram.com undated lab guides only. Deepgram remains silver sponsor at AI Summit Barcelona (Sep 22–23, speaking Tue Sep 22 on AI Voice Agents: From Pilot to Production) and diamond sponsor at VapiCon (Nov 11–12).",
+      "Re-checked 2026-09-07: Luma cal-qHEDltsO0Gr0WtD now lists London Voice AI Exchange (Sep 10) plus NEW Voice AI: Shaping the Next Frontier of Customer Interaction (Oct 1, London, luma.com/prkbq50k — Deepgram × Pipecat × frog). deepgram.com/speak still live for Speak '26 (Oct 29, The Aviary SF). Vapi×Deepgram BCN sunset drinks (Sep 22) + Web Summit Mixer (Nov 2) still confirmed. Hatch Designing for Voices (Sep 18) still live. deepgram.com/events 404s. Deepgram remains silver sponsor at AI Summit Barcelona (Sep 22–23) and diamond sponsor at VapiCon (Nov 11–12). Voice AI Unplugged Mumbai (Aug 13, ti2m4q5i) is past.",
   },
   {
     id: "cartesia",
@@ -165,7 +179,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Re-checked 2026-09-06: Cartesia Luma calendar (cal-EeDJt2cPbgGca1W) still lists Field Notes: Voice AI in India webinar Sep 9 (qyt0fc3o) and Farm to Table Sep 10 6:30pm PT (qiv3xhu6) — event/get still Sep 10. Maven AI Builders Summit session with Cartesia DevRel still listed Sep 10 8pm EDT. Cartesia CEO remains on the VapiCon speaker list.",
+      "Re-checked 2026-09-07: Cartesia Luma calendar (cal-EeDJt2cPbgGca1W) still lists Field Notes: Voice AI in India webinar Sep 9 (qyt0fc3o) and Farm to Table Sep 10 6:30pm PT (qiv3xhu6) — event/get still Sep 10. Maven AI Builders Summit session with Cartesia DevRel still listed Sep 10 8pm. Cartesia CEO remains on the VapiCon speaker list.",
   },
   {
     id: "elevenlabs",
@@ -244,7 +258,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Re-checked 2026-09-06: ElevenLabs events page still lists Finovate Fall (Sep 9–11 NYC), Summit Bengaluru (Oct 6), and Summit NYC (Nov 11). Startup Grant Demo Day webinar Oct 21 still confirmed. Chatbot Summit Amsterdam (Nov 26) still confirmed. No new SF Summit date. Deepgram Speak (Oct 29 SF) remains the competitive same-market calendar day two weeks before ElevenLabs NYC Summit / VapiCon week.",
+      "Re-checked 2026-09-07: ElevenLabs events page still lists Finovate Fall (Sep 9–11 NYC), Summit Bengaluru (Oct 6, The Leela Bhartiya), and Summit NYC (Nov 11). Startup Grant Demo Day webinar Oct 21 still confirmed. Chatbot Summit Amsterdam (Nov 26) still confirmed. No new SF Summit date. Deepgram Speak (Oct 29 SF) remains the competitive same-market calendar day two weeks before ElevenLabs NYC Summit / VapiCon week.",
   },
   {
     id: "vapi",
@@ -282,7 +296,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Re-checked 2026-09-06: Vapi Luma calendar cal-9jzVoVZclDCewDU lists BCN executive dinner (Sep 23), early-stage sales dinner (Sep 25, skipped), Fleet Week yacht (Oct 8, skipped), Vapi×Deepgram Web Summit Mixer (Nov 2, Lisbon — tracked under Deepgram), and VapiCon (Nov 11). HumanX Amsterdam after-hours (Sep 23, luma.com/d7jixwna) still live via event/get even when calendar listing is sparse. VapiCon 2026 (Nov 11–12, Fort Mason SF) remains on the main calendar — Deepgram diamond sponsor; Cartesia CEO on the speaker list.",
+      "Re-checked 2026-09-07: Vapi Luma calendar cal-9jzVoVZclDCewDU lists BCN executive dinner (Sep 23), early-stage sales dinner (Sep 24, skipped), Fleet Week yacht (Oct 8, skipped), Vapi×Deepgram Web Summit Mixer (Nov 2, Lisbon — tracked under Deepgram), and VapiCon (Nov 11). HumanX Amsterdam after-hours (Sep 23, luma.com/d7jixwna) still live via event/get. VapiCon 2026 (Nov 11–12, Fort Mason SF) remains on the main calendar — Deepgram diamond sponsor; Cartesia CEO on the speaker list. Skip builders-sep26 (2025 Voice AI Builders Meetup slug trap).",
   },
   {
     id: "regal",
@@ -306,7 +320,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Re-checked 2026-09-06: Regal Rise (Sep 17 NYC/virtual) is the dated public event on regal.ai/events. Adjacent contact-center Voice AI competitive signal vs AssemblyAI phone-agent builders — watch for a Bay Area follow-on.",
+      "Re-checked 2026-09-07: Regal Rise (Sep 17 NYC/virtual) is still the dated public event (luma.com/regal-rise-2026). Adjacent contact-center Voice AI competitive signal vs AssemblyAI phone-agent builders — watch for a Bay Area follow-on.",
   },
   {
     id: "twilio",
@@ -348,7 +362,7 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://livekit.io/",
     events: [],
     watchNote:
-      "No dedicated public events page (livekit.io/events 404 as of 2026-09-06). LiveKit co-hosted AssemblyAI’s NYC Voice AI Meetup Sep 1 (now in pastEvents2026). Competitive signal: LiveKit GM Robotics (David Chen) is on the panel for The Audio Layer 3.0: Voice x Robotics (Sep 15, luma.com/uxmg18ib, Tavus SF — tracked on main calendar). Surfaces via Luma user LiveKit_Events and partner hackathons — re-check weekly around voice-agent forums.",
+      "No dedicated public events page (livekit.io/events 404 as of 2026-09-07). LiveKit co-hosted AssemblyAI’s NYC Voice AI Meetup Sep 1 (now in pastEvents2026). Competitive signal: LiveKit GM Robotics (David Chen) is on the panel for The Audio Layer 3.0: Voice x Robotics (Sep 15, luma.com/uxmg18ib, Tavus SF — tracked on main calendar). Surfaces via Luma user LiveKit_Events and partner hackathons — re-check weekly around voice-agent forums.",
   },
   {
     id: "retell",
@@ -375,7 +389,7 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://pipecat.ai/",
     events: [],
     watchNote:
-      "pipecat.ai and daily.co/blog showed no dated Jul–Dec 2026 public meetups as of 2026-08-27. Pipecat often co-appears with Speechmatics / LiveKit builder nights — watch those calendars and daily.co changelog for workshop announcements.",
+      "pipecat.ai and daily.co/blog still show no owned dated public meetups as of 2026-09-07. Competitive signal: Pipecat is a named co-host (with Deepgram + frog/Capgemini Invent) on Voice AI: Shaping the Next Frontier of Customer Interaction (Oct 1 London, luma.com/prkbq50k — tracked under Deepgram). Pipecat often co-appears with Speechmatics / LiveKit / Deepgram builder nights — watch those calendars and daily.co changelog.",
   },
   {
     id: "speechmatics",
@@ -444,7 +458,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Luma calendar cal-xZRPdTa3UcyyNJE (2026-09-02) lists The Direct Line Mumbai (Sep 8) as the only dated upcoming entry. Past 2026 Bay Area pattern: Beyond Text research talks (Jun 8, Menlo Park), Voice AI Goes Global multilingual panel (Jun 15), CCW Las Vegas steakhouse afterhours with Telnyx (Jun 24), Voice AI HackSprint 2.0 (Mar 14, SF). Re-check weekly — they run SF/Menlo Park builder nights in bursts.",
+      "Luma calendar cal-xZRPdTa3UcyyNJE (2026-09-07) still lists The Direct Line Mumbai (Sep 8) as the only dated upcoming entry. Past 2026 Bay Area pattern: Beyond Text research talks (Jun 8, Menlo Park), Voice AI Goes Global multilingual panel (Jun 15), CCW Las Vegas steakhouse afterhours with Telnyx (Jun 24), Voice AI HackSprint 2.0 (Mar 14, SF). Re-check weekly — they run SF/Menlo Park builder nights in bursts.",
   },
   {
     id: "google-cloud-speech",
@@ -462,7 +476,7 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://azure.microsoft.com/en-us/products/ai-services/ai-speech",
     events: [],
     watchNote:
-      "No Azure AI Speech-specific dated Jul–Dec 2026 events confirmed as of 2026-09-06. Llama Lounge 26 (Sep 10, Microsoft MV) is on the main calendar as a borrowed Microsoft campus room, not an Azure Speech product event. Watch Microsoft Reactor SF.",
+      "No Azure AI Speech-specific dated Jul–Dec 2026 events confirmed as of 2026-09-07. Llama Lounge 26 (Sep 10, Microsoft MV) is on the main calendar as a borrowed Microsoft campus room, not an Azure Speech product event. Watch Microsoft Reactor SF.",
   },
   {
     id: "aws-transcribe",
