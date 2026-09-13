@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-09-12. Dates and venues sourced from
+ * Confirmed research date: 2026-09-13. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -163,51 +163,25 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "lablab.ai",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // 2026-09-12 (UTC afternoon / Pacific morning).
+  // 2026-09-13 (UTC afternoon / Pacific morning).
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
-  // AI / voice-agent-relevant listings. 78 discover entries across 4 pages.
-  // Prior keepers re-verified via event/get: Open Model Hack, CoreWeave,
-  // All Things Agent Setups, Audio Layer, StepAudio 3 Launch, Ship a Voice
-  // Agent, AGI House voice weekend, TrueFoundry, Agent Arena, AI Native Summit.
-  // NEW from voiceaispace (not on discover): Voice AI Happy Hour & Fireside
-  // Chat (h2qu25rt, Sep 16 SF, Coval). Owned AssemblyAI Build Night
-  // (xwnkujzr, Sep 24 SF) remains in directSubmissions. Leverage still lists
-  // Next Interface (AIHardware wearables, skipped) + Who Goes There? (skipped).
-  // Skipped from discover / voice search: Agentworld×Superdark, AI Filmmaking,
-  // Live Models Hackathon (gh4256ju — realtime *video* models, not voice),
-  // Real-Time Video Agents Hack (vastsf), Humongous AI Meetup, Ground Truth,
-  // Cartesia×Lorikeet drinks (bz8x2v1s — social), builders-sep26 / ch986w6u /
-  // suhy8sgz (past-year traps). Maxwell Sherwood SF Tech Week voice AI
-  // hackathon still undated.
-  {
-    id: "luma-open-model-hack",
-    name: "Open Model Hack — Gradient × Google DeepMind",
-    category: "hackathon",
-    status: "confirmed",
-    dateLabel: "Sep 12",
-    sortDate: "2026-09-12",
-    month: "2026-09",
-    location: "San Francisco",
-    description:
-      "Day hack with Gradient and Google DeepMind for engineers and founders building with the latest open models — inference, fine-tuning, and production performance comparisons.",
-    sourceUrl: "https://luma.com/openmodelhack",
-    sourceLabel: "luma.com",
-  },
-  {
-    id: "ai-tinkerers-agents-everywhere-hackathon-sf",
-    name: "AI Tinkerers — Agents, Everywhere: Bots, Channels, & More (Global Hackathon)",
-    category: "hackathon",
-    status: "confirmed",
-    dateLabel: "Sep 12, 10am–5pm",
-    sortDate: "2026-09-12",
-    month: "2026-09",
-    location: "San Francisco (AI Tinkerers SF chapter)",
-    description:
-      "AI Tinkerers global agent hackathon day — build agent prototypes that plug into existing tools/channels beyond chat UIs; OpenAI, CopilotKit, and OpenRouter listed as supporters. Strong agent-builder attendance; voice is a plausible use case but not the stated theme (no topic tag until a voice track is confirmed).",
-    sourceUrl:
-      "https://sf.aitinkerers.org/p/agents-everywhere-beyond-the-chatbot-global-hackathon",
-    sourceLabel: "sf.aitinkerers.org",
-  },
+  // AI / voice-agent-relevant listings. 77 discover entries across 4 pages.
+  // Pruned after Pacific day passed: Open Model Hack (Sep 12), AI Tinkerers
+  // Agents Everywhere (Sep 12). CoreWeave Hacks kept (ends Sep 13 5pm PT).
+  // Prior keepers re-verified via event/get: CoreWeave, All Things Agent
+  // Setups, Audio Layer, StepAudio 3 Launch (title now includes Cresta),
+  // Voice AI Happy Hour, Ship a Voice Agent, AGI House voice weekend,
+  // TrueFoundry, Agent Arena, AI Native Summit.
+  // NEW from discover: Claude Build Day (Sep 19 SF), Runtime by Modal (Oct 1).
+  // Owned AssemblyAI Build Night (xwnkujzr, Sep 24 SF) remains in
+  // directSubmissions. Leverage still lists Next Interface (AIHardware
+  // wearables, skipped) + Who Goes There? / Paper Club GTM (skipped).
+  // Skipped: AI Filmmaking, Live Models / Real-Time Video Agents, Humongous
+  // AI Meetup, Ground Truth, Cartesia×Lorikeet drinks, Baseten multi-model
+  // deploy talk, Demo Night @ WorkOS, Decagon GTM Series, builders-sep26 /
+  // suhy8sgz year traps. Maxwell Sherwood SF Tech Week voice hackathon
+  // still undated. Voice AI Summit (voiceaisummit, Nov 18 London) stays
+  // watch-only — venue still obfuscated/TBA.
   {
     id: "luma-coreweave-agent-loops-hackathon",
     name: "CoreWeave Hacks: Agent Loops Hackathon with Weights & Biases, AGI House, and TypeSafe AI",
@@ -254,7 +228,7 @@ const scrapedEvents: CalEvent[] = [
   },
   {
     id: "luma-stepaudio-3-launch-meetup",
-    name: "Voice AI Meetup: StepAudio 3 Launch | Featuring Plaud & Coval & SGlang",
+    name: "Voice AI Meetup: StepAudio 3 Launch ft. PLAUD, Cresta, Coval & SGLang",
     category: "meetup",
     status: "confirmed",
     dateLabel: "Sep 16, 6–9pm PT",
@@ -262,7 +236,7 @@ const scrapedEvents: CalEvent[] = [
     month: "2026-09",
     location: "San Francisco (SoMa; exact venue on registration)",
     description:
-      "SF Voice AI community evening for the StepAudio 3 audio-model launch (StepFun) with Plaud, Coval, and SGlang — research talk/demo, Voice AI Leaders panel, AMA, and API credits for in-person attendees. High-signal Bay Area voice-builder room the night before Ship a Voice Agent; same evening as Coval’s Happy Hour & Fireside Chat.",
+      "SF Voice AI community evening for the StepAudio 3 audio-model launch (StepFun) with PLAUD, Cresta, Coval, and SGLang — research talk/demo, Voice AI Leaders panel, AMA, and API credits for in-person attendees. High-signal Bay Area voice-builder room the night before Ship a Voice Agent; same evening as Coval’s Happy Hour & Fireside Chat.",
     sourceUrl: "https://luma.com/bkpe5h92",
     sourceLabel: "luma.com",
     topics: ["voice-agents", "stt", "tts", "audio-intel"],
@@ -298,6 +272,20 @@ const scrapedEvents: CalEvent[] = [
     sourceUrl: "https://luma.com/leverage-0gfk",
     sourceLabel: "luma.com",
     topics: ["voice-agents", "stt", "streaming"],
+  },
+  {
+    id: "luma-claude-build-day-sf",
+    name: "San Francisco | Claude Build Day",
+    category: "hackathon",
+    status: "confirmed",
+    dateLabel: "Sep 19, 9am–4pm PT",
+    sortDate: "2026-09-19",
+    month: "2026-09",
+    location: "590 Howard St, San Francisco, CA 94105",
+    description:
+      "Anthropic Claude Community build day in SF — hands-on day shipping with Claude Fable 5.1 alongside local builders. Strong agent-builder room the same calendar day as the AGI House Voice AI Hackathon and TrueFoundry Agent Harness; voice is a plausible use case but not the stated theme.",
+    sourceUrl: "https://luma.com/claudesanfranciscobuildday",
+    sourceLabel: "luma.com",
   },
   {
     id: "luma-truefoundry-agent-harness-hackathon",
@@ -396,6 +384,20 @@ const scrapedEvents: CalEvent[] = [
   // than Luma's for this audience (heavy false-positive rate on words like
   // "voice" matching unrelated events, plus templated paid-training-course spam).
   // Agentic AI workshop (Aug 18) pruned after Pacific day passed (2026-08-20).
+  {
+    id: "luma-runtime-by-modal",
+    name: "Runtime by Modal",
+    category: "conference",
+    status: "confirmed",
+    dateLabel: "Oct 1, 8:30am–6:30pm PT",
+    sortDate: "2026-10-01",
+    month: "2026-10",
+    location: "The Midway, 900 Marin St, San Francisco, CA 94124",
+    description:
+      "Modal’s full-day SF conference on AI runtime infrastructure — inference, training, and batch workloads for builders shipping production AI systems. Strong infra/agent-builder attendance; Gladia co-appears with Modal on the Oct 14 Paris Voice AI Meetup, so this room overlaps the voice-infra developer graph even though the agenda is not voice-specific.",
+    sourceUrl: "https://luma.com/runtime-by-modal",
+    sourceLabel: "luma.com",
+  },
   {
     id: "eventbrite-data-streaming-summit",
     name: "Data Streaming Summit 2026",
@@ -569,7 +571,7 @@ export const recurringSeries: RecurringSeries[] = [
     name: "AI Tinkerers — San Francisco",
     category: "meetup",
     cadence:
-      "Monthly — next dated builder slot: Sep 12 Agents, Everywhere: Bots, Channels, & More global hackathon (tracked in scheduledEvents); same weekend as CoreWeave Hacks Agent Loops (Sep 12–13)",
+      "Monthly — Sep 12 Agents Everywhere global hackathon has passed; watch sf.aitinkerers.org for the next demo night",
     location: "San Francisco",
     description:
       "Hands-on demo nights for engineers/founders building AI agents, voice agents, and coding agents. Recurring borrowed audience for an STT lightning talk.",
@@ -674,7 +676,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Re-checked 2026-09-12: public Luma calendar cal-Lv1pgYv5ITFR4tC still lists Founders Edition dinner (Sep 16, skipped), Data Goldmine (Sep 17, skipped), Voice AI Hackathon (Sep 19, voiceaihackathon), AI Debates (Sep 20, aidebates), and Energy Optimization of GPUs (Sep 22 PT, gpuenergyoptimization). Sep 19–20 remains the back-to-back AGI House voice weekend. CoreWeave Hacks Agent Loops (Sep 12–13, coreweavehacks) at CoreWeave SF still lists AGI House sponsorship (+ TypeSafe AI).",
+      "Re-checked 2026-09-13: public Luma calendar cal-Lv1pgYv5ITFR4tC still lists Founders Edition dinner (Sep 16, skipped), Data Goldmine (Sep 17, skipped), Voice AI Hackathon (Sep 19, voiceaihackathon), AI Debates (Sep 20, aidebates), and Energy Optimization of GPUs (Sep 22 PT, gpuenergyoptimization). Sep 19–20 remains the back-to-back AGI House voice weekend. CoreWeave Hacks Agent Loops (Sep 12–13, coreweavehacks) at CoreWeave SF still lists AGI House sponsorship (+ TypeSafe AI) and ends today 5pm PT.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -691,7 +693,7 @@ export const recurringSeries: RecurringSeries[] = [
     id: "anthropic-build-days",
     name: "Anthropic-sponsored build days",
     category: "hackathon",
-    cadence: "Periodic — no fixed cadence",
+    cadence: "Periodic — next dated slot: Sep 19 San Francisco | Claude Build Day (tracked in scheduledEvents)",
     location: "San Francisco",
     description:
       'Periodic in-person builder days (e.g. "Claude Opus 4.8 Build Day," ~300 founders). Check anthropic.com/events for the next one.',
@@ -709,7 +711,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://www.voiceaispace.com/events",
     sourceLabel: "voiceaispace.com",
     watchNote:
-      "Re-checked 2026-09-12: NEW Voice AI Happy Hour & Fireside Chat (h2qu25rt, Sep 16 SF, Coval) — same evening as StepAudio 3 Launch (bkpe5h92). Sep 15 Audio Layer (uxmg18ib), Cartesia Field Notes India webinar (qyt0fc3o, Sep 16 evening PT), Sep 17 Ship a Voice Agent (leverage-0gfk) still live. Owned AssemblyAI Build Night dictation (xwnkujzr, Sep 24 SF — directSubmissions). Still upcoming: Sep 19–20 AGI House voice weekend, Oct 1 Deepgram×Pipecat London (prkbq50k), Oct 14 Gladia×pyannoteAI×Modal Paris (paris-voice-ai — vendorEvents), Oct 29 Deepgram Speak SF, Nov 5 Voice Agents Forum, Nov 11 VapiCon, Nov 18 Voice AI Summit London (voiceaisummit — TBA). Do not trust voiceaispace’s Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5. Skip Cartesia×Lorikeet drinks (bz8x2v1s — social), builders-sep26 / ch986w6u / suhy8sgz year traps, and Agora Empathy dinner. Owned AssemblyAI × lablab hackathon Sep 1–30 still in directSubmissions.",
+      "Re-checked 2026-09-13: StepAudio 3 Launch (bkpe5h92, Sep 16 SF) title now includes Cresta + SGLang alongside PLAUD & Coval; same evening as Voice AI Happy Hour & Fireside Chat (h2qu25rt, Coval). Sep 15 Audio Layer (uxmg18ib), Cartesia Field Notes India webinar (qyt0fc3o, Sep 16 evening PT), Sep 17 Ship a Voice Agent (leverage-0gfk) still live. Owned AssemblyAI Build Night dictation (xwnkujzr, Sep 24 SF — directSubmissions). NEW Bay Area rooms from discover: Claude Build Day (claudesanfranciscobuildday, Sep 19 SF) and Runtime by Modal (runtime-by-modal, Oct 1, The Midway). Still upcoming: Sep 19–20 AGI House voice weekend, Oct 1 Deepgram×Pipecat London (prkbq50k), Oct 14 Gladia×pyannoteAI×Modal Paris (paris-voice-ai — vendorEvents), Oct 29 Deepgram Speak SF, Nov 5 Voice Agents Forum, Nov 11 VapiCon, Nov 18 Voice AI Summit London (voiceaisummit — venue still TBA/obfuscated). Do not trust voiceaispace’s Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5. Skip Cartesia×Lorikeet drinks (bz8x2v1s — social), builders-sep26 / ch986w6u / suhy8sgz year traps, and Agora Empathy dinner. Owned AssemblyAI × lablab hackathon Sep 1–30 still in directSubmissions.",
   },
 ];
 
@@ -835,4 +837,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-09-12";
+export const researchDate = "2026-09-13";
