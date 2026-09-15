@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-09-14. Dates and venues sourced from
+ * Confirmed research date: 2026-09-15. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -163,24 +163,27 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "lablab.ai",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // 2026-09-14 (UTC afternoon / Pacific morning).
+  // 2026-09-15 (UTC afternoon / Pacific morning).
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
-  // AI / voice-agent-relevant listings. 79 discover entries across 4 pages.
-  // Pruned after Pacific day passed: CoreWeave Hacks Agent Loops (Sep 12–13).
+  // AI / voice-agent-relevant listings. 78 discover entries across 4 pages.
+  // Vendor prune (not this array): Deepgram Guess Who's Talking (Sep 14 SF).
   // Prior keepers re-verified via event/get: All Things Agent Setups, Audio
   // Layer, StepAudio 3 Launch, Voice AI Happy Hour, Ship a Voice Agent, AGI
-  // House voice weekend, TrueFoundry (title now The Agent Harness Hackathon),
-  // Claude Build Day, Agent Arena, AI Native Summit, Runtime by Modal.
-  // NEW from discover: SF Tech Week Agent Day (Oct 9, 7wn8tsf7, Menlo Park).
+  // House voice weekend, TrueFoundry Agent Harness, Claude Build Day, Agent
+  // Arena, AI Native Summit, Runtime by Modal, SF Tech Week Agent Day.
+  // NEW from discover: STACKED (Sep 30, e2b-0e34) — E2B × Fireworks ×
+  // Braintrust agent-infra evening.
   // Owned AssemblyAI Build Night (xwnkujzr, Sep 24 SF) remains in
   // directSubmissions. Leverage still lists Next Interface (AIHardware
   // wearables, skipped) + Who Goes There? / Paper Club GTM (skipped).
-  // Skipped: Demo Night @ WorkOS, Decagon GTM, Real-Time Video Agents
-  // (vastsf), Humongous AI Meetup, Ground Truth, Cartesia×Lorikeet drinks,
-  // Baseten multi-model deploy, Claude Sales/Cowork/Business Moms rooms,
-  // SF Systems multimodal coding talks, AI Journal Club, builders-sep26 /
-  // year traps. Maxwell Sherwood SF Tech Week voice hackathon still undated.
-  // Voice AI Summit (voiceaisummit, Nov 18) stays watch-only — venue TBA.
+  // Skipped: Twilio Dev User Group London (generic Conversations DUG),
+  // Demo Night @ WorkOS, Decagon GTM, Real-Time Video Agents (vastsf),
+  // Humongous AI Meetup, Ground Truth, Cartesia×Lorikeet drinks, Baseten
+  // multi-model deploy, Claude Sales/Cowork/Business Moms rooms, SF Systems
+  // multimodal coding talks, AI Journal Club, builders-sep26 / year traps
+  // (71g0b0w7 Applied Agents, xcx9dvik, BETAhackathon, ch986w6u). Maxwell
+  // Sherwood SF Tech Week voice hackathon still undated. Voice AI Summit
+  // (voiceaisummit, Nov 18) stays watch-only — venue TBA.
   {
     id: "luma-all-things-agent-setups",
     name: "All Things Agent Setups",
@@ -361,6 +364,20 @@ const scrapedEvents: CalEvent[] = [
       "Two-day in-person Vultr × Cerebral Valley hackathon on production agent infrastructure — VM backends, serverless inference, and the compute layer autonomous agents run on; $10k+ cash/credits. Strong agent-infra builder room the same weekend as the AWS Loft Healthcare AI Hackathon; voice is a plausible use case but not the stated theme.",
     sourceUrl: "https://cerebralvalley.ai/e/vultr-the-agent-arena",
     sourceLabel: "cerebralvalley.ai",
+  },
+  {
+    id: "luma-stacked-e2b-fireworks-braintrust",
+    name: "STACKED: Sandboxes, Inference, & Observability",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Sep 30, 6:00–8:30pm PT",
+    sortDate: "2026-09-30",
+    month: "2026-09",
+    location: "San Francisco, CA (SoMa; exact venue on registration)",
+    description:
+      "E2B × Fireworks AI × Braintrust evening on production agent infrastructure — sandboxes for untrusted agent code, low-latency inference for agent loops, and evals/observability. Strong agent-builder attendance the night before Runtime by Modal; voice is a plausible use case but not the stated theme.",
+    sourceUrl: "https://luma.com/e2b-0e34",
+    sourceLabel: "luma.com",
   },
   // Sourced from Eventbrite's SF Bay Area search (2026-07-17), filtered from
   // several hundred loosely-keyword-matched results down to genuine
