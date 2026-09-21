@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-09-20. Dates and venues sourced from
+ * Confirmed research date: 2026-09-21. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -131,26 +131,28 @@ const scrapedEvents: CalEvent[] = [
     note: "Invite-only; exact venue not yet published",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // 2026-09-20 (UTC afternoon / Pacific morning).
+  // 2026-09-21 (UTC afternoon / Pacific morning).
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
-  // AI / voice-agent-relevant listings. 72 discover entries across 3 pages.
-  // No new high-signal Bay Area voice/agent rooms vs 2026-09-19 keepers.
-  // Pruned after Pacific Sep 19: Claude Build Day, TrueFoundry Agent Harness,
-  // AGI House Voice AI Hackathon (→ pastEvents2026). Removed AI Debates
-  // (aidebates) — Luma event/get + luma.com/aidebates 404 as of 2026-09-20;
-  // also dropped from AGI House cal-Lv1pgYv5ITFR4tC (→ pastEvents2026 watch).
-  // Re-verified via event/get: Ship a Voice Agent still Oct 25 (leverage-0gfk),
-  // STACKED still Sep 30 PT (e2b-0e34), Agentic + AI Observability still Oct 13
-  // (Agentic_AI_10-13), Gemini Audio | At Night still Sep 24 PT, Decagon
-  // Dialogues Oct 1, Runtime by Modal Oct 1, owned Build Nights xwnkujzr /
-  // k74g72a0. AGI House cal now only lists GPU energy agents (Sep 22).
-  // Skipped again: Real-Time Video Agents (vastsf), SF Frontier Hackathon,
-  // Company Brain Hackathon, SF Systems multimodal coding, ThinkingAI Agentic
-  // Growth Summit (GTM), Cartesia×Lorikeet drinks, Vapi Fleet Week yacht /
-  // sales dinner, EliseAI Toronto afterparties, Agora Empathy & Scale,
-  // year traps (lsjiq8kf 2025, 71g0b0w7 2025, builders-sep26 / n36erqbu /
-  // ch986w6u Feb 2026 / v2bksbb8 May 2026). Voice AI Summit London
-  // (voiceaisummit, Nov 18) still venue-obfuscated — watch-only.
+  // AI / voice-agent-relevant listings. 77 discover entries across 4 pages.
+  // New keepers (not on Luma discover — found via voice-agent search):
+  // SignalWire SF + Palo Alto production voice-agent workshops (Sep 30 / Oct 6).
+  // Nothing to prune on Pacific Sep 21 (next cut: GPU energy after Sep 22;
+  // Vapi BCN / Behind the feature after Sep 22–23; Gemini Audio / owned SF
+  // Build Night after Sep 24). Re-verified via event/get: Ship a Voice Agent
+  // still Oct 25 (leverage-0gfk), STACKED still Sep 30 PT (e2b-0e34), Agentic
+  // + AI Observability still Oct 13 (Agentic_AI_10-13), Gemini Audio | At Night
+  // still Sep 24 PT, Decagon Dialogues Oct 1, Runtime by Modal Oct 1, owned
+  // Build Nights xwnkujzr / k74g72a0. AGI House cal-Lv1pgYv5ITFR4tC still only
+  // GPU energy agents (Sep 22). Deepgram cal still only London Oct 1 (prkbq50k)
+  // + Speak '26 / Flux webinar off-cal. Skipped again: Real-Time Video Agents
+  // (vastsf), SF Frontier Hackathon, Company Brain Hackathon, SF Systems
+  // multimodal coding, Open Source AI Stack Tech Week panel (novita-oas6),
+  // ThinkingAI Agentic Growth Summit (GTM), Cartesia×Lorikeet drinks, Vapi
+  // Fleet Week yacht / sales dinner, EliseAI Toronto afterparties, Agora
+  // Empathy & Scale, DeepMind Korea hackathon (mis-linked CV page), year traps
+  // (lsjiq8kf 2025, 71g0b0w7 2025, builders-sep26 / n36erqbu / ch986w6u Feb
+  // 2026 / v2bksbb8 May 2026). Voice AI Summit London (voiceaisummit, Nov 18)
+  // still venue-obfuscated — watch-only.
   {
     id: "luma-agi-house-gpu-energy-agents",
     name: "Energy Optimization of GPUs through Self-Improving Agents",
@@ -215,6 +217,23 @@ const scrapedEvents: CalEvent[] = [
     sourceLabel: "cerebralvalley.ai",
   },
   {
+    id: "signalwire-voice-agent-workshop-sf",
+    name: "AI Developer Workshop — Build AI Voice Agents (SignalWire SF)",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Sep 30, 5:30–8:30pm PT",
+    sortDate: "2026-09-30",
+    month: "2026-09",
+    location: "Emergence Capital, Pier 5, The Embarcadero #102, San Francisco",
+    description:
+      "SignalWire hands-on evening for engineers shipping production voice agents — call-scoped state, tool calling against a live backend, interruptions/turn-taking/handoffs, and per-turn debugging. Same calendar evening as STACKED; highest-signal new Bay Area voice-agent build room this week (AICamp registration required).",
+    sourceUrl: "https://www.aicamp.ai/event/eventdetails/W2026093017",
+    sourceLabel: "aicamp.ai",
+    topics: ["voice-agents", "streaming"],
+    topicNote:
+      "Dedicated production voice-agent workshop on SignalWire’s stack — competitive mindshare vs AssemblyAI phone/voice-agent builders; not an STT-vendor room.",
+  },
+  {
     id: "luma-stacked-e2b-fireworks-braintrust",
     name: "STACKED: Sandboxes, Inference, & Observability",
     category: "meetup",
@@ -224,7 +243,7 @@ const scrapedEvents: CalEvent[] = [
     month: "2026-09",
     location: "San Francisco, CA (SoMa; exact venue on registration)",
     description:
-      "E2B × Fireworks AI × Braintrust evening on production agent infrastructure — sandboxes for untrusted agent code, low-latency inference for agent loops, and evals/observability. Strong agent-builder attendance the night before Runtime by Modal; voice is a plausible use case but not the stated theme.",
+      "E2B × Fireworks AI × Braintrust evening on production agent infrastructure — sandboxes for untrusted agent code, low-latency inference for agent loops, and evals/observability. Strong agent-builder attendance the night before Runtime by Modal; voice is a plausible use case but not the stated theme. Same evening as the SignalWire SF voice-agent workshop.",
     sourceUrl: "https://luma.com/e2b-0e34",
     sourceLabel: "luma.com",
   },
@@ -264,6 +283,23 @@ const scrapedEvents: CalEvent[] = [
       "Modal’s full-day SF conference on AI runtime infrastructure — inference, training, and batch workloads for builders shipping production AI systems. Strong infra/agent-builder attendance; Gladia co-appears with Modal on the Oct 14 Paris Voice AI Meetup, so this room overlaps the voice-infra developer graph even though the agenda is not voice-specific.",
     sourceUrl: "https://luma.com/runtime-by-modal",
     sourceLabel: "luma.com",
+  },
+  {
+    id: "signalwire-voice-agent-workshop-palo-alto",
+    name: "AI Developer Workshop — Build AI Voice Agents (SignalWire Palo Alto)",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Oct 6, 3:00–5:00pm PT",
+    sortDate: "2026-10-06",
+    month: "2026-10",
+    location: "Prosperity 7 Ventures, 700 Emerson St, Palo Alto",
+    description:
+      "Peninsula follow-on to SignalWire’s Sep 30 SF voice-agent workshop — same hands-on production patterns (call-scoped state, tool calling, interruptions, per-turn observability) at Prosperity 7 Ventures. Strong Peninsula voice-agent builder room during a16z Tech Week week.",
+    sourceUrl: "https://www.aicamp.ai/event/eventdetails/W2026100615",
+    sourceLabel: "aicamp.ai",
+    topics: ["voice-agents", "streaming"],
+    topicNote:
+      "Dedicated production voice-agent workshop — competitive SignalWire mindshare for Peninsula phone/voice-agent engineers.",
   },
   {
     id: "eventbrite-data-streaming-summit",
@@ -604,7 +640,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Re-checked 2026-09-20: public Luma calendar cal-Lv1pgYv5ITFR4tC now only lists Energy Optimization of GPUs (Sep 22 PT, gpuenergyoptimization). Voice AI Hackathon (Sep 19) moved to pastEvents2026; AI Debates (aidebates) Luma 404 / delisted — also pastEvents2026 for format recurrence watch.",
+      "Re-checked 2026-09-21: public Luma calendar cal-Lv1pgYv5ITFR4tC still only lists Energy Optimization of GPUs (Sep 22 PT, gpuenergyoptimization). Voice AI Hackathon (Sep 19) + AI Debates (aidebates delist) remain in pastEvents2026 for voice-format recurrence watch.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -639,7 +675,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://www.voiceaispace.com/events",
     sourceLabel: "voiceaispace.com",
     watchNote:
-      "Re-checked 2026-09-20: Discover feed 72/3 pages — no new high-signal Bay Area voice rooms. AGI House Voice AI Hackathon (Sep 19) + AI Debates delist pruned. Ship a Voice Agent still Oct 25 (leverage-0gfk). Gemini Audio | At Night (Sep 24, The Pearl) + owned SF Build Night (xwnkujzr, Sep 24) + Decagon Dialogues (Oct 1, CJM SF) + London Build Night (k74g72a0, Oct 1 — same night as Deepgram×Pipecat prkbq50k + Speechmatics×Tuner pyhvutqe). Still upcoming: Oct 13 Agentic + AI Observability SF, Oct 14 Gladia×pyannoteAI×Modal Paris, Oct 29 Deepgram Speak SF, Nov 5 Voice Agents Forum, Nov 11 VapiCon, Nov 18 Voice AI Summit London (voiceaisummit — venue still obfuscated). Do not trust voiceaispace’s Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5. Skip Cartesia×Lorikeet drinks (bz8x2v1s), builders-sep26 / lsjiq8kf / 71g0b0w7 / ch986w6u year traps, Agora Empathy dinner, ThinkingAI Agentic Growth Summit (GTM). Owned AssemblyAI × lablab hackathon Sep 1–30 still in directSubmissions.",
+      "Re-checked 2026-09-21: Discover feed 77/4 pages. New keepers: SignalWire production voice-agent workshops — SF Sep 30 (aicamp W2026093017, Emergence Capital; same evening as STACKED) + Palo Alto Oct 6 (aicamp W2026100615, Prosperity 7). Ship a Voice Agent still Oct 25 (leverage-0gfk). Gemini Audio | At Night (Sep 24, The Pearl) + owned SF Build Night (xwnkujzr, Sep 24) + Decagon Dialogues (Oct 1, CJM SF) + London Build Night (k74g72a0, Oct 1 — same night as Deepgram×Pipecat prkbq50k + Speechmatics×Tuner pyhvutqe). Still upcoming: Oct 13 Agentic + AI Observability SF, Oct 14 Gladia×pyannoteAI×Modal Paris, Oct 29 Deepgram Speak SF, Nov 5 Voice Agents Forum, Nov 11 VapiCon, Nov 18 Voice AI Summit London (voiceaisummit — venue still obfuscated). Do not trust voiceaispace’s Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5. Skip Cartesia×Lorikeet drinks (bz8x2v1s), builders-sep26 / lsjiq8kf / 71g0b0w7 / ch986w6u year traps, Agora Empathy dinner, ThinkingAI Agentic Growth Summit (GTM), novita-oas6 Tech Week panel. Owned AssemblyAI × lablab hackathon Sep 1–30 still in directSubmissions.",
   },
 ];
 
@@ -800,4 +836,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-09-20";
+export const researchDate = "2026-09-21";
