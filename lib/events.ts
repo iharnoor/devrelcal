@@ -46,27 +46,10 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-09-29. Dates and venues sourced from
+ * Confirmed research date: 2026-09-30. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
-  {
-    id: "openai-devday-2026",
-    name: "OpenAI DevDay 2026",
-    category: "conference",
-    status: "confirmed",
-    dateLabel: "Sep 29",
-    sortDate: "2026-09-29",
-    month: "2026-09",
-    location: "Fort Mason, San Francisco",
-    description:
-      "OpenAI's flagship developer conference — technical sessions, hands-on demos, workshops. Keynote livestreamed. Realtime / voice-agent API sessions are the pitch-fit rooms if they repeat the 2025 pattern.",
-    sourceUrl: "https://openai.com/index/devday-2026/",
-    sourceLabel: "openai.com",
-    topics: ["voice-agents", "streaming"],
-    topicNote:
-      "Pitch fit only if the agenda includes Realtime, speech, or voice-agent sessions — confirm closer to the date.",
-  },
   {
     id: "the-ai-conference-2026",
     name: "The AI Conference 2026",
@@ -131,28 +114,33 @@ const scrapedEvents: CalEvent[] = [
     note: "Invite-only; exact venue not yet published",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // 2026-09-29 (UTC afternoon / Pacific morning).
+  // 2026-09-30 (UTC afternoon / Pacific morning).
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
-  // AI / voice-agent-relevant listings. 60 discover entries across 3 pages.
-  // Added SF Tech Week voice rooms from voiceaispace (missed discover):
-  // Vonage×Deepgram lunch (Oct 6), Agora Prototype→Production (Oct 6),
-  // Voice AI Product Leadership Panel (Oct 7), Solving 'voice' as an
-  // interface (Oct 7, Speechmatics×LiveKit×Aqua). Owned AssemblyAI hardware
-  // Furby voice-agent hackathon (w9e4qgol, Oct 7) added under
-  // directSubmissions. Re-verified: Deepgram × Vapi Oct 14 (deepgram-2jm5),
-  // Ship a Voice Agent Oct 25 (leverage-0gfk), STACKED Sep 30 (e2b-0e34),
-  // SignalWire SF/PA, Decagon Dialogues Oct 1, Runtime by Modal Oct 1, AGI
-  // House GPU agents Oct 3, Deepgram London Oct 1 (prkbq50k) + Speak '26 /
-  // Flux webinar still Sep 29, Cartesia Operators London Sep 30, Fall '26
-  // VON Atlanta Oct 13–15, AI Engineer Code Summit Nov 10–12, Agentic + AI
-  // Observability Oct 13. Owned London Voice AI Meetup (k74g72a0) still
-  // Oct 1. Vapi×Deepgram Web Summit Mixer still Nov 9 (vapi-t98x). Skipped
-  // again: vastsf, Startup Speedrun / Supabase Select, OpenTogether, Open
-  // Source AI Stack (novita-oas6), Company Brain, FAST FORWARD / MITAI Age
-  // of Agency, Cartesia×Lorikeet drinks, Vapi yacht / sales dinner, Agora
-  // Empathy / London Learning, Berkeley×DeepMind, ElevenLabs Advertising
-  // Week NYC, Pioneer by Fin, ALD SF (dsssf26), Voice AI Dinner London,
-  // luma.com/voiceagents + lsjiq8kf + ai-coding-hack (2025 year traps).
+  // AI / voice-agent-relevant listings. 63 discover entries across 3 pages.
+  // OpenAI DevDay (Sep 29) + owned AssemblyAI × lablab Voice Agent Hackathon
+  // (ended Sep 30 8am PT) → pastEvents2026. No new high-signal Bay Area
+  // discover adds. Re-verified Tech Week voice rooms via voiceaispace/
+  // Partiful: Vonage×Deepgram lunch (Oct 6), Agora Prototype→Production
+  // (Oct 6), Voice AI Product Leadership Panel (Oct 7), Solving 'voice' as
+  // an interface (Oct 7). NEW competitor activation (vendorEvents only):
+  // Coffee CARTesia Tech Week (Oct 7 AM, Partiful SlhNY5IAaMN0BKSJ3WiA) —
+  // skipped on main cal as coffee meetup. Skipped Conversational AI Dinner
+  // Bluejay (Oct 6, Partiful OVizOLTyzEPiGZYVwf6C — dinner / no agenda).
+  // Re-verified: Deepgram × Vapi Oct 14 (deepgram-2jm5), Ship a Voice Agent
+  // Oct 25 (leverage-0gfk), STACKED Sep 30 (e2b-0e34), SignalWire SF/PA,
+  // Decagon Dialogues Oct 1, Runtime by Modal Oct 1, AGI House GPU agents
+  // Oct 3, Deepgram London Oct 1 (prkbq50k) + Speak '26, Cartesia Operators
+  // London Sep 30, Fall '26 VON Atlanta Oct 13–15, AI Engineer Code Summit
+  // Nov 10–12, Agentic + AI Observability Oct 13. Owned London Voice AI
+  // Meetup (k74g72a0) still Oct 1; Furby hardware hack (w9e4qgol) Oct 7.
+  // Vapi×Deepgram Web Summit Mixer still Nov 9 (vapi-t98x). Skipped again:
+  // vastsf, Supabase Select, OpenTogether, Open Source AI Stack
+  // (novita-oas6), Company Brain, FAST FORWARD / MITAI Age of Agency,
+  // Cartesia×Lorikeet drinks, Vapi yacht / sales dinner, Agora Empathy /
+  // London Learning, Berkeley×DeepMind, ElevenLabs Advertising Week NYC,
+  // Pioneer by Fin, ALD SF (dsssf26), Voice AI Dinner London,
+  // luma.com/voiceagents + lsjiq8kf + ai-coding-hack + builders-sep26
+  // (2025 year traps).
   {
     id: "luma-agi-house-gpu-energy-agents",
     name: "Can AI Agents Make GPUs More Energy Efficient?",
@@ -511,6 +499,8 @@ export const directSubmissions: CalEvent[] = [
   // after Pacific day.
   // 2026-09-29: owned Hardware hackathon — Furby voice agent (w9e4qgol, Oct 7)
   // surfaced on AssemblyAI Luma cal-R9IQUb53FUrolUF (missed discover).
+  // 2026-09-30: owned AssemblyAI × lablab Voice Agent Hackathon (Sep 1–30)
+  // → pastEvents2026 after endDate 8am PT passed.
   {
     id: "assemblyai-hardware-hackathon-furby-voice-agent-oct7",
     name: "Hardware hackathon: turn a vintage toy into a voice agent",
@@ -540,23 +530,6 @@ export const directSubmissions: CalEvent[] = [
     sourceUrl: "https://luma.com/k74g72a0",
     sourceLabel: "luma.com",
     topics: ["stt", "audio-intel"],
-  },
-  {
-    id: "assemblyai-voice-agent-hackathon-lablab-sep",
-    name: "AssemblyAI — Voice Agent Hackathon (lablab.ai)",
-    category: "hackathon",
-    status: "confirmed",
-    dateLabel: "Sep 1–30",
-    sortDate: "2026-09-01",
-    endDate: "2026-09-30",
-    month: "2026-09",
-    location: "Online (lablab.ai)",
-    description:
-      "Owned month-long online voice-agent hackathon with lablab.ai — every project builds on AssemblyAI; $10k prize pool ($5k cash + $5k credits). Registration stays open through the build window.",
-    sourceUrl:
-      "https://lablab.ai/ai-hackathons/assemblyai-voice-agent-hackathon",
-    sourceLabel: "lablab.ai",
-    topics: ["voice-agents", "stt", "streaming"],
   },
   {
     id: "voice-agents-forum-2026",
@@ -713,7 +686,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Re-checked 2026-09-29: public Luma calendar cal-Lv1pgYv5ITFR4tC still only lists Can AI Agents Make GPUs More Energy Efficient? — Oct 3 PT (gpuenergyoptimization; 4–6pm PT). Voice AI Hackathon (Sep 19) + AI Debates (aidebates delist) remain in pastEvents2026 for voice-format recurrence watch.",
+      "Re-checked 2026-09-30: public Luma calendar cal-Lv1pgYv5ITFR4tC still only lists Can AI Agents Make GPUs More Energy Efficient? — Oct 3 PT (gpuenergyoptimization; 4–6pm PT). Voice AI Hackathon (Sep 19) + AI Debates (aidebates delist) remain in pastEvents2026 for voice-format recurrence watch.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -722,7 +695,7 @@ export const recurringSeries: RecurringSeries[] = [
     cadence: "Continuous, themed hackathons",
     location: "Hybrid — online + occasional Bay Area on-site",
     description:
-      "Runs continuous themed hackathons (recent: ExecuTorch/Qualcomm x Meta on-site in SF). Currently hosting the owned AssemblyAI Voice Agent Hackathon online Sep 1–30 — tracked in directSubmissions.",
+      "Runs continuous themed hackathons (recent: ExecuTorch/Qualcomm x Meta on-site in SF). Owned AssemblyAI Voice Agent Hackathon (Sep 1–30) ended — in pastEvents2026; watch lablab.ai for the next voice-agent theme.",
     sourceUrl: "https://lablab.ai/ai-hackathons",
     sourceLabel: "lablab.ai",
   },
@@ -748,11 +721,25 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://www.voiceaispace.com/events",
     sourceLabel: "voiceaispace.com",
     watchNote:
-      "Re-checked 2026-09-29: Discover feed 60/3 pages. New SF Tech Week voice rooms surfaced via voiceaispace (Partiful RSVPs): Vonage×Deepgram lunch Oct 6, Agora Prototype→Production Oct 6, Voice AI Product Leadership Panel Oct 7, Solving 'voice' as an interface Oct 7 (Speechmatics×LiveKit×Aqua). Owned AssemblyAI Furby hardware voice-agent hackathon (w9e4qgol, Oct 7) on AssemblyAI Luma cal. Deepgram × Vapi phone voice-agent workshop (deepgram-2jm5, Oct 14 PT) still on main calendar + vendorEvents. AGI House GPU agents still Oct 3. SignalWire SF Sep 30 + Palo Alto Oct 6 still live. Ship a Voice Agent still Oct 25 (leverage-0gfk). Decagon Dialogues Oct 1 + London Voice AI Meetup (k74g72a0, Oct 1 — same night as Deepgram×Pipecat prkbq50k + Speechmatics×Tuner pyhvutqe). Cartesia Operators London (42d8c7mu, Sep 30) under vendorEvents. Fall '26 VON Atlanta Oct 13–15 still live. Vapi×Deepgram Web Summit Mixer still Nov 9 (vapi-t98x). AI Engineer Code Summit Nov 10–12 same week as VapiCon. Still upcoming: Oct 13 Agentic + AI Observability SF, Oct 14 Gladia×pyannoteAI×Modal Paris (same day as Deepgram×Vapi SF), Oct 29 Deepgram Speak SF, Nov 5 Voice Agents Forum, Nov 11 VapiCon. Do not trust voiceaispace’s Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5. Skip vastsf, FAST FORWARD, MITAI Age of Agency, Cartesia×Lorikeet drinks, Vapi yacht/sales dinner, Voice AI Dinner London, Advertising Week ElevenLabs NYC, Pioneer by Fin, Berkeley×DeepMind, ALD SF (dsssf26), luma.com/voiceagents + lsjiq8kf + ai-coding-hack (2025 year traps). Owned AssemblyAI × lablab hackathon Sep 1–30 still in directSubmissions.",
+      "Re-checked 2026-09-30: Discover feed 63/3 pages. No new high-signal Bay Area discover adds. Tech Week voice rooms still via voiceaispace/Partiful: Vonage×Deepgram lunch Oct 6, Agora Prototype→Production Oct 6, Voice AI Product Leadership Panel Oct 7, Solving 'voice' as an interface Oct 7 (Speechmatics×LiveKit×Aqua). NEW Cartesia Coffee CARTesia Tech Week (Oct 7 AM, Partiful SlhNY5IAaMN0BKSJ3WiA) — vendorEvents only (coffee meetup). Skipped Conversational AI Dinner Bluejay (Oct 6, Partiful OVizOLTyzEPiGZYVwf6C). Owned Furby hardware hack (w9e4qgol, Oct 7) + Deepgram × Vapi (deepgram-2jm5, Oct 14) still live. AGI House GPU agents still Oct 3. SignalWire SF Sep 30 + Palo Alto Oct 6 still live. Ship a Voice Agent still Oct 25 (leverage-0gfk). Decagon Dialogues Oct 1 + London Voice AI Meetup (k74g72a0, Oct 1 — same night as Deepgram×Pipecat prkbq50k + Speechmatics×Tuner pyhvutqe). Cartesia Operators London (42d8c7mu, Sep 30) under vendorEvents. Fall '26 VON Atlanta Oct 13–15 still live. Vapi×Deepgram Web Summit Mixer still Nov 9 (vapi-t98x). AI Engineer Code Summit Nov 10–12 same week as VapiCon. Still upcoming: Oct 13 Agentic + AI Observability SF, Oct 14 Gladia×pyannoteAI×Modal Paris (same day as Deepgram×Vapi SF), Oct 29 Deepgram Speak SF, Nov 5 Voice Agents Forum, Nov 11 VapiCon. Do not trust voiceaispace’s Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5. Skip vastsf, FAST FORWARD, MITAI Age of Agency, Cartesia×Lorikeet drinks, Vapi yacht/sales dinner, Voice AI Dinner London, Advertising Week ElevenLabs NYC, Pioneer by Fin, Berkeley×DeepMind, ALD SF (dsssf26), luma.com/voiceagents + lsjiq8kf + ai-coding-hack + builders-sep26 (2025 year traps). OpenAI DevDay + owned AssemblyAI × lablab hackathon → pastEvents2026.",
   },
 ];
 
 export const pastEvents2026: PastEvent[] = [
+  {
+    id: "openai-devday-2026",
+    name: "OpenAI DevDay 2026",
+    dateLabel: "Sep 29",
+    location: "Fort Mason, San Francisco",
+    note: "OpenAI flagship developer conference — kept for annual recurrence / Realtime + voice-agent API session monitoring",
+  },
+  {
+    id: "assemblyai-voice-agent-hackathon-lablab-sep-2026",
+    name: "AssemblyAI — Voice Agent Hackathon (lablab.ai)",
+    dateLabel: "Sep 1–30",
+    location: "Online (lablab.ai)",
+    note: "Owned month-long online voice-agent hackathon with lablab.ai ($10k prize pool) — kept for owned hackathon cadence / likely recurrence planning",
+  },
   {
     id: "cv-agent-arena-hackathon-sep-2026",
     name: "The Agent Arena Hackathon",
