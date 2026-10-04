@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-10-03. Dates and venues sourced from
+ * Confirmed research date: 2026-10-04. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -96,37 +96,27 @@ const scrapedEvents: CalEvent[] = [
     note: "Invite-only; exact venue not yet published",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // 2026-10-03 (UTC afternoon / Pacific morning).
+  // 2026-10-04 (UTC afternoon / Pacific morning).
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
-  // AI / voice-agent-relevant listings. 74 discover entries across 3 pages.
+  // AI / voice-agent-relevant listings. 79 discover entries across 4 pages.
   // DATE CORRECTION: Deepgram × Vapi phone voice-agent workshop
-  // (deepgram-2jm5) rescheduled Oct 14 → Nov 18 (live event/get + Deepgram
-  // cal-qHEDltsO0Gr0WtD + Vapi cal). Re-verified Tech Week Partiful cluster
-  // Oct 6–11, AGI House GPU Oct 3, Ship a Voice Agent Oct 25 (leverage-0gfk),
-  // Speak '26 Oct 29, VON Atlanta Oct 13–15, Voice Agents Forum Nov 5,
-  // Vapi×Deepgram mixer Nov 9, AI Engineer Code Summit Nov 10–12, VapiCon
-  // Nov 11–12. No new high-signal Bay Area discover adds. Skipped: Claude
-  // Connected Agents, Haunted Agent Horror Night, Supabase Select, novita-oas6,
-  // Company Brain, Agentic Zero finance, COLM happy hour, Modal×Gray Area
-  // opening night, Conversational AI Dinner Bluejay, Cartesia×Lorikeet, Vapi
-  // yacht, Voice AI Dinner London, ElevenLabs AdWeek NYC, Google DeepMind
-  // Korea hackathon (Oct 16), vibe-code Noveum workshop (May 14 past),
-  // luma.com/voiceagents + lsjiq8kf + ai-coding-hack + builders-sep26 +
-  // ch986w6u (2025/early-2026 year traps).
-  {
-    id: "luma-agi-house-gpu-energy-agents",
-    name: "Can AI Agents Make GPUs More Energy Efficient?",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Oct 3, 4–6pm PT",
-    sortDate: "2026-10-03",
-    month: "2026-10",
-    location: "AGI House SF, 170 St. Germain Ave, San Francisco",
-    description:
-      "AGI House evening on self-improving agents that tune inference serving for lower energy per request — Traversaal / energy.traversaal.ai architecture deep dive. Rescheduled from Sep 22 to Oct 3; Luma title refreshed and end time confirmed 4–6pm PT via live event/get (gpuenergyoptimization) as of 2026-09-29.",
-    sourceUrl: "https://luma.com/gpuenergyoptimization",
-    sourceLabel: "luma.com",
-  },
+  // (deepgram-2jm5) Nov 18 → Nov 17 (live event/get + Deepgram
+  // cal-qHEDltsO0Gr0WtD + Vapi cal + voiceaispace). Pruned AGI House GPU
+  // energy agents (gpuenergyoptimization) after Pacific Oct 3. Added SANE
+  // 2026 (MIT speech/audio research workshop, Oct 30). Re-verified Tech
+  // Week Partiful cluster Oct 6–11, Ship a Voice Agent Oct 25
+  // (leverage-0gfk), Speak '26 Oct 29, VON Atlanta Oct 13–15, Voice Agents
+  // Forum Nov 5, Vapi×Deepgram mixer Nov 9, AI Engineer Code Summit
+  // Nov 10–12, VapiCon Nov 11–12. No new high-signal Bay Area discover
+  // adds. Skipped: Claude Connected Agents, Haunted Agent Horror Night,
+  // Selling to Agents (Cloudflare×Stripe), Supabase Select, novita-oas6,
+  // Company Brain, Agentic Zero finance, COLM happy hour, Anything Applied
+  // Agentic Hackathon (gap48i1m — generic agent build day), Modal×Gray
+  // Area, Conversational AI Dinner Bluejay, Cartesia×Lorikeet, Vapi yacht,
+  // Voice AI Dinner London, ElevenLabs AdWeek NYC, Google DeepMind Korea
+  // hackathon (Oct 16), vibe-code Noveum (May 14 past), luma.com/voiceagents
+  // + lsjiq8kf + ai-coding-hack + builders-sep26 + ch986w6u + wljlei8m
+  // (2025/early-2026 / Sep 30 past year traps).
   {
     id: "vonage-deepgram-voice-ai-in-the-wild-techweek",
     name: "Voice AI in the Wild: Demos & Lunch with Vonage + Deepgram",
@@ -404,10 +394,27 @@ const scrapedEvents: CalEvent[] = [
     month: "2026-10",
     location: "San Francisco (exact venue on registration)",
     description:
-      "Afternoon hands-on workshop (Leverage / Nir Naamani) — build a working voice agent end-to-end (speech in → model → structured data out), including latency, interruptions, and state. Approval-required; small room. Rescheduled from Sep 17 to Oct 25 per live Luma event/get (leverage-0gfk) — top dedicated Bay Area voice-agent build workshop this month alongside the Oct 6 Tech Week Ship an AI Voice Agent Workshop; Deepgram × Vapi phone-agent night moved to Nov 18.",
+      "Afternoon hands-on workshop (Leverage / Nir Naamani) — build a working voice agent end-to-end (speech in → model → structured data out), including latency, interruptions, and state. Approval-required; small room. Rescheduled from Sep 17 to Oct 25 per live Luma event/get (leverage-0gfk) — top dedicated Bay Area voice-agent build workshop this month alongside the Oct 6 Tech Week Ship an AI Voice Agent Workshop; Deepgram × Vapi phone-agent night now Nov 17.",
     sourceUrl: "https://luma.com/leverage-0gfk",
     sourceLabel: "luma.com",
     topics: ["voice-agents", "stt", "streaming"],
+  },
+  {
+    id: "sane-2026-speech-audio-northeast",
+    name: "SANE 2026 — Speech and Audio in the Northeast",
+    category: "conference",
+    status: "confirmed",
+    dateLabel: "Oct 30",
+    sortDate: "2026-10-30",
+    month: "2026-10",
+    location: "Thomas Tull Concert Hall (MIT W18), 201 Amherst St, Cambridge, MA",
+    description:
+      "One-day Northeast speech/audio research workshop at MIT — invited talks from academic and industry speech labs (IBM, Google, Johns Hopkins, Northwestern, etc.). Highest-signal East Coast ASR / audio-ML research room in this window; adjacent to DCASE/AIR workshop week (saneworkshop.org + voiceaispace as of 2026-10-04).",
+    sourceUrl: "https://www.saneworkshop.org/sane2026/",
+    sourceLabel: "saneworkshop.org",
+    topics: ["stt", "audio-intel"],
+    topicNote:
+      "Academic speech/audio research day — STT / audio-intel researcher audience, not a voice-agent product summit.",
   },
   {
     id: "ai-engineer-code-summit-2026",
@@ -429,12 +436,12 @@ const scrapedEvents: CalEvent[] = [
     name: "Build Your First Phone Voice Agent — Deepgram × Vapi Workshop",
     category: "meetup",
     status: "confirmed",
-    dateLabel: "Nov 18, 6–9pm PT",
-    sortDate: "2026-11-18",
+    dateLabel: "Nov 17, 6–9pm PT",
+    sortDate: "2026-11-17",
     month: "2026-11",
     location: "Deepgram SF Collab Hub, 505 Howard St Suite 100, San Francisco",
     description:
-      "Deepgram × Vapi hands-on evening at Deepgram’s SoMa collab hub — guided build of a phone voice agent that answers real calls, with both vendors’ developer advocates unblocking attendees. Rescheduled from Oct 14 to Nov 18 per live Luma event/get + Deepgram cal-qHEDltsO0Gr0WtD + Vapi cal (luma.com/deepgram-2jm5) as of 2026-10-03 — now the week after VapiCon; still the highest-signal Bay Area Deepgram×Vapi developer-education room.",
+      "Deepgram × Vapi hands-on evening at Deepgram’s SoMa collab hub — guided build of a phone voice agent that answers real calls, with both vendors’ developer advocates unblocking attendees. DATE CORRECTION 2026-10-04: live event/get + Deepgram cal-qHEDltsO0Gr0WtD + Vapi cal + voiceaispace moved this from Nov 18 to Nov 17 (week after VapiCon); still the highest-signal Bay Area Deepgram×Vapi developer-education room.",
     sourceUrl: "https://luma.com/deepgram-2jm5",
     sourceLabel: "luma.com",
     topics: ["voice-agents", "stt", "streaming"],
@@ -654,7 +661,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Re-checked 2026-10-03: public Luma calendar cal-Lv1pgYv5ITFR4tC still only lists Can AI Agents Make GPUs More Energy Efficient? — Oct 3 PT (gpuenergyoptimization; 4–6pm PT). Voice AI Hackathon (Sep 19) + AI Debates (aidebates delist) remain in pastEvents2026 for voice-format recurrence watch.",
+      "Re-checked 2026-10-04: public Luma calendar cal-Lv1pgYv5ITFR4tC is empty after Can AI Agents Make GPUs More Energy Efficient? (gpuenergyoptimization, Oct 3) was pruned post–Pacific day. Voice AI Hackathon (Sep 19) + AI Debates (aidebates delist) remain in pastEvents2026 for voice-format recurrence watch.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -689,7 +696,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://www.voiceaispace.com/events",
     sourceLabel: "voiceaispace.com",
     watchNote:
-      "Re-checked 2026-10-03: Discover feed now 74/3 pages (+8 vs 10-02). No new high-signal Bay Area discover adds — skipped Claude Connected Agents, Haunted Agent Horror Night, Supabase Select/hackathon, novita-oas6, Company Brain, Agentic Zero finance, COLM happy hour, Modal×Gray Area opening. DATE CORRECTION: Deepgram × Vapi phone workshop (deepgram-2jm5) Oct 14 → Nov 18. Tech Week still: Vonage×Deepgram lunch Oct 6, Agora Prototype→Production Oct 6 (814 Mission St), SignalWire Palo Alto Oct 6, Ship workshop Partiful+Luma leverage-pjc9, Coffee CARTesia Oct 7 AM (vendor), Furby + Product Leadership + Solving voice + Wire workflow Oct 7 eve, Conversational AI × Gaming day Oct 7, Outdoor Voice Coding Oct 11 Stanford, Voices in the Room Coval×Cartesia Oct 8 (vendor). Ship a Voice Agent Oct 25 (leverage-0gfk), Speak '26 Oct 29, VON Atlanta Oct 13–15, Vapi×Deepgram mixer Nov 9, Voice Agents Forum Nov 5, VapiCon Nov 11–12, AI Engineer Code Summit Nov 10–12, Bolna Symphony Nov 20 still live. Skip dinners/yacht/AdWeek/2025 year traps. Do not trust voiceaispace’s Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5.",
+      "Re-checked 2026-10-04: Discover feed now 79/4 pages (+5 vs 10-03). No new high-signal Bay Area discover adds — skipped Claude Connected Agents, Haunted Agent Horror, Selling to Agents, Company Brain, Agentic Zero, COLM HH, Anything Applied Agentic Hackathon (gap48i1m). DATE CORRECTION: Deepgram × Vapi phone workshop (deepgram-2jm5) Nov 18 → Nov 17. Added SANE 2026 (Oct 30 MIT). Tech Week still: Vonage×Deepgram lunch Oct 6, Agora Prototype→Production Oct 6 (814 Mission St), SignalWire Palo Alto Oct 6, Ship workshop Partiful+Luma leverage-pjc9, Coffee CARTesia Oct 7 AM (vendor), Furby + Product Leadership + Solving voice + Wire workflow Oct 7 eve, Conversational AI × Gaming day Oct 7, Outdoor Voice Coding Oct 11 Stanford, Voices in the Room Coval×Cartesia Oct 8 (vendor). Ship a Voice Agent Oct 25 (leverage-0gfk), Speak '26 Oct 29, VON Atlanta Oct 13–15, Vapi×Deepgram mixer Nov 9, Voice Agents Forum Nov 5, VapiCon Nov 11–12, AI Engineer Code Summit Nov 10–12, Bolna Symphony Nov 20 still live. Skip dinners/yacht/AdWeek/2025 year traps. Do not trust voiceaispace’s Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5.",
   },
 ];
 
@@ -920,4 +927,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-10-03";
+export const researchDate = "2026-10-04";
