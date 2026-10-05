@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-10-04. Dates and venues sourced from
+ * Confirmed research date: 2026-10-05. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -96,27 +96,24 @@ const scrapedEvents: CalEvent[] = [
     note: "Invite-only; exact venue not yet published",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // 2026-10-04 (UTC afternoon / Pacific morning).
+  // 2026-10-05 (UTC afternoon / Pacific morning).
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
-  // AI / voice-agent-relevant listings. 79 discover entries across 4 pages.
-  // DATE CORRECTION: Deepgram × Vapi phone voice-agent workshop
-  // (deepgram-2jm5) Nov 18 → Nov 17 (live event/get + Deepgram
-  // cal-qHEDltsO0Gr0WtD + Vapi cal + voiceaispace). Pruned AGI House GPU
-  // energy agents (gpuenergyoptimization) after Pacific Oct 3. Added SANE
-  // 2026 (MIT speech/audio research workshop, Oct 30). Re-verified Tech
-  // Week Partiful cluster Oct 6–11, Ship a Voice Agent Oct 25
-  // (leverage-0gfk), Speak '26 Oct 29, VON Atlanta Oct 13–15, Voice Agents
-  // Forum Nov 5, Vapi×Deepgram mixer Nov 9, AI Engineer Code Summit
-  // Nov 10–12, VapiCon Nov 11–12. No new high-signal Bay Area discover
-  // adds. Skipped: Claude Connected Agents, Haunted Agent Horror Night,
-  // Selling to Agents (Cloudflare×Stripe), Supabase Select, novita-oas6,
-  // Company Brain, Agentic Zero finance, COLM happy hour, Anything Applied
-  // Agentic Hackathon (gap48i1m — generic agent build day), Modal×Gray
-  // Area, Conversational AI Dinner Bluejay, Cartesia×Lorikeet, Vapi yacht,
-  // Voice AI Dinner London, ElevenLabs AdWeek NYC, Google DeepMind Korea
-  // hackathon (Oct 16), vibe-code Noveum (May 14 past), luma.com/voiceagents
-  // + lsjiq8kf + ai-coding-hack + builders-sep26 + ch986w6u + wljlei8m
-  // (2025/early-2026 / Sep 30 past year traps).
+  // AI / voice-agent-relevant listings. 80 discover entries across 4 pages.
+  // NEW: Cresta × Anthropic Agent Hackathon: Voice Mode On (Oct 7, Partiful
+  // bq3rFJ5Lfqyjtryj5v9I) — missed discover/voiceaispace; found via Tech Week
+  // web search. Venue fix: Ship an AI Voice Agent Workshop now lists
+  // 455 Valencia St via Luma leverage-pjc9. Re-verified deepgram-2jm5 still
+  // Nov 17 PT, Tech Week Partiful cluster Oct 6–11, Speak '26 Oct 29, VON
+  // Atlanta, Voice Agents Forum Nov 5, VapiCon Nov 11–12, SANE Oct 30,
+  // Bolna Symphony Nov 20. AGI House cal-Lv1pgYv5ITFR4tC still empty.
+  // Skipped: Claude Connected Agents, Haunted Agent Horror Night, Selling
+  // to Agents, Agentic Zero finance, COLM happy hour, Company Brain,
+  // Open Source AI Stack (generic agent harness), AI Infra Night
+  // @PyTorchCon, Conversational AI Dinner Bluejay, Cartesia×Lorikeet,
+  // Vapi yacht, Voice AI Dinner London, ElevenLabs AdWeek NYC, Google
+  // DeepMind Korea hackathon, Cresta State of Voice AI Partiful
+  // (jrGE1peC34x6hFZlMHWZ — Oct 8 2025 year trap), vibe-code / builders /
+  // lsjiq8kf / ai-coding-hack / ch986w6u / wljlei8m past-year traps.
   {
     id: "vonage-deepgram-voice-ai-in-the-wild-techweek",
     name: "Voice AI in the Wild: Demos & Lunch with Vonage + Deepgram",
@@ -142,9 +139,9 @@ const scrapedEvents: CalEvent[] = [
     dateLabel: "Oct 6, 5:30–8:30pm PT",
     sortDate: "2026-10-06",
     month: "2026-10",
-    location: "Inner Mission, San Francisco (exact venue on registration)",
+    location: "455 Valencia St, San Francisco (Inner Mission)",
     description:
-      "SF Tech Week hands-on evening — crash course then build sprint where attendees bring their own voice-agent stack, add realtime guardrails (fraud/hallucinations/compliance), and have the agent answer a live phone call in front of judges. Mentors/API credits from Modulate, Tavily, and Plivo (Luma mirror luma.com/leverage-pjc9, same host/time as Partiful). Same 5:30–8:30pm PT window as Agora Prototype→Production; strong phone-agent builder room the same day as Vonage×Deepgram lunch and SignalWire Palo Alto.",
+      "SF Tech Week hands-on evening — crash course then build sprint where attendees bring their own voice-agent stack, add realtime guardrails (fraud/hallucinations/compliance), and have the agent answer a live phone call in front of judges. Mentors/API credits from Modulate, Tavily, and Plivo (Luma mirror luma.com/leverage-pjc9 confirmed 455 Valencia St as of 2026-10-05; same host/time as Partiful). Same 5:30–8:30pm PT window as Agora Prototype→Production; strong phone-agent builder room the same day as Vonage×Deepgram lunch and SignalWire Palo Alto.",
     sourceUrl: "https://partiful.com/e/7O725PQ56Ki4P8gHKyiM",
     sourceLabel: "partiful.com",
     topics: ["voice-agents", "streaming"],
@@ -186,6 +183,23 @@ const scrapedEvents: CalEvent[] = [
       "Dedicated conversational/voice-agent hackathon — gaming framing, but the build surface is voice agents holding real conversations.",
   },
   {
+    id: "cresta-voice-mode-on-hackathon-techweek",
+    name: "Agent Hackathon: Voice Mode On — Cresta × Anthropic (SF Tech Week)",
+    category: "hackathon",
+    status: "confirmed",
+    dateLabel: "Oct 7, 12–8pm PT",
+    sortDate: "2026-10-07",
+    month: "2026-10",
+    location: "San Francisco, CA (SoMa; exact venue on registration)",
+    description:
+      "Cresta-hosted SF Tech Week voice-agent hackathon sponsored by Anthropic — invite-only builders (12–5pm) ship a working phone voice agent on Cresta Conductor in three hours; public doors 5pm for agent showcase where judges place unscripted live calls, then networking to 8pm. $10k Claude credits for top three teams. Highest-signal contact-center / enterprise voice-agent competitive room of Tech Week day two — same evening conflict cluster as owned AssemblyAI Furby hackathon, Speechmatics×LiveKit×Aqua, and the Voice AI Product Leadership Panel (Partiful bq3rFJ5Lfqyjtryj5v9I; missed Luma discover + voiceaispace as of 2026-10-05).",
+    sourceUrl: "https://partiful.com/e/bq3rFJ5Lfqyjtryj5v9I",
+    sourceLabel: "partiful.com",
+    topics: ["voice-agents", "streaming"],
+    topicNote:
+      "Dedicated phone voice-agent hackathon on Cresta Conductor with live judge call-ins — enterprise CX / contact-center voice-agent mindshare vs AssemblyAI builders.",
+  },
+  {
     id: "voice-ai-product-leadership-panel-techweek",
     name: "Voice AI Product Leadership Panel — SF Tech Week",
     category: "meetup",
@@ -195,7 +209,7 @@ const scrapedEvents: CalEvent[] = [
     month: "2026-10",
     location: "575 Market St 4th Floor, San Francisco",
     description:
-      "SF Tech Week panel of Voice AI product leaders and founders — Asurion, Upstart, Rime, AudioShake, moderated by Coval’s CEO. Same evening as owned AssemblyAI hardware voice-agent hackathon, Speechmatics×LiveKit×Aqua engineering night, and Wire a Voice Agent Into a Real Workflow; stronger product/operator room than a hands-on build workshop (Partiful via voiceaispace).",
+      "SF Tech Week panel of Voice AI product leaders and founders — Asurion, Upstart, Rime, AudioShake, moderated by Coval’s CEO. Same evening as Cresta Voice Mode On showcase, owned AssemblyAI hardware voice-agent hackathon, Speechmatics×LiveKit×Aqua engineering night, and Wire a Voice Agent Into a Real Workflow; stronger product/operator room than a hands-on build workshop (Partiful via voiceaispace).",
     sourceUrl: "https://partiful.com/e/qRX76YKI93J2I6sQ0mbN",
     sourceLabel: "partiful.com",
     topics: ["voice-agents"],
@@ -501,7 +515,7 @@ export const directSubmissions: CalEvent[] = [
     month: "2026-10",
     location: "San Francisco, CA (Northern Waterfront; exact venue on registration)",
     description:
-      "Owned AssemblyAI hands-on evening — build a realtime voice agent with AssemblyAI’s Voice Agent API, install it in a Furby with a mini computer, and take the hardware home. Same Tech Week evening as Speechmatics×LiveKit×Aqua “Solving voice as an interface” and the Voice AI Product Leadership Panel — direct calendar conflict for Bay Area voice builders (luma.com/w9e4qgol on cal-R9IQUb53FUrolUF as of 2026-10-02).",
+      "Owned AssemblyAI hands-on evening — build a realtime voice agent with AssemblyAI’s Voice Agent API, install it in a Furby with a mini computer, and take the hardware home. Same Tech Week evening as Cresta Voice Mode On public showcase, Speechmatics×LiveKit×Aqua “Solving voice as an interface,” and the Voice AI Product Leadership Panel — direct calendar conflict for Bay Area voice builders (luma.com/w9e4qgol on cal-R9IQUb53FUrolUF as of 2026-10-05).",
     sourceUrl: "https://luma.com/w9e4qgol",
     sourceLabel: "luma.com",
     topics: ["voice-agents", "stt", "streaming"],
@@ -661,7 +675,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Re-checked 2026-10-04: public Luma calendar cal-Lv1pgYv5ITFR4tC is empty after Can AI Agents Make GPUs More Energy Efficient? (gpuenergyoptimization, Oct 3) was pruned post–Pacific day. Voice AI Hackathon (Sep 19) + AI Debates (aidebates delist) remain in pastEvents2026 for voice-format recurrence watch.",
+      "Re-checked 2026-10-05: public Luma calendar cal-Lv1pgYv5ITFR4tC still empty (no dated upcoming items). Voice AI Hackathon (Sep 19) + AI Debates (aidebates delist) remain in pastEvents2026 for voice-format recurrence watch; agihouse.org/events UI failed to fetch dated listings this pass.",
   },
   {
     id: "lablab-ai-hackathons",
