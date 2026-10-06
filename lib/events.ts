@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-10-05. Dates and venues sourced from
+ * Confirmed research date: 2026-10-06. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -96,20 +96,21 @@ const scrapedEvents: CalEvent[] = [
     note: "Invite-only; exact venue not yet published",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // 2026-10-05 (UTC afternoon / Pacific morning).
+  // 2026-10-06 (UTC afternoon / Pacific morning).
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
-  // AI / voice-agent-relevant listings. 80 discover entries across 4 pages.
-  // NEW: Cresta × Anthropic Agent Hackathon: Voice Mode On (Oct 7, Partiful
-  // bq3rFJ5Lfqyjtryj5v9I) — missed discover/voiceaispace; found via Tech Week
-  // web search. Venue fix: Ship an AI Voice Agent Workshop now lists
-  // 455 Valencia St via Luma leverage-pjc9. Re-verified deepgram-2jm5 still
-  // Nov 17 PT, Tech Week Partiful cluster Oct 6–11, Speak '26 Oct 29, VON
-  // Atlanta, Voice Agents Forum Nov 5, VapiCon Nov 11–12, SANE Oct 30,
-  // Bolna Symphony Nov 20. AGI House cal-Lv1pgYv5ITFR4tC still empty.
+  // AI / voice-agent-relevant listings. 78 discover entries across 4 pages.
+  // No new Bay Area discover adds today — Tech Week Oct 6 day still live
+  // (Vonage×Deepgram lunch, SignalWire Palo Alto, Ship workshop, Agora
+  // Prototype→Production). Re-verified deepgram-2jm5 Nov 17 PT, Speak '26
+  // Oct 29, VON Atlanta, Voice Agents Forum Nov 5, VapiCon Nov 11–12, SANE
+  // Oct 30, Bolna Symphony Nov 20, Cresta Voice Mode On Oct 7. NEW on
+  // Deepgram Luma cal (vendorEvents only): Voice AI in HealthTech London
+  // Dec 3 (fimimqjw). AGI House cal-Lv1pgYv5ITFR4tC still empty.
   // Skipped: Claude Connected Agents, Haunted Agent Horror Night, Selling
   // to Agents, Agentic Zero finance, COLM happy hour, Company Brain,
   // Open Source AI Stack (generic agent harness), AI Infra Night
-  // @PyTorchCon, Conversational AI Dinner Bluejay, Cartesia×Lorikeet,
+  // @PyTorchCon, Universal Hackathon AWS Loft (generic workforce /
+  // Masky.ai), Conversational AI Dinner Bluejay, Cartesia×Lorikeet,
   // Vapi yacht, Voice AI Dinner London, ElevenLabs AdWeek NYC, Google
   // DeepMind Korea hackathon, Cresta State of Voice AI Partiful
   // (jrGE1peC34x6hFZlMHWZ — Oct 8 2025 year trap), vibe-code / builders /
@@ -515,7 +516,7 @@ export const directSubmissions: CalEvent[] = [
     month: "2026-10",
     location: "San Francisco, CA (Northern Waterfront; exact venue on registration)",
     description:
-      "Owned AssemblyAI hands-on evening — build a realtime voice agent with AssemblyAI’s Voice Agent API, install it in a Furby with a mini computer, and take the hardware home. Same Tech Week evening as Cresta Voice Mode On public showcase, Speechmatics×LiveKit×Aqua “Solving voice as an interface,” and the Voice AI Product Leadership Panel — direct calendar conflict for Bay Area voice builders (luma.com/w9e4qgol on cal-R9IQUb53FUrolUF as of 2026-10-05).",
+      "Owned AssemblyAI hands-on evening — build a realtime voice agent with AssemblyAI’s Voice Agent API, install it in a Furby with a mini computer, and take the hardware home. Same Tech Week evening as Cresta Voice Mode On public showcase, Speechmatics×LiveKit×Aqua “Solving voice as an interface,” and the Voice AI Product Leadership Panel — direct calendar conflict for Bay Area voice builders (luma.com/w9e4qgol on cal-R9IQUb53FUrolUF as of 2026-10-06).",
     sourceUrl: "https://luma.com/w9e4qgol",
     sourceLabel: "luma.com",
     topics: ["voice-agents", "stt", "streaming"],
@@ -675,7 +676,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Re-checked 2026-10-05: public Luma calendar cal-Lv1pgYv5ITFR4tC still empty (no dated upcoming items). Voice AI Hackathon (Sep 19) + AI Debates (aidebates delist) remain in pastEvents2026 for voice-format recurrence watch; agihouse.org/events UI failed to fetch dated listings this pass.",
+      "Re-checked 2026-10-06: public Luma calendar cal-Lv1pgYv5ITFR4tC still empty (no dated upcoming items). Voice AI Hackathon (Sep 19) + AI Debates (aidebates delist) remain in pastEvents2026 for voice-format recurrence watch; agihouse.org/events UI failed to fetch dated listings this pass.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -710,7 +711,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://www.voiceaispace.com/events",
     sourceLabel: "voiceaispace.com",
     watchNote:
-      "Re-checked 2026-10-04: Discover feed now 79/4 pages (+5 vs 10-03). No new high-signal Bay Area discover adds — skipped Claude Connected Agents, Haunted Agent Horror, Selling to Agents, Company Brain, Agentic Zero, COLM HH, Anything Applied Agentic Hackathon (gap48i1m). DATE CORRECTION: Deepgram × Vapi phone workshop (deepgram-2jm5) Nov 18 → Nov 17. Added SANE 2026 (Oct 30 MIT). Tech Week still: Vonage×Deepgram lunch Oct 6, Agora Prototype→Production Oct 6 (814 Mission St), SignalWire Palo Alto Oct 6, Ship workshop Partiful+Luma leverage-pjc9, Coffee CARTesia Oct 7 AM (vendor), Furby + Product Leadership + Solving voice + Wire workflow Oct 7 eve, Conversational AI × Gaming day Oct 7, Outdoor Voice Coding Oct 11 Stanford, Voices in the Room Coval×Cartesia Oct 8 (vendor). Ship a Voice Agent Oct 25 (leverage-0gfk), Speak '26 Oct 29, VON Atlanta Oct 13–15, Vapi×Deepgram mixer Nov 9, Voice Agents Forum Nov 5, VapiCon Nov 11–12, AI Engineer Code Summit Nov 10–12, Bolna Symphony Nov 20 still live. Skip dinners/yacht/AdWeek/2025 year traps. Do not trust voiceaispace’s Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5.",
+      "Re-checked 2026-10-06: Discover 78/4 pages. No new high-signal Bay Area discover adds — skipped Claude Connected Agents, Haunted Agent Horror, Selling to Agents, Company Brain, Agentic Zero, COLM HH, Universal Hackathon AWS Loft. Tech Week Oct 6 day still live (Vonage×Deepgram, SignalWire PA, Ship workshop, Agora). Coffee CARTesia Oct 7 AM (vendor), Furby + Cresta Voice Mode On + Product Leadership + Solving voice + Wire workflow Oct 7, Gaming day Oct 7, Outdoor Voice Coding Oct 11, Voices in the Room Coval×Cartesia Oct 8 (vendor). Ship a Voice Agent Oct 25 (leverage-0gfk), Speak '26 Oct 29, VON Atlanta Oct 13–15, Vapi×Deepgram mixer Nov 9, Voice Agents Forum Nov 5, VapiCon Nov 11–12, AI Engineer Code Summit Nov 10–12, Bolna Symphony Nov 20, Deepgram HealthTech London Dec 3 (vendor) still live. Skip dinners/yacht/AdWeek/2025 year traps. Do not trust voiceaispace’s Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5.",
   },
 ];
 
@@ -941,4 +942,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-10-04";
+export const researchDate = "2026-10-06";
