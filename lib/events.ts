@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-10-06. Dates and venues sourced from
+ * Confirmed research date: 2026-10-07. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -96,76 +96,24 @@ const scrapedEvents: CalEvent[] = [
     note: "Invite-only; exact venue not yet published",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // 2026-10-06 (UTC afternoon / Pacific morning).
+  // 2026-10-07 (UTC afternoon / ~09:00 PT).
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
-  // AI / voice-agent-relevant listings. 78 discover entries across 4 pages.
-  // No new Bay Area discover adds today — Tech Week Oct 6 day still live
+  // AI / voice-agent-relevant listings. 73 discover entries across 3 pages.
+  // Pruned Oct 6 one-day Tech Week rooms after Pacific day passed
   // (Vonage×Deepgram lunch, SignalWire Palo Alto, Ship workshop, Agora
-  // Prototype→Production). Re-verified deepgram-2jm5 Nov 17 PT, Speak '26
-  // Oct 29, VON Atlanta, Voice Agents Forum Nov 5, VapiCon Nov 11–12, SANE
-  // Oct 30, Bolna Symphony Nov 20, Cresta Voice Mode On Oct 7. NEW on
-  // Deepgram Luma cal (vendorEvents only): Voice AI in HealthTech London
-  // Dec 3 (fimimqjw). AGI House cal-Lv1pgYv5ITFR4tC still empty.
-  // Skipped: Claude Connected Agents, Haunted Agent Horror Night, Selling
-  // to Agents, Agentic Zero finance, COLM happy hour, Company Brain,
-  // Open Source AI Stack (generic agent harness), AI Infra Night
-  // @PyTorchCon, Universal Hackathon AWS Loft (generic workforce /
-  // Masky.ai), Conversational AI Dinner Bluejay, Cartesia×Lorikeet,
-  // Vapi yacht, Voice AI Dinner London, ElevenLabs AdWeek NYC, Google
-  // DeepMind Korea hackathon, Cresta State of Voice AI Partiful
-  // (jrGE1peC34x6hFZlMHWZ — Oct 8 2025 year trap), vibe-code / builders /
-  // lsjiq8kf / ai-coding-hack / ch986w6u / wljlei8m past-year traps.
-  {
-    id: "vonage-deepgram-voice-ai-in-the-wild-techweek",
-    name: "Voice AI in the Wild: Demos & Lunch with Vonage + Deepgram",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Oct 6, 11am–2pm PT",
-    sortDate: "2026-10-06",
-    month: "2026-10",
-    location: "Deepgram SF Collab Hub, 505 Howard St #100, San Francisco",
-    description:
-      "a16z SF Tech Week midday at Deepgram’s SoMa hub — Vonage × Deepgram live demos of Voice API + speech intelligence (AI voice agents and real-time transcription), lunch, and open networking for developers/founders evaluating voice infra. Same calendar day as SignalWire Palo Alto, Ship an AI Voice Agent Workshop, and Agora’s Prototype→Production evening; strongest Deepgram×telco distribution signal of Tech Week (Partiful via voiceaispace).",
-    sourceUrl: "https://partiful.com/e/Gp49nL2GPStlf9AlRpms",
-    sourceLabel: "partiful.com",
-    topics: ["voice-agents", "stt", "streaming"],
-    topicNote:
-      "Explicit Vonage Voice API + Deepgram STT/agent demos — direct competitive mindshare for phone/voice-agent builders during Tech Week.",
-  },
-  {
-    id: "ship-ai-voice-agent-workshop-techweek",
-    name: "Ship an AI Voice Agent Workshop — SF Tech Week",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Oct 6, 5:30–8:30pm PT",
-    sortDate: "2026-10-06",
-    month: "2026-10",
-    location: "455 Valencia St, San Francisco (Inner Mission)",
-    description:
-      "SF Tech Week hands-on evening — crash course then build sprint where attendees bring their own voice-agent stack, add realtime guardrails (fraud/hallucinations/compliance), and have the agent answer a live phone call in front of judges. Mentors/API credits from Modulate, Tavily, and Plivo (Luma mirror luma.com/leverage-pjc9 confirmed 455 Valencia St as of 2026-10-05; same host/time as Partiful). Same 5:30–8:30pm PT window as Agora Prototype→Production; strong phone-agent builder room the same day as Vonage×Deepgram lunch and SignalWire Palo Alto.",
-    sourceUrl: "https://partiful.com/e/7O725PQ56Ki4P8gHKyiM",
-    sourceLabel: "partiful.com",
-    topics: ["voice-agents", "streaming"],
-    topicNote:
-      "Dedicated live phone-call voice-agent build workshop — high-signal Tech Week room for AssemblyAI phone/voice-agent DevRel; stack-agnostic (bring your own).",
-  },
-  {
-    id: "agora-prototype-to-production-voice-ai-techweek",
-    name: "From Prototype to Production: Scaling Voice AI — SF Tech Week",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Oct 6, 5:30–8:30pm PT",
-    sortDate: "2026-10-06",
-    month: "2026-10",
-    location: "814 Mission St, San Francisco",
-    description:
-      "Agora Convo AI World evening during a16z SF Tech Week — panels and live demos on shipping production voice/conversational/realtime AI (voice agents, avatars, multimodal) with speakers from OpenAI, Autodesk, MiniMax, Bluejay, HammingAI, and thymia. Same 5:30–8:30pm PT window as Ship an AI Voice Agent Workshop; Bay Area competitive realtime-voice builder room (Partiful venue confirmed 814 Mission St as of 2026-10-01).",
-    sourceUrl: "https://partiful.com/e/IL3sKweGcfohlDRJGFkk",
-    sourceLabel: "partiful.com",
-    topics: ["voice-agents", "streaming"],
-    topicNote:
-      "Agora-hosted production voice / conversational AI evening — realtime platform mindshare vs AssemblyAI voice-agent builders; not an STT-vendor room.",
-  },
+  // Prototype→Production). Oct 7 cluster still live: Cresta Voice Mode On,
+  // Gaming Hackathon, Furby, Solving voice, Product Leadership, Wire
+  // workflow, Coffee CARTesia (vendor). NEW: Sensory×Qualcomm on-device
+  // wearables STT webinar Oct 15 (voiceaispace). Re-verified deepgram-2jm5
+  // Nov 17 PT, Speak '26 Oct 29, VON Atlanta, Voice Agents Forum Nov 5,
+  // VapiCon Nov 11–12, SANE Oct 30, Bolna Symphony Nov 20, Deepgram
+  // HealthTech London Dec 3 (vendor). AGI House cal still empty.
+  // Skipped: Claude Connected Agents, Agentic Zero finance, COLM happy
+  // hour, Company Brain, Open Source AI Stack, AI Infra Night
+  // @PyTorchCon, Conversational AI Dinner Bluejay, Cartesia×Lorikeet,
+  // Vapi yacht, Voice AI Dinner London, ElevenLabs AdWeek/Finovate/Raise
+  // booths, Google DeepMind Korea hackathon, Cresta State of Voice AI
+  // 2025 year trap, vibe-code / builders / lsjiq8kf past-year traps.
   {
     id: "conversational-ai-gaming-hackathon-techweek",
     name: "Conversational AI × Gaming Hackathon — SF Tech Week",
@@ -294,23 +242,7 @@ const scrapedEvents: CalEvent[] = [
   // Agentic AI workshop (Aug 18) pruned after Pacific day passed (2026-08-20).
   // 2026-10-02: Decagon Dialogues + Runtime by Modal → pastEvents2026 after
   // Pacific Oct 1.
-  {
-    id: "signalwire-voice-agent-workshop-palo-alto",
-    name: "AI Developer Workshop — Build AI Voice Agents (SignalWire Palo Alto)",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Oct 6, 3:00–5:00pm PT",
-    sortDate: "2026-10-06",
-    month: "2026-10",
-    location: "Prosperity 7 Ventures, 700 Emerson St, Palo Alto",
-    description:
-      "Peninsula follow-on to SignalWire’s Sep 30 SF voice-agent workshop — same hands-on production patterns (call-scoped state, tool calling, interruptions, per-turn observability) at Prosperity 7 Ventures. Strong Peninsula voice-agent builder room during a16z Tech Week week.",
-    sourceUrl: "https://www.aicamp.ai/event/eventdetails/W2026100615",
-    sourceLabel: "aicamp.ai",
-    topics: ["voice-agents", "streaming"],
-    topicNote:
-      "Dedicated production voice-agent workshop — competitive SignalWire mindshare for Peninsula phone/voice-agent engineers.",
-  },
+  // 2026-10-07: SignalWire Palo Alto workshop (Oct 6) pruned after Pacific day.
   {
     id: "eventbrite-data-streaming-summit",
     name: "Data Streaming Summit 2026",
@@ -409,10 +341,28 @@ const scrapedEvents: CalEvent[] = [
     month: "2026-10",
     location: "San Francisco (exact venue on registration)",
     description:
-      "Afternoon hands-on workshop (Leverage / Nir Naamani) — build a working voice agent end-to-end (speech in → model → structured data out), including latency, interruptions, and state. Approval-required; small room. Rescheduled from Sep 17 to Oct 25 per live Luma event/get (leverage-0gfk) — top dedicated Bay Area voice-agent build workshop this month alongside the Oct 6 Tech Week Ship an AI Voice Agent Workshop; Deepgram × Vapi phone-agent night now Nov 17.",
+      "Afternoon hands-on workshop (Leverage / Nir Naamani) — build a working voice agent end-to-end (speech in → model → structured data out), including latency, interruptions, and state. Approval-required; small room. Rescheduled from Sep 17 to Oct 25 per live Luma event/get (leverage-0gfk) — top dedicated Bay Area voice-agent build workshop remaining this month after the Oct 6 Tech Week Ship workshop; Deepgram × Vapi phone-agent night still Nov 17.",
     sourceUrl: "https://luma.com/leverage-0gfk",
     sourceLabel: "luma.com",
     topics: ["voice-agents", "stt", "streaming"],
+  },
+  {
+    id: "sensory-qualcomm-voice-wearables-webinar",
+    name: "Voice Is the New UI for Intelligent Wearables — Sensory × Qualcomm",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Oct 15, 9:00am PT",
+    sortDate: "2026-10-15",
+    month: "2026-10",
+    location: "Online (Zoom)",
+    description:
+      "Sensory × Qualcomm technical webinar on on-device voice for wearables — wake words and speech-to-text running on Snapdragon Wear Elite’s low-power island, plus a look at the full embedded voice stack for smartwatches/glasses. Free Zoom registration; surfaced via voiceaispace (missed Bay Area Luma discover). Competitive on-device / edge-STT signal adjacent to cloud STT DevRel.",
+    sourceUrl:
+      "https://sensory.zoom.us/webinar/register/7417906142854/WN_II8W-lBWTFCHkm0OSTXJNg",
+    sourceLabel: "sensory.zoom.us",
+    topics: ["stt", "audio-intel"],
+    topicNote:
+      "Dedicated on-device wake-word / embedded STT webinar — edge speech stack, not a cloud voice-agent build room.",
   },
   {
     id: "sane-2026-speech-audio-northeast",
@@ -516,7 +466,7 @@ export const directSubmissions: CalEvent[] = [
     month: "2026-10",
     location: "San Francisco, CA (Northern Waterfront; exact venue on registration)",
     description:
-      "Owned AssemblyAI hands-on evening — build a realtime voice agent with AssemblyAI’s Voice Agent API, install it in a Furby with a mini computer, and take the hardware home. Same Tech Week evening as Cresta Voice Mode On public showcase, Speechmatics×LiveKit×Aqua “Solving voice as an interface,” and the Voice AI Product Leadership Panel — direct calendar conflict for Bay Area voice builders (luma.com/w9e4qgol on cal-R9IQUb53FUrolUF as of 2026-10-06).",
+      "Owned AssemblyAI hands-on evening — build a realtime voice agent with AssemblyAI’s Voice Agent API, install it in a Furby with a mini computer, and take the hardware home. Same Tech Week evening as Cresta Voice Mode On public showcase, Speechmatics×LiveKit×Aqua “Solving voice as an interface,” and the Voice AI Product Leadership Panel — direct calendar conflict for Bay Area voice builders (luma.com/w9e4qgol on cal-R9IQUb53FUrolUF as of 2026-10-07).",
     sourceUrl: "https://luma.com/w9e4qgol",
     sourceLabel: "luma.com",
     topics: ["voice-agents", "stt", "streaming"],
@@ -676,7 +626,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Re-checked 2026-10-06: public Luma calendar cal-Lv1pgYv5ITFR4tC still empty (no dated upcoming items). Voice AI Hackathon (Sep 19) + AI Debates (aidebates delist) remain in pastEvents2026 for voice-format recurrence watch; agihouse.org/events UI failed to fetch dated listings this pass.",
+      "Re-checked 2026-10-07: public Luma calendar cal-Lv1pgYv5ITFR4tC still empty (no dated upcoming items). Voice AI Hackathon (Sep 19) + AI Debates (aidebates delist) remain in pastEvents2026 for voice-format recurrence watch; agihouse.org/events UI failed to fetch dated listings this pass.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -711,7 +661,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://www.voiceaispace.com/events",
     sourceLabel: "voiceaispace.com",
     watchNote:
-      "Re-checked 2026-10-06: Discover 78/4 pages. No new high-signal Bay Area discover adds — skipped Claude Connected Agents, Haunted Agent Horror, Selling to Agents, Company Brain, Agentic Zero, COLM HH, Universal Hackathon AWS Loft. Tech Week Oct 6 day still live (Vonage×Deepgram, SignalWire PA, Ship workshop, Agora). Coffee CARTesia Oct 7 AM (vendor), Furby + Cresta Voice Mode On + Product Leadership + Solving voice + Wire workflow Oct 7, Gaming day Oct 7, Outdoor Voice Coding Oct 11, Voices in the Room Coval×Cartesia Oct 8 (vendor). Ship a Voice Agent Oct 25 (leverage-0gfk), Speak '26 Oct 29, VON Atlanta Oct 13–15, Vapi×Deepgram mixer Nov 9, Voice Agents Forum Nov 5, VapiCon Nov 11–12, AI Engineer Code Summit Nov 10–12, Bolna Symphony Nov 20, Deepgram HealthTech London Dec 3 (vendor) still live. Skip dinners/yacht/AdWeek/2025 year traps. Do not trust voiceaispace’s Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5.",
+      "Re-checked 2026-10-07: Discover 73/3 pages. Pruned Oct 6 Tech Week day (Vonage×Deepgram, SignalWire PA, Ship workshop, Agora). NEW Sensory×Qualcomm on-device wearables STT webinar Oct 15 (Zoom). Oct 7 cluster still live: Coffee CARTesia AM (vendor), Furby + Cresta Voice Mode On + Product Leadership + Solving voice + Wire workflow + Gaming day; Outdoor Voice Coding Oct 11; Voices in the Room Coval×Cartesia Oct 8 (vendor). Ship a Voice Agent Oct 25 (leverage-0gfk), Speak '26 Oct 29, VON Atlanta Oct 13–15, Vapi×Deepgram mixer Nov 9, Voice Agents Forum Nov 5, VapiCon Nov 11–12, AI Engineer Code Summit Nov 10–12, Bolna Symphony Nov 20, Deepgram HealthTech London Dec 3 (vendor) still live. Skip dinners/yacht/AdWeek/Finovate/2025 year traps. Do not trust voiceaispace’s Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5.",
   },
 ];
 
@@ -942,4 +892,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-10-06";
+export const researchDate = "2026-10-07";
