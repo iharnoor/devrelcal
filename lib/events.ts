@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-10-08. Dates and venues sourced from
+ * Confirmed research date: 2026-10-09. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -96,42 +96,21 @@ const scrapedEvents: CalEvent[] = [
     note: "Invite-only; exact venue not yet published",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // 2026-10-08 (UTC afternoon / ~09:10 PT).
+  // 2026-10-09 (UTC afternoon / ~09:10 PT).
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
-  // AI / voice-agent-relevant listings. 72 discover entries across 3 pages.
-  // Pruned Oct 7 Tech Week cluster after Pacific day passed (Gaming
-  // Hackathon, Cresta Voice Mode On, Solving voice, Product Leadership,
-  // Wire workflow, Furby owned, Coffee CARTesia vendor, Data Streaming
-  // Summit). NEW: Voice Research Club SF Tech Week (yd93ae7y, Oct 8
-  // 5:30–8:30pm PT — Meta Muse TTS + NVIDIA Nemotron 3 Diarization;
-  // missed discover + voiceaispace). Voices in the Room Coval×Cartesia
-  // still tonight (vendor). Outdoor Voice Coding Oct 11 still live.
-  // Re-verified deepgram-2jm5 Nov 17 PT, Speak '26 Oct 29, VON Atlanta,
-  // Voice Agents Forum Nov 5, VapiCon Nov 11–12, SANE Oct 30, Bolna
-  // Symphony Nov 20, Deepgram HealthTech London Dec 3 (vendor). AGI
-  // House cal + AssemblyAI cal empty. Skipped: COLM happy hours, Company
-  // Brain, Open Source AI Stack, AI Infra Night @PyTorchCon, Voice Build
-  // Lab no-code (0nqh5a25), Unmute Zoom IST already passed (jmcbs158),
-  // Speedwins Hathora year trap (u0k6rev6 = 2025), dinners/yacht,
-  // ElevenLabs AdWeek/Finovate booths, Korea DeepMind hack, Cresta
-  // State of Voice AI 2025 year trap.
-  {
-    id: "voice-research-club-sf-techweek",
-    name: "Voice Research Club at SF Tech Week — Meta Muse TTS + NVIDIA Nemotron 3 Diarization",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Oct 8, 5:30–8:30pm PT",
-    sortDate: "2026-10-08",
-    month: "2026-10",
-    location: "San Francisco, CA (exact venue on registration)",
-    description:
-      "Voice Arena × Bay Area Frontier Research Club paper-driven evening — Meta Muse TTS (Nishant Nikhil) and NVIDIA Nemotron 3 Diarization (Taejin Park), then extended research Q&A for speech/TTS/STT builders. Highest-signal Tech Week speech-research room tonight; same evening as Coval×Cartesia Voices in the Room (vendor). Missed Bay Area Luma discover + voiceaispace (luma.com/yd93ae7y as of 2026-10-08).",
-    sourceUrl: "https://luma.com/yd93ae7y",
-    sourceLabel: "luma.com",
-    topics: ["stt", "tts", "audio-intel"],
-    topicNote:
-      "Dedicated speech-research session on frontier TTS + multi-speaker diarization — direct STT/TTS researcher audience, not a phone-agent product summit.",
-  },
+  // AI / voice-agent-relevant listings. 64 discover entries across 3 pages.
+  // Pruned Oct 8 after Pacific day: Voice Research Club (yd93ae7y) →
+  // pastEvents2026; Voices in the Room Coval×Cartesia → vendor prune.
+  // NEW (vendor): Azure AI Speech Model Mondays Voice Agents Upgraded
+  // (Oct 12, 10:30am PT / 5:30pm UTC — Foundry STT/TTS/S2S + MAI).
+  // Outdoor Voice Coding Oct 11 still Partiful PUBLISHED. Re-verified
+  // deepgram-2jm5 Nov 17 PT, Speak '26 Oct 29, VON Atlanta, Voice Agents
+  // Forum Nov 5, VapiCon Nov 11–12, SANE Oct 30, Bolna Symphony Nov 20,
+  // Deepgram HealthTech London Dec 3, leverage-0gfk Oct 25, Sensory
+  // Oct 15, Agora NYC Oct 12 ET. AGI House + AssemblyAI cals empty.
+  // Skipped: Company Brain Hackathon, Open Together, Braintrust×Greylock
+  // evals, dinners/yacht, Cartesia×Lorikeet, Korea DeepMind hack,
+  // SignalWire Oct 6 already past, wljlei8m year trap.
   {
     id: "outdoor-voice-coding-hackathon-techweek",
     name: "touch ./GRASS — Outdoor Voice Coding Hackathon (SF Tech Week)",
@@ -532,7 +511,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Re-checked 2026-10-08: public Luma calendar cal-Lv1pgYv5ITFR4tC still empty (no dated upcoming items). Voice AI Hackathon (Sep 19) + AI Debates (aidebates delist) remain in pastEvents2026 for voice-format recurrence watch; agihouse.org/events UI failed to fetch dated listings this pass.",
+      "Re-checked 2026-10-09: public Luma calendar cal-Lv1pgYv5ITFR4tC still empty (no dated upcoming items). Voice AI Hackathon (Sep 19) + AI Debates (aidebates delist) remain in pastEvents2026 for voice-format recurrence watch; agihouse.org/events UI failed to fetch dated listings this pass.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -567,11 +546,18 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://www.voiceaispace.com/events",
     sourceLabel: "voiceaispace.com",
     watchNote:
-      "Re-checked 2026-10-08: Discover 72/3 pages. Pruned Oct 7 Tech Week day (Furby, Cresta Voice Mode On, Solving voice, Product Leadership, Wire workflow, Gaming, Coffee CARTesia, Data Streaming Summit). NEW Voice Research Club (yd93ae7y, Oct 8 eve — Meta Muse TTS + NVIDIA Nemotron 3 Diarization; missed discover + voiceaispace). Voices in the Room Coval×Cartesia still tonight (vendor). Outdoor Voice Coding Oct 11; Sensory×Qualcomm Oct 15; Ship a Voice Agent Oct 25 (leverage-0gfk); Speak '26 Oct 29; VON Atlanta Oct 13–15; Vapi×Deepgram mixer Nov 9; Voice Agents Forum Nov 5; VapiCon Nov 11–12; AI Engineer Code Summit Nov 10–12; Bolna Symphony Nov 20; Deepgram HealthTech London Dec 3 (vendor) still live. Skip dinners/yacht/AdWeek/Finovate/2025 year traps / Voice Build Lab no-code. Do not trust voiceaispace’s Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5; voiceaispace also mis-dates Agora NYC workshop as Oct 8 — Luma b59sk0v6 is Oct 12 ET.",
+      "Re-checked 2026-10-09: Discover 64/3 pages. Pruned Oct 8 Voice Research Club → pastEvents2026; Voices in the Room Coval×Cartesia pruned from vendor. NEW Azure AI Speech Model Mondays Voice Agents Upgraded (Oct 12, 10:30am PT — vendor). Outdoor Voice Coding Oct 11; Sensory×Qualcomm Oct 15; Ship a Voice Agent Oct 25 (leverage-0gfk); Speak '26 Oct 29; VON Atlanta Oct 13–15; Vapi×Deepgram mixer Nov 9; Voice Agents Forum Nov 5; VapiCon Nov 11–12; AI Engineer Code Summit Nov 10–12; Bolna Symphony Nov 20; Deepgram HealthTech London Dec 3 (vendor) still live. Skip dinners/yacht/AdWeek/Finovate/2025 year traps / Company Brain / Cartesia×Lorikeet. Do not trust voiceaispace’s Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5; voiceaispace also mis-dates Agora NYC workshop as Oct 8 — Luma b59sk0v6 is Oct 12 ET.",
   },
 ];
 
 export const pastEvents2026: PastEvent[] = [
+  {
+    id: "voice-research-club-sf-techweek-2026",
+    name: "Voice Research Club at SF Tech Week — Meta Muse TTS + NVIDIA Nemotron 3 Diarization",
+    dateLabel: "Oct 8",
+    location: "San Francisco, CA",
+    note: "Voice Arena × Frontier Research Club paper night (luma.com/yd93ae7y) — Meta Muse TTS + NVIDIA Nemotron 3 Diarization; kept for Bay Area speech-research series / Voice Arena recurrence watch",
+  },
   {
     id: "cresta-voice-mode-on-hackathon-techweek-2026",
     name: "Agent Hackathon: Voice Mode On — Cresta × Anthropic (SF Tech Week)",
@@ -833,4 +819,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-10-08";
+export const researchDate = "2026-10-09";
