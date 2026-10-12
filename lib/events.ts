@@ -46,25 +46,10 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-10-11. Dates and venues sourced from
+ * Confirmed research date: 2026-10-12. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
-  {
-    id: "a16z-tech-week-2026",
-    name: "a16z Tech Week",
-    category: "conference",
-    status: "confirmed",
-    dateLabel: "Oct 5–11",
-    sortDate: "2026-10-05",
-    endDate: "2026-10-11",
-    month: "2026-10",
-    location: "San Francisco (citywide)",
-    description:
-      "Not a single venue — an ecosystem of independently-hosted pitch nights, workshops, hackathons, founder dinners, and themed meetups across SF for a week.",
-    sourceUrl: "https://www.tech-week.com/",
-    sourceLabel: "tech-week.com",
-  },
   {
     id: "open-source-ai-week-2026",
     name: "Open Source AI Week",
@@ -96,40 +81,26 @@ const scrapedEvents: CalEvent[] = [
     note: "Invite-only; exact venue not yet published",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // 2026-10-11 (UTC afternoon / ~09:00 PT).
+  // 2026-10-12 (UTC afternoon / ~09:00 PT).
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
-  // AI / voice-agent-relevant listings. 62 discover entries across 3 pages.
-  // No prune yet (Pacific morning Oct 11 — Outdoor Voice Coding still
-  // Partiful PUBLISHED ending 6:30pm PT; Tech Week endDate Oct 11). NEW:
-  // Open Intelligence Summit (Oct 12–13 Midway, digita-ghqh + OIS workshop),
-  // MITAI Age of Agency (Oct 17 CHM), AI Startup Challenge Hackathon
-  // (Oct 20 AWS Loft, 0oww46mm). Re-verified deepgram-2jm5 Nov 17 PT,
-  // Speak '26 Oct 29, VON Atlanta, Voice Agents Forum Nov 5, VapiCon
-  // Nov 11–12, SANE Oct 30, Bolna Symphony Nov 20, Deepgram HealthTech
-  // London Dec 3, leverage-0gfk Oct 25, Sensory Oct 15, Agora NYC Oct 12 ET,
-  // Azure Foundry Voice Agents Upgraded Oct 12, Rasa NYC Nov 3, PyTorch
-  // Con NA Oct 20–21, Debate Night Oct 19. AGI House + AssemblyAI cals
-  // empty. Skipped: Company Brain, Open Together, Braintrust×Greylock
-  // evals, AI Infra Night drinks, Founders Panel Agentic Stack (founder
-  // networking), dinners/yacht, Cartesia×Lorikeet, Korea DeepMind hack,
+  // AI / voice-agent-relevant listings. 68 discover entries across 3 pages.
+  // Pruned after Pacific day: Outdoor Voice Coding (Partiful end
+  // 2026-10-12T01:30Z / Oct 11 6:30pm PT) + a16z Tech Week (endDate Oct 11)
+  // → pastEvents2026. Re-verified OIS workshop day still today (luma.com/OIS
+  // Oct 12 9am–2pm PT) + summit digita-ghqh Oct 13; Azure Foundry Voice
+  // Agents Upgraded still today 10:30am PT; Agora NYC b59sk0v6 still tonight
+  // ET. Re-verified deepgram-2jm5 Nov 17 PT, Speak '26 Oct 29, VON Atlanta,
+  // Voice Agents Forum Nov 5, VapiCon Nov 11–12, SANE Oct 30, Bolna Symphony
+  // Nov 20, Deepgram HealthTech London Dec 3, leverage-0gfk Oct 25, Sensory
+  // Oct 15, Rasa NYC Nov 3, PyTorch Con NA Oct 20–21, Debate Night Oct 19,
+  // MITAI Oct 17, AI Startup Challenge 0oww46mm Oct 20. AGI House +
+  // AssemblyAI + Speechmatics cals empty. Skipped: Company Brain
+  // (oct-hackathon), Open Together, Braintrust×Greylock evals, AI Infra
+  // Night drinks, Founders Panel Agentic Stack, Cartesia×Lorikeet
+  // (bz8x2v1s Oct 28 eve PT), dinners/yacht, Korea DeepMind hack, CTOs
+  // Pitch Engineers (Dec 8 London — not voice), Fast Forward (no voice
+  // signal), Stripe Build Day, SGLang×LinkedIn, CoreWeave×NVIDIA Dynamo,
   // lsjiq8kf / wljlei8m / ch986w6u year traps.
-  {
-    id: "outdoor-voice-coding-hackathon-techweek",
-    name: "touch ./GRASS — Outdoor Voice Coding Hackathon (SF Tech Week)",
-    category: "hackathon",
-    status: "confirmed",
-    dateLabel: "Oct 11, 9:45am–6:30pm PT",
-    sortDate: "2026-10-11",
-    month: "2026-10",
-    location: "Stanford University, Palo Alto",
-    description:
-      "Openbase × Maritime × Sundai Club full-day outdoor Tech Week hackathon at Stanford — build by directing coding agents from your phone by voice (speech-to-speech preferred), then demo. Strong speech-input / voice-agent builder room closing Tech Week weekend (Partiful 9LIzPkFXp0xQpzjqryNJ as of 2026-10-01).",
-    sourceUrl: "https://partiful.com/e/9LIzPkFXp0xQpzjqryNJ",
-    sourceLabel: "partiful.com",
-    topics: ["voice-agents", "stt"],
-    topicNote:
-      "Voice-first coding-agent hackathon — STT/speech-to-speech is the interaction surface; not a phone-agent or ASR-benchmark room.",
-  },
   {
     id: "open-intelligence-summit-sf-2026",
     name: "Open Intelligence Summit",
@@ -575,7 +546,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Re-checked 2026-10-11: public Luma calendar cal-Lv1pgYv5ITFR4tC still empty (no dated upcoming items). Voice AI Hackathon (Sep 19) + AI Debates (aidebates delist) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice/agent rooms surfaced this pass.",
+      "Re-checked 2026-10-12: public Luma calendar cal-Lv1pgYv5ITFR4tC still empty (no dated upcoming items). Voice AI Hackathon (Sep 19) + AI Debates (aidebates delist) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice/agent rooms surfaced this pass.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -610,11 +581,25 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://www.voiceaispace.com/events",
     sourceLabel: "voiceaispace.com",
     watchNote:
-      "Re-checked 2026-10-11: Discover 62/3 pages. No prune (Pacific morning Oct 11). NEW: Open Intelligence Summit (Oct 12–13 Midway), MITAI Age of Agency (Oct 17 CHM), AI Startup Challenge Hackathon (Oct 20 AWS Loft, 0oww46mm). Outdoor Voice Coding Oct 11 still Partiful PUBLISHED; Azure Foundry Voice Agents Upgraded Oct 12 (vendor); Agora NYC Oct 12 ET; Sensory×Qualcomm Oct 15; Ship a Voice Agent Oct 25 (leverage-0gfk); Speak '26 Oct 29; VON Atlanta Oct 13–15; Vapi×Deepgram mixer Nov 9; Voice Agents Forum Nov 5; VapiCon Nov 11–12; AI Engineer Code Summit Nov 10–12; Bolna Symphony Nov 20; Deepgram HealthTech London Dec 3 (vendor) still live. Skip dinners/yacht/AdWeek/Finovate/2025 year traps / Company Brain / Cartesia×Lorikeet / AI Infra Night drinks / Founders Panel Agentic Stack. Do not trust voiceaispace’s Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5; voiceaispace also mis-dates Agora NYC workshop as Oct 8 — Luma b59sk0v6 is Oct 12 ET. lsjiq8kf is Oct 2025 year trap.",
+      "Re-checked 2026-10-12: Discover 68/3 pages. Pruned Outdoor Voice Coding + a16z Tech Week after Pacific Oct 11 → pastEvents2026. No net-new voice rooms vs prior pass. Still live: Open Intelligence Summit (Oct 12–13 Midway; OIS workshop today), Azure Foundry Voice Agents Upgraded Oct 12 (vendor), Agora NYC Oct 12 ET, Sensory×Qualcomm Oct 15, Ship a Voice Agent Oct 25 (leverage-0gfk), Speak '26 Oct 29, VON Atlanta Oct 13–15, Vapi×Deepgram mixer Nov 9, Voice Agents Forum Nov 5, VapiCon Nov 11–12, AI Engineer Code Summit Nov 10–12, Bolna Symphony Nov 20, Deepgram HealthTech London Dec 3 (vendor). Skip dinners/yacht/AdWeek/Finovate/2025 year traps / Company Brain / Cartesia×Lorikeet / AI Infra Night drinks / Founders Panel Agentic Stack / CTOs Pitch Engineers. Do not trust voiceaispace’s Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5; voiceaispace also mis-dates Agora NYC workshop as Oct 8 — Luma b59sk0v6 is Oct 12 ET. lsjiq8kf is Oct 2025 year trap.",
   },
 ];
 
 export const pastEvents2026: PastEvent[] = [
+  {
+    id: "a16z-tech-week-2026",
+    name: "a16z Tech Week",
+    dateLabel: "Oct 5–11",
+    location: "San Francisco (citywide)",
+    note: "Citywide Tech Week ecosystem (tech-week.com) — kept for annual SF builder-week recurrence / voice-side-event monitoring",
+  },
+  {
+    id: "outdoor-voice-coding-hackathon-techweek-2026",
+    name: "touch ./GRASS — Outdoor Voice Coding Hackathon (SF Tech Week)",
+    dateLabel: "Oct 11",
+    location: "Stanford University, Palo Alto",
+    note: "Openbase × Maritime × Sundai Club voice-first outdoor coding-agent hackathon (Partiful 9LIzPkFXp0xQpzjqryNJ) — kept for Tech Week / speech-input coding-agent format recurrence",
+  },
   {
     id: "ai-native-summit-sf-techweek-2026",
     name: "AI Native Summit — SF TechWeek 2026",
@@ -890,4 +875,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-10-11";
+export const researchDate = "2026-10-12";
