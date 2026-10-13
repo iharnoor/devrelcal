@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-10-12. Dates and venues sourced from
+ * Confirmed research date: 2026-10-13. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -81,26 +81,26 @@ const scrapedEvents: CalEvent[] = [
     note: "Invite-only; exact venue not yet published",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // 2026-10-12 (UTC afternoon / ~09:00 PT).
+  // 2026-10-13 (UTC afternoon / ~09:00 PT).
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
-  // AI / voice-agent-relevant listings. 68 discover entries across 3 pages.
-  // Pruned after Pacific day: Outdoor Voice Coding (Partiful end
-  // 2026-10-12T01:30Z / Oct 11 6:30pm PT) + a16z Tech Week (endDate Oct 11)
-  // → pastEvents2026. Re-verified OIS workshop day still today (luma.com/OIS
-  // Oct 12 9am–2pm PT) + summit digita-ghqh Oct 13; Azure Foundry Voice
-  // Agents Upgraded still today 10:30am PT; Agora NYC b59sk0v6 still tonight
-  // ET. Re-verified deepgram-2jm5 Nov 17 PT, Speak '26 Oct 29, VON Atlanta,
-  // Voice Agents Forum Nov 5, VapiCon Nov 11–12, SANE Oct 30, Bolna Symphony
-  // Nov 20, Deepgram HealthTech London Dec 3, leverage-0gfk Oct 25, Sensory
-  // Oct 15, Rasa NYC Nov 3, PyTorch Con NA Oct 20–21, Debate Night Oct 19,
-  // MITAI Oct 17, AI Startup Challenge 0oww46mm Oct 20. AGI House +
-  // AssemblyAI + Speechmatics cals empty. Skipped: Company Brain
-  // (oct-hackathon), Open Together, Braintrust×Greylock evals, AI Infra
-  // Night drinks, Founders Panel Agentic Stack, Cartesia×Lorikeet
-  // (bz8x2v1s Oct 28 eve PT), dinners/yacht, Korea DeepMind hack, CTOs
-  // Pitch Engineers (Dec 8 London — not voice), Fast Forward (no voice
-  // signal), Stripe Build Day, SGLang×LinkedIn, CoreWeave×NVIDIA Dynamo,
-  // lsjiq8kf / wljlei8m / ch986w6u year traps.
+  // AI / voice-agent-relevant listings. 67 discover entries across 3 pages.
+  // Pruned vendor rooms after Pacific Oct 12: Azure Foundry Voice Agents
+  // Upgraded + Agora NYC Voice AI Workshop (b59sk0v6 now 404). OIS workshop
+  // day (luma.com/OIS) ended Oct 12; summit digita-ghqh still tonight PT.
+  // NEW: Multi-Modal AI for Education Hackathon @ Snowflake (beta-3ue5,
+  // Nov 13 Menlo Park — Voice & Audio Tutors track). NEW vendor:
+  // Speechmatics × Roark London (c0iiab0e, Nov 5 — same day as Voice Agents
+  // Forum SF). Re-verified deepgram-2jm5 Nov 17 PT, Speak '26 Oct 29, VON
+  // Atlanta Oct 13–15, Voice Agents Forum Nov 5, VapiCon Nov 11–12, SANE
+  // Oct 30, Bolna Symphony Nov 20, Deepgram HealthTech London Dec 3,
+  // leverage-0gfk Oct 25, Sensory Oct 15, Rasa NYC Nov 3, PyTorch Con NA
+  // Oct 20–21, Debate Night Oct 19, MITAI Oct 17, AI Startup Challenge
+  // 0oww46mm Oct 20. AGI House + AssemblyAI cals empty. Skipped: Company
+  // Brain, Open Together, Braintrust×Greylock evals, AI Infra Night drinks,
+  // Founders Panel Agentic Stack, Cartesia×Lorikeet, dinners/yacht, Korea
+  // DeepMind hack, CTOs Pitch Engineers, Fast Forward, Stripe Build Day,
+  // SGLang×LinkedIn, CoreWeave×NVIDIA Dynamo, u0k6rev6 / lsjiq8kf /
+  // wljlei8m / ch986w6u year traps, AI Builder's Night / Mahjong Party.
   {
     id: "open-intelligence-summit-sf-2026",
     name: "Open Intelligence Summit",
@@ -112,7 +112,7 @@ const scrapedEvents: CalEvent[] = [
     month: "2026-10",
     location: "The Midway, 900 Marin St, San Francisco",
     description:
-      "DigitalOcean-hosted open-weights / open-infra summit — Oct 12 MLH hands-on workshop day (deploy open agents, model routing) then Oct 13 Build/Serve/Run tracks on open models, agent memory/context standards, and production vLLM. Medium-priority Bay Area agent-infra builder room (luma.com/digita-ghqh + luma.com/OIS + digitalocean.com as of 2026-10-11).",
+      "DigitalOcean-hosted open-weights / open-infra summit — Oct 12 MLH hands-on workshop day (now past) then Oct 13 evening Build/Serve/Run tracks on open models, agent memory/context standards, and production vLLM (luma.com/digita-ghqh ends ~6:30pm PT). Medium-priority Bay Area agent-infra builder room.",
     sourceUrl: "https://www.digitalocean.com/open-intelligence-summit",
     sourceLabel: "digitalocean.com",
   },
@@ -328,6 +328,23 @@ const scrapedEvents: CalEvent[] = [
       "AI Engineer’s code/engineering conference for practitioners shipping AI systems — same SF week as VapiCon (Nov 11–12). Strong agent-builder attendance and calendar-conflict room for DevRel coverage planning; agenda is not voice-specific.",
     sourceUrl: "https://ai.engineer/code/2026",
     sourceLabel: "ai.engineer",
+  },
+  {
+    id: "multimodal-ai-education-hackathon-snowflake-2026",
+    name: "Multi-Modal AI for Education Hackathon @ Snowflake — Beta Fund × Epic",
+    category: "hackathon",
+    status: "confirmed",
+    dateLabel: "Nov 13, 9am–5:30pm PT",
+    sortDate: "2026-11-13",
+    month: "2026-11",
+    location: "Snowflake Silicon Valley AI Hub, Menlo Park, CA",
+    description:
+      "One-day Beta Fund × Epic multimodal education hackathon at Snowflake’s Menlo Park AI hub — explicit Voice & Audio Tutors track plus realtime multimodal tutor/agent tracks. Day after VapiCon; strong STT / audio-intel pitch room for builders shipping listen-and-respond learning tools (luma.com/beta-3ue5 as of 2026-10-13).",
+    sourceUrl: "https://luma.com/beta-3ue5",
+    sourceLabel: "luma.com",
+    topics: ["stt", "audio-intel"],
+    topicNote:
+      "Voice & Audio Tutors is an explicit track — speech/audio modality pitch, not a dedicated phone voice-agent hackathon.",
   },
   {
     id: "deepgram-vapi-phone-voice-agent-workshop-sf",
@@ -546,7 +563,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Re-checked 2026-10-12: public Luma calendar cal-Lv1pgYv5ITFR4tC still empty (no dated upcoming items). Voice AI Hackathon (Sep 19) + AI Debates (aidebates delist) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice/agent rooms surfaced this pass.",
+      "Re-checked 2026-10-13: public Luma calendar cal-Lv1pgYv5ITFR4tC still empty (no dated upcoming items). Voice AI Hackathon (Sep 19) + AI Debates (aidebates delist) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice/agent rooms surfaced this pass.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -581,7 +598,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://www.voiceaispace.com/events",
     sourceLabel: "voiceaispace.com",
     watchNote:
-      "Re-checked 2026-10-12: Discover 68/3 pages. Pruned Outdoor Voice Coding + a16z Tech Week after Pacific Oct 11 → pastEvents2026. No net-new voice rooms vs prior pass. Still live: Open Intelligence Summit (Oct 12–13 Midway; OIS workshop today), Azure Foundry Voice Agents Upgraded Oct 12 (vendor), Agora NYC Oct 12 ET, Sensory×Qualcomm Oct 15, Ship a Voice Agent Oct 25 (leverage-0gfk), Speak '26 Oct 29, VON Atlanta Oct 13–15, Vapi×Deepgram mixer Nov 9, Voice Agents Forum Nov 5, VapiCon Nov 11–12, AI Engineer Code Summit Nov 10–12, Bolna Symphony Nov 20, Deepgram HealthTech London Dec 3 (vendor). Skip dinners/yacht/AdWeek/Finovate/2025 year traps / Company Brain / Cartesia×Lorikeet / AI Infra Night drinks / Founders Panel Agentic Stack / CTOs Pitch Engineers. Do not trust voiceaispace’s Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5; voiceaispace also mis-dates Agora NYC workshop as Oct 8 — Luma b59sk0v6 is Oct 12 ET. lsjiq8kf is Oct 2025 year trap.",
+      "Re-checked 2026-10-13: Discover 67/3 pages. Pruned Azure Foundry Voice Agents Upgraded + Agora NYC (b59sk0v6 404) after Pacific Oct 12. NEW: Multi-Modal Education Hackathon Snowflake Menlo Park Nov 13 (beta-3ue5); Speechmatics × Roark London Nov 5 (c0iiab0e — vendor; same day as Voice Agents Forum SF). Still live: OIS summit tonight (digita-ghqh), VON Atlanta Oct 13–15, Sensory Oct 15, Ship a Voice Agent Oct 25, Speak '26 Oct 29, Voice Agents Forum Nov 5, Vapi×Deepgram mixer Nov 9, VapiCon Nov 11–12, AI Engineer Code Summit Nov 10–12, Deepgram×Vapi phone workshop Nov 17, Bolna Symphony Nov 20, Deepgram HealthTech London Dec 3. Skip dinners/yacht/AdWeek/Finovate/year traps / Company Brain / Cartesia×Lorikeet / AI Infra Night / Founders Panel Agentic Stack / CTOs Pitch Engineers / u0k6rev6 (Nov 2025). Do not trust voiceaispace’s Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5.",
   },
 ];
 
@@ -875,4 +892,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-10-12";
+export const researchDate = "2026-10-13";
