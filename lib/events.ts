@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-10-13. Dates and venues sourced from
+ * Confirmed research date: 2026-10-14. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -81,41 +81,26 @@ const scrapedEvents: CalEvent[] = [
     note: "Invite-only; exact venue not yet published",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // 2026-10-13 (UTC afternoon / ~09:00 PT).
+  // 2026-10-14 (UTC afternoon / ~09:00 PT).
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
-  // AI / voice-agent-relevant listings. 67 discover entries across 3 pages.
-  // Pruned vendor rooms after Pacific Oct 12: Azure Foundry Voice Agents
-  // Upgraded + Agora NYC Voice AI Workshop (b59sk0v6 now 404). OIS workshop
-  // day (luma.com/OIS) ended Oct 12; summit digita-ghqh still tonight PT.
-  // NEW: Multi-Modal AI for Education Hackathon @ Snowflake (beta-3ue5,
-  // Nov 13 Menlo Park — Voice & Audio Tutors track). NEW vendor:
-  // Speechmatics × Roark London (c0iiab0e, Nov 5 — same day as Voice Agents
-  // Forum SF). Re-verified deepgram-2jm5 Nov 17 PT, Speak '26 Oct 29, VON
-  // Atlanta Oct 13–15, Voice Agents Forum Nov 5, VapiCon Nov 11–12, SANE
-  // Oct 30, Bolna Symphony Nov 20, Deepgram HealthTech London Dec 3,
+  // AI / voice-agent-relevant listings. 63 discover entries across 3 pages.
+  // Pruned after Pacific Oct 13 end times: Open Intelligence Summit
+  // (digita-ghqh → pastEvents2026) + Agentic Observability meetup (deleted).
+  // NEW owned: Text-to-Screech Haunted TTS Launch (assemb-42oc, Oct 29
+  // 5–8pm PT — same day as Deepgram Speak '26; directSubmissions).
+  // Re-verified deepgram-2jm5 Nov 17 PT, Speak '26 Oct 29, VON Atlanta
+  // Oct 13–15 (still live), Voice Agents Forum Nov 5, VapiCon Nov 11–12,
+  // SANE Oct 30, Bolna Symphony Nov 20, Deepgram HealthTech London Dec 3,
   // leverage-0gfk Oct 25, Sensory Oct 15, Rasa NYC Nov 3, PyTorch Con NA
   // Oct 20–21, Debate Night Oct 19, MITAI Oct 17, AI Startup Challenge
-  // 0oww46mm Oct 20. AGI House + AssemblyAI cals empty. Skipped: Company
-  // Brain, Open Together, Braintrust×Greylock evals, AI Infra Night drinks,
-  // Founders Panel Agentic Stack, Cartesia×Lorikeet, dinners/yacht, Korea
-  // DeepMind hack, CTOs Pitch Engineers, Fast Forward, Stripe Build Day,
-  // SGLang×LinkedIn, CoreWeave×NVIDIA Dynamo, u0k6rev6 / lsjiq8kf /
-  // wljlei8m / ch986w6u year traps, AI Builder's Night / Mahjong Party.
-  {
-    id: "open-intelligence-summit-sf-2026",
-    name: "Open Intelligence Summit",
-    category: "conference",
-    status: "confirmed",
-    dateLabel: "Oct 12–13",
-    sortDate: "2026-10-12",
-    endDate: "2026-10-13",
-    month: "2026-10",
-    location: "The Midway, 900 Marin St, San Francisco",
-    description:
-      "DigitalOcean-hosted open-weights / open-infra summit — Oct 12 MLH hands-on workshop day (now past) then Oct 13 evening Build/Serve/Run tracks on open models, agent memory/context standards, and production vLLM (luma.com/digita-ghqh ends ~6:30pm PT). Medium-priority Bay Area agent-infra builder room.",
-    sourceUrl: "https://www.digitalocean.com/open-intelligence-summit",
-    sourceLabel: "digitalocean.com",
-  },
+  // 0oww46mm Oct 20, beta-3ue5 Nov 13, Gladia Paris + Twilio London still
+  // today (end ~1pm PT). AGI House empty; AssemblyAI cal has assemb-42oc.
+  // Speechmatics NEW dinner 59dy3crh Nov 10 skipped (leaders dinner).
+  // Skipped: Fast Forward, Company Brain, Open Together, Braintrust×Greylock,
+  // AI Infra Night drinks, Founders Panel Agentic Stack, Cartesia×Lorikeet,
+  // Cline/Composio personal-agent hack, Backprop Summit, dinners/yacht,
+  // Korea DeepMind hack, CTOs Pitch Engineers, Stripe Build Day,
+  // SGLang×LinkedIn, CoreWeave×NVIDIA Dynamo, year traps, Mahjong Party.
   {
     id: "von-voice-conversations-atlanta-2026",
     name: "Fall '26 Voice and Conversations on the Net (VON)",
@@ -146,20 +131,8 @@ const scrapedEvents: CalEvent[] = [
   // 2026-10-08: Data Streaming Summit (Oct 7) → pastEvents2026 after Pacific day.
   // 2026-10-10: AI Native Summit + SF Tech Week Agent Day pruned after Pacific
   // Oct 9 (event/get end times were Oct 9 evening PT).
-  {
-    id: "luma-agentic-ai-observability-meetup-sf",
-    name: "Agentic + AI Observability Meetup SF",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Oct 13, 5–8pm PT",
-    sortDate: "2026-10-13",
-    month: "2026-10",
-    location: "San Francisco (Financial District; exact venue on registration)",
-    description:
-      "SF evening on agentic systems and AI observability — developer meetup for teams instrumenting, evaluating, and operating production agents. Strong agent-infra adjacency after Tech Week; voice is a plausible use case but not the stated theme.",
-    sourceUrl: "https://luma.com/Agentic_AI_10-13",
-    sourceLabel: "luma.com",
-  },
+  // 2026-10-14: Agentic Observability meetup (Agentic_AI_10-13) pruned after
+  // Pacific Oct 13 end; Open Intelligence Summit → pastEvents2026.
   {
     id: "mitai-conference-age-of-agency-2026",
     name: "MITAI Conference 2026: Age of Agency",
@@ -407,7 +380,26 @@ export const directSubmissions: CalEvent[] = [
   // Oct 1; Furby (w9e4qgol) was sole upcoming owned room on
   // AssemblyAI cal-R9IQUb53FUrolUF.
   // 2026-10-08: Furby (w9e4qgol) → pastEvents2026 after Pacific Oct 7;
-  // AssemblyAI cal-R9IQUb53FUrolUF now empty — no dated owned upcoming.
+  // AssemblyAI cal-R9IQUb53FUrolUF was empty until Text-to-Screech appeared.
+  // 2026-10-14: NEW owned Text-to-Screech Haunted TTS Launch (assemb-42oc,
+  // Oct 29 5–8pm PT) on AssemblyAI cal — same day as Deepgram Speak '26.
+  {
+    id: "assemblyai-text-to-screech-tts-launch-oct29-2026",
+    name: "Text-to-Screech: Haunted TTS Launch Event",
+    category: "meetup",
+    status: "confirmed",
+    dateLabel: "Oct 29, 5–8pm PT",
+    sortDate: "2026-10-29",
+    month: "2026-10",
+    location: "San Francisco, CA (Financial District; exact venue on registration)",
+    description:
+      "Owned AssemblyAI evening for a new text-to-speech model launch — interactive real-time TTS demos plus networking with voice-AI builders. Same calendar day as Deepgram Speak '26 (daytime Aviary conference) — highest-priority owned vs competitor SF coverage conflict this month (luma.com/assemb-42oc on AssemblyAI cal-R9IQUb53FUrolUF as of 2026-10-14).",
+    sourceUrl: "https://luma.com/assemb-42oc",
+    sourceLabel: "luma.com",
+    topics: ["tts"],
+    topicNote:
+      "Owned AssemblyAI TTS product-launch room — TTS pitch/demo night, not an STT or phone voice-agent build workshop.",
+  },
   {
     id: "voice-agents-forum-2026",
     name: "Voice Agents Forum",
@@ -563,7 +555,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Re-checked 2026-10-13: public Luma calendar cal-Lv1pgYv5ITFR4tC still empty (no dated upcoming items). Voice AI Hackathon (Sep 19) + AI Debates (aidebates delist) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice/agent rooms surfaced this pass.",
+      "Re-checked 2026-10-14: public Luma calendar cal-Lv1pgYv5ITFR4tC still empty (no dated upcoming items). Voice AI Hackathon (Sep 19) + AI Debates (aidebates delist) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice/agent rooms surfaced this pass.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -598,11 +590,18 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://www.voiceaispace.com/events",
     sourceLabel: "voiceaispace.com",
     watchNote:
-      "Re-checked 2026-10-13: Discover 67/3 pages. Pruned Azure Foundry Voice Agents Upgraded + Agora NYC (b59sk0v6 404) after Pacific Oct 12. NEW: Multi-Modal Education Hackathon Snowflake Menlo Park Nov 13 (beta-3ue5); Speechmatics × Roark London Nov 5 (c0iiab0e — vendor; same day as Voice Agents Forum SF). Still live: OIS summit tonight (digita-ghqh), VON Atlanta Oct 13–15, Sensory Oct 15, Ship a Voice Agent Oct 25, Speak '26 Oct 29, Voice Agents Forum Nov 5, Vapi×Deepgram mixer Nov 9, VapiCon Nov 11–12, AI Engineer Code Summit Nov 10–12, Deepgram×Vapi phone workshop Nov 17, Bolna Symphony Nov 20, Deepgram HealthTech London Dec 3. Skip dinners/yacht/AdWeek/Finovate/year traps / Company Brain / Cartesia×Lorikeet / AI Infra Night / Founders Panel Agentic Stack / CTOs Pitch Engineers / u0k6rev6 (Nov 2025). Do not trust voiceaispace’s Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5.",
+      "Re-checked 2026-10-14: Discover 63/3 pages. Pruned OIS (→ pastEvents2026) + Agentic Observability after Pacific Oct 13. NEW owned: Text-to-Screech Haunted TTS Launch Oct 29 5–8pm PT (assemb-42oc) — same day as Deepgram Speak '26. Still live: VON Atlanta Oct 13–15, Gladia Paris + Twilio London today, Sensory Oct 15, Ship a Voice Agent Oct 25, Speak '26 Oct 29, Voice Agents Forum Nov 5, Speechmatics × Roark London Nov 5 (c0iiab0e), Vapi×Deepgram mixer Nov 9, VapiCon Nov 11–12, AI Engineer Code Summit Nov 10–12, Deepgram×Vapi phone workshop Nov 17, Bolna Symphony Nov 20, Deepgram HealthTech London Dec 3. Skip Speechmatics leaders dinner 59dy3crh Nov 10 / Cartesia×Lorikeet / AI Infra Night / Founders Panel / Cline hack / Backprop / dinners/yacht / year traps. Do not trust voiceaispace Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5.",
   },
 ];
 
 export const pastEvents2026: PastEvent[] = [
+  {
+    id: "open-intelligence-summit-sf-2026",
+    name: "Open Intelligence Summit",
+    dateLabel: "Oct 12–13",
+    location: "The Midway, 900 Marin St, San Francisco",
+    note: "DigitalOcean open-weights / open-infra summit (workshop day + digita-ghqh evening) — kept for annual Bay Area open-infra / agent-memory builder recurrence watch",
+  },
   {
     id: "a16z-tech-week-2026",
     name: "a16z Tech Week",
@@ -892,4 +891,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-10-13";
+export const researchDate = "2026-10-14";
