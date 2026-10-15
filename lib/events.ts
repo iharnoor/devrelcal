@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-10-14. Dates and venues sourced from
+ * Confirmed research date: 2026-10-15. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -81,26 +81,25 @@ const scrapedEvents: CalEvent[] = [
     note: "Invite-only; exact venue not yet published",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // 2026-10-14 (UTC afternoon / ~09:00 PT).
+  // 2026-10-15 (UTC afternoon / ~09:00 PT).
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
-  // AI / voice-agent-relevant listings. 63 discover entries across 3 pages.
-  // Pruned after Pacific Oct 13 end times: Open Intelligence Summit
-  // (digita-ghqh → pastEvents2026) + Agentic Observability meetup (deleted).
-  // NEW owned: Text-to-Screech Haunted TTS Launch (assemb-42oc, Oct 29
-  // 5–8pm PT — same day as Deepgram Speak '26; directSubmissions).
-  // Re-verified deepgram-2jm5 Nov 17 PT, Speak '26 Oct 29, VON Atlanta
-  // Oct 13–15 (still live), Voice Agents Forum Nov 5, VapiCon Nov 11–12,
-  // SANE Oct 30, Bolna Symphony Nov 20, Deepgram HealthTech London Dec 3,
-  // leverage-0gfk Oct 25, Sensory Oct 15, Rasa NYC Nov 3, PyTorch Con NA
-  // Oct 20–21, Debate Night Oct 19, MITAI Oct 17, AI Startup Challenge
-  // 0oww46mm Oct 20, beta-3ue5 Nov 13, Gladia Paris + Twilio London still
-  // today (end ~1pm PT). AGI House empty; AssemblyAI cal has assemb-42oc.
-  // Speechmatics NEW dinner 59dy3crh Nov 10 skipped (leaders dinner).
+  // AI / voice-agent-relevant listings. 58 discover entries across 3 pages.
+  // Vendor prune after Pacific Oct 14: Gladia Paris (paris-voice-ai) + Twilio
+  // London Conversations (d14cpj24) removed from vendorEvents.
+  // Re-verified deepgram-2jm5 Nov 17 PT, Speak '26 Oct 29, assemb-42oc Oct 29
+  // evening, VON Atlanta Oct 13–15 (final day today), Sensory Oct 15 (today),
+  // Voice Agents Forum Nov 5, VapiCon Nov 11–12, SANE Oct 30, Bolna Symphony
+  // Nov 20, Deepgram HealthTech London Dec 3, leverage-0gfk Oct 25, Rasa NYC
+  // Nov 3, PyTorch Con NA Oct 20–21, Debate Night Oct 19, MITAI Oct 17, AI
+  // Startup Challenge 0oww46mm Oct 20, beta-3ue5 Nov 13, Speechmatics
+  // c0iiab0e Nov 5. AGI House empty; AssemblyAI cal has assemb-42oc.
+  // Speechmatics dinner 59dy3crh Nov 10 skipped (leaders dinner).
   // Skipped: Fast Forward, Company Brain, Open Together, Braintrust×Greylock,
   // AI Infra Night drinks, Founders Panel Agentic Stack, Cartesia×Lorikeet,
   // Cline/Composio personal-agent hack, Backprop Summit, dinners/yacht,
   // Korea DeepMind hack, CTOs Pitch Engineers, Stripe Build Day,
-  // SGLang×LinkedIn, CoreWeave×NVIDIA Dynamo, year traps, Mahjong Party.
+  // SGLang×LinkedIn, CoreWeave×NVIDIA Dynamo, year traps (dihiwe4q Apr,
+  // ch986w6u Feb, wljlei8m Sep), Mahjong Party. No net-new scheduledEvents.
   {
     id: "von-voice-conversations-atlanta-2026",
     name: "Fall '26 Voice and Conversations on the Net (VON)",
@@ -133,6 +132,8 @@ const scrapedEvents: CalEvent[] = [
   // Oct 9 (event/get end times were Oct 9 evening PT).
   // 2026-10-14: Agentic Observability meetup (Agentic_AI_10-13) pruned after
   // Pacific Oct 13 end; Open Intelligence Summit → pastEvents2026.
+  // 2026-10-15: no main-calendar prunes yet (VON + Sensory still live today);
+  // Gladia Paris + Twilio London Oct 14 pruned from vendorEvents only.
   {
     id: "mitai-conference-age-of-agency-2026",
     name: "MITAI Conference 2026: Age of Agency",
@@ -555,7 +556,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Re-checked 2026-10-14: public Luma calendar cal-Lv1pgYv5ITFR4tC still empty (no dated upcoming items). Voice AI Hackathon (Sep 19) + AI Debates (aidebates delist) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice/agent rooms surfaced this pass.",
+      "Re-checked 2026-10-15: public Luma calendar cal-Lv1pgYv5ITFR4tC still empty (no dated upcoming items). Voice AI Hackathon (Sep 19) + AI Debates (aidebates delist) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice/agent rooms surfaced this pass.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -590,7 +591,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://www.voiceaispace.com/events",
     sourceLabel: "voiceaispace.com",
     watchNote:
-      "Re-checked 2026-10-14: Discover 63/3 pages. Pruned OIS (→ pastEvents2026) + Agentic Observability after Pacific Oct 13. NEW owned: Text-to-Screech Haunted TTS Launch Oct 29 5–8pm PT (assemb-42oc) — same day as Deepgram Speak '26. Still live: VON Atlanta Oct 13–15, Gladia Paris + Twilio London today, Sensory Oct 15, Ship a Voice Agent Oct 25, Speak '26 Oct 29, Voice Agents Forum Nov 5, Speechmatics × Roark London Nov 5 (c0iiab0e), Vapi×Deepgram mixer Nov 9, VapiCon Nov 11–12, AI Engineer Code Summit Nov 10–12, Deepgram×Vapi phone workshop Nov 17, Bolna Symphony Nov 20, Deepgram HealthTech London Dec 3. Skip Speechmatics leaders dinner 59dy3crh Nov 10 / Cartesia×Lorikeet / AI Infra Night / Founders Panel / Cline hack / Backprop / dinners/yacht / year traps. Do not trust voiceaispace Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5.",
+      "Re-checked 2026-10-15: Discover 58/3 pages. Pruned Gladia Paris + Twilio London Oct 14 from vendorEvents. Still live: VON Atlanta Oct 13–15 (final day), Sensory Oct 15 (today), Ship a Voice Agent Oct 25, Speak '26 Oct 29 + owned Text-to-Screech (assemb-42oc) same evening, Voice Agents Forum Nov 5, Speechmatics × Roark London Nov 5 (c0iiab0e), Vapi×Deepgram mixer Nov 9, VapiCon Nov 11–12, AI Engineer Code Summit Nov 10–12, Deepgram×Vapi phone workshop Nov 17, Bolna Symphony Nov 20, Deepgram HealthTech London Dec 3. Skip Speechmatics leaders dinner 59dy3crh Nov 10 / Cartesia×Lorikeet / AI Infra Night / Founders Panel / Cline hack / Backprop / dinners/yacht / year traps (dihiwe4q). Do not trust voiceaispace Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5.",
   },
 ];
 
@@ -891,4 +892,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-10-14";
+export const researchDate = "2026-10-15";
