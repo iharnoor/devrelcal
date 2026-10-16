@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-10-15. Dates and venues sourced from
+ * Confirmed research date: 2026-10-16. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -81,43 +81,25 @@ const scrapedEvents: CalEvent[] = [
     note: "Invite-only; exact venue not yet published",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // 2026-10-15 (UTC afternoon / ~09:00 PT).
+  // 2026-10-16 (~09:00 PT / 16:00 UTC).
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
-  // AI / voice-agent-relevant listings. 58 discover entries across 3 pages.
-  // Vendor prune after Pacific Oct 14: Gladia Paris (paris-voice-ai) + Twilio
-  // London Conversations (d14cpj24) removed from vendorEvents.
+  // AI / voice-agent-relevant listings. 57 discover entries across 3 pages.
+  // NEW owned: Voice hackathon week Hack into speech (msrwwjby, Oct 16–24 Discord)
+  // on AssemblyAI cal-R9IQUb53FUrolUF — added to directSubmissions.
+  // Pruned after Pacific Oct 15: VON Atlanta → pastEvents2026; Sensory×Qualcomm
+  // webinar deleted; SignalWire VON VoiceAI LIVE! cleared from vendorEvents.
   // Re-verified deepgram-2jm5 Nov 17 PT, Speak '26 Oct 29, assemb-42oc Oct 29
-  // evening, VON Atlanta Oct 13–15 (final day today), Sensory Oct 15 (today),
-  // Voice Agents Forum Nov 5, VapiCon Nov 11–12, SANE Oct 30, Bolna Symphony
-  // Nov 20, Deepgram HealthTech London Dec 3, leverage-0gfk Oct 25, Rasa NYC
-  // Nov 3, PyTorch Con NA Oct 20–21, Debate Night Oct 19, MITAI Oct 17, AI
-  // Startup Challenge 0oww46mm Oct 20, beta-3ue5 Nov 13, Speechmatics
-  // c0iiab0e Nov 5. AGI House empty; AssemblyAI cal has assemb-42oc.
+  // evening, Voice Agents Forum Nov 5, VapiCon Nov 11–12, SANE Oct 30, Bolna
+  // Symphony Nov 20, Deepgram HealthTech London Dec 3, leverage-0gfk Oct 25,
+  // Rasa NYC Nov 3, PyTorch Con NA Oct 20–21, Debate Night Oct 19, MITAI Oct 17,
+  // AI Startup Challenge 0oww46mm Oct 20, beta-3ue5 Nov 13, Speechmatics
+  // c0iiab0e Nov 5. AGI House empty; AssemblyAI cal has msrwwjby + assemb-42oc.
   // Speechmatics dinner 59dy3crh Nov 10 skipped (leaders dinner).
-  // Skipped: Fast Forward, Company Brain, Open Together, Braintrust×Greylock,
-  // AI Infra Night drinks, Founders Panel Agentic Stack, Cartesia×Lorikeet,
-  // Cline/Composio personal-agent hack, Backprop Summit, dinners/yacht,
-  // Korea DeepMind hack, CTOs Pitch Engineers, Stripe Build Day,
-  // SGLang×LinkedIn, CoreWeave×NVIDIA Dynamo, year traps (dihiwe4q Apr,
-  // ch986w6u Feb, wljlei8m Sep), Mahjong Party. No net-new scheduledEvents.
-  {
-    id: "von-voice-conversations-atlanta-2026",
-    name: "Fall '26 Voice and Conversations on the Net (VON)",
-    category: "conference",
-    status: "confirmed",
-    dateLabel: "Oct 13–15",
-    sortDate: "2026-10-13",
-    endDate: "2026-10-15",
-    month: "2026-10",
-    location: "Sandy Springs Performing Arts Center, Atlanta, GA",
-    description:
-      "Jeff Pulver’s AI-communications industry conference — Oct 13 pre-conference pairs the vCon Summit with VoiceAI LIVE! demo stages (SignalWire confirmed; Vapi invited), then Oct 14–15 main program on carriers, voice-AI platforms, and enterprise deployments. Highest-signal non–Bay Area contact-center / voice-agent industry room this window (surfaced via voiceaispace + vonevolution.com).",
-    sourceUrl: "https://www.vonevolution.com/",
-    sourceLabel: "vonevolution.com",
-    topics: ["voice-agents", "streaming", "stt"],
-    topicNote:
-      "VoiceAI LIVE! and main conference are production voice / CX rooms — not every vCon standards track is an STT pitch; prioritize demo and deployment sessions.",
-  },
+  // Skipped: Open Together, Braintrust×Greylock, AI Infra Night drinks,
+  // Founders Panel Agentic Stack, Cartesia×Lorikeet, Cline/Composio hack,
+  // Backprop Summit, dinners/yacht, Are We Running Too Many Agents (exe.dev),
+  // OpenClaw NVIDIA meetup, Stripe Build Day, SGLang×LinkedIn, GTM hackathons,
+  // year traps (dihiwe4q Apr, ch986w6u Feb, wljlei8m Sep), Mahjong Party.
   // Sourced from Eventbrite's SF Bay Area search (2026-07-17), filtered from
   // several hundred loosely-keyword-matched results down to genuine
   // voice-agent / speech-AI relevance — Eventbrite's own search is much noisier
@@ -132,8 +114,8 @@ const scrapedEvents: CalEvent[] = [
   // Oct 9 (event/get end times were Oct 9 evening PT).
   // 2026-10-14: Agentic Observability meetup (Agentic_AI_10-13) pruned after
   // Pacific Oct 13 end; Open Intelligence Summit → pastEvents2026.
-  // 2026-10-15: no main-calendar prunes yet (VON + Sensory still live today);
-  // Gladia Paris + Twilio London Oct 14 pruned from vendorEvents only.
+  // 2026-10-15: Gladia Paris + Twilio London Oct 14 pruned from vendorEvents.
+  // 2026-10-16: VON Atlanta → pastEvents2026; Sensory webinar pruned.
   {
     id: "mitai-conference-age-of-agency-2026",
     name: "MITAI Conference 2026: Age of Agency",
@@ -254,24 +236,6 @@ const scrapedEvents: CalEvent[] = [
     topics: ["voice-agents", "stt", "streaming"],
   },
   {
-    id: "sensory-qualcomm-voice-wearables-webinar",
-    name: "Voice Is the New UI for Intelligent Wearables — Sensory × Qualcomm",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Oct 15, 9:00am PT",
-    sortDate: "2026-10-15",
-    month: "2026-10",
-    location: "Online (Zoom)",
-    description:
-      "Sensory × Qualcomm technical webinar on on-device voice for wearables — wake words and speech-to-text running on Snapdragon Wear Elite’s low-power island, plus a look at the full embedded voice stack for smartwatches/glasses. Free Zoom registration; surfaced via voiceaispace (missed Bay Area Luma discover). Competitive on-device / edge-STT signal adjacent to cloud STT DevRel.",
-    sourceUrl:
-      "https://sensory.zoom.us/webinar/register/7417906142854/WN_II8W-lBWTFCHkm0OSTXJNg",
-    sourceLabel: "sensory.zoom.us",
-    topics: ["stt", "audio-intel"],
-    topicNote:
-      "Dedicated on-device wake-word / embedded STT webinar — edge speech stack, not a cloud voice-agent build room.",
-  },
-  {
     id: "sane-2026-speech-audio-northeast",
     name: "SANE 2026 — Speech and Audio in the Northeast",
     category: "conference",
@@ -384,6 +348,26 @@ export const directSubmissions: CalEvent[] = [
   // AssemblyAI cal-R9IQUb53FUrolUF was empty until Text-to-Screech appeared.
   // 2026-10-14: NEW owned Text-to-Screech Haunted TTS Launch (assemb-42oc,
   // Oct 29 5–8pm PT) on AssemblyAI cal — same day as Deepgram Speak '26.
+  // 2026-10-16: NEW owned Voice hackathon week — Hack into speech (msrwwjby,
+  // Oct 16–24 Discord) on AssemblyAI cal — TTS API hackathon + live kickoff.
+  {
+    id: "assemblyai-voice-hackathon-week-hack-into-speech-oct2026",
+    name: "Voice hackathon week: Hack into speech",
+    category: "hackathon",
+    status: "confirmed",
+    dateLabel: "Oct 16–24",
+    sortDate: "2026-10-16",
+    endDate: "2026-10-24",
+    month: "2026-10",
+    location: "Online (Discord)",
+    description:
+      "Owned AssemblyAI week-long online voice hackathon focused on the new Text-to-Speech API — live kickoff build of a working TTS app with Voice AI engineers, then teams of 1–4 ship voice agents / audio products ($2k prize pool). Live event/get (msrwwjby) is Oct 16 7pm–Oct 24 11am PT on AssemblyAI cal-R9IQUb53FUrolUF; also listed on voiceaispace as of 2026-10-16.",
+    sourceUrl: "https://luma.com/msrwwjby",
+    sourceLabel: "luma.com",
+    topics: ["tts", "voice-agents"],
+    topicNote:
+      "Owned AssemblyAI TTS hackathon week — primary pitch is new TTS API for voice products; not an STT benchmark room.",
+  },
   {
     id: "assemblyai-text-to-screech-tts-launch-oct29-2026",
     name: "Text-to-Screech: Haunted TTS Launch Event",
@@ -556,7 +540,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Re-checked 2026-10-15: public Luma calendar cal-Lv1pgYv5ITFR4tC still empty (no dated upcoming items). Voice AI Hackathon (Sep 19) + AI Debates (aidebates delist) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice/agent rooms surfaced this pass.",
+      "Re-checked 2026-10-16: public Luma calendar cal-Lv1pgYv5ITFR4tC still empty (no dated upcoming items). Voice AI Hackathon (Sep 19) + AI Debates (aidebates delist) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice/agent rooms surfaced this pass.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -591,11 +575,18 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://www.voiceaispace.com/events",
     sourceLabel: "voiceaispace.com",
     watchNote:
-      "Re-checked 2026-10-15: Discover 58/3 pages. Pruned Gladia Paris + Twilio London Oct 14 from vendorEvents. Still live: VON Atlanta Oct 13–15 (final day), Sensory Oct 15 (today), Ship a Voice Agent Oct 25, Speak '26 Oct 29 + owned Text-to-Screech (assemb-42oc) same evening, Voice Agents Forum Nov 5, Speechmatics × Roark London Nov 5 (c0iiab0e), Vapi×Deepgram mixer Nov 9, VapiCon Nov 11–12, AI Engineer Code Summit Nov 10–12, Deepgram×Vapi phone workshop Nov 17, Bolna Symphony Nov 20, Deepgram HealthTech London Dec 3. Skip Speechmatics leaders dinner 59dy3crh Nov 10 / Cartesia×Lorikeet / AI Infra Night / Founders Panel / Cline hack / Backprop / dinners/yacht / year traps (dihiwe4q). Do not trust voiceaispace Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5.",
+      "Re-checked 2026-10-16: Discover 57/3 pages. NEW owned Voice hackathon week (msrwwjby, Oct 16–24 Discord). Pruned VON Atlanta → pastEvents2026 + Sensory webinar + SignalWire VON vendor entry after Pacific Oct 15. Still live: Ship a Voice Agent Oct 25, Speak '26 Oct 29 + owned Text-to-Screech (assemb-42oc) same evening, Voice Agents Forum Nov 5, Speechmatics × Roark London Nov 5 (c0iiab0e), Vapi×Deepgram mixer Nov 9, VapiCon Nov 11–12, AI Engineer Code Summit Nov 10–12, Deepgram×Vapi phone workshop Nov 17, Bolna Symphony Nov 20, Deepgram HealthTech London Dec 3. Skip Speechmatics leaders dinner 59dy3crh Nov 10 / Cartesia×Lorikeet / AI Infra Night / Founders Panel / Cline hack / Backprop / dinners/yacht / year traps (dihiwe4q). Do not trust voiceaispace Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5.",
   },
 ];
 
 export const pastEvents2026: PastEvent[] = [
+  {
+    id: "von-voice-conversations-atlanta-2026",
+    name: "Fall '26 Voice and Conversations on the Net (VON)",
+    dateLabel: "Oct 13–15",
+    location: "Sandy Springs Performing Arts Center, Atlanta, GA",
+    note: "Jeff Pulver AI-communications / VoiceAI LIVE! conference (SignalWire confirmed; Vapi invited) — kept for annual contact-center / voice-agent industry recurrence watch",
+  },
   {
     id: "open-intelligence-summit-sf-2026",
     name: "Open Intelligence Summit",
@@ -892,4 +883,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-10-15";
+export const researchDate = "2026-10-16";
