@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-10-19. Dates and venues sourced from
+ * Confirmed research date: 2026-10-20. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -56,14 +56,14 @@ const scrapedEvents: CalEvent[] = [
     category: "conference",
     status: "tentative",
     dateLabel: "Oct (exact dates TBA)",
-    sortDate: "2026-10-19",
+    sortDate: "2026-10-20",
     month: "2026-10",
     location: "Bay Area (inaugural 2025 edition was SF)",
     description:
-      "Linux Foundation / PyTorch event — inaugural edition ran Oct 18–26, 2025. 2026 hub dates still TBA on the LF page, but Open Weight Debate Night (luma.com/592fcwx2, Oct 19 evening PT) confirms a Bay Area 2026 edition is running — treat as tentative until the official schedule posts.",
+      "Linux Foundation / PyTorch event — inaugural edition ran Oct 18–26, 2025. 2026 hub dates still TBA on the LF page; Open Weight Debate Night (luma.com/592fcwx2) ran Oct 19 evening PT and confirmed Bay Area activity — treat the full week as tentative until the official schedule posts.",
     sourceUrl: "https://events.linuxfoundation.org/open-source-ai-week/",
     sourceLabel: "events.linuxfoundation.org",
-    note: "Tentative — Debate Night Oct 19 confirms activity; check LF schedule before calendaring the full week",
+    note: "Tentative — Debate Night Oct 19 confirmed activity; check LF schedule before calendaring the full week",
   },
   {
     id: "cerebral-valley-summit-2026",
@@ -81,24 +81,24 @@ const scrapedEvents: CalEvent[] = [
     note: "Invite-only; exact venue not yet published",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // 2026-10-19 (~09:00 PT / 16:00 UTC).
+  // 2026-10-20 (~09:00 PT / 16:00 UTC).
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
-  // AI / voice-agent-relevant listings. 56 discover entries across 3 pages.
-  // No new Bay Area discover adds. Vendor NEW: ElevenLabs ElevenAgents Build
-  // Series (Nov 10 + Nov 17) + travel booking workshop (Nov 11 virtual).
+  // AI / voice-agent-relevant listings. 53 discover entries across 3 pages.
+  // No new Bay Area discover adds. DATE CORRECTION: owned msrwwjby shifted to
+  // Oct 27–Nov 7 via event/get (was Oct 16–24; Luma body text still stale).
+  // Vendor NEW: Agora Lisbon Scaling Voice AI (wqg33o39, Nov 10 Web Summit week).
+  // Pruned: Debate Night 592fcwx2 after Pacific Oct 19 end.
   // Re-verified deepgram-2jm5 Nov 17 PT, Speak '26 Oct 29, assemb-42oc Oct 29
-  // evening, msrwwjby Oct 16–24 (still live via event/get; AssemblyAI cal only
-  // assemb-42oc), Voice Agents Forum Nov 5 (Deepgram DevRel on roster), VapiCon
-  // Nov 11–12, SANE Oct 30, Bolna Symphony Nov 20, Deepgram HealthTech London
-  // Dec 3, leverage-0gfk Oct 25, Rasa NYC Nov 3, PyTorch Con NA Oct 20–21,
-  // Debate Night Oct 19, AI Startup Challenge 0oww46mm Oct 20, beta-3ue5 Nov 13,
-  // Speechmatics c0iiab0e Nov 5, AGNTCon Oct 22–23. AGI House empty; Agora empty;
-  // Cartesia still Cartesia×Lorikeet (skip). Speechmatics dinner 59dy3crh skipped.
+  // evening, Voice Agents Forum Nov 5, VapiCon Nov 11–12, SANE Oct 30, Bolna
+  // Symphony Nov 20, Deepgram HealthTech London Dec 3, leverage-0gfk Oct 25,
+  // Rasa NYC Nov 3 (title refresh), PyTorch Con NA Oct 20–21, AI Startup
+  // Challenge 0oww46mm Oct 20, beta-3ue5 Nov 13, Speechmatics c0iiab0e Nov 5,
+  // AGNTCon Oct 22–23. AGI House empty; Cartesia still Cartesia×Lorikeet (skip).
+  // Speechmatics dinner 59dy3crh skipped.
   // Skipped: Cline/Composio hack, GTM hackathons, AI Infra Night, Founders Panel,
   // Cartesia×Lorikeet, Backprop Summit, dinners/yacht, Are We Running Too Many
   // Agents, OpenClaw NVIDIA meetup, Stripe Build Day, SGLang×LinkedIn, Mux AI
-  // trivia, CTOs Pitch Engineers (London networking), Gemini 4 Argon SF Hackathon,
-  // Wispr/WeMakeDevs India dictation challenge, year traps (dihiwe4q Apr), Mahjong.
+  // trivia, Gemini 4 Argon SF Hackathon, year traps (dihiwe4q Apr), Mahjong.
   // Sourced from Eventbrite's SF Bay Area search (2026-07-17), filtered from
   // several hundred loosely-keyword-matched results down to genuine
   // voice-agent / speech-AI relevance — Eventbrite's own search is much noisier
@@ -117,20 +117,7 @@ const scrapedEvents: CalEvent[] = [
   // 2026-10-16: VON Atlanta → pastEvents2026; Sensory webinar pruned.
   // 2026-10-18: MITAI → pastEvents2026; AGNTCon + MCPCon NA added.
   // 2026-10-19: ElevenLabs Build Series + booking workshop added (vendorEvents).
-  {
-    id: "luma-open-weight-debate-night-osai-week",
-    name: "Open Source AI Week 2026 | Open Weight Debate Night",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Oct 19, 5–9pm PT",
-    sortDate: "2026-10-19",
-    month: "2026-10",
-    location: "San Francisco, CA",
-    description:
-      "Open Source AI Week evening debate on open-weight models — confirmed Bay Area dated signal while the full LF OSAI Week hub schedule remains TBA. Strong open-source / infra-builder adjacency; not a dedicated voice room.",
-    sourceUrl: "https://luma.com/592fcwx2",
-    sourceLabel: "luma.com",
-  },
+  // 2026-10-20: Debate Night pruned; msrwwjby date correction; Agora Lisbon added.
   {
     id: "pytorch-conference-north-america-2026",
     name: "PyTorch Conference North America 2026",
@@ -177,7 +164,7 @@ const scrapedEvents: CalEvent[] = [
   },
   {
     id: "rasa-agent-factory-voice-masterclass-nyc",
-    name: "Building the Agent Factory: Build, Test and Improve Agents as a Team",
+    name: "Build an Agent Factory with OpenAI’s Agents API and Rasa Mantle",
     category: "meetup",
     status: "confirmed",
     dateLabel: "Nov 3, 3–6pm ET",
@@ -185,7 +172,7 @@ const scrapedEvents: CalEvent[] = [
     month: "2026-11",
     location: "The Assembly, 2 Park Ave, New York, NY",
     description:
-      "Rasa-hosted NYC masterclass — small groups build, test, and harden a customer-service voice AI agent against a simulated order system (ambiguous requests, shipped orders, API failures). Hands-on CX / voice-agent engineering room the week before VapiCon (luma.com/56nl6dpz + voiceaispace as of 2026-10-10).",
+      "Rasa-hosted NYC workshop — start from a working customer-service voice agent on Rasa Mantle, then use OpenAI’s Agents API to investigate failures, propose fixes, and re-run evals in a small “agent factory” loop. Hands-on CX / voice-agent engineering room the week before VapiCon (luma.com/56nl6dpz title refresh as of 2026-10-20).",
     sourceUrl: "https://luma.com/56nl6dpz",
     sourceLabel: "luma.com",
     topics: ["voice-agents"],
@@ -351,19 +338,21 @@ export const directSubmissions: CalEvent[] = [
   // 2026-10-14: NEW owned Text-to-Screech Haunted TTS Launch (assemb-42oc,
   // Oct 29 5–8pm PT) on AssemblyAI cal — same day as Deepgram Speak '26.
   // 2026-10-16: NEW owned Voice hackathon week — Hack into speech (msrwwjby,
-  // Oct 16–24 Discord) on AssemblyAI cal — TTS API hackathon + live kickoff.
+  // Discord) on AssemblyAI cal — TTS API hackathon + live kickoff.
+  // 2026-10-20: DATE CORRECTION — event/get moved msrwwjby to Oct 27–Nov 7
+  // (was Oct 16–24; Luma body copy still stale).
   {
     id: "assemblyai-voice-hackathon-week-hack-into-speech-oct2026",
     name: "Voice hackathon week: Hack into speech",
     category: "hackathon",
     status: "confirmed",
-    dateLabel: "Oct 16–24",
-    sortDate: "2026-10-16",
-    endDate: "2026-10-24",
+    dateLabel: "Oct 27–Nov 7",
+    sortDate: "2026-10-27",
+    endDate: "2026-11-07",
     month: "2026-10",
     location: "Online (Discord)",
     description:
-      "Owned AssemblyAI week-long online voice hackathon focused on the new Text-to-Speech API — live kickoff build of a working TTS app with Voice AI engineers, then teams of 1–4 ship voice agents / audio products ($2k prize pool). Live event/get (msrwwjby) is Oct 16 7pm–Oct 24 11am PT on AssemblyAI cal-R9IQUb53FUrolUF; also listed on voiceaispace as of 2026-10-16.",
+      "Owned AssemblyAI online voice hackathon focused on the new Text-to-Speech API — live kickoff build of a working TTS app with Voice AI engineers, then teams of 1–4 ship voice agents / audio products ($2k prize pool). DATE CORRECTION 2026-10-20: live event/get (msrwwjby) is now Oct 27 7pm–Nov 7 11am PT on AssemblyAI cal-R9IQUb53FUrolUF (was Oct 16–24; Luma body copy still shows stale Oct 15–23 — trust event/get).",
     sourceUrl: "https://luma.com/msrwwjby",
     sourceLabel: "luma.com",
     topics: ["tts", "voice-agents"],
@@ -542,7 +531,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Re-checked 2026-10-19: public Luma calendar cal-Lv1pgYv5ITFR4tC still empty (no dated upcoming items). Voice AI Hackathon (Sep 19) + AI Debates (aidebates delist) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice/agent rooms surfaced this pass.",
+      "Re-checked 2026-10-20: public Luma calendar cal-Lv1pgYv5ITFR4tC still empty (no dated upcoming items). Voice AI Hackathon (Sep 19) + AI Debates (aidebates delist) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice/agent rooms surfaced this pass.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -577,7 +566,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://www.voiceaispace.com/events",
     sourceLabel: "voiceaispace.com",
     watchNote:
-      "Re-checked 2026-10-19: Discover 56/3 pages — no new Bay Area discover adds. Vendor NEW: ElevenLabs ElevenAgents Build Series (Nov 10 + Nov 17 Go Live) + travel booking workshop (Nov 11 virtual). Still live: owned Voice hackathon week (msrwwjby, Oct 16–24 Discord — event/get live; AssemblyAI cal only assemb-42oc), Debate Night Oct 19, Ship a Voice Agent Oct 25, Speak '26 Oct 29 + owned Text-to-Screech same evening, Voice Agents Forum Nov 5 (Deepgram DevRel on roster), Speechmatics × Roark London Nov 5 (c0iiab0e), Vapi×Deepgram mixer Nov 9, VapiCon Nov 11–12, AI Engineer Code Summit Nov 10–12, Deepgram×Vapi phone workshop Nov 17 (same day as ElevenLabs Go Live webinar), Bolna Symphony Nov 20, Deepgram HealthTech London Dec 3. Skip Speechmatics leaders dinner 59dy3crh Nov 10 / Cartesia×Lorikeet / AI Infra Night / Founders Panel / Cline hack / Mux trivia / dinners/yacht / year traps (dihiwe4q). Do not trust voiceaispace Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5.",
+      "Re-checked 2026-10-20: Discover 53/3 pages — no new Bay Area discover adds. DATE CORRECTION: owned Voice hackathon week (msrwwjby) now Oct 27–Nov 7 via event/get (was Oct 16–24). Vendor NEW: Agora Lisbon Scaling Voice AI (wqg33o39, Nov 10). Debate Night pruned after Pacific Oct 19. Still live: Ship a Voice Agent Oct 25, Speak '26 Oct 29 + owned Text-to-Screech same evening, Voice Agents Forum Nov 5 (Deepgram DevRel on roster), Speechmatics × Roark London Nov 5 (c0iiab0e), Vapi×Deepgram mixer Nov 9, Agora Lisbon + AI Engineer Code Summit Nov 10–12, VapiCon Nov 11–12, Deepgram×Vapi phone workshop Nov 17 (same day as ElevenLabs Go Live webinar), Bolna Symphony Nov 20, Deepgram HealthTech London Dec 3. Skip Speechmatics leaders dinner 59dy3crh Nov 10 / Cartesia×Lorikeet / AI Infra Night / Founders Panel / Mux trivia / dinners/yacht / year traps (dihiwe4q). Do not trust voiceaispace Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5.",
   },
 ];
 
@@ -892,4 +881,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-10-19";
+export const researchDate = "2026-10-20";
