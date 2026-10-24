@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-10-23. Dates and venues sourced from
+ * Confirmed research date: 2026-10-24. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -60,10 +60,10 @@ const scrapedEvents: CalEvent[] = [
     month: "2026-10",
     location: "Bay Area (inaugural 2025 edition was SF)",
     description:
-      "Linux Foundation / PyTorch event — inaugural edition ran Oct 18–26, 2025. 2026 hub dates still TBA on the LF page; Open Weight Debate Night (luma.com/592fcwx2) ran Oct 19 evening PT and confirmed Bay Area activity — treat the full week as tentative until the official schedule posts.",
+      "Linux Foundation / PyTorch event — inaugural edition ran Oct 18–26, 2025. 2026 hub dates still TBA on the LF page as of 2026-10-24; Open Weight Debate Night (luma.com/592fcwx2) ran Oct 19 evening PT. Late-Oct window is ending without a published full-week schedule — keep tentative until LF posts dates or prune next pass if nothing lands.",
     sourceUrl: "https://events.linuxfoundation.org/open-source-ai-week/",
     sourceLabel: "events.linuxfoundation.org",
-    note: "Tentative — Debate Night Oct 19 confirmed activity; check LF schedule before calendaring the full week",
+    note: "Tentative — Debate Night Oct 19 confirmed activity; no full 2026 hub schedule published as of Oct 24",
   },
   {
     id: "cerebral-valley-summit-2026",
@@ -81,25 +81,23 @@ const scrapedEvents: CalEvent[] = [
     note: "Invite-only; exact venue not yet published",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // 2026-10-23 (~09:00 PT / 16:00 UTC).
+  // 2026-10-24 (~09:00 PT / 16:00 UTC).
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
-  // AI / voice-agent-relevant listings. 56 discover entries across 3 pages.
+  // AI / voice-agent-relevant listings. 63 discover entries across 3 pages.
   // No new Bay Area discover adds (Are We Running Too Many Agents / Rootly
   // production agents / Braintrust evals / Stripe Build Day / Night Hack /
   // Backprop Summit / Wispr Flow fireside / Cartesia×Lorikeet drinks /
-  // Matcha workshop skipped as low-signal or non-voice).
-  // Pruned: Zero Trust for AI (Eventbrite, Oct 22) after Pacific day passed.
-  // UPDATED (vendor): Deepgram HealthTech London (fimimqjw) time corrected to
-  // Dec 3 6–8:30pm GMT via event/get (was 4–8pm). Meetup mirror for
-  // deepgram-2jm5 shows Canceled — Luma still open (86 registered) so keep.
+  // Matcha workshop / DNAForge biology hack skipped as low-signal or non-voice).
+  // Pruned after Pacific Oct 23 end: AGNTCon + MCPCon NA → pastEvents2026;
+  // Multi-Model Hackathon (beta-79jb) → pastEvents2026.
   // Re-verified deepgram-2jm5 Nov 17 PT, Speak '26 Oct 29, assemb-42oc Oct 29
   // evening, msrwwjby Oct 27–Nov 7, Voice Agents Forum Nov 5, VapiCon Nov 11–12,
   // SANE Oct 30, Bolna Symphony Nov 20, leverage-0gfk Oct 25, Rasa NYC Nov 3,
-  // beta-3ue5 Nov 13, Speechmatics c0iiab0e Nov 5, AGNTCon Oct 22–23 (day 2
-  // in progress), Multi-Model Hackathon beta-79jb ends today 6:30pm PT,
-  // Cartesia 94y4it1j Nov 3 + xrj6gzm2 Nov 10, Agora Lisbon wqg33o39 Nov 10,
-  // Vapi NYC vapi-pjzk Dec 9. AGI House cal empty. Skip Cartesia dinners /
-  // Speechmatics 59dy3crh / Vapi healthcare dinner vapi-2wdx / ice-cream popup.
+  // beta-3ue5 Nov 13, Speechmatics c0iiab0e Nov 5, Cartesia 94y4it1j Nov 3 +
+  // xrj6gzm2 Nov 10, Agora Lisbon wqg33o39 Nov 10, Vapi NYC vapi-pjzk Dec 9,
+  // fimimqjw Dec 3 6–8:30pm GMT. AGI House cal empty. LiveKit/Daily/Smallest
+  // cals empty. Skip Cartesia dinners / Speechmatics 59dy3crh / Vapi healthcare
+  // dinner vapi-2wdx / ice-cream popup / Gemini 4 Argon SF Hackathon.
   // Skipped: year traps (v2bksbb8 May, dihiwe4q Apr), Mahjong, dinners/yacht.
   // 2026-10-18: MITAI → pastEvents2026; AGNTCon + MCPCon NA added.
   // 2026-10-19: ElevenLabs Build Series + booking workshop added (vendorEvents).
@@ -107,21 +105,7 @@ const scrapedEvents: CalEvent[] = [
   // 2026-10-21: AI Startup Challenge pruned; Cartesia S2S First Look SF added.
   // 2026-10-22: PyTorch → past; Cartesia Multimodal rename; ElevenLabs refresh.
   // 2026-10-23: Zero Trust pruned; Deepgram HealthTech London time correction.
-  {
-    id: "agntcon-mcpcon-north-america-2026",
-    name: "AGNTCon + MCPCon North America: The AI Agents Conference",
-    category: "conference",
-    status: "confirmed",
-    dateLabel: "Oct 22–23",
-    sortDate: "2026-10-22",
-    endDate: "2026-10-23",
-    month: "2026-10",
-    location: "San Jose McEnery Convention Center, San Jose, CA",
-    description:
-      "Linux Foundation / Agentic AI Foundation two-day San Jose conference on production agentic engineering — MCP, evals, security, interoperability, multi-agent systems, and agent infra (~3,500 attendees, 150+ talks, workshops). Strong Bay Area agent-builder room; not voice-specific, but high-density audience for voice-agent platform adjacency (events.linuxfoundation.org as of 2026-10-23).",
-    sourceUrl: "https://events.linuxfoundation.org/agntcon-mcpcon-north-america/",
-    sourceLabel: "events.linuxfoundation.org",
-  },
+  // 2026-10-24: AGNTCon + Multi-Model Hackathon → pastEvents2026; discover 63/3.
   {
     id: "rasa-agent-factory-voice-masterclass-nyc",
     name: "Build an Agent Factory with OpenAI’s Agents API and Rasa Mantle",
@@ -138,23 +122,6 @@ const scrapedEvents: CalEvent[] = [
     topics: ["voice-agents"],
     topicNote:
       "Dedicated customer-service voice-agent build/test workshop on Rasa — CX voice-agent DevRel room, not an STT benchmark session.",
-  },
-  {
-    id: "luma-multi-model-hackathon-aws-loft",
-    name: "Beta Fund × AWS × OpenAI Multi-Model Hackathon",
-    category: "hackathon",
-    status: "confirmed",
-    dateLabel: "Oct 23, 9am–6:30pm PT",
-    sortDate: "2026-10-23",
-    month: "2026-10",
-    location: "AWS Builder Loft, 525 Market St, San Francisco",
-    description:
-      "One-day multimodal hackathon at AWS Builder Loft (Luma title refreshed to Beta Fund × AWS × OpenAI as of 2026-10-01) — ship products that combine text, image, video, audio, and voice; multi-modal agents that can see, hear, and act are an explicit track.",
-    sourceUrl: "https://luma.com/beta-79jb",
-    sourceLabel: "luma.com",
-    topics: ["stt", "audio-intel"],
-    topicNote:
-      "Pitch fit for teams using speech/audio as a modality — not a dedicated voice-agent hackathon; confirm tracks closer to the date.",
   },
   {
     id: "luma-ship-voice-agent-workshop",
@@ -495,7 +462,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Re-checked 2026-10-23: public Luma calendar cal-Lv1pgYv5ITFR4tC still empty (no dated upcoming items). Voice AI Hackathon (Sep 19) + AI Debates (aidebates delist) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice/agent rooms surfaced this pass.",
+      "Re-checked 2026-10-24: public Luma calendar cal-Lv1pgYv5ITFR4tC still empty (no dated upcoming items). Voice AI Hackathon (Sep 19) + AI Debates (aidebates delist) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice/agent rooms surfaced this pass.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -530,11 +497,25 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://www.voiceaispace.com/events",
     sourceLabel: "voiceaispace.com",
     watchNote:
-      "Re-checked 2026-10-23: Discover 56/3 pages — no new Bay Area discover adds. Pruned Zero Trust for AI (Oct 22). UPDATED: Deepgram HealthTech London (fimimqjw) now Dec 3 6–8:30pm GMT via event/get. Still live: AGNTCon Oct 22–23 (day 2), Multi-Model Hackathon Oct 23 (ends 6:30pm PT), Ship a Voice Agent Oct 25, owned TTS hackathon week Oct 27–Nov 7, Speak '26 Oct 29 + owned Text-to-Screech same evening, Voice Agents Forum Nov 5 (Deepgram DevRel on roster), Speechmatics × Roark London Nov 5 (c0iiab0e), Cartesia Managed Agents webinar Nov 3 + Multimodal First Look SF Nov 10, Vapi×Deepgram mixer Nov 9, Agora Lisbon + AI Engineer Code Summit Nov 10–12, VapiCon Nov 11–12, Deepgram×Vapi phone workshop Nov 17 (Luma open; Meetup mirror canceled), Bolna Symphony Nov 20, Twilio London Dec 2 + Deepgram HealthTech London Dec 3, Vapi NYC builders social Dec 9. Skip Speechmatics leaders dinner 59dy3crh / Cartesia×Lorikeet / Agent's Table / Launch Panel Dinner / Vapi healthcare dinner vapi-2wdx / dinners/yacht / Wispr SPC fireside / year traps (dihiwe4q, v2bksbb8 May). Do not trust voiceaispace Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5.",
+      "Re-checked 2026-10-24: Discover 63/3 pages — no new Bay Area discover adds. Pruned AGNTCon + MCPCon NA (Oct 22–23) and Multi-Model Hackathon (Oct 23) → pastEvents2026 after Pacific end. Still live: Ship a Voice Agent Oct 25, owned TTS hackathon week Oct 27–Nov 7, Speak '26 Oct 29 + owned Text-to-Screech same evening, SANE Oct 30, Cartesia Managed Agents webinar Nov 3 + Multimodal First Look SF Nov 10, Voice Agents Forum Nov 5 (Deepgram DevRel on roster), Speechmatics × Roark London Nov 5 (c0iiab0e), Vapi×Deepgram mixer Nov 9, Agora Lisbon + AI Engineer Code Summit Nov 10–12, VapiCon Nov 11–12, Multi-Modal Education Hackathon Snowflake Nov 13, Deepgram×Vapi phone workshop Nov 17 (Luma open; Meetup mirror canceled), Bolna Symphony Nov 20, Twilio London Dec 2 + Deepgram HealthTech London Dec 3, Vapi NYC builders social Dec 9. Skip Speechmatics leaders dinner 59dy3crh / Cartesia×Lorikeet / Agent's Table / Launch Panel Dinner / Vapi healthcare dinner vapi-2wdx / dinners/yacht / Wispr SPC fireside / Gemini 4 Argon SF Hackathon / year traps (dihiwe4q, v2bksbb8 May). Do not trust voiceaispace Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5.",
   },
 ];
 
 export const pastEvents2026: PastEvent[] = [
+  {
+    id: "agntcon-mcpcon-north-america-2026",
+    name: "AGNTCon + MCPCon North America: The AI Agents Conference",
+    dateLabel: "Oct 22–23",
+    location: "San Jose McEnery Convention Center, San Jose, CA",
+    note: "Linux Foundation / Agentic AI Foundation two-day San Jose agentic engineering conference (~3,500) — kept for annual Bay Area agent-infra / MCP builder recurrence watch",
+  },
+  {
+    id: "luma-multi-model-hackathon-aws-loft",
+    name: "Beta Fund × AWS × OpenAI Multi-Model Hackathon",
+    dateLabel: "Oct 23",
+    location: "AWS Builder Loft, 525 Market St, San Francisco",
+    note: "One-day multimodal hackathon at AWS Builder Loft (audio/voice modalities in scope) — kept for AWS Loft multimodal-build cadence / STT pitch recurrence watch",
+  },
   {
     id: "pytorch-conference-north-america-2026",
     name: "PyTorch Conference North America 2026",
