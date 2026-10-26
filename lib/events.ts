@@ -46,26 +46,10 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-10-25. Dates and venues sourced from
+ * Confirmed research date: 2026-10-26. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
-  {
-    id: "open-source-ai-week-2026",
-    name: "Open Source AI Week",
-    category: "conference",
-    status: "confirmed",
-    dateLabel: "Oct 16–25",
-    sortDate: "2026-10-16",
-    endDate: "2026-10-25",
-    month: "2026-10",
-    location: "Bay Area, CA",
-    description:
-      "Linux Foundation open-source AI week (Oct 16–25, 2026) — umbrella for Bay Area AI/ML conferences, hackathons, and community rooms. Flagships were PyTorch Conference NA (Oct 20–21) and AGNTCon + MCPCon NA (Oct 22–23), both already in pastEvents2026. LF page confirmed the Oct 16–25 window as of 2026-10-25 (final day); prune after Pacific Oct 25 ends.",
-    sourceUrl: "https://events.linuxfoundation.org/open-source-ai-week/",
-    sourceLabel: "events.linuxfoundation.org",
-    note: "Confirmed Oct 16–25 on LF page; flagship conferences already past — last day of umbrella week",
-  },
   {
     id: "cerebral-valley-summit-2026",
     name: "Cerebral Valley AI Summit — San Francisco",
@@ -82,24 +66,27 @@ const scrapedEvents: CalEvent[] = [
     note: "Invite-only; exact venue not yet published",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // 2026-10-25 (~09:00 PT / 16:00 UTC).
+  // 2026-10-26 (~09:00 PT / 16:00 UTC).
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
-  // AI / voice-agent-relevant listings. 64 discover entries across 3 pages.
+  // AI / voice-agent-relevant listings. 69 discover entries across 3 pages.
   // No new Bay Area discover adds (Are We Running Too Many Agents / Rootly
   // production agents / Braintrust evals / Stripe Build Day / Night Hack /
   // Backprop Summit / Wispr Flow fireside / Cartesia×Lorikeet drinks /
   // After Tokens / Fireworks×MS×NVIDIA / Matcha / DNAForge biology hack /
-  // Gemini 4 Argon SF Hackathon skipped as low-signal or non-voice).
-  // Open Source AI Week: LF confirmed Oct 16–25 (was TBA) — final day today.
-  // Re-verified deepgram-2jm5 Nov 17 PT, Speak '26 Oct 29, assemb-42oc Oct 29
-  // evening, msrwwjby Oct 27–Nov 7, Voice Agents Forum Nov 5, VapiCon Nov 11–12,
-  // SANE Oct 30, Bolna Symphony Nov 20, leverage-0gfk Oct 25 (1–4pm PT; keep
-  // until Pacific end), Rasa NYC Nov 3, beta-3ue5 Nov 13, Speechmatics c0iiab0e
-  // Nov 5, Cartesia 94y4it1j Nov 3 + xrj6gzm2 Nov 10, Agora Lisbon wqg33o39
-  // Nov 10, Vapi NYC vapi-pjzk Dec 9, fimimqjw Dec 3 6–8:30pm GMT. AGI House /
-  // LiveKit / Daily / Smallest cals empty. Skip Cartesia dinners / Speechmatics
-  // 59dy3crh / Vapi healthcare dinner vapi-2wdx / ice-cream popup.
-  // Skipped: year traps (v2bksbb8 May, dihiwe4q Apr), Mahjong, dinners/yacht.
+  // SEV0 reliability / Modal Inference as Instrument skipped as low-signal
+  // or non-voice). Open Source AI Week + Ship a Voice Agent (leverage-0gfk)
+  // → pastEvents2026 after Pacific Oct 25 end.
+  // Re-verified deepgram-2jm5 Nov 17 PST (Luma open; Meetup mirror can show
+  // Canceled — trust Luma), Speak '26 Oct 29, assemb-42oc Oct 29 evening,
+  // msrwwjby Oct 27–Nov 7, Voice Agents Forum Nov 5, VapiCon Nov 11–12,
+  // SANE Oct 30, Bolna Symphony Nov 20, Rasa NYC Nov 3, beta-3ue5 Nov 13,
+  // Speechmatics c0iiab0e Nov 5, Cartesia 94y4it1j Nov 3 + xrj6gzm2 Nov 10,
+  // Agora Lisbon wqg33o39 Nov 10, Vapi NYC vapi-pjzk Dec 9, fimimqjw Dec 3
+  // 6–8:30pm GMT. AGI House / LiveKit / Daily / Smallest cals empty. Skip
+  // Cartesia dinners / Speechmatics 59dy3crh / Vapi healthcare dinner
+  // vapi-2wdx / ice-cream popup. Year trap: 3zsy5yq2 Multi Agent Systems
+  // Hackathon is Nov 2025 — not 2026.
+  // Skipped: year traps (v2bksbb8 May, dihiwe4q Apr, 3zsy5yq2), dinners/yacht.
   // 2026-10-18: MITAI → pastEvents2026; AGNTCon + MCPCon NA added.
   // 2026-10-19: ElevenLabs Build Series + booking workshop added (vendorEvents).
   // 2026-10-20: Debate Night pruned; msrwwjby date correction; Agora Lisbon added.
@@ -108,6 +95,7 @@ const scrapedEvents: CalEvent[] = [
   // 2026-10-23: Zero Trust pruned; Deepgram HealthTech London time correction.
   // 2026-10-24: AGNTCon + Multi-Model Hackathon → pastEvents2026; discover 63/3.
   // 2026-10-25: Open Source AI Week dates confirmed Oct 16–25; discover 64/3.
+  // 2026-10-26: Open Source AI Week + Ship a Voice Agent → past; discover 69/3.
   {
     id: "rasa-agent-factory-voice-masterclass-nyc",
     name: "Build an Agent Factory with OpenAI’s Agents API and Rasa Mantle",
@@ -124,21 +112,6 @@ const scrapedEvents: CalEvent[] = [
     topics: ["voice-agents"],
     topicNote:
       "Dedicated customer-service voice-agent build/test workshop on Rasa — CX voice-agent DevRel room, not an STT benchmark session.",
-  },
-  {
-    id: "luma-ship-voice-agent-workshop",
-    name: "Ship a Voice Agent: A Hands-On Build Workshop",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Oct 25, 1–4pm PT",
-    sortDate: "2026-10-25",
-    month: "2026-10",
-    location: "San Francisco (exact venue on registration)",
-    description:
-      "Afternoon hands-on workshop (Leverage / Nir Naamani) — build a working voice agent end-to-end (speech in → model → structured data out), including latency, interruptions, and state. Approval-required; small room. Rescheduled from Sep 17 to Oct 25 per live Luma event/get (leverage-0gfk) — top dedicated Bay Area voice-agent build workshop remaining this month after the Oct 6 Tech Week Ship workshop; Deepgram × Vapi phone-agent night still Nov 17.",
-    sourceUrl: "https://luma.com/leverage-0gfk",
-    sourceLabel: "luma.com",
-    topics: ["voice-agents", "stt", "streaming"],
   },
   {
     id: "sane-2026-speech-audio-northeast",
@@ -464,7 +437,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Re-checked 2026-10-25: public Luma calendar cal-Lv1pgYv5ITFR4tC still empty (no dated upcoming items). Voice AI Hackathon (Sep 19) + AI Debates (aidebates delist) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice/agent rooms surfaced this pass.",
+      "Re-checked 2026-10-26: public Luma calendar cal-Lv1pgYv5ITFR4tC still empty (no dated upcoming items). Voice AI Hackathon (Sep 19) + AI Debates (aidebates delist) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice/agent rooms surfaced this pass.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -499,11 +472,25 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://www.voiceaispace.com/events",
     sourceLabel: "voiceaispace.com",
     watchNote:
-      "Re-checked 2026-10-25: Discover 64/3 pages — no new Bay Area discover adds. Open Source AI Week confirmed Oct 16–25 on LF (final day). Still live: Ship a Voice Agent Oct 25 (1–4pm PT), owned TTS hackathon week Oct 27–Nov 7, Speak '26 Oct 29 + owned Text-to-Screech same evening, SANE Oct 30, Cartesia Managed Agents webinar Nov 3 + Multimodal First Look SF Nov 10, Voice Agents Forum Nov 5 (Deepgram DevRel on roster), Speechmatics × Roark London Nov 5 (c0iiab0e), Vapi×Deepgram mixer Nov 9, Agora Lisbon + AI Engineer Code Summit Nov 10–12, VapiCon Nov 11–12, Multi-Modal Education Hackathon Snowflake Nov 13, Deepgram×Vapi phone workshop Nov 17 (Luma open; Meetup mirror can show Canceled — trust Luma), Bolna Symphony Nov 20, Twilio London Dec 2 + Deepgram HealthTech London Dec 3, Vapi NYC builders social Dec 9. Skip Speechmatics leaders dinner 59dy3crh / Cartesia×Lorikeet / Agent's Table / Launch Panel Dinner / Vapi healthcare dinner vapi-2wdx / dinners/yacht / Wispr SPC fireside / After Tokens / Gemini 4 Argon SF Hackathon / year traps (dihiwe4q, v2bksbb8 May). Do not trust voiceaispace Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5. Next pass: prune leverage-0gfk + Open Source AI Week after Pacific Oct 25 end.",
+      "Re-checked 2026-10-26: Discover 69/3 pages — no new Bay Area discover adds. Open Source AI Week + Ship a Voice Agent (leverage-0gfk) moved to pastEvents2026 after Pacific Oct 25 end. Still live: owned TTS hackathon week Oct 27–Nov 7, Speak '26 Oct 29 + owned Text-to-Screech same evening, SANE Oct 30, Cartesia Managed Agents webinar Nov 3 + Multimodal First Look SF Nov 10, Voice Agents Forum Nov 5 (Deepgram DevRel on roster), Speechmatics × Roark London Nov 5 (c0iiab0e), Vapi×Deepgram mixer Nov 9, Agora Lisbon + AI Engineer Code Summit Nov 10–12, VapiCon Nov 11–12, Multi-Modal Education Hackathon Snowflake Nov 13, Deepgram×Vapi phone workshop Nov 17 (Luma open; Meetup mirror can show Canceled — trust Luma), Bolna Symphony Nov 20, Twilio London Dec 2 + Deepgram HealthTech London Dec 3, Vapi NYC builders social Dec 9. Skip Speechmatics leaders dinner 59dy3crh / Cartesia×Lorikeet / Agent's Table / Launch Panel Dinner / Vapi healthcare dinner vapi-2wdx / dinners/yacht / Wispr SPC fireside / After Tokens / year traps (dihiwe4q, v2bksbb8 May, 3zsy5yq2 Nov 2025). Do not trust voiceaispace Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5.",
   },
 ];
 
 export const pastEvents2026: PastEvent[] = [
+  {
+    id: "open-source-ai-week-2026",
+    name: "Open Source AI Week",
+    dateLabel: "Oct 16–25",
+    location: "Bay Area, CA",
+    note: "Linux Foundation open-source AI week umbrella (PyTorch NA + AGNTCon/MCPCon flagships already past) — kept for annual Bay Area open-source AI week / infra-builder recurrence watch",
+  },
+  {
+    id: "luma-ship-voice-agent-workshop",
+    name: "Ship a Voice Agent: A Hands-On Build Workshop",
+    dateLabel: "Oct 25",
+    location: "San Francisco, CA",
+    note: "Leverage / Nir Naamani afternoon voice-agent build workshop (luma.com/leverage-0gfk) — kept for Bay Area dedicated voice-agent workshop format / recurrence watch",
+  },
   {
     id: "agntcon-mcpcon-north-america-2026",
     name: "AGNTCon + MCPCon North America: The AI Agents Conference",
@@ -835,4 +822,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-10-25";
+export const researchDate = "2026-10-26";
