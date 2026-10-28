@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-10-27. Dates and venues sourced from
+ * Confirmed research date: 2026-10-28. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -66,28 +66,27 @@ const scrapedEvents: CalEvent[] = [
     note: "Invite-only; exact venue not yet published",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // 2026-10-27 (~09:00 PT / 16:00 UTC).
+  // 2026-10-28 (~09:00 PT / 16:00 UTC).
   // (api.luma.com/discover, place discplace-BDj7GNbGlsF7Cka), filtered to
-  // AI / voice-agent-relevant listings. 71 discover entries across 3 pages.
-  // NEW: Cartesia Voice AI fireside (bz8x2v1s, Oct 28) — previously skipped as
-  // drinks; now has named Cartesia/Lorikeet/Speak fireside on voice-agent UX.
-  // Skipped low-signal: SEV0 / Rootly production agents / GitHub Universe
-  // socials / Night Hack / Backprop / Wispr Flow / After Tokens /
-  // Fireworks×MS×NVIDIA / Stripe Build Day / DNAForge / Modal Inference as
-  // Instrument / Matcha. Still skip Cartesia Agent's Table (srbdv0c2) + NYC
-  // Multimodal Research Panel dinner (0960vqe8, renamed from Launch Panel
-  // Dinner) + Speechmatics 59dy3crh + Vapi healthcare dinner vapi-2wdx +
-  // ice-cream popup. Year traps: 3zsy5yq2 Nov 2025, v2bksbb8 May, dihiwe4q.
-  // Re-verified deepgram-2jm5 Nov 17 PST (Luma open; Meetup cancel mirror —
-  // trust Luma), Speak '26 Oct 29, assemb-42oc Oct 29 evening, msrwwjby
-  // Oct 27–Nov 7, Voice Agents Forum Nov 5, VapiCon Nov 11–12, SANE Oct 30,
-  // Cartesia 94y4it1j Nov 3 9:30–10:30am PT (time correction) + xrj6gzm2
-  // Nov 10, Agora Lisbon Nov 10, fimimqjw Dec 3 6–8:30pm GMT. AGI House /
-  // LiveKit / Daily / Smallest cals empty. Skip Deepgram Beyond the Cloud
-  // webinar page (Tuesday Nov 19 copy = 2024 year trap; Nov 19 2026 is Thu).
-  // 2026-10-26: Open Source AI Week + Ship a Voice Agent → past; discover 69/3.
-  // 2026-10-27: Cartesia Oct 28 fireside added; Managed Agents time corrected;
-  // discover 71/3.
+  // AI / voice-agent-relevant listings. 65 discover entries across 3 pages.
+  // No new Bay Area voice/agent scrape adds this pass — Cartesia fireside
+  // (bz8x2v1s, Oct 28 evening) still live; prune after 8:30pm PT tonight.
+  // Skipped low-signal: GitHub Universe socials / Agents After Dark mini-golf /
+  // Night Hack / Backprop / Wispr Flow / After Tokens / Fireworks×MS×NVIDIA /
+  // Stripe Build Day / DNAForge / Modal Inference as Instrument / Matcha /
+  // Mistral Make SF Better hack night / Braintrust evals. Still skip Cartesia
+  // Agent's Table (srbdv0c2) + NYC Multimodal Research Panel dinner (0960vqe8)
+  // + Speechmatics 59dy3crh + Vapi healthcare dinner vapi-2wdx + ice-cream
+  // popup. Year traps: 3zsy5yq2 Nov 2025, v2bksbb8 May, dihiwe4q, the-audio-layer
+  // Dec 2025. Re-verified deepgram-2jm5 Nov 17 PST (Luma open), Speak '26 Oct 29,
+  // assemb-42oc Oct 29 evening, msrwwjby Oct 27–Nov 7, Voice Agents Forum Nov 5,
+  // VapiCon Nov 11–12, SANE Oct 30, Cartesia 94y4it1j Nov 3 9:30–10:30am PT +
+  // xrj6gzm2 Nov 10, Agora Lisbon Nov 10, fimimqjw Dec 3 6–8:30pm GMT. AGI House /
+  // LiveKit / Daily / Smallest cals empty. Beyond the Cloud webinar page now
+  // HTTP 404 (was 2024 year trap). Competitor NEW: ElevenAgents Hackathon
+  // London Nov 17–18 (elevenlabs.io/events — vendorEvents). Build Series
+  // webinar slugs still HTTP 404 — do not add. 2026-10-27: Cartesia Oct 28
+  // fireside added; Managed Agents time corrected; discover 71/3.
   {
     id: "cartesia-voice-ai-models-to-real-world-sf",
     name: "Voice AI: From Models to Real-World Experiences — Cartesia × Lorikeet × Speak",
@@ -446,7 +445,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Re-checked 2026-10-27: public Luma calendar cal-Lv1pgYv5ITFR4tC still empty (no dated upcoming items). Voice AI Hackathon (Sep 19) + AI Debates (aidebates delist) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice/agent rooms surfaced this pass.",
+      "Re-checked 2026-10-28: public Luma calendar cal-Lv1pgYv5ITFR4tC still empty (no dated upcoming items). Voice AI Hackathon (Sep 19) + AI Debates (aidebates delist) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice/agent rooms surfaced this pass.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -481,7 +480,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://www.voiceaispace.com/events",
     sourceLabel: "voiceaispace.com",
     watchNote:
-      "Re-checked 2026-10-27: Discover 71/3 pages — added Cartesia Voice AI fireside (bz8x2v1s, Oct 28; named Cartesia/Lorikeet/Speak product panel). Still live: owned TTS hackathon week Oct 27–Nov 7, Speak '26 Oct 29 + owned Text-to-Screech same evening, SANE Oct 30, Cartesia Managed Agents webinar Nov 3 9:30–10:30am PT (time correction) + Multimodal First Look SF Nov 10, Voice Agents Forum Nov 5 (Deepgram DevRel on roster), Speechmatics × Roark London Nov 5 (c0iiab0e), Vapi×Deepgram mixer Nov 9, Agora Lisbon + AI Engineer Code Summit Nov 10–12, VapiCon Nov 11–12, Multi-Modal Education Hackathon Snowflake Nov 13, Deepgram×Vapi phone workshop Nov 17 (Luma open; Meetup mirror can show Canceled — trust Luma), Bolna Symphony Nov 20, Twilio London Dec 2 + Deepgram HealthTech London Dec 3, Vapi NYC builders social Dec 9. Skip Speechmatics leaders dinner 59dy3crh / Cartesia Agent's Table / NYC Multimodal Research Panel dinner 0960vqe8 / Vapi healthcare dinner vapi-2wdx / dinners/yacht / Wispr SPC fireside / After Tokens / Deepgram Beyond the Cloud stale webinar page / year traps (dihiwe4q, v2bksbb8 May, 3zsy5yq2 Nov 2025). Do not trust voiceaispace Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5.",
+      "Re-checked 2026-10-28: Discover 65/3 pages — no new Bay Area scrape adds. Still live: Cartesia Voice AI fireside (bz8x2v1s, Oct 28 evening — prune after 8:30pm PT), owned TTS hackathon week Oct 27–Nov 7, Speak '26 Oct 29 + owned Text-to-Screech same evening, SANE Oct 30, Cartesia Managed Agents webinar Nov 3 9:30–10:30am PT + Multimodal First Look SF Nov 10, Voice Agents Forum Nov 5 (Deepgram DevRel on roster), Speechmatics × Roark London Nov 5 (c0iiab0e), Vapi×Deepgram mixer Nov 9, Agora Lisbon + AI Engineer Code Summit Nov 10–12, VapiCon Nov 11–12, Multi-Modal Education Hackathon Snowflake Nov 13, Deepgram×Vapi phone workshop Nov 17 (Luma open; Meetup mirror can show Canceled — trust Luma), Bolna Symphony Nov 20, Twilio London Dec 2 + Deepgram HealthTech London Dec 3, Vapi NYC builders social Dec 9. NEW competitor: ElevenAgents Hackathon London Nov 17–18 (elevenlabs.io/events). Skip Speechmatics leaders dinner 59dy3crh / Cartesia Agent's Table / NYC Multimodal Research Panel dinner 0960vqe8 / Vapi healthcare dinner vapi-2wdx / dinners/yacht / Wispr Flow fireside / After Tokens / ElevenAgents Build Series (still HTTP 404) / year traps (dihiwe4q, v2bksbb8 May, 3zsy5yq2 Nov 2025). Beyond the Cloud webinar page now 404. Do not trust voiceaispace Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5.",
   },
 ];
 
@@ -831,4 +830,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-10-27";
+export const researchDate = "2026-10-28";
