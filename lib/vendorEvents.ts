@@ -30,7 +30,7 @@ export interface VendorGroup {
 
 /**
  * Speech / voice-AI vendor events — competitive & partnership tracking for
- * AssemblyAI. Re-researched 2026-10-29 (~09:00 PT) against each vendor's own events page.
+ * AssemblyAI. Re-researched 2026-10-30 (~09:00 PT) against each vendor's own events page.
  * These are companies that compete or overlap on STT, TTS, streaming audio, or
  * voice-agent platforms — not the Bay Area builder calendar (see events.ts).
  */
@@ -41,20 +41,6 @@ export const vendorGroups: VendorGroup[] = [
     category: "STT / TTS / Voice Agent API",
     homepageUrl: "https://luma.com/deepgram",
     events: [
-      {
-        id: "deepgram-speak-26",
-        name: "Deepgram Speak '26",
-        dateLabel: "Oct 29, 8am–6pm PT",
-        sortDate: "2026-10-29",
-        format: "in-person",
-        location: "The Aviary, 135 Fourth St Ste 4000, San Francisco",
-        description:
-          "Deepgram’s flagship one-day SF voice-AI conference — keynotes/firesides plus builder conversation (explicitly not a sales pitch day). Live speaker roster on deepgram.com/speak as of 2026-09-29 includes Deepgram leadership plus Vapi (Jordan Dearsley), Daily/Pipecat (Kwindla Kramer), Twilio Field CTO, Cresta, Sierra, Coval, RingCentral, AWS, and Qualcomm — strongest single-day competitive ecosystem map of the window. Registration still open (~500 seats).",
-        status: "confirmed",
-        sourceUrl: "https://deepgram.com/speak",
-        sourceLabel: "deepgram.com/speak",
-        topics: ["stt", "voice-agents", "streaming", "tts"],
-      },
       {
         id: "deepgram-vapi-web-summit-mixer",
         name: "Vapi × Deepgram: Web Summit Mixer",
@@ -113,7 +99,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Re-checked 2026-10-29: Deepgram Luma cal-qHEDltsO0Gr0WtD still lists deepgram-2jm5 (Nov 17 PST via event/get; Luma open — Meetup cancel mirror can disagree; trust Luma) + Voice AI in HealthTech London Dec 3 (fimimqjw; 6–8:30pm GMT). deepgram.com/speak still 200 for Speak '26 (Oct 29 daytime — live this morning PT). Coverage conflict today: AssemblyAI owned Text-to-Screech TTS launch (assemb-42oc) same evening Oct 29 5–8pm PT — owned Voice hackathon week (msrwwjby) Oct 27–Nov 7 still live via event/get. Cartesia Voice AI fireside (bz8x2v1s) pruned after Pacific Oct 28 end → pastEvents2026. Web Summit Mixer still Nov 9 (vapi-t98x); same Lisbon week as Agora Scaling Voice AI (wqg33o39, Nov 10) and Cartesia Multimodal Research First Look SF (xrj6gzm2, Nov 10). Bolna Symphony 2026 (Nov 20) names Deepgram as partner. Deepgram remains diamond sponsor at VapiCon (Nov 11–12). Deepgram Sr. DevRel Sam Gutentag confirmed on Voice Agents Forum (Nov 5) speaker roster. Nov 17 triple stack: Deepgram×Vapi SF phone workshop + Agora Voice AI Workshop NYC (voiceai-workshop-nyc-nov17) + ElevenAgents Hackathon London — cross-coast/EU voice-agent builder mindshare cluster. Beyond the Cloud webinar page still HTTP 404. Skip Jul 2025 AWS GenAI Loft year trap and past Plivo×Deepgram×Inworld dihiwe4q (Apr 2026).",
+      "Re-checked 2026-10-30: Speak '26 (Oct 29) → pastEvents2026 after Pacific end (deepgram.com/speak still HTTP 200 as archive). Deepgram Luma cal-qHEDltsO0Gr0WtD still lists deepgram-2jm5 (Nov 17 PST via event/get; Luma open + Meetup now open) + Voice AI in HealthTech London Dec 3 (fimimqjw; 6–8:30pm GMT). Owned Text-to-Screech also → pastEvents2026; owned Voice hackathon week (msrwwjby) Oct 27–Nov 7 still live via event/get. Web Summit Mixer still Nov 9 (vapi-t98x); same Lisbon week as Agora Scaling Voice AI (wqg33o39, Nov 10) and Cartesia Multimodal Research First Look SF (xrj6gzm2, Nov 10). Bolna Symphony 2026 (Nov 20) names Deepgram as partner. Deepgram remains diamond sponsor at VapiCon (Nov 11–12). Deepgram Sr. DevRel Sam Gutentag confirmed on Voice Agents Forum (Nov 5) speaker roster. Nov 17 triple stack: Deepgram×Vapi SF phone workshop + Agora Voice AI Workshop NYC (voiceai-workshop-nyc-nov17) + ElevenAgents Hackathon London. Beyond the Cloud webinar page still HTTP 404. Skip Jul 2025 AWS GenAI Loft year trap, past Plivo×Deepgram×Inworld dihiwe4q (Apr 2026), and internal GRAM JAM (Nov 15–18 — not public).",
   },
   {
     id: "cartesia",
@@ -150,7 +136,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Re-checked 2026-10-29: Cartesia Luma cal-EeDJt2cPbgGca1W — Voice AI fireside bz8x2v1s pruned after Pacific Oct 28 end (→ pastEvents2026) + Managed Agents webinar (94y4it1j, Nov 3 9:30–10:30am PT via event/get) + First Look: Multimodal Research (xrj6gzm2, Nov 10 6:30–9pm PST). Still skipping dinner rooms: The Agent’s Table (srbdv0c2, Nov 12 evening PT) + Multimodal Research Panel NYC (0960vqe8, Nov 11 7–9:30pm ET — renamed from Launch Panel & Dinner; still fireside + dinner & drinks). Cartesia also named partner at Bolna Symphony 2026 (Nov 20 Bengaluru — tracked under Deepgram). Cartesia CEO remains on the VapiCon speaker list; Cartesia Dev Samith Venkatesh on Voice Agents Forum (Nov 5) roster.",
+      "Re-checked 2026-10-30: Cartesia Luma cal-EeDJt2cPbgGca1W — Managed Agents webinar (94y4it1j, Nov 3 9:30–10:30am PT via event/get) + First Look: Multimodal Research (xrj6gzm2, Nov 10 6:30–9pm PST). Still skipping dinner rooms: The Agent’s Table (srbdv0c2, Nov 12 evening PT) + Multimodal Research Panel NYC (0960vqe8, Nov 11 7–9:30pm ET). Same Nov 3 morning as new Coval × Cloudflare production Voice AI SF evening (iq4hna2x — tracked in events.ts). Cartesia also named partner at Bolna Symphony 2026 (Nov 20 Bengaluru — tracked under Deepgram). Cartesia CEO remains on the VapiCon speaker list; Cartesia Dev Samith Venkatesh on Voice Agents Forum (Nov 5) roster.",
   },
   {
     id: "elevenlabs",
@@ -229,7 +215,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Re-checked 2026-10-29: ElevenAgents Hackathon London (Nov 17–18, The Bike Shed / Shoreditch) still HTTP 200 on elevenlabs.io/events. elevenlabs.io/webinars Upcoming still heavy on ElevenCreative ads / Vercel marketing (skip) + Nov 5 Eleven v4 Mandarin URL still HTTP 200; Nov 11 bookings/commerce demo URL still HTTP 200. ElevenAgents Build Series slugs still HTTP 404 — do not add. Summit NYC (Nov 11) + Chatbot Summit Amsterdam (Nov 26) still 200. Skip past Customer Impact Summit / Adweek / Raise Paris listings + Nov 24 French CX GTM webinar + Seoul meetup (no official slug) + Mel×ElevenLabs Miami general agent hack. Today: Deepgram Speak (day) / AssemblyAI Text-to-Screech (evening); Nov 5 stacks Voice Agents Forum SF vs ElevenLabs v4 webinar; Nov 11 stacks Summit NYC + bookings demo vs VapiCon SF; Nov 17 stacks London hackathon vs Deepgram×Vapi SF + Agora NYC Voice AI Workshop. AssemblyAI owned TTS hackathon week (msrwwjby, Oct 27–Nov 7) remains the near-term TTS mindshare counter-move.",
+      "Re-checked 2026-10-30: ElevenAgents Hackathon London (Nov 17–18, The Bike Shed / Shoreditch) still HTTP 200 on elevenlabs.io/events. Nov 5 Eleven v4 Mandarin URL still HTTP 200; Nov 11 bookings/commerce demo URL still HTTP 200. ElevenAgents Build Series slugs still HTTP 404 — do not add. Summit NYC (Nov 11) + Chatbot Summit Amsterdam (Nov 26) still 200. Skip past Customer Impact Summit / Adweek / Raise Paris listings + Nov 24 French CX GTM webinar + Seoul meetup + Mel×ElevenLabs Miami general agent hack. Speak '26 / Text-to-Screech → pastEvents2026. Nov 5 stacks Voice Agents Forum SF vs ElevenLabs v4 webinar; Nov 11 stacks Summit NYC + bookings demo vs VapiCon SF; Nov 17 stacks London hackathon vs Deepgram×Vapi SF + Agora NYC Voice AI Workshop. AssemblyAI owned TTS hackathon week (msrwwjby, Oct 27–Nov 7) remains the near-term TTS mindshare counter-move.",
   },
   {
     id: "vapi",
@@ -238,22 +224,22 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://www.vapicon.ai/",
     events: [
       {
-        id: "vapi-voice-ai-builders-social-ai-summit-nyc",
-        name: "Voice AI Builders Social | The AI Summit New York",
-        dateLabel: "Dec 9, 6–8pm ET",
+        id: "vapi-ai-summit-nyc-after-hours",
+        name: "THE AI SUMMIT — After hours (Vapi × LangChain)",
+        dateLabel: "Dec 9, 6–8:30pm ET",
         sortDate: "2026-12-09",
         format: "in-person",
         location: "Nittis Italian Restaurant, 523 9th Ave, New York, NY",
         description:
-          "Vapi-hosted Voice AI builders social during The AI Summit New York — evening gathering for teams shipping voice agents after the summit’s enterprise AI day. Competitive NYC distribution signal after VapiCon SF (luma.com/vapi-pjzk on cal-9jzVoVZclDCewDU as of 2026-10-22).",
+          "Vapi-hosted AI Summit New York after-hours at Nittis — drinks plus short talks from Vapi and LangChain on agent harness/evals/feedback loops with realtime voice-agent production themes. SLUG/TITLE REFRESH 2026-10-30: prior Voice AI Builders Social listing (luma.com/vapi-pjzk) now HTTP 404; live room on cal-9jzVoVZclDCewDU is luma.com/ai-summit-ny-after-hours (same venue/day). Competitive NYC distribution signal after VapiCon SF.",
         status: "confirmed",
-        sourceUrl: "https://luma.com/vapi-pjzk",
+        sourceUrl: "https://luma.com/ai-summit-ny-after-hours",
         sourceLabel: "luma.com",
         topics: ["voice-agents"],
       },
     ],
     watchNote:
-      "Re-checked 2026-10-29: Vapi Luma calendar cal-9jzVoVZclDCewDU — Voice Agents Forum (Nov 5), Vapi×Deepgram Web Summit Mixer (Nov 9, Lisbon — tracked under Deepgram), VapiCon 2026 (Nov 11–12, Fort Mason SF), Deepgram × Vapi phone voice-agent workshop SF still Nov 17 (deepgram-2jm5; Luma open), Voice AI Builders Social NYC Dec 9 (vapi-pjzk). Skip VapiCon afterparty Nov 12 + Conversations at Scale healthcare dinner (vapi-2wdx, Nov 17 evening) as social/invite dinner. Fall '26 VON Atlanta (Vapi invited) → pastEvents2026 after Pacific Oct 15. Skip builders-sep26 / vapi-l8kw yacht (past).",
+      "Re-checked 2026-10-30: Vapi Luma calendar cal-9jzVoVZclDCewDU — Voice Agents Forum (Nov 5), Vapi×Deepgram Web Summit Mixer (Nov 9, Lisbon — tracked under Deepgram), VapiCon 2026 (Nov 11–12, Fort Mason SF), Deepgram × Vapi phone voice-agent workshop SF still Nov 17 (deepgram-2jm5; Luma + Meetup open), THE AI SUMMIT After hours NYC Dec 9 (ai-summit-ny-after-hours; replaced 404'd vapi-pjzk). Skip VapiCon afterparty Nov 12 + Conversations at Scale healthcare dinner (vapi-2wdx, Nov 17 evening) as social/invite dinner. Fall '26 VON Atlanta (Vapi invited) → pastEvents2026 after Pacific Oct 15. Skip builders-sep26 / vapi-l8kw yacht (past).",
   },
   {
     id: "regal",
@@ -262,7 +248,7 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://www.regal.ai/",
     events: [],
     watchNote:
-      "Re-checked 2026-10-29: Regal Rise (Sep 17 NYC/virtual) already pruned. No new dated public Regal events found — watch for a Bay Area follow-on vs AssemblyAI phone-agent builders.",
+      "Re-checked 2026-10-30: Regal Rise (Sep 17 NYC/virtual) already pruned. No new dated public Regal events found — watch for a Bay Area follow-on vs AssemblyAI phone-agent builders.",
   },
   {
     id: "twilio",
@@ -314,7 +300,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Twilio UK Luma calendar cal-hoJOad2gnCAn32t (2026-10-29): Assemble London Nov 3 (7z0fyqec) + Manchester Nov 4 (401md669) + London Dec 2 (9xwcwwxz) unchanged via event/get. Deepgram’s HealthTech London (Dec 3 6–8:30pm GMT, fimimqjw) still lands the day after Twilio’s London builder meetup — EU voice/comms cluster. Same Nov 5 London evening window as Speechmatics × Roark (c0iiab0e) vs Voice Agents Forum SF. Twilio Field CTO Andy O’Dower remains on Deepgram Speak '26 (Oct 29). Watch twilio.com and Assemble announcements for US/Bay Area dates.",
+      "Twilio UK Luma calendar cal-hoJOad2gnCAn32t (2026-10-30): Assemble London Nov 3 (7z0fyqec) + Manchester Nov 4 (401md669) + London Dec 2 (9xwcwwxz) unchanged via event/get. Deepgram’s HealthTech London (Dec 3 6–8:30pm GMT, fimimqjw) still lands the day after Twilio’s London builder meetup — EU voice/comms cluster. Same Nov 5 London evening window as Speechmatics × Roark (c0iiab0e) vs Voice Agents Forum SF. Twilio Field CTO Andy O’Dower was on Deepgram Speak '26 (Oct 29 → pastEvents2026). Watch twilio.com and Assemble announcements for US/Bay Area dates.",
   },
   {
     id: "agora",
@@ -352,7 +338,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Re-checked 2026-10-29: cal-wYHDiuJD5JdAolS lists From Prototype to Production: Scaling Voice AI (wqg33o39, Nov 10 Lisbon) + NEW Voice AI Workshop NYC (voiceai-workshop-nyc-nov17, Nov 17 5:30–8:30pm ET via event/get). Empathy & Scale Oct 13 past; old NYC slug b59sk0v6 still 404 (replaced by voiceai-workshop-nyc-nov17). Watch agora.io + Luma for the next SF realtime voice-agent builder night.",
+      "Re-checked 2026-10-30: cal-wYHDiuJD5JdAolS lists From Prototype to Production: Scaling Voice AI (wqg33o39, Nov 10 Lisbon) + Voice AI Workshop NYC (voiceai-workshop-nyc-nov17, Nov 17 5:30–8:30pm ET via event/get). Empathy & Scale Oct 13 past; old NYC slug b59sk0v6 still 404 (replaced by voiceai-workshop-nyc-nov17). Watch agora.io + Luma for the next SF realtime voice-agent builder night.",
   },
   {
     id: "signalwire",
@@ -361,7 +347,7 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://signalwire.com/resources/events",
     events: [],
     watchNote:
-      "Re-checked 2026-10-29: VoiceAI LIVE! at Fall '26 VON Atlanta (Oct 13–15) pruned after Pacific end — VON kept in pastEvents2026. Palo Alto Build AI Voice Agents workshop (Oct 6) remains past. signalwire.com/resources/events still highlights ClueCon 2026 (past) — no new dated city workshops. Watch for the next SF/Bay Area production voice-agent workshop.",
+      "Re-checked 2026-10-30: VoiceAI LIVE! at Fall '26 VON Atlanta (Oct 13–15) pruned after Pacific end — VON kept in pastEvents2026. Palo Alto Build AI Voice Agents workshop (Oct 6) remains past. signalwire.com/resources/events still highlights ClueCon 2026 (past) — no new dated city workshops. Watch for the next SF/Bay Area production voice-agent workshop.",
   },
   {
     id: "livekit",
@@ -370,7 +356,7 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://livekit.io/",
     events: [],
     watchNote:
-      "Re-checked 2026-10-29: Luma cal-G3PEa5PrYXwKXx6 empty. SF Tech Week co-host Solving 'voice' as an interface (Oct 7) remains in pastEvents2026. livekit.io/events still 404. No new dated LiveKit-owned rooms — surfaces via partner nights; re-check weekly around Voice Agents Forum / VapiCon.",
+      "Re-checked 2026-10-30: Luma cal-G3PEa5PrYXwKXx6 empty. SF Tech Week co-host Solving 'voice' as an interface (Oct 7) remains in pastEvents2026. livekit.io/events still 404. No new dated LiveKit-owned rooms — surfaces via partner nights; re-check weekly around Voice Agents Forum / VapiCon.",
   },
   {
     id: "retell",
@@ -379,7 +365,7 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://www.retellai.com/",
     events: [],
     watchNote:
-      "Re-checked 2026-10-29: retellai.com/events Upcoming still empty (past TCPA Jul 22 / GHL Mar 2025 workshops only — not dated upcoming). Typically appears at voice-agent conferences (VapiCon-class rooms) rather than running a dated Luma series. Check LinkedIn / retellai.com/blog.",
+      "Re-checked 2026-10-30: retellai.com/events Upcoming still empty (\"Nothing on the calendar right now\"). Typically appears at voice-agent conferences (VapiCon-class rooms) rather than running a dated Luma series. Check LinkedIn / retellai.com/blog.",
   },
   {
     id: "bland",
@@ -388,7 +374,7 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://www.bland.ai/",
     events: [],
     watchNote:
-      "No public dated Jul–Dec 2026 developer events found on bland.ai as of 2026-10-29. Watch bland.ai and partner pages around contact-center / phone-agent summits.",
+      "No public dated Jul–Dec 2026 developer events found on bland.ai as of 2026-10-30. Watch bland.ai and partner pages around contact-center / phone-agent summits.",
   },
   {
     id: "pipecat-daily",
@@ -397,7 +383,7 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://pipecat.ai/",
     events: [],
     watchNote:
-      "pipecat.ai/events still shows no upcoming dated public meetups as of 2026-10-29; Daily Luma cal-9UmQbmvz8qvnCK3 empty. Competitive signal: Deepgram × Daily Flux TTS on Pipecat webinar (Sep 29) is past; Pipecat co-hosted Voice AI: Shaping the Next Frontier of Customer Interaction (Oct 1 London, luma.com/prkbq50k — now past). Daily/Pipecat CEO Kwindla Kramer is on Deepgram Speak '26 (Oct 29) and VapiCon builder track. Pipecat often co-appears with Speechmatics / LiveKit / Deepgram builder nights — watch those calendars and daily.co changelog.",
+      "pipecat.ai/events still shows no upcoming dated public meetups as of 2026-10-30 (\"The calendar is clear — for now\"); Daily Luma cal-9UmQbmvz8qvnCK3 empty. Competitive signal: Deepgram × Daily Flux TTS on Pipecat webinar (Sep 29) is past; Pipecat co-hosted Voice AI: Shaping the Next Frontier of Customer Interaction (Oct 1 London, luma.com/prkbq50k — now past). Daily/Pipecat CEO Kwindla Kramer was on Deepgram Speak '26 (Oct 29 → pastEvents2026) and remains on VapiCon builder track. Pipecat often co-appears with Speechmatics / LiveKit / Deepgram builder nights — watch those calendars and daily.co changelog.",
   },
   {
     id: "speechmatics",
@@ -421,7 +407,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Re-checked 2026-10-29: Speechmatics Luma cal-ZYr28XXq5fyMAym still lists Better Every Call? (c0iiab0e, Nov 5 London with Roark) + What Did Your Agent Learn This Week? Voice AI Leaders Dinner (59dy3crh, Nov 10 SF Embarcadero — skipped as invite-only leaders dinner, not a developer room). speechmatics.com/events also lists HLTH Las Vegas Nov 15–18 (healthcare trade show — skipped as booth/operator room). c0iiab0e remains the strongest near-term Speechmatics developer mindshare after past Oct 1 Tuner + Tech Week LiveKit/Aqua (pastEvents2026).",
+      "Re-checked 2026-10-30: Speechmatics Luma cal-ZYr28XXq5fyMAym still lists Better Every Call? (c0iiab0e, Nov 5 London with Roark) + What Did Your Agent Learn This Week? Voice AI Leaders Dinner (59dy3crh, Nov 10 SF Embarcadero — skipped as invite-only leaders dinner, not a developer room). speechmatics.com/events also lists HLTH Las Vegas Nov 15–18 (healthcare trade show — skipped as booth/operator room). c0iiab0e remains the strongest near-term Speechmatics developer mindshare after past Oct 1 Tuner + Tech Week LiveKit/Aqua (pastEvents2026).",
   },
   {
     id: "gladia",
@@ -430,7 +416,7 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://gladia.io/",
     events: [],
     watchNote:
-      "Re-checked 2026-10-29: Paris Voice AI Meetup with pyannoteAI × Modal (Oct 14, paris-voice-ai) remains pruned. No new dated Gladia public rooms — direct STT competitor with EU residency positioning; watch gladia.io and @gladiaio for the next EU builder night.",
+      "Re-checked 2026-10-30: Paris Voice AI Meetup with pyannoteAI × Modal (Oct 14, paris-voice-ai) remains pruned. No new dated Gladia public rooms — direct STT competitor with EU residency positioning; watch gladia.io and @gladiaio for the next EU builder night.",
   },
   {
     id: "soniox",
@@ -439,7 +425,7 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://www.soniox.com/",
     events: [],
     watchNote:
-      "No owned dated Jul–Dec 2026 events on soniox.com as of 2026-10-29. Competitive signal: Soniox CEO Klemen Simonic is on the VapiCon 2026 builder-track panel “Building Voice Models for Real Conversations” (Nov 12, with Deepgram CPO / Fish Audio / pyannoteAI). Real-time STT competitor — watch soniox.com and LinkedIn for workshop / launch announcements.",
+      "No owned dated Jul–Dec 2026 events on soniox.com as of 2026-10-30. Competitive signal: Soniox CEO Klemen Simonic is on the VapiCon 2026 builder-track panel “Building Voice Models for Real Conversations” (Nov 12, with Deepgram CPO / Fish Audio / pyannoteAI). Real-time STT competitor — watch soniox.com and LinkedIn for workshop / launch announcements.",
   },
   {
     id: "rev-ai",
@@ -448,7 +434,7 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://www.rev.ai/",
     events: [],
     watchNote:
-      "No public dated Jul–Dec 2026 developer events found on rev.ai as of 2026-10-29. Check rev.com/blog and partner conference booths.",
+      "No public dated Jul–Dec 2026 developer events found on rev.ai as of 2026-10-30. Check rev.com/blog and partner conference booths.",
   },
   {
     id: "hume",
@@ -457,7 +443,7 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://www.hume.ai",
     events: [],
     watchNote:
-      "No dedicated public events calendar found at research time (2026-10-29). Hume sponsored/judged AGI House Voice AI Hackathon (Sep 19, now pastEvents2026) — competitive TTS/empathic-voice mindshare at AGI House. Otherwise shows up as a speaker/sponsor at voice-agent conferences rather than running its own dated series. Check hume.ai and @hume_ai.",
+      "No dedicated public events calendar found at research time (2026-10-30). Hume sponsored/judged AGI House Voice AI Hackathon (Sep 19, now pastEvents2026) — competitive TTS/empathic-voice mindshare at AGI House. Otherwise shows up as a speaker/sponsor at voice-agent conferences rather than running its own dated series. Check hume.ai and @hume_ai.",
   },
   {
     id: "smallest-ai",
@@ -466,7 +452,7 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://luma.com/smallest.ai",
     events: [],
     watchNote:
-      "Luma calendar cal-xZRPdTa3UcyyNJE empty as of 2026-10-29. Past 2026 Bay Area pattern: Beyond Text research talks (Jun 8, Menlo Park), Voice AI Goes Global multilingual panel (Jun 15), CCW Las Vegas steakhouse afterhours with Telnyx (Jun 24), Voice AI HackSprint 2.0 (Mar 14, SF). Re-check weekly — they run SF/Menlo Park builder nights in bursts.",
+      "Luma calendar cal-xZRPdTa3UcyyNJE empty as of 2026-10-30. Past 2026 Bay Area pattern: Beyond Text research talks (Jun 8, Menlo Park), Voice AI Goes Global multilingual panel (Jun 15), CCW Las Vegas steakhouse afterhours with Telnyx (Jun 24), Voice AI HackSprint 2.0 (Mar 14, SF). Re-check weekly — they run SF/Menlo Park builder nights in bursts.",
   },
   {
     id: "google-cloud-speech",
@@ -475,7 +461,7 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://cloud.google.com/speech-to-text",
     events: [],
     watchNote:
-      "Re-checked 2026-10-29: Gemini Audio | At Night (Sep 24) remains in pastEvents2026. No new dated Google Cloud Speech / Gemini Live Bay Area builder rooms on DeepMind Luma cal-7Q5A70Bz5Idxopu (Encode London / Gemma Hardware Hackathon / Bench Summit not speech-specific; Founder Briefing Nov 4 skipped as generic frontier LLM / non-developer). Watch Google Cloud events and Gemini Live launch webinars for follow-ons.",
+      "Re-checked 2026-10-30: Gemini Audio | At Night (Sep 24) remains in pastEvents2026. No new dated Google Cloud Speech / Gemini Live Bay Area builder rooms on DeepMind Luma cal-7Q5A70Bz5Idxopu (Halloween At Imperial / Scaling Startups London / Founder Briefing Nov 4 / Built in London / Miami Build Night / GTM Hackathon skipped as non-speech or generic founder rooms). Watch Google Cloud events and Gemini Live launch webinars for follow-ons.",
   },
   {
     id: "azure-ai-speech",
@@ -484,7 +470,7 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://azure.microsoft.com/en-us/products/ai-services/ai-speech",
     events: [],
     watchNote:
-      "Re-checked 2026-10-29: Model Mondays Voice Agents Upgraded (Oct 12) remains pruned. Watch Microsoft Reactor SF / Model Mondays for the next Azure Speech / Foundry voice-agent education hour.",
+      "Re-checked 2026-10-30: Model Mondays Voice Agents Upgraded (Oct 12) remains pruned. Watch Microsoft Reactor SF / Model Mondays for the next Azure Speech / Foundry voice-agent education hour.",
   },
   {
     id: "aws-transcribe",
@@ -493,6 +479,6 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://aws.amazon.com/transcribe/",
     events: [],
     watchNote:
-      "No Transcribe-specific dated Jul–Dec 2026 events confirmed as of 2026-10-29. Multi-Model Hackathon (Oct 23, luma.com/beta-79jb) and AGNTCon + MCPCon NA (Oct 22–23) moved to pastEvents2026 after Pacific end. Multi-Modal Education Hackathon @ Snowflake (Nov 13, beta-3ue5) still adds a Voice & Audio Tutors track — multimodal-audio teams are the near-term STT pitch. Watch AWS Gen AI Loft SF for Amazon Connect / contact-center voice sessions. Skip stale Deepgram×Daily Jul 2025 year trap.",
+      "No Transcribe-specific dated Jul–Dec 2026 events confirmed as of 2026-10-30. Multi-Model Hackathon (Oct 23, luma.com/beta-79jb) and AGNTCon + MCPCon NA (Oct 22–23) moved to pastEvents2026 after Pacific end. Multi-Modal Education Hackathon @ Snowflake (Nov 13, beta-3ue5) still adds a Voice & Audio Tutors track — multimodal-audio teams are the near-term STT pitch. Watch AWS Gen AI Loft SF for Amazon Connect / contact-center voice sessions. Skip stale Deepgram×Daily Jul 2025 year trap.",
   },
 ];
