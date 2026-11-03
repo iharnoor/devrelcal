@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-11-02. Dates and venues sourced from
+ * Confirmed research date: 2026-11-03. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -66,27 +66,32 @@ const scrapedEvents: CalEvent[] = [
     note: "Invite-only; exact venue not yet published",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // 2026-11-02 (~08:00 PST / 16:00 UTC). (api.luma.com/discover, place
+  // 2026-11-03 (~08:00 PST / 16:00 UTC). (api.luma.com/discover, place
   // discplace-BDj7GNbGlsF7Cka), filtered to AI / voice-agent-relevant
-  // listings. 75 discover entries across 3 pages — no new Bay Area discover
-  // voice rooms. NEW via voiceaispace: Decagon × Accel Voice & Audio Research
-  // Night SF (j3ddfdsw, Nov 9) + Voice Mitte 1.0 Berlin (th6h5ufn, Nov 5).
+  // listings. 81 discover entries across 4 pages — no new Bay Area discover
+  // voice rooms (Coval×Cloudflare iq4hna2x still the only discover voice hit).
+  // NEW via web/vexoai + Luma: VexoHacks wearables hackathon at YC (chgfm6ec,
+  // Nov 14; Voice track + ElevenLabs sponsor). NEW Deepgram Speak Easy
+  // re:Invent lounge (reinvent-speak-easy, Dec 1) tracked under vendorEvents.
   // msrwwjby Oct 27–Nov 7 still live via event/get (AssemblyAI cal items
-  // empty). Re-verified iq4hna2x Nov 3, Voice Agents Forum Nov 5 9am–6pm
-  // PST, Cartesia 94y4it1j + xrj6gzm2 Nov 10, deepgram-2jm5 Nov 17 PST,
-  // Agora Lisbon Nov 10 + NYC Nov 17, fimimqjw Dec 3, rasa-w23d Nov 24.
+  // empty). Re-verified iq4hna2x Nov 3 tonight, Voice Agents Forum Nov 5
+  // 9am–6pm PST, Cartesia 94y4it1j + xrj6gzm2 Nov 10 (xrj6gzm2 dropped from
+  // Cartesia cal items but event/get still live), deepgram-2jm5 Nov 17 PST,
+  // Agora Lisbon Nov 10 + NYC Nov 17, fimimqjw Dec 3, rasa-w23d Nov 24,
+  // Deepgram cal now also lists reinvent-speak-easy Dec 1.
   // Skipped low-signal discover: Mistral Make SF Better / Braintrust evals /
   // DNAForge / She Builds / Physical AI Industry Night / EliseAI drinks /
   // ElevenCreative After Hours / AIE Code Summit afterparty + MLH hack /
-  // Wispr Flow SPC fireside / Even Realities glasses build night / Fireworks
-  // Buildathon. Still skip Cartesia Agent's Table (srbdv0c2) + Coffee
-  // CARTesia NYC (0960vqe8) + Speechmatics 59dy3crh + Vapi healthcare dinner
-  // vapi-2wdx + CTOs Pitch Engineers + Sensory×Qualcomm wearables webinar
-  // (voiceaispace dated Oct 15 — past). Year traps: u0k6rev6 / 3zsy5yq2
-  // Nov 2025, dihiwe4q Apr 2026, ch986w6u Feb 2026, v2bksbb8 May.
-  // AGI House / LiveKit / Daily / Smallest / Decagon cal items empty
-  // (Decagon room live via event/get only). ElevenAgents Hackathon London
-  // still 200; Build Series still HTTP 404.
+  // Wispr Flow SPC fireside / Even Realities glasses build night / OpenRouter
+  // × Meta Build Day. Still skip Cartesia Agent's Table (srbdv0c2) + Coffee
+  // CARTesia NYC (0960vqe8; voiceaispace mislabels as Multimodal Research
+  // Panel) + Speechmatics 59dy3crh + Vapi healthcare dinner vapi-2wdx +
+  // WAVE Summit Parloa (CX-exec invite-only) + MEF Voice AI Summit London
+  // (carrier/telecom room). Year traps: u0k6rev6 / 3zsy5yq2 Nov 2025,
+  // dihiwe4q Apr 2026, ch986w6u Feb 2026, v2bksbb8 May. AGI House / LiveKit /
+  // Daily / Smallest / Decagon / AssemblyAI cal items empty (Decagon +
+  // msrwwjby live via event/get only). ElevenAgents Hackathon London still
+  // 200; Build Series still HTTP 404.
   {
     id: "coval-cloudflare-production-voice-ai-sf",
     name: "Building Voice AI That Holds Up in Production: Coval × Cloudflare",
@@ -275,6 +280,24 @@ const scrapedEvents: CalEvent[] = [
     topicNote:
       "Dedicated phone voice-agent build night co-hosted by Deepgram and Vapi — direct STT + voice-agent platform mindshare vs AssemblyAI builders.",
   },
+  {
+    id: "vexohacks-ai-wearables-hackathon-yc-sf",
+    name: "VexoHacks: An AI Wearables Hackathon",
+    category: "hackathon",
+    status: "confirmed",
+    dateLabel: "Nov 14, 9am–9pm PT",
+    sortDate: "2026-11-14",
+    month: "2026-11",
+    location: "Y Combinator, San Francisco (address on acceptance)",
+    description:
+      "One-day Vexo wearables hackathon at Y Combinator — Voice / Vision / Ambient tracks, optional Vexo bracelet voice builds, $15k+ prizes plus a YC final interview. Sponsored by OpenAI, ElevenLabs, Stripe, Mastra, and Brex. Day after Multi-Modal Education Hackathon @ Snowflake; strong Bay Area speech-input / wearable-voice builder room (luma.com/chgfm6ec + vexoai.com/hackathon as of 2026-11-03).",
+    sourceUrl: "https://luma.com/chgfm6ec",
+    sourceLabel: "luma.com",
+    note: "Registration requires approval; in-person SF only",
+    topics: ["voice-agents", "tts"],
+    topicNote:
+      "Explicit Voice track plus wearable speech builds; ElevenLabs is a named sponsor — TTS / voice-interface mindshare, not an STT benchmark session.",
+  },
 ];
 
 /**
@@ -336,6 +359,9 @@ export const directSubmissions: CalEvent[] = [
   // 2026-11-02: msrwwjby still sole upcoming owned room through Nov 7;
   // no new AssemblyAI Luma rooms; Decagon × Accel + Voice Mitte added via
   // voiceaispace (not on AssemblyAI cal).
+  // 2026-11-03: msrwwjby still sole upcoming owned room through Nov 7
+  // 11am PT (cal items empty; event/get live); VexoHacks added to scraped
+  // (ElevenLabs-sponsored Voice track at YC — not AssemblyAI-owned).
   {
     id: "assemblyai-voice-hackathon-week-hack-into-speech-oct2026",
     name: "Voice hackathon week: Hack into speech",
@@ -364,7 +390,7 @@ export const directSubmissions: CalEvent[] = [
     month: "2026-11",
     location: "Digital Jungle SF, 972 Mission St, San Francisco",
     description:
-      "One-day AAIF Community forum for teams shipping voice agents in production — latency, turn-taking, barge-in, evaluation, observability, human handoff. Confirmed speakers include Deepgram Sr. DevRel Sam Gutentag plus Moonshine AI, AudioShake, Coval, Fish Audio, Phonely, Delphi, LiveKit, Telnyx, Cartesia, and ServiceNow. Highest-signal Bay Area room the week before VapiCon (Luma event/get lists Nov 5, 9am–6pm PT as of 2026-11-02).",
+      "One-day AAIF Community forum for teams shipping voice agents in production — latency, turn-taking, barge-in, evaluation, observability, human handoff. Confirmed speakers include Deepgram Sr. DevRel Sam Gutentag plus Moonshine AI, AudioShake, Coval, Fish Audio, Phonely, Delphi, LiveKit, Telnyx, Cartesia, and ServiceNow. Highest-signal Bay Area room the week before VapiCon (Luma event/get lists Nov 5, 9am–6pm PT as of 2026-11-03).",
     sourceUrl: "https://luma.com/voiceagentssf",
     sourceLabel: "luma.com",
     topics: ["voice-agents", "stt", "streaming"],
@@ -509,7 +535,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Re-checked 2026-11-02: public Luma calendar cal-Lv1pgYv5ITFR4tC still empty (no dated upcoming items). Voice AI Hackathon (Sep 19) + AI Debates (aidebates still 404) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice/agent rooms surfaced this pass.",
+      "Re-checked 2026-11-03: public Luma calendar cal-Lv1pgYv5ITFR4tC still empty (no dated upcoming items). Voice AI Hackathon (Sep 19) + AI Debates (aidebates still 404) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice/agent rooms surfaced this pass.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -544,7 +570,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://www.voiceaispace.com/events",
     sourceLabel: "voiceaispace.com",
     watchNote:
-      "Re-checked 2026-11-02 (PST): Discover 75/3 pages — no new Bay Area discover voice rooms. NEW via voiceaispace: Decagon × Accel Voice & Audio Research Night SF Nov 9 (j3ddfdsw; Meta + Cartesia speakers) + Voice Mitte 1.0 Berlin Nov 5 (th6h5ufn; ai-coustics × telli). Still live: owned TTS hackathon week Oct 27–Nov 7 (msrwwjby event/get; AssemblyAI cal items empty). Ahead: Coval×Cloudflare + Rasa NYC Nov 3, Voice Agents Forum Nov 5 9am–6pm PST (Deepgram DevRel on roster) + Speechmatics × Roark London + Gradium×Coval Paris + Voice Mitte Berlin + Treble webinar same day, Decagon × Accel research night + Vapi×Deepgram Web Summit Kick Off Nov 9, Agora Lisbon + Cartesia Managed Agents webinar + Multimodal First Look SF + AI Engineer Code Summit Nov 10–12, VapiCon Nov 11–12, Multi-Modal Education Hackathon Snowflake Nov 13, Deepgram×Vapi phone workshop Nov 17 (Luma + Meetup open) + Agora Voice AI Workshop NYC Nov 17 + ElevenAgents Hackathon London Nov 17–18, Bolna Symphony Nov 20, Rasa Founding Builders Paris Nov 24, Twilio London Dec 2 + Deepgram HealthTech London Dec 3, Vapi × LangChain AI Summit NYC after-hours Dec 9. Skip Speechmatics leaders dinner 59dy3crh / Cartesia Agent's Table / Coffee CARTesia NYC 0960vqe8 / ElevenCreative After Hours SF / Vapi healthcare dinner vapi-2wdx / EliseAI rooms / CTOs Pitch Engineers / Wispr Flow SPC fireside / Even Realities glasses night / AIE MLH hack / Sensory×Qualcomm wearables webinar (past Oct 15) / ElevenAgents Build Series (still HTTP 404) / year traps (u0k6rev6 Nov 2025, dihiwe4q Apr, ch986w6u Feb, 3zsy5yq2 Nov 2025, v2bksbb8 May). Beyond the Cloud webinar page still 404. Do not trust voiceaispace Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5.",
+      "Re-checked 2026-11-03 (PST): Discover 81/4 pages — no new Bay Area discover voice rooms (iq4hna2x still tonight). NEW: VexoHacks AI Wearables Hackathon at YC Nov 14 (chgfm6ec; Voice track; ElevenLabs sponsor) + Deepgram Speak Easy re:Invent lounge Dec 1 (reinvent-speak-easy; Deepgram×Krisp×Twilio — vendorEvents). Still live: owned TTS hackathon week Oct 27–Nov 7 (msrwwjby event/get; AssemblyAI cal items empty). Ahead: Coval×Cloudflare + Rasa NYC + Twilio Assemble London Nov 3, Voice Agents Forum Nov 5 9am–6pm PST (Deepgram DevRel on roster) + Speechmatics × Roark London + Gradium×Coval Paris + Voice Mitte Berlin + Treble webinar same day, Decagon × Accel research night + Vapi×Deepgram Web Summit Kick Off Nov 9, Agora Lisbon + Cartesia Managed Agents webinar + Multimodal First Look SF + AI Engineer Code Summit Nov 10–12, VapiCon Nov 11–12, Multi-Modal Education Hackathon Snowflake Nov 13 + VexoHacks Nov 14, Deepgram×Vapi phone workshop Nov 17 + Agora Voice AI Workshop NYC Nov 17 + ElevenAgents Hackathon London Nov 17–18, Bolna Symphony Nov 20, Rasa Founding Builders Paris Nov 24, Deepgram Speak Easy re:Invent Dec 1 + Twilio London Dec 2 + Deepgram HealthTech London Dec 3, Vapi × LangChain AI Summit NYC after-hours Dec 9. Skip Speechmatics leaders dinner 59dy3crh / Cartesia Agent's Table / Coffee CARTesia NYC 0960vqe8 (voiceaispace mislabels as Multimodal Research Panel) / ElevenCreative After Hours SF / Vapi healthcare dinner vapi-2wdx / EliseAI rooms / CTOs Pitch Engineers / Wispr Flow SPC fireside / Even Realities glasses night / AIE MLH hack / WAVE Summit Parloa (CX-exec) / MEF Voice AI Summit London (carrier room) / ElevenAgents Build Series (still HTTP 404) / year traps (u0k6rev6 Nov 2025, dihiwe4q Apr, ch986w6u Feb, 3zsy5yq2 Nov 2025, v2bksbb8 May). Beyond the Cloud webinar page still 404. Do not trust voiceaispace Sep 16 date for Voice Agents Forum — Luma voiceagentssf is Nov 5.",
   },
 ];
 
@@ -922,4 +948,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-11-02";
+export const researchDate = "2026-11-03";
