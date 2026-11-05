@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-11-04. Dates and venues sourced from
+ * Confirmed research date: 2026-11-05. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -66,25 +66,24 @@ const scrapedEvents: CalEvent[] = [
     note: "Invite-only; exact venue not yet published",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // 2026-11-04 (~08:00 PST / 16:00 UTC). (api.luma.com/discover, place
+  // 2026-11-05 (~08:00 PST / 16:00 UTC). (api.luma.com/discover, place
   // discplace-BDj7GNbGlsF7Cka), filtered to AI / voice-agent-relevant
-  // listings. 80 discover entries across 4 pages — no new Bay Area discover
-  // voice rooms (prior Coval×Cloudflare iq4hna2x ended Nov 3 → pastEvents2026).
-  // NEW via Vapi cal + web: Side Quest Hotline Vapi Hackathon (buildclub-lugq,
-  // Nov 9 5–9pm PST @ Vapi HQ; Deepgram prize/tech partner). NEW owned
-  // AssemblyAI re:Invent Topgolf happy hour (m6gcrmm7, Nov 30) in
-  // directSubmissions. NEW ElevenLabs AI Tinkerers Singapore build
-  // (olv1aat3, Nov 10) under vendorEvents. Pruned Nov 3: iq4hna2x + Rasa NYC
-  // 56nl6dpz + Twilio Assemble 7z0fyqec. Still live: msrwwjby through Nov 7
-  // 11am PT (AssemblyAI cal now also lists m6gcrmm7), Voice Agents Forum
-  // Nov 5, Cartesia 94y4it1j + xrj6gzm2 Nov 10, deepgram-2jm5 Nov 17,
-  // reinvent-speak-easy Dec 1, fimimqjw Dec 3. AGI House cal now lists
-  // SF×MIT Energy/Peptides hack days (not voice — skip). Skipped:
-  // Braintrust evals / DNAForge / She Builds / EliseAI poker+drinks /
-  // ElevenCreative After Hours / WAVE Summit Parloa / MEF Voice AI Summit /
-  // Cartesia Agent's Table + Coffee CARTesia / Speechmatics 59dy3crh /
-  // Vapi healthcare dinner + afterparty / AIE MLH hack. Year traps
-  // unchanged. ElevenAgents London still 200; Build Series still 404.
+  // listings. 71 discover entries across 3 pages — no new Bay Area discover
+  // voice rooms. NEW via Antler US cal + web: Antler SF After Dark V2
+  // Building with Voice (antlerus-fd0t, Dec 3 5:30–10pm PT; ElevenLabs
+  // engineers). Pruned Twilio Manchester 401md669 (Nov 4) from vendorEvents.
+  // Still live today: Voice Agents Forum + Speechmatics × Roark + Gradium×
+  // Coval Paris + Voice Mitte Berlin + Treble webinar + ElevenLabs v4.
+  // Still ahead: msrwwjby through Nov 7 11am PT, Side Quest / Decagon /
+  // Lisbon Nov 9, Cartesia + Agora + ElevenLabs Singapore Nov 10, VapiCon
+  // Nov 11–12, Snowflake + VexoHacks Nov 13–14, Deepgram×Vapi SF Nov 17,
+  // owned Topgolf Nov 30 + Deepgram Speak Easy Dec 1 + Twilio London Dec 2
+  // + Deepgram HealthTech Dec 3 (same day as Antler After Dark). AGI House
+  // still Energy/Peptides only — skip. Skipped: Telnyx SF Happy Hour /
+  // Braintrust / DNAForge / She Builds / ElevenCreative / WAVE / MEF /
+  // Cartesia Agent's Table + Coffee CARTesia / Speechmatics dinner /
+  // Vapi dinner+afterparty / LiveKit Colorado Robotics / Murf Falcon
+  // India masterclasses / Sierra Summit Singapore. Year traps unchanged.
   {
     id: "treble-smart-glasses-audio-webinar-nov2026",
     name: "Engineering Smart Glasses Audio for the Real World — Treble × DSP Concepts",
@@ -275,6 +274,24 @@ const scrapedEvents: CalEvent[] = [
     topicNote:
       "Explicit Voice track plus wearable speech builds; ElevenLabs is a named sponsor — TTS / voice-interface mindshare, not an STT benchmark session.",
   },
+  {
+    id: "antler-sf-after-dark-v2-building-with-voice",
+    name: "Antler SF After Dark V2: Building with Voice",
+    category: "hackathon",
+    status: "confirmed",
+    dateLabel: "Dec 3, 5:30–10pm PT",
+    sortDate: "2026-12-03",
+    month: "2026-12",
+    location: "Antler SF office, San Francisco (China Basin; exact address on approval)",
+    description:
+      "Antler US after-hours SF voice build session — open workspace for operators and builders prototyping voice agents, with ElevenLabs engineers on demos and office hours. Same calendar day as Deepgram HealthTech London; strongest near-term Bay Area ElevenLabs builder-education signal after VapiCon week (luma.com/antlerus-fd0t on Antler US cal-TVpiEZu23bsIljH as of 2026-11-05).",
+    sourceUrl: "https://luma.com/antlerus-fd0t",
+    sourceLabel: "luma.com",
+    note: "Registration requires approval",
+    topics: ["voice-agents", "tts"],
+    topicNote:
+      "Dedicated voice-agent prototype evening with ElevenLabs engineers on site — TTS / voice-product mindshare, not a generic founder mixer.",
+  },
 ];
 
 /**
@@ -343,6 +360,8 @@ export const directSubmissions: CalEvent[] = [
   // re:Invent Voice AI Happy Hour @ Topgolf (m6gcrmm7, Nov 30 6–9pm PT);
   // msrwwjby still live via event/get through Nov 7 11am PT. Side Quest
   // Vapi Hackathon (buildclub-lugq) added to scraped — not owned.
+  // 2026-11-05: msrwwjby + m6gcrmm7 still live; Antler SF After Dark V2
+  // (antlerus-fd0t, Dec 3) added to scraped — ElevenLabs co-build, not owned.
   {
     id: "assemblyai-voice-hackathon-week-hack-into-speech-oct2026",
     name: "Voice hackathon week: Hack into speech",
@@ -534,7 +553,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Re-checked 2026-11-04: public Luma calendar cal-Lv1pgYv5ITFR4tC now lists SF × MIT Hack Day: Energy (Nov 8) + Peptides (Nov 29) — skipped (not voice/agent DevRel). Voice AI Hackathon (Sep 19) + AI Debates (aidebates still 404) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice rooms this pass.",
+      "Re-checked 2026-11-05: public Luma calendar cal-Lv1pgYv5ITFR4tC still lists SF × MIT Hack Day: Energy (Nov 8) + Peptides (Nov 29) — skipped (not voice/agent DevRel). Voice AI Hackathon (Sep 19) + AI Debates (aidebates still 404) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice rooms this pass.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -569,7 +588,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://www.voiceaispace.com/events",
     sourceLabel: "voiceaispace.com",
     watchNote:
-      "Re-checked 2026-11-04 (PST): Discover 80/4 pages — no new Bay Area discover voice rooms. NEW: Side Quest Hotline Vapi Hackathon Nov 9 (buildclub-lugq; Deepgram prize partner) + owned AssemblyAI re:Invent Topgolf Nov 30 (m6gcrmm7) + ElevenLabs AI Tinkerers Singapore Nov 10 (olv1aat3 — vendorEvents). Pruned Nov 3: Coval×Cloudflare + Rasa NYC + Twilio Assemble London → past/removed. Still live: owned TTS hackathon week through Nov 7 11am PT (msrwwjby). Ahead: Voice Agents Forum Nov 5 9am–6pm PST + Speechmatics × Roark London + Gradium×Coval Paris + Voice Mitte Berlin + Treble webinar, Decagon × Accel + Side Quest Vapi Hackathon + Vapi×Deepgram Lisbon Nov 9, Agora Lisbon + Cartesia Managed Agents + Multimodal First Look + ElevenLabs Singapore + AI Engineer Code Summit Nov 10–12, VapiCon Nov 11–12, Snowflake multimodal Nov 13 + VexoHacks Nov 14, Deepgram×Vapi SF + Agora NYC + ElevenAgents London Nov 17–18, Bolna Symphony Nov 20, Rasa Paris Nov 24, owned Topgolf Nov 30 + Deepgram Speak Easy Dec 1 + Twilio London Dec 2 + Deepgram HealthTech Dec 3 + Vapi×LangChain NYC Dec 9. Skip Speechmatics 59dy3crh / Cartesia Agent's Table + Coffee CARTesia / ElevenCreative After Hours / Vapi dinner+afterparty / EliseAI / WAVE Summit Parloa / MEF London / AGI House Energy+Peptides / ElevenAgents Build Series 404 / year traps. Beyond the Cloud still 404. Do not trust voiceaispace Sep 16 for Voice Agents Forum — Luma is Nov 5.",
+      "Re-checked 2026-11-05 (PST): Discover 71/3 pages — no new Bay Area discover voice rooms. NEW: Antler SF After Dark V2 Building with Voice Dec 3 (antlerus-fd0t; ElevenLabs engineers — also vendorEvents). Pruned Twilio Manchester Nov 4 (401md669). Still live today: Voice Agents Forum 9am–6pm PST + Speechmatics × Roark London + Gradium×Coval Paris + Voice Mitte Berlin + Treble webinar + ElevenLabs v4. Owned TTS hackathon week through Nov 7 11am PT (msrwwjby). Ahead: Decagon × Accel + Side Quest Vapi Hackathon + Vapi×Deepgram Lisbon Nov 9, Agora Lisbon + Cartesia Managed Agents + Multimodal First Look + ElevenLabs Singapore + AI Engineer Code Summit Nov 10–12, VapiCon Nov 11–12, Snowflake multimodal Nov 13 + VexoHacks Nov 14, Deepgram×Vapi SF + Agora NYC + ElevenAgents London Nov 17–18, Bolna Symphony Nov 20, Rasa Paris Nov 24, owned Topgolf Nov 30 + Deepgram Speak Easy Dec 1 + Twilio London Dec 2 + Deepgram HealthTech Dec 3 (same day as Antler After Dark) + Vapi×LangChain NYC Dec 9. Skip Telnyx SF Happy Hour / Speechmatics 59dy3crh / Cartesia Agent's Table + Coffee CARTesia / ElevenCreative After Hours / Vapi dinner+afterparty / LiveKit Colorado Robotics / Murf Falcon India masterclasses / Sierra Summit / WAVE / MEF / AGI House Energy+Peptides / ElevenAgents Build Series 404 / year traps. Beyond the Cloud still 404.",
   },
 ];
 
@@ -961,4 +980,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-11-04";
+export const researchDate = "2026-11-05";
