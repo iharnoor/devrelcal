@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-11-07. Dates and venues sourced from
+ * Confirmed research date: 2026-11-08. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -66,22 +66,21 @@ const scrapedEvents: CalEvent[] = [
     note: "Invite-only; exact venue not yet published",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // 2026-11-07 (~08:00 PST / 16:00 UTC). (api.luma.com/discover, place
+  // 2026-11-08 (~08:00 PST / 16:00 UTC). (api.luma.com/discover, place
   // discplace-BDj7GNbGlsF7Cka), filtered to AI / voice-agent-relevant
-  // listings. 72 discover entries across 3 pages. NEW via voiceaispace
-  // (missed Bay Area discover): Inside GPT‑Live‑1 EliseAI × OpenAI
-  // (2cbcy58l, Nov 17 6–9pm PT SF) — expands Nov 17 to a QUINT stack with
-  // owned Parallel build + OpenRouter×ElevenLabs + Deepgram×Vapi SF +
-  // Agora NYC / ElevenAgents London. NEW ElevenLabs re:Invent booth
-  // meetings Dec 1–3 (vendorEvents). Owned TTS hackathon week (msrwwjby)
-  // still live via event/get through Nov 7 11am PT. AGI House still
-  // Energy/Peptides only — skip. Skipped: Telnyx SF Happy Hour /
-  // Braintrust / DNAForge / She Builds / ElevenCreative / WAVE / MEF /
-  // Cartesia Agent's Table + Coffee CARTesia + Agent Soundcheck karaoke /
+  // listings. 78 discover entries across 4 pages. NEW: Speech to Ship
+  // Hackathon (1netrne6, Nov 20 SF — Willow × Emergent × You.com; missed
+  // Bay Area discover; found via voice/speech search). Owned TTS hackathon
+  // week (msrwwjby) ended Nov 7 11am PT → pastEvents2026. AGI House still
+  // Energy (today) / Peptides only — skip. Year trap: the-audio-layer is
+  // 2025-12-10, not 2026. Skipped: Telnyx SF Happy Hour / Braintrust /
+  // DNAForge / She Builds / ElevenCreative SF+LA / WAVE / MEF / Cartesia
+  // Agent's Table + Coffee CARTesia + Agent Soundcheck karaoke /
   // Speechmatics dinner / Vapi dinner+afterparty / LiveKit Colorado
   // Robotics / Murf Falcon India masterclasses / Sierra Summit / Wispr
-  // SPC fireside / Grok Bot Build Day / Vertical Agent Meetup (no voice
-  // signal) / ElevenLabs LATAM exec rooms / Adopt AI Paris booth.
+  // SPC fireside / Grok Bot Build Day / Vertical Agent Meetup / ElevenLabs
+  // LATAM exec rooms / Adopt AI Paris booth / Voice Connect Dubai /
+  // Voice AI Space dinner London / CTOs Pitch Engineers.
   {
     id: "decagon-accel-voice-audio-research-night-sf",
     name: "Voice & Audio Research Night by Decagon × Accel",
@@ -256,6 +255,24 @@ const scrapedEvents: CalEvent[] = [
       "Dedicated full-duplex realtime voice-agent production panel (OpenAI GPT‑Live‑1 × EliseAI) — streaming conversational-voice engineering room, not a generic AI mixer.",
   },
   {
+    id: "speech-to-ship-hackathon-sf-nov2026",
+    name: "Speech to Ship Hackathon: Speak It, Build It, Ship It.",
+    category: "hackathon",
+    status: "confirmed",
+    dateLabel: "Nov 20, 9am–8pm PT",
+    sortDate: "2026-11-20",
+    month: "2026-11",
+    location: "Emergent HQ, San Francisco (exact address on approval)",
+    description:
+      "One-day Willow × Emergent × You.com SF hackathon — builders ship a full app using only speech (Willow dictation → Emergent codegen → You.com realtime web search), with a kickoff city/business/customer draw so teams start hacking immediately. Same calendar day as Bolna Symphony Bengaluru; strongest near-term Bay Area speech-input / dictation-STT builder room after VexoHacks (luma.com/1netrne6 as of 2026-11-08; missed Bay Area discover).",
+    sourceUrl: "https://luma.com/1netrne6",
+    sourceLabel: "luma.com",
+    note: "Registration requires approval; capped capacity",
+    topics: ["stt"],
+    topicNote:
+      "Dedicated speech-first app-building hackathon centered on voice dictation / speech-to-text input — STT pitch room, not a phone voice-agent platform session.",
+  },
+  {
     id: "antler-sf-after-dark-v2-building-with-voice",
     name: "Antler SF After Dark V2: Building with Voice",
     category: "hackathon",
@@ -350,24 +367,9 @@ export const directSubmissions: CalEvent[] = [
   // 2026-11-07: msrwwjby + 5b3cjgix + m6gcrmm7 still live (msrwwjby through
   // Nov 7 11am PT via event/get; cal items show only 5b3cjgix + m6gcrmm7).
   // EliseAI × OpenAI GPT‑Live‑1 (2cbcy58l) added to scraped — not owned.
-  {
-    id: "assemblyai-voice-hackathon-week-hack-into-speech-oct2026",
-    name: "Voice hackathon week: Hack into speech",
-    category: "hackathon",
-    status: "confirmed",
-    dateLabel: "Oct 27–Nov 7",
-    sortDate: "2026-10-27",
-    endDate: "2026-11-07",
-    month: "2026-10",
-    location: "Online (Discord)",
-    description:
-      "Owned AssemblyAI online voice hackathon focused on the new Text-to-Speech API — live kickoff build of a working TTS app with Voice AI engineers, then teams of 1–4 ship voice agents / audio products ($2k prize pool). DATE CORRECTION 2026-10-20: live event/get (msrwwjby) is now Oct 27 7pm–Nov 7 11am PT on AssemblyAI cal-R9IQUb53FUrolUF (was Oct 16–24; Luma body copy still shows stale Oct 15–23 — trust event/get).",
-    sourceUrl: "https://luma.com/msrwwjby",
-    sourceLabel: "luma.com",
-    topics: ["tts", "voice-agents"],
-    topicNote:
-      "Owned AssemblyAI TTS hackathon week — primary pitch is new TTS API for voice products; not an STT benchmark room.",
-  },
+  // 2026-11-08: msrwwjby ended Nov 7 11am PT → pastEvents2026; AssemblyAI
+  // cal still lists 5b3cjgix + m6gcrmm7 only. Speech to Ship (1netrne6)
+  // added to scraped — not owned.
   {
     id: "assemblyai-parallel-build-night-voice-agent-sf-nov2026",
     name: "Build Night: Parallel × AssemblyAI",
@@ -544,7 +546,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Re-checked 2026-11-07: public Luma calendar cal-Lv1pgYv5ITFR4tC still lists SF × MIT Hack Day: Energy (Nov 8) + Peptides (Nov 29) — skipped (not voice/agent DevRel). Voice AI Hackathon (Sep 19) + AI Debates (aidebates still 404) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice rooms this pass.",
+      "Re-checked 2026-11-08: public Luma calendar cal-Lv1pgYv5ITFR4tC still lists SF × MIT Hack Day: Energy (Nov 8) + Peptides (Nov 29) — skipped (not voice/agent DevRel). Voice AI Hackathon (Sep 19) + AI Debates (aidebates still 404) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice rooms this pass.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -579,11 +581,18 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://www.voiceaispace.com/events",
     sourceLabel: "voiceaispace.com",
     watchNote:
-      "Re-checked 2026-11-07 (PST): Discover 72/3 pages. NEW: EliseAI × OpenAI Inside GPT‑Live‑1 SF Nov 17 (2cbcy58l via voiceaispace) + ElevenLabs re:Invent booth meetings Dec 1–3 (vendorEvents). Owned TTS hackathon week still through Nov 7 11am PT (msrwwjby). Ahead: Decagon × Accel + Side Quest Vapi Hackathon + Vapi×Deepgram Lisbon Nov 9, Agora Lisbon + Cartesia Managed Agents + Multimodal First Look + ElevenLabs Singapore + AI Engineer Code Summit Nov 10–12, VapiCon Nov 11–12, Snowflake multimodal Nov 13 + VexoHacks Nov 14, Nov 17 QUINT (owned Parallel build + OpenRouter×ElevenLabs + Deepgram×Vapi SF + EliseAI×OpenAI + Agora NYC / ElevenAgents London), Bolna Symphony Nov 20, Rasa Paris Nov 24, owned Topgolf Nov 30 + Deepgram Speak Easy Dec 1 + Cartesia Super Car-tesia Dec 1 morning + ElevenLabs re:Invent booth Dec 1–3 + Twilio London Dec 2 + Deepgram HealthTech Dec 3 (same day as Antler After Dark) + Vapi×LangChain NYC Dec 9. Skip Telnyx SF Happy Hour / Speechmatics 59dy3crh / Cartesia Agent's Table + Coffee CARTesia + Agent Soundcheck karaoke / ElevenCreative After Hours / Vapi dinner+afterparty / LiveKit Colorado Robotics / Murf Falcon India masterclasses / Sierra Summit / WAVE / MEF / AGI House Energy+Peptides / Wispr SPC fireside / Grok Bot Build Day / Vertical Agent Meetup / ElevenLabs LATAM exec rooms / Adopt AI Paris booth / ElevenAgents Build Series 404 / year traps. Beyond the Cloud still 404.",
+      "Re-checked 2026-11-08 (PST): Discover 78/4 pages. NEW: Speech to Ship Hackathon SF Nov 20 (1netrne6). Owned TTS hackathon week (msrwwjby) → pastEvents2026 after Nov 7 11am PT. Ahead: Decagon × Accel + Side Quest Vapi Hackathon + Vapi×Deepgram Lisbon Nov 9, Agora Lisbon + Cartesia Managed Agents + Multimodal First Look + ElevenLabs Singapore + AI Engineer Code Summit Nov 10–12, VapiCon Nov 11–12, Snowflake multimodal Nov 13 + VexoHacks Nov 14, Nov 17 QUINT (owned Parallel build + OpenRouter×ElevenLabs + Deepgram×Vapi SF + EliseAI×OpenAI + Agora NYC / ElevenAgents London), Speech to Ship + Bolna Symphony Nov 20, Rasa Paris Nov 24, owned Topgolf Nov 30 + Deepgram Speak Easy Dec 1 + Cartesia Super Car-tesia Dec 1 morning + ElevenLabs re:Invent booth Dec 1–3 + Twilio London Dec 2 + Deepgram HealthTech Dec 3 (same day as Antler After Dark) + Vapi×LangChain NYC Dec 9. Skip Telnyx SF Happy Hour / Speechmatics 59dy3crh / Cartesia Agent's Table + Coffee CARTesia + Agent Soundcheck karaoke / ElevenCreative After Hours / Vapi dinner+afterparty / LiveKit Colorado Robotics / Murf Falcon India / Sierra Summit / WAVE / MEF / AGI House Energy+Peptides / Vertical Agent Meetup / ElevenLabs LATAM exec rooms / Adopt AI Paris booth / Voice Connect Dubai / Voice AI Space dinner London / the-audio-layer 2025 year trap / ElevenAgents Build Series 404. Beyond the Cloud still 404.",
   },
 ];
 
 export const pastEvents2026: PastEvent[] = [
+  {
+    id: "assemblyai-voice-hackathon-week-hack-into-speech-oct2026",
+    name: "Voice hackathon week: Hack into speech",
+    dateLabel: "Oct 27–Nov 7",
+    location: "Online (Discord)",
+    note: "Owned AssemblyAI TTS / voice-product hackathon week (luma.com/msrwwjby; ended Nov 7 11am PT) — kept for owned online TTS hackathon cadence / recurrence planning",
+  },
   {
     id: "voice-agents-forum-2026",
     name: "Voice Agents Forum",
@@ -999,4 +1008,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-11-07";
+export const researchDate = "2026-11-08";
