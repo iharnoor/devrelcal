@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-11-10. Dates and venues sourced from
+ * Confirmed research date: 2026-11-11. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -66,22 +66,25 @@ const scrapedEvents: CalEvent[] = [
     note: "Invite-only; exact venue not yet published",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // 2026-11-10 (~08:02 PST / 16:02 UTC). (api.luma.com/discover, place
+  // 2026-11-11 (~08:05 PST / 16:05 UTC). (api.luma.com/discover, place
   // discplace-BDj7GNbGlsF7Cka), filtered to AI / voice-agent-relevant
-  // listings. 84 discover entries across 4 pages. Nov 9 stack (Side Quest /
-  // Decagon / Lisbon kickoff) + ElevenLabs Singapore pruned after Pacific
-  // end. NEW via voice search (missed discover): Rime Prism S2S hackathon
-  // (9q4bvnmt, Dec 5). Cartesia Managed Agents DATE CORRECTION → Nov 17
-  // (vendorEvents). Agora NYC workshop retitled with Google DeepMind Gemini.
-  // AGI House still Peptides only — skip. Year traps: the-audio-layer +
-  // Rime×Rasa a05j8jv0 are 2025, not 2026. Skipped: Telnyx SF Happy Hour /
-  // Braintrust / DNAForge / She Builds / ElevenCreative SF+LA / WAVE / MEF /
-  // Cartesia Agent's Table + Coffee CARTesia + Agent Soundcheck karaoke /
-  // Speechmatics dinner / Vapi dinner+afterparty / LiveKit Colorado Robotics /
-  // Murf Falcon India / Sierra Summit / Wispr SPC fireside / Vertical Agent
-  // Meetup / ElevenLabs LATAM exec rooms + Seoul meetup / Adopt AI Paris /
-  // Voice Connect Dubai / Voice AI Space dinner London / CTOs Pitch Engineers /
-  // Cashfree×Sarvam Bengaluru / n8n×Vercel Builder Night / Backprop Summit.
+  // listings. 75 discover entries across 3 pages. Nov 10 Cartesia Multimodal
+  // First Look (xrj6gzm2) + Agora Lisbon Scaling Voice AI (wqg33o39) →
+  // pastEvents2026 after Pacific end. Agora NYC Scaling slug refresh:
+  // 1bf4kv8i → agora-ai-summit-nyc (old slug 404). No new Bay Area discover
+  // voice rooms; Voice AI Day SF Dec 10 (voiceaiday-sanfrancisco) surfaced
+  // via voiceaispace / web search — skipped (no talks/demos/agenda mixer).
+  // AGI House cal now Formalizing Bioelectricity Nov 12 + Peptides Nov 29 —
+  // both skip. Year traps: the-audio-layer + Rime×Rasa a05j8jv0 are 2025.
+  // Skipped: Telnyx SF Happy Hour / Braintrust / DNAForge / She Builds /
+  // ElevenCreative SF+LA / WAVE / MEF / Cartesia Agent's Table + Coffee
+  // CARTesia + Agent Soundcheck karaoke / Speechmatics dinner / Vapi
+  // dinner+afterparty / LiveKit Colorado Robotics / Murf Falcon India /
+  // Sierra Summit / Wispr SPC fireside / Vertical Agent Meetup / ElevenLabs
+  // LATAM exec rooms + Seoul meetup / Adopt AI Paris / Voice Connect Dubai /
+  // Voice AI Space dinner London + Voice AI Day global mixers / CTOs Pitch
+  // Engineers / Cashfree×Sarvam Bengaluru / n8n×Vercel Builder Night /
+  // Backprop Summit.
   {
     id: "rasa-founding-builders-voice-agent-hackathon-paris",
     name: "Rasa Founding Builders — Voice Agent Hackathon (Paris)",
@@ -131,23 +134,6 @@ const scrapedEvents: CalEvent[] = [
     topics: ["stt", "audio-intel"],
     topicNote:
       "Voice & Audio Tutors is an explicit track — speech/audio modality pitch, not a dedicated phone voice-agent hackathon.",
-  },
-  {
-    id: "cartesia-multimodal-research-first-look-sf",
-    name: "First Look: Multimodal Research with Cartesia",
-    category: "meetup",
-    status: "confirmed",
-    dateLabel: "Nov 10, 6:30–9pm PT",
-    sortDate: "2026-11-10",
-    month: "2026-11",
-    location: "San Francisco, CA (Marina District; exact venue on registration)",
-    description:
-      "Cartesia invite-gated SF evening first look at multimodal research for voice/conversational builders — product preview plus discussion during AI Engineer Code Summit week. Same Luma room as the prior Speech-to-Speech First Look listing (luma.com/xrj6gzm2); title refreshed on cal-EeDJt2cPbgGca1W as of 2026-10-22. Same calendar day as Agora Lisbon Scaling Voice AI; Cartesia Managed Agents webinar DATE CORRECTION 2026-11-10 → Nov 17 (94y4it1j). Night after Decagon × Accel Voice & Audio Research Night (now pastEvents2026).",
-    sourceUrl: "https://luma.com/xrj6gzm2",
-    sourceLabel: "luma.com",
-    topics: ["tts", "voice-agents", "audio-intel"],
-    topicNote:
-      "Cartesia multimodal / voice-model first-look evening — TTS and audio-modality mindshare, not an STT benchmark session.",
   },
   {
     id: "deepgram-vapi-phone-voice-agent-workshop-sf",
@@ -357,6 +343,10 @@ export const directSubmissions: CalEvent[] = [
   // (j3ddfdsw) → pastEvents2026 after Pacific end; AssemblyAI cal still
   // 5b3cjgix + m6gcrmm7. NEW Rime Prism S2S hackathon (9q4bvnmt, Dec 5)
   // added to scraped — not owned.
+  // 2026-11-11: Cartesia Multimodal First Look (xrj6gzm2) + Agora Lisbon
+  // Scaling Voice AI (wqg33o39) → pastEvents2026 after Pacific Nov 10 end;
+  // AssemblyAI cal still 5b3cjgix + m6gcrmm7. Agora NYC Scaling slug →
+  // agora-ai-summit-nyc. Voice AI Day SF Dec 10 skipped (mixer).
   {
     id: "assemblyai-parallel-build-night-voice-agent-sf-nov2026",
     name: "Build Night: Parallel × AssemblyAI",
@@ -533,7 +523,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Re-checked 2026-11-10: public Luma calendar cal-Lv1pgYv5ITFR4tC still lists only SF × MIT Hack Day: Peptides (Nov 29) — skipped (not voice/agent DevRel). Voice AI Hackathon (Sep 19) + AI Debates (aidebates still 404) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice rooms this pass.",
+      "Re-checked 2026-11-11: public Luma calendar cal-Lv1pgYv5ITFR4tC lists Formalizing Bioelectricity (Nov 12) + SF × MIT Hack Day: Peptides (Nov 29) — both skipped (not voice/agent DevRel). Voice AI Hackathon (Sep 19) + AI Debates (aidebates still 404) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice rooms this pass.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -568,11 +558,25 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://www.voiceaispace.com/events",
     sourceLabel: "voiceaispace.com",
     watchNote:
-      "Re-checked 2026-11-10 (PST): Discover 84/4 pages. Nov 9 Side Quest / Decagon / Lisbon kickoff + ElevenLabs Singapore pruned after Pacific end. NEW Bay Area: Rime Prism S2S hackathon Dec 5 (9q4bvnmt — missed discover). Cartesia Managed Agents DATE CORRECTION → Nov 17 9:30–10:30am PT (94y4it1j). Agora NYC workshop retitled Agora × Google DeepMind Gemini Voice AI Workshop. Ahead today: Cartesia Multimodal First Look SF + Agora Lisbon Scaling Voice AI + AI Engineer Code Summit start; then VapiCon Nov 11–12, Snowflake multimodal Nov 13 + VexoHacks Nov 14, Nov 17 stack (owned Parallel build + OpenRouter×ElevenLabs + Deepgram×Vapi SF + EliseAI×OpenAI + Cartesia Managed Agents webinar + Agora×DeepMind NYC / ElevenAgents London), Speech to Ship + Bolna Symphony Nov 20, Rasa Paris Nov 24, owned Topgolf Nov 30 + Cartesia Super Car-tesia Dec 1 morning + Deepgram Speak Easy Dec 1 evening + ElevenLabs re:Invent booth Dec 1–3 + Twilio London Dec 2 + Deepgram HealthTech Dec 3 + Antler After Dark Dec 3 + Rime Prism Dec 5 + NYC Dec 9 double-stack (Agora Scaling + Vapi×LangChain). Skip Telnyx SF Happy Hour / Speechmatics 59dy3crh / Cartesia Agent's Table + Coffee CARTesia + Agent Soundcheck karaoke / ElevenCreative After Hours / Vapi dinner+afterparty / LiveKit Colorado Robotics / Murf Falcon India / Wispr SPC / Vertical Agent Meetup / ElevenLabs LATAM + Seoul / Adopt AI Paris / Voice Connect Dubai / Voice AI Space dinner London / Cashfree×Sarvam / the-audio-layer + a05j8jv0 2025 year traps / ElevenAgents Build Series 404. Beyond the Cloud still 404.",
+      "Re-checked 2026-11-11 (PST): Discover 75/3 pages. Nov 10 Cartesia Multimodal First Look (xrj6gzm2) + Agora Lisbon Scaling Voice AI (wqg33o39) → pastEvents2026 after Pacific end. Agora NYC Scaling slug refresh 1bf4kv8i → agora-ai-summit-nyc. No new Bay Area discover voice rooms. Voice AI Day SF Dec 10 (voiceaiday-sanfrancisco) + global VAD city mixers skipped (no talks/demos/agenda). Ahead: VapiCon Nov 11–12 (today), AI Engineer Code Summit through Nov 12, Snowflake multimodal Nov 13 + VexoHacks Nov 14, Nov 17 stack (owned Parallel build + OpenRouter×ElevenLabs + Deepgram×Vapi SF + EliseAI×OpenAI + Cartesia Managed Agents webinar + Agora×DeepMind NYC / ElevenAgents London), Speech to Ship + Bolna Symphony Nov 20, Rasa Paris Nov 24, owned Topgolf Nov 30 + Cartesia Super Car-tesia Dec 1 morning + Deepgram Speak Easy Dec 1 evening + ElevenLabs re:Invent booth Dec 1–3 + Twilio London Dec 2 + Deepgram HealthTech Dec 3 + Antler After Dark Dec 3 + Rime Prism Dec 5 + NYC Dec 9 double-stack (Agora Scaling + Vapi×LangChain). Skip Telnyx HH / Speechmatics 59dy3crh (past) / Cartesia Agent's Table Nov 12 + Coffee CARTesia + Agent Soundcheck karaoke / ElevenCreative After Hours / Vapi dinner+afterparty / LiveKit Colorado Robotics / Murf Falcon India / Wispr SPC / Vertical Agent Meetup / ElevenLabs LATAM + Seoul / Adopt AI Paris / Voice Connect Dubai / Voice AI Space dinner London / Cashfree×Sarvam / the-audio-layer + a05j8jv0 2025 year traps / ElevenAgents Build Series 404. Beyond the Cloud still 404.",
   },
 ];
 
 export const pastEvents2026: PastEvent[] = [
+  {
+    id: "cartesia-multimodal-research-first-look-sf",
+    name: "First Look: Multimodal Research with Cartesia",
+    dateLabel: "Nov 10",
+    location: "San Francisco, CA (Marina District)",
+    note: "Cartesia invite-gated SF multimodal / voice-model first-look evening (luma.com/xrj6gzm2) during AI Engineer Code Summit week — kept for Bay Area Cartesia product-preview / TTS mindshare recurrence watch",
+  },
+  {
+    id: "agora-scaling-voice-ai-lisbon-nov10",
+    name: "From Prototype to Production: Scaling Voice AI — Agora (Lisbon)",
+    dateLabel: "Nov 10",
+    location: "Bairro Alto, Lisbon, Portugal",
+    note: "Agora Convo AI World Lisbon Scaling Voice AI evening during Web Summit week (luma.com/wqg33o39) — kept for Agora Scaling Voice AI series recurrence watch ahead of NYC Dec 9 (agora-ai-summit-nyc)",
+  },
   {
     id: "vapi-side-quest-hotline-hackathon-sf",
     name: "Side Quest Hotline Vapi Hackathon",
