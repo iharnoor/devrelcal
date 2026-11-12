@@ -46,7 +46,7 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-11-11. Dates and venues sourced from
+ * Confirmed research date: 2026-11-12. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
@@ -66,25 +66,24 @@ const scrapedEvents: CalEvent[] = [
     note: "Invite-only; exact venue not yet published",
   },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // 2026-11-11 (~08:05 PST / 16:05 UTC). (api.luma.com/discover, place
+  // 2026-11-12 (~08:01 PST / 16:01 UTC). (api.luma.com/discover, place
   // discplace-BDj7GNbGlsF7Cka), filtered to AI / voice-agent-relevant
-  // listings. 75 discover entries across 3 pages. Nov 10 Cartesia Multimodal
-  // First Look (xrj6gzm2) + Agora Lisbon Scaling Voice AI (wqg33o39) →
-  // pastEvents2026 after Pacific end. Agora NYC Scaling slug refresh:
-  // 1bf4kv8i → agora-ai-summit-nyc (old slug 404). No new Bay Area discover
-  // voice rooms; Voice AI Day SF Dec 10 (voiceaiday-sanfrancisco) surfaced
-  // via voiceaispace / web search — skipped (no talks/demos/agenda mixer).
-  // AGI House cal now Formalizing Bioelectricity Nov 12 + Peptides Nov 29 —
-  // both skip. Year traps: the-audio-layer + Rime×Rasa a05j8jv0 are 2025.
-  // Skipped: Telnyx SF Happy Hour / Braintrust / DNAForge / She Builds /
-  // ElevenCreative SF+LA / WAVE / MEF / Cartesia Agent's Table + Coffee
-  // CARTesia + Agent Soundcheck karaoke / Speechmatics dinner / Vapi
-  // dinner+afterparty / LiveKit Colorado Robotics / Murf Falcon India /
-  // Sierra Summit / Wispr SPC fireside / Vertical Agent Meetup / ElevenLabs
-  // LATAM exec rooms + Seoul meetup / Adopt AI Paris / Voice Connect Dubai /
-  // Voice AI Space dinner London + Voice AI Day global mixers / CTOs Pitch
-  // Engineers / Cashfree×Sarvam Bengaluru / n8n×Vercel Builder Night /
-  // Backprop Summit.
+  // listings. 74 discover entries across 3 pages. ElevenLabs Summit NYC
+  // (Nov 11) → pastEvents2026 after Pacific end; ElevenLabs bookings/
+  // commerce live demo pruned from vendorEvents. No new Bay Area discover
+  // voice rooms this pass (OpenRouter × ElevenLabs still the only tracked
+  // discover hit). AGI House still Formalizing Bioelectricity Nov 12 +
+  // Peptides Nov 29 — both skip. Year traps: the-audio-layer + Rime×Rasa
+  // a05j8jv0 are 2025. Skipped: Telnyx SF Happy Hour / Braintrust /
+  // DNAForge / She Builds / ElevenCreative SF+LA / WAVE / MEF / Cartesia
+  // Agent's Table + Coffee CARTesia + Agent Soundcheck karaoke /
+  // Speechmatics Women in Tech (xqndyvrv) / Vapi dinner+afterparty /
+  // LiveKit Colorado Robotics / Murf Falcon India (lo3o0ypn + falcon-83vx) /
+  // Sierra Summit / Wispr SPC / Vertical Agent Meetup / ElevenLabs LATAM
+  // + Seoul / Adopt AI Paris / Voice Connect Dubai / Voice AI Space dinner
+  // London + Voice AI Day global mixers / CTOs Pitch Engineers /
+  // Cashfree×Sarvam / n8n×Vercel Builder Night / Backprop Summit /
+  // Antler Claude Impact Lab + OpenRouter lunch.
   {
     id: "rasa-founding-builders-voice-agent-hackathon-paris",
     name: "Rasa Founding Builders — Voice Agent Hackathon (Paris)",
@@ -347,6 +346,9 @@ export const directSubmissions: CalEvent[] = [
   // Scaling Voice AI (wqg33o39) → pastEvents2026 after Pacific Nov 10 end;
   // AssemblyAI cal still 5b3cjgix + m6gcrmm7. Agora NYC Scaling slug →
   // agora-ai-summit-nyc. Voice AI Day SF Dec 10 skipped (mixer).
+  // 2026-11-12: ElevenLabs Summit NYC (Nov 11) → pastEvents2026 after
+  // Pacific end; VapiCon Day 2 + AI Engineer Code Summit + Cerebral Valley
+  // still live today; AssemblyAI cal still 5b3cjgix + m6gcrmm7.
   {
     id: "assemblyai-parallel-build-night-voice-agent-sf-nov2026",
     name: "Build Night: Parallel × AssemblyAI",
@@ -523,7 +525,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Re-checked 2026-11-11: public Luma calendar cal-Lv1pgYv5ITFR4tC lists Formalizing Bioelectricity (Nov 12) + SF × MIT Hack Day: Peptides (Nov 29) — both skipped (not voice/agent DevRel). Voice AI Hackathon (Sep 19) + AI Debates (aidebates still 404) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice rooms this pass.",
+      "Re-checked 2026-11-12: public Luma calendar cal-Lv1pgYv5ITFR4tC lists Formalizing Bioelectricity (Nov 12) + SF × MIT Hack Day: Peptides (Nov 29) — both skipped (not voice/agent DevRel). Voice AI Hackathon (Sep 19) + AI Debates (aidebates still 404) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice rooms this pass.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -558,11 +560,18 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://www.voiceaispace.com/events",
     sourceLabel: "voiceaispace.com",
     watchNote:
-      "Re-checked 2026-11-11 (PST): Discover 75/3 pages. Nov 10 Cartesia Multimodal First Look (xrj6gzm2) + Agora Lisbon Scaling Voice AI (wqg33o39) → pastEvents2026 after Pacific end. Agora NYC Scaling slug refresh 1bf4kv8i → agora-ai-summit-nyc. No new Bay Area discover voice rooms. Voice AI Day SF Dec 10 (voiceaiday-sanfrancisco) + global VAD city mixers skipped (no talks/demos/agenda). Ahead: VapiCon Nov 11–12 (today), AI Engineer Code Summit through Nov 12, Snowflake multimodal Nov 13 + VexoHacks Nov 14, Nov 17 stack (owned Parallel build + OpenRouter×ElevenLabs + Deepgram×Vapi SF + EliseAI×OpenAI + Cartesia Managed Agents webinar + Agora×DeepMind NYC / ElevenAgents London), Speech to Ship + Bolna Symphony Nov 20, Rasa Paris Nov 24, owned Topgolf Nov 30 + Cartesia Super Car-tesia Dec 1 morning + Deepgram Speak Easy Dec 1 evening + ElevenLabs re:Invent booth Dec 1–3 + Twilio London Dec 2 + Deepgram HealthTech Dec 3 + Antler After Dark Dec 3 + Rime Prism Dec 5 + NYC Dec 9 double-stack (Agora Scaling + Vapi×LangChain). Skip Telnyx HH / Speechmatics 59dy3crh (past) / Cartesia Agent's Table Nov 12 + Coffee CARTesia + Agent Soundcheck karaoke / ElevenCreative After Hours / Vapi dinner+afterparty / LiveKit Colorado Robotics / Murf Falcon India / Wispr SPC / Vertical Agent Meetup / ElevenLabs LATAM + Seoul / Adopt AI Paris / Voice Connect Dubai / Voice AI Space dinner London / Cashfree×Sarvam / the-audio-layer + a05j8jv0 2025 year traps / ElevenAgents Build Series 404. Beyond the Cloud still 404.",
+      "Re-checked 2026-11-12 (PST): Discover 74/3 pages. ElevenLabs Summit NYC (Nov 11) → pastEvents2026 after Pacific end; bookings/commerce live demo pruned from vendorEvents. No new Bay Area discover voice rooms. Voice AI Day SF Dec 10 + global VAD city mixers still skipped (no talks/demos/agenda). Ahead: VapiCon Day 2 + AI Engineer Code Summit + Cerebral Valley (today), Snowflake multimodal Nov 13 + VexoHacks Nov 14, Nov 17 stack (owned Parallel build + OpenRouter×ElevenLabs + Deepgram×Vapi SF + EliseAI×OpenAI + Cartesia Managed Agents webinar + Agora×DeepMind NYC / ElevenAgents London), Speech to Ship + Bolna Symphony Nov 20, Rasa Paris Nov 24, owned Topgolf Nov 30 + Cartesia Super Car-tesia Dec 1 morning + Deepgram Speak Easy Dec 1 evening + ElevenLabs re:Invent booth Dec 1–3 + Twilio London Dec 2 + Deepgram HealthTech Dec 3 + Antler After Dark Dec 3 + Rime Prism Dec 5 + NYC Dec 9 double-stack (Agora Scaling + Vapi×LangChain). Skip Telnyx HH / Speechmatics 59dy3crh (past) + Women in Tech xqndyvrv / Cartesia Agent's Table Nov 12 + Coffee CARTesia + Agent Soundcheck karaoke / ElevenCreative After Hours / Vapi dinner+afterparty / LiveKit Colorado Robotics / Murf Falcon India / Wispr SPC / Vertical Agent Meetup / ElevenLabs LATAM + Seoul / Adopt AI Paris / Voice Connect Dubai / Voice AI Space dinner London / Cashfree×Sarvam / the-audio-layer + a05j8jv0 2025 year traps / ElevenAgents Build Series 404. Beyond the Cloud still 404.",
   },
 ];
 
 export const pastEvents2026: PastEvent[] = [
+  {
+    id: "elevenlabs-summit-new-york-2026",
+    name: "ElevenLabs Summit — New York",
+    dateLabel: "Nov 11",
+    location: "Lincoln Center, New York, NY",
+    note: "ElevenLabs flagship NYC summit (elevenlabs.io/summit/new-york; Interaction Engine / ElevenAgents Memory+Routines / Scribe v3 announcements) — kept for annual Summit hub recurrence watch vs VapiCon SF week competitive coverage",
+  },
   {
     id: "cartesia-multimodal-research-first-look-sf",
     name: "First Look: Multimodal Research with Cartesia",
