@@ -46,34 +46,19 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-11-12. Dates and venues sourced from
+ * Confirmed research date: 2026-11-13. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
-  {
-    id: "cerebral-valley-summit-2026",
-    name: "Cerebral Valley AI Summit — San Francisco",
-    category: "conference",
-    status: "tentative",
-    dateLabel: "Nov 12",
-    sortDate: "2026-11-12",
-    month: "2026-11",
-    location: "San Francisco (invite-only; venue TBA)",
-    description:
-      "Invite-only summit with on-stage conversations featuring CEOs from Anthropic, xAI, Vercel, Replit, and top VCs.",
-    sourceUrl: "https://www.cerebralvalley.com/",
-    sourceLabel: "cerebralvalley.com",
-    note: "Invite-only; exact venue not yet published",
-  },
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // 2026-11-12 (~08:01 PST / 16:01 UTC). (api.luma.com/discover, place
+  // 2026-11-13 (~08:04 PST / 16:04 UTC). (api.luma.com/discover, place
   // discplace-BDj7GNbGlsF7Cka), filtered to AI / voice-agent-relevant
-  // listings. 74 discover entries across 3 pages. ElevenLabs Summit NYC
-  // (Nov 11) → pastEvents2026 after Pacific end; ElevenLabs bookings/
-  // commerce live demo pruned from vendorEvents. No new Bay Area discover
-  // voice rooms this pass (OpenRouter × ElevenLabs still the only tracked
-  // discover hit). AGI House still Formalizing Bioelectricity Nov 12 +
-  // Peptides Nov 29 — both skip. Year traps: the-audio-layer + Rime×Rasa
+  // listings. 78 discover entries across 4 pages. VapiCon + AI Engineer
+  // Code Summit + Cerebral Valley → pastEvents2026 after Pacific Nov 12
+  // end. NEW via voice/speech search (missed Bay Area discover): Do Not
+  // Disturb Hackathon x Phone Use (advrricd, Nov 13). OpenRouter ×
+  // ElevenLabs still the tracked discover voice hit. AGI House cal now
+  // only Peptides Nov 29 — skip. Year traps: the-audio-layer + Rime×Rasa
   // a05j8jv0 are 2025. Skipped: Telnyx SF Happy Hour / Braintrust /
   // DNAForge / She Builds / ElevenCreative SF+LA / WAVE / MEF / Cartesia
   // Agent's Table + Coffee CARTesia + Agent Soundcheck karaoke /
@@ -83,7 +68,28 @@ const scrapedEvents: CalEvent[] = [
   // + Seoul / Adopt AI Paris / Voice Connect Dubai / Voice AI Space dinner
   // London + Voice AI Day global mixers / CTOs Pitch Engineers /
   // Cashfree×Sarvam / n8n×Vercel Builder Night / Backprop Summit /
-  // Antler Claude Impact Lab + OpenRouter lunch.
+  // Antler Claude Impact Lab + OpenRouter lunch / Agentic Web browser
+  // runtime / Who's Watching the Agents? / SF Non-Slop Hackathon /
+  // Great Business Bake Off agent hack / AdaL Multimodal (video/browser/
+  // memory) Full-Stack Agents Hackathon.
+  {
+    id: "do-not-disturb-phone-use-hackathon-sf-nov2026",
+    name: "Do Not Disturb Hackathon x Phone Use",
+    category: "hackathon",
+    status: "confirmed",
+    dateLabel: "Nov 13, 8:30am–7:30pm PT",
+    sortDate: "2026-11-13",
+    month: "2026-11",
+    location: "San Francisco, CA (Mid-Market; exact venue on approval)",
+    description:
+      "One-day Exit 1 × Bond AI / Phone Use SF hackathon — ~50 builders ship AI agents that use the phone (everything must be phone-accessible), with Replit, LangChain, and Tavily partners plus ElevenLabs credits in the prize stack. Same Pacific day as Multi-Modal Education Hackathon @ Snowflake; strongest near-term Bay Area phone-agent builder room after VapiCon week (luma.com/advrricd; missed Bay Area discover).",
+    sourceUrl: "https://luma.com/advrricd",
+    sourceLabel: "luma.com",
+    note: "Registration requires approval; capped at ~50 hackers",
+    topics: ["voice-agents"],
+    topicNote:
+      "Dedicated phone-use AI-agent hackathon (Bond AI / Phone Use) with ElevenLabs prize credits — phone voice-agent builder room, not an STT benchmark session.",
+  },
   {
     id: "rasa-founding-builders-voice-agent-hackathon-paris",
     name: "Rasa Founding Builders — Voice Agent Hackathon (Paris)",
@@ -101,21 +107,6 @@ const scrapedEvents: CalEvent[] = [
     topics: ["voice-agents"],
     topicNote:
       "Full-day hands-on voice-agent hackathon on Rasa Builder — CX voice-agent DevRel room, not an STT benchmark session.",
-  },
-  {
-    id: "ai-engineer-code-summit-2026",
-    name: "AI Engineer Code Summit 2026",
-    category: "conference",
-    status: "confirmed",
-    dateLabel: "Nov 10–12",
-    sortDate: "2026-11-10",
-    endDate: "2026-11-12",
-    month: "2026-11",
-    location: "Hilton San Francisco Union Square, San Francisco",
-    description:
-      "AI Engineer’s code/engineering conference for practitioners shipping AI systems — same SF week as VapiCon (Nov 11–12). Strong agent-builder attendance and calendar-conflict room for DevRel coverage planning; agenda is not voice-specific.",
-    sourceUrl: "https://ai.engineer/code/2026",
-    sourceLabel: "ai.engineer",
   },
   {
     id: "multimodal-ai-education-hackathon-snowflake-2026",
@@ -348,7 +339,11 @@ export const directSubmissions: CalEvent[] = [
   // agora-ai-summit-nyc. Voice AI Day SF Dec 10 skipped (mixer).
   // 2026-11-12: ElevenLabs Summit NYC (Nov 11) → pastEvents2026 after
   // Pacific end; VapiCon Day 2 + AI Engineer Code Summit + Cerebral Valley
-  // still live today; AssemblyAI cal still 5b3cjgix + m6gcrmm7.
+  // still live that day; AssemblyAI cal still 5b3cjgix + m6gcrmm7.
+  // 2026-11-13: VapiCon + AI Engineer Code Summit + Cerebral Valley →
+  // pastEvents2026 after Pacific Nov 12 end; NEW Do Not Disturb Phone Use
+  // hackathon (advrricd) added to scraped; AssemblyAI cal still 5b3cjgix
+  // + m6gcrmm7.
   {
     id: "assemblyai-parallel-build-night-voice-agent-sf-nov2026",
     name: "Build Night: Parallel × AssemblyAI",
@@ -366,22 +361,6 @@ export const directSubmissions: CalEvent[] = [
     topics: ["voice-agents", "streaming", "stt"],
     topicNote:
       "Owned AssemblyAI realtime voice-agent build night with tool-calling web search — direct Voice Agent API / streaming-STT pitch room.",
-  },
-  {
-    id: "vapicon-2026",
-    name: "VapiCon 2026 — The Frontier Voice AI Summit",
-    category: "conference",
-    status: "confirmed",
-    dateLabel: "Nov 11–12",
-    sortDate: "2026-11-11",
-    endDate: "2026-11-12",
-    month: "2026-11",
-    location: "Festival Pavilion, Fort Mason, San Francisco",
-    description:
-      "The dedicated voice-AI summit — ~1,200 builders, product leaders, and operators. Deepgram is a diamond sponsor; Cartesia’s CEO is on the speaker list; AssemblyAI’s Dylan Fox is on the hosted-voices lineup. Parallel builder + business tracks.",
-    sourceUrl: "https://www.vapicon.ai/",
-    sourceLabel: "vapicon.ai",
-    topics: ["voice-agents", "stt", "tts", "streaming"],
   },
   {
     id: "assemblyai-reinvent-voice-ai-happy-hour-topgolf-2026",
@@ -525,7 +504,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Re-checked 2026-11-12: public Luma calendar cal-Lv1pgYv5ITFR4tC lists Formalizing Bioelectricity (Nov 12) + SF × MIT Hack Day: Peptides (Nov 29) — both skipped (not voice/agent DevRel). Voice AI Hackathon (Sep 19) + AI Debates (aidebates still 404) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice rooms this pass.",
+      "Re-checked 2026-11-13: public Luma calendar cal-Lv1pgYv5ITFR4tC now lists only SF × MIT Hack Day: Peptides (Nov 29) — skipped (not voice/agent DevRel); Formalizing Bioelectricity (Nov 12) dropped after Pacific end. Voice AI Hackathon (Sep 19) + AI Debates (aidebates still 404) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice rooms this pass.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -560,11 +539,32 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://www.voiceaispace.com/events",
     sourceLabel: "voiceaispace.com",
     watchNote:
-      "Re-checked 2026-11-12 (PST): Discover 74/3 pages. ElevenLabs Summit NYC (Nov 11) → pastEvents2026 after Pacific end; bookings/commerce live demo pruned from vendorEvents. No new Bay Area discover voice rooms. Voice AI Day SF Dec 10 + global VAD city mixers still skipped (no talks/demos/agenda). Ahead: VapiCon Day 2 + AI Engineer Code Summit + Cerebral Valley (today), Snowflake multimodal Nov 13 + VexoHacks Nov 14, Nov 17 stack (owned Parallel build + OpenRouter×ElevenLabs + Deepgram×Vapi SF + EliseAI×OpenAI + Cartesia Managed Agents webinar + Agora×DeepMind NYC / ElevenAgents London), Speech to Ship + Bolna Symphony Nov 20, Rasa Paris Nov 24, owned Topgolf Nov 30 + Cartesia Super Car-tesia Dec 1 morning + Deepgram Speak Easy Dec 1 evening + ElevenLabs re:Invent booth Dec 1–3 + Twilio London Dec 2 + Deepgram HealthTech Dec 3 + Antler After Dark Dec 3 + Rime Prism Dec 5 + NYC Dec 9 double-stack (Agora Scaling + Vapi×LangChain). Skip Telnyx HH / Speechmatics 59dy3crh (past) + Women in Tech xqndyvrv / Cartesia Agent's Table Nov 12 + Coffee CARTesia + Agent Soundcheck karaoke / ElevenCreative After Hours / Vapi dinner+afterparty / LiveKit Colorado Robotics / Murf Falcon India / Wispr SPC / Vertical Agent Meetup / ElevenLabs LATAM + Seoul / Adopt AI Paris / Voice Connect Dubai / Voice AI Space dinner London / Cashfree×Sarvam / the-audio-layer + a05j8jv0 2025 year traps / ElevenAgents Build Series 404. Beyond the Cloud still 404.",
+      "Re-checked 2026-11-13 (PST): Discover 78/4 pages. VapiCon + AI Engineer Code Summit + Cerebral Valley → pastEvents2026 after Pacific Nov 12 end. NEW Do Not Disturb Phone Use hackathon (advrricd, Nov 13; missed discover). Voice AI Day SF Dec 10 + global VAD city mixers still skipped (no talks/demos/agenda). Ahead: Snowflake multimodal + DND Phone Use (today) + VexoHacks Nov 14, Nov 17 stack (owned Parallel build + OpenRouter×ElevenLabs + Deepgram×Vapi SF + EliseAI×OpenAI + Cartesia Managed Agents webinar + Agora×DeepMind NYC / ElevenAgents London), Speech to Ship + Bolna Symphony Nov 20, Rasa Paris Nov 24, owned Topgolf Nov 30 + Deepgram AIM382-S voice-agent breakout Nov 30 + Cartesia Super Car-tesia Dec 1 morning + Deepgram Speak Easy Dec 1 evening + ElevenLabs re:Invent booth Dec 1–3 + Twilio London Dec 2 + Deepgram HealthTech Dec 3 + Antler After Dark Dec 3 + Rime Prism Dec 5 + NYC Dec 9 double-stack (Agora Scaling + Vapi×LangChain). Skip Telnyx HH / Speechmatics 59dy3crh (past) + Women in Tech xqndyvrv / Cartesia Agent's Table + Coffee CARTesia + Agent Soundcheck karaoke / ElevenCreative After Hours / Vapi dinner+afterparty / LiveKit Colorado Robotics / Murf Falcon India / Wispr SPC / Vertical Agent Meetup / ElevenLabs LATAM + Seoul / Adopt AI Paris / Voice Connect Dubai / Voice AI Space dinner London / Cashfree×Sarvam / AdaL Multimodal Full-Stack Agents / the-audio-layer + a05j8jv0 2025 year traps / ElevenAgents Build Series 404. Beyond the Cloud still 404.",
   },
 ];
 
 export const pastEvents2026: PastEvent[] = [
+  {
+    id: "vapicon-2026",
+    name: "VapiCon 2026 — The Frontier Voice AI Summit",
+    dateLabel: "Nov 11–12",
+    location: "Festival Pavilion, Fort Mason, San Francisco",
+    note: "Dedicated voice-AI summit (~1,200; Deepgram diamond sponsor; Cartesia CEO + AssemblyAI Dylan Fox on roster; luma.com/vapi-9sdp ended Nov 12 5pm PT) — kept for annual flagship Bay Area voice-agent conference recurrence watch",
+  },
+  {
+    id: "ai-engineer-code-summit-2026",
+    name: "AI Engineer Code Summit 2026",
+    dateLabel: "Nov 10–12",
+    location: "Hilton San Francisco Union Square, San Francisco",
+    note: "AI Engineer code/engineering conference same SF week as VapiCon (ai.engineer/code/2026) — kept for annual Bay Area agent-builder conference recurrence / calendar-conflict watch",
+  },
+  {
+    id: "cerebral-valley-summit-2026",
+    name: "Cerebral Valley AI Summit — San Francisco",
+    dateLabel: "Nov 12",
+    location: "San Francisco (invite-only)",
+    note: "Invite-only Cerebral Valley AI Summit during VapiCon / AI Engineer Code Summit week (cerebralvalley.com) — kept for annual SF invite-only builder-summit recurrence watch",
+  },
   {
     id: "elevenlabs-summit-new-york-2026",
     name: "ElevenLabs Summit — New York",
@@ -1022,4 +1022,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-11-10";
+export const researchDate = "2026-11-13";
