@@ -46,22 +46,22 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-11-13. Dates and venues sourced from
+ * Confirmed research date: 2026-11-14. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // 2026-11-13 (~08:04 PST / 16:04 UTC). (api.luma.com/discover, place
+  // 2026-11-14 (~08:02 PST / 16:02 UTC). (api.luma.com/discover, place
   // discplace-BDj7GNbGlsF7Cka), filtered to AI / voice-agent-relevant
-  // listings. 78 discover entries across 4 pages. VapiCon + AI Engineer
-  // Code Summit + Cerebral Valley → pastEvents2026 after Pacific Nov 12
-  // end. NEW via voice/speech search (missed Bay Area discover): Do Not
-  // Disturb Hackathon x Phone Use (advrricd, Nov 13). OpenRouter ×
-  // ElevenLabs still the tracked discover voice hit. AGI House cal now
+  // listings. 69 discover entries across 3 pages. Do Not Disturb Phone
+  // Use (advrricd) + Snowflake multimodal (beta-3ue5) → pastEvents2026
+  // after Pacific Nov 13 end. No new voice/speech rooms via discover or
+  // voiceaispace / Deepgram / AGI House / Antler / vendor cals. OpenRouter
+  // × ElevenLabs still the tracked discover voice hit. AGI House cal still
   // only Peptides Nov 29 — skip. Year traps: the-audio-layer + Rime×Rasa
-  // a05j8jv0 are 2025. Skipped: Telnyx SF Happy Hour / Braintrust /
-  // DNAForge / She Builds / ElevenCreative SF+LA / WAVE / MEF / Cartesia
-  // Agent's Table + Coffee CARTesia + Agent Soundcheck karaoke /
+  // a05j8jv0 are 2025. Skipped: Telnyx SF Happy Hour / HLTH / Braintrust /
+  // DNAForge / She Builds / ElevenCreative SF+LA+Bhopal / WAVE / MEF /
+  // Cartesia Agent's Table + Coffee CARTesia + Agent Soundcheck karaoke /
   // Speechmatics Women in Tech (xqndyvrv) / Vapi dinner+afterparty /
   // LiveKit Colorado Robotics / Murf Falcon India (lo3o0ypn + falcon-83vx) /
   // Sierra Summit / Wispr SPC / Vertical Agent Meetup / ElevenLabs LATAM
@@ -70,26 +70,8 @@ const scrapedEvents: CalEvent[] = [
   // Cashfree×Sarvam / n8n×Vercel Builder Night / Backprop Summit /
   // Antler Claude Impact Lab + OpenRouter lunch / Agentic Web browser
   // runtime / Who's Watching the Agents? / SF Non-Slop Hackathon /
-  // Great Business Bake Off agent hack / AdaL Multimodal (video/browser/
-  // memory) Full-Stack Agents Hackathon.
-  {
-    id: "do-not-disturb-phone-use-hackathon-sf-nov2026",
-    name: "Do Not Disturb Hackathon x Phone Use",
-    category: "hackathon",
-    status: "confirmed",
-    dateLabel: "Nov 13, 8:30am–7:30pm PT",
-    sortDate: "2026-11-13",
-    month: "2026-11",
-    location: "San Francisco, CA (Mid-Market; exact venue on approval)",
-    description:
-      "One-day Exit 1 × Bond AI / Phone Use SF hackathon — ~50 builders ship AI agents that use the phone (everything must be phone-accessible), with Replit, LangChain, and Tavily partners plus ElevenLabs credits in the prize stack. Same Pacific day as Multi-Modal Education Hackathon @ Snowflake; strongest near-term Bay Area phone-agent builder room after VapiCon week (luma.com/advrricd; missed Bay Area discover).",
-    sourceUrl: "https://luma.com/advrricd",
-    sourceLabel: "luma.com",
-    note: "Registration requires approval; capped at ~50 hackers",
-    topics: ["voice-agents"],
-    topicNote:
-      "Dedicated phone-use AI-agent hackathon (Bond AI / Phone Use) with ElevenLabs prize credits — phone voice-agent builder room, not an STT benchmark session.",
-  },
+  // Great Business Bake Off agent hack / AdaL Multimodal Full-Stack Agents /
+  // What to Build What to Trust London.
   {
     id: "rasa-founding-builders-voice-agent-hackathon-paris",
     name: "Rasa Founding Builders — Voice Agent Hackathon (Paris)",
@@ -107,23 +89,6 @@ const scrapedEvents: CalEvent[] = [
     topics: ["voice-agents"],
     topicNote:
       "Full-day hands-on voice-agent hackathon on Rasa Builder — CX voice-agent DevRel room, not an STT benchmark session.",
-  },
-  {
-    id: "multimodal-ai-education-hackathon-snowflake-2026",
-    name: "Multi-Modal AI for Education Hackathon @ Snowflake — Beta Fund × Epic",
-    category: "hackathon",
-    status: "confirmed",
-    dateLabel: "Nov 13, 9am–5:30pm PT",
-    sortDate: "2026-11-13",
-    month: "2026-11",
-    location: "Snowflake Silicon Valley AI Hub, Menlo Park, CA",
-    description:
-      "One-day Beta Fund × Epic multimodal education hackathon at Snowflake’s Menlo Park AI hub — explicit Voice & Audio Tutors track plus realtime multimodal tutor/agent tracks. Day after VapiCon; strong STT / audio-intel pitch room for builders shipping listen-and-respond learning tools (luma.com/beta-3ue5 as of 2026-10-13).",
-    sourceUrl: "https://luma.com/beta-3ue5",
-    sourceLabel: "luma.com",
-    topics: ["stt", "audio-intel"],
-    topicNote:
-      "Voice & Audio Tutors is an explicit track — speech/audio modality pitch, not a dedicated phone voice-agent hackathon.",
   },
   {
     id: "deepgram-vapi-phone-voice-agent-workshop-sf",
@@ -165,12 +130,12 @@ const scrapedEvents: CalEvent[] = [
     name: "In Production: OpenRouter × ElevenLabs",
     category: "meetup",
     status: "confirmed",
-    dateLabel: "Nov 17, 5:30–8:30pm PT",
+    dateLabel: "Nov 17, 5:30–8pm PT",
     sortDate: "2026-11-17",
     month: "2026-11",
     location: "San Francisco, CA (exact venue on approval)",
     description:
-      "OpenRouter quarterly In Production showcase partnered with ElevenLabs — founders and eng teams shipping voice/audio products with ElevenLabs models via OpenRouter share live demos, model-selection, and production infra lessons. Same SF evening as owned Parallel × AssemblyAI Build Night, Deepgram × Vapi phone workshop, and EliseAI × OpenAI GPT‑Live‑1 panel — direct competitive TTS / voice-product mindshare conflict (luma.com/wvw8xwsi via Bay Area discover as of 2026-11-06).",
+      "OpenRouter quarterly In Production showcase partnered with ElevenLabs — founders and eng teams shipping voice/audio products with ElevenLabs models via OpenRouter share live demos, model-selection, and production infra lessons. Same SF evening as owned Parallel × AssemblyAI Build Night, Deepgram × Vapi phone workshop, and EliseAI × OpenAI GPT‑Live‑1 panel — direct competitive TTS / voice-product mindshare conflict (luma.com/wvw8xwsi via Bay Area discover as of 2026-11-06; event/get end 8pm PT).",
     sourceUrl: "https://luma.com/wvw8xwsi",
     sourceLabel: "luma.com",
     note: "Registration requires approval; limited capacity",
@@ -344,6 +309,9 @@ export const directSubmissions: CalEvent[] = [
   // pastEvents2026 after Pacific Nov 12 end; NEW Do Not Disturb Phone Use
   // hackathon (advrricd) added to scraped; AssemblyAI cal still 5b3cjgix
   // + m6gcrmm7.
+  // 2026-11-14: Do Not Disturb Phone Use (advrricd) + Snowflake multimodal
+  // (beta-3ue5) → pastEvents2026 after Pacific Nov 13 end; VexoHacks still
+  // live today; AssemblyAI cal still 5b3cjgix + m6gcrmm7; no new owned rooms.
   {
     id: "assemblyai-parallel-build-night-voice-agent-sf-nov2026",
     name: "Build Night: Parallel × AssemblyAI",
@@ -539,11 +507,25 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://www.voiceaispace.com/events",
     sourceLabel: "voiceaispace.com",
     watchNote:
-      "Re-checked 2026-11-13 (PST): Discover 78/4 pages. VapiCon + AI Engineer Code Summit + Cerebral Valley → pastEvents2026 after Pacific Nov 12 end. NEW Do Not Disturb Phone Use hackathon (advrricd, Nov 13; missed discover). Voice AI Day SF Dec 10 + global VAD city mixers still skipped (no talks/demos/agenda). Ahead: Snowflake multimodal + DND Phone Use (today) + VexoHacks Nov 14, Nov 17 stack (owned Parallel build + OpenRouter×ElevenLabs + Deepgram×Vapi SF + EliseAI×OpenAI + Cartesia Managed Agents webinar + Agora×DeepMind NYC / ElevenAgents London), Speech to Ship + Bolna Symphony Nov 20, Rasa Paris Nov 24, owned Topgolf Nov 30 + Deepgram AIM382-S voice-agent breakout Nov 30 + Cartesia Super Car-tesia Dec 1 morning + Deepgram Speak Easy Dec 1 evening + ElevenLabs re:Invent booth Dec 1–3 + Twilio London Dec 2 + Deepgram HealthTech Dec 3 + Antler After Dark Dec 3 + Rime Prism Dec 5 + NYC Dec 9 double-stack (Agora Scaling + Vapi×LangChain). Skip Telnyx HH / Speechmatics 59dy3crh (past) + Women in Tech xqndyvrv / Cartesia Agent's Table + Coffee CARTesia + Agent Soundcheck karaoke / ElevenCreative After Hours / Vapi dinner+afterparty / LiveKit Colorado Robotics / Murf Falcon India / Wispr SPC / Vertical Agent Meetup / ElevenLabs LATAM + Seoul / Adopt AI Paris / Voice Connect Dubai / Voice AI Space dinner London / Cashfree×Sarvam / AdaL Multimodal Full-Stack Agents / the-audio-layer + a05j8jv0 2025 year traps / ElevenAgents Build Series 404. Beyond the Cloud still 404.",
+      "Re-checked 2026-11-14 (PST): Discover 69/3 pages. Do Not Disturb Phone Use (advrricd) + Snowflake multimodal (beta-3ue5) → pastEvents2026 after Pacific Nov 13 end. No new voice/speech rooms via discover, voiceaispace, Deepgram, AGI House, or vendor cals. Voice AI Day SF Dec 10 + global VAD city mixers still skipped (no talks/demos/agenda). Ahead: VexoHacks today (Nov 14), Nov 17 stack (owned Parallel build + OpenRouter×ElevenLabs + Deepgram×Vapi SF + EliseAI×OpenAI + Cartesia Managed Agents webinar + Agora×DeepMind NYC / ElevenAgents London), Speech to Ship + Bolna Symphony Nov 20, Rasa Paris Nov 24, owned Topgolf Nov 30 + Deepgram AIM382-S voice-agent breakout Nov 30 + Cartesia Super Car-tesia Dec 1 morning + Deepgram Speak Easy Dec 1 evening + ElevenLabs re:Invent booth Dec 1–3 + Twilio London Dec 2 + Deepgram HealthTech Dec 3 + Antler After Dark Dec 3 + Rime Prism Dec 5 + NYC Dec 9 double-stack (Agora Scaling + Vapi×LangChain). Skip Telnyx HH / HLTH / Speechmatics Women in Tech xqndyvrv / Cartesia Agent's Table + Coffee CARTesia + Agent Soundcheck karaoke / ElevenCreative After Hours SF+LA+Bhopal / Vapi dinner+afterparty / LiveKit Colorado Robotics / Murf Falcon India / Sierra Summit / Wispr SPC / Vertical Agent Meetup / ElevenLabs LATAM + Seoul / Adopt AI Paris / Voice Connect Dubai / Voice AI Space dinner London / Cashfree×Sarvam / AdaL Multimodal Full-Stack Agents / the-audio-layer + a05j8jv0 2025 year traps / ElevenAgents Build Series 404. Beyond the Cloud still 404.",
   },
 ];
 
 export const pastEvents2026: PastEvent[] = [
+  {
+    id: "do-not-disturb-phone-use-hackathon-sf-nov2026",
+    name: "Do Not Disturb Hackathon x Phone Use",
+    dateLabel: "Nov 13",
+    location: "San Francisco, CA (Mid-Market)",
+    note: "Exit 1 × Bond AI / Phone Use one-day phone-agent hackathon with ElevenLabs prize credits (luma.com/advrricd; ended Nov 13 7:30pm PT) — kept for Bay Area phone-use / voice-agent hackathon recurrence watch after VapiCon week",
+  },
+  {
+    id: "multimodal-ai-education-hackathon-snowflake-2026",
+    name: "Multi-Modal AI for Education Hackathon @ Snowflake — Beta Fund × Epic",
+    dateLabel: "Nov 13",
+    location: "Snowflake Silicon Valley AI Hub, Menlo Park, CA",
+    note: "Beta Fund × Epic multimodal education hackathon with explicit Voice & Audio Tutors track (luma.com/beta-3ue5; ended Nov 13 5:30pm PT) — kept for Bay Area multimodal-audio / STT education-hack recurrence watch",
+  },
   {
     id: "vapicon-2026",
     name: "VapiCon 2026 — The Frontier Voice AI Summit",
@@ -1022,4 +1004,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-11-13";
+export const researchDate = "2026-11-14";
