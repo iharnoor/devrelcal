@@ -46,32 +46,31 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-11-14. Dates and venues sourced from
+ * Confirmed research date: 2026-11-15. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // 2026-11-14 (~08:02 PST / 16:02 UTC). (api.luma.com/discover, place
+  // 2026-11-15 (~08:02 PST / 16:02 UTC). (api.luma.com/discover, place
   // discplace-BDj7GNbGlsF7Cka), filtered to AI / voice-agent-relevant
-  // listings. 69 discover entries across 3 pages. Do Not Disturb Phone
-  // Use (advrricd) + Snowflake multimodal (beta-3ue5) → pastEvents2026
-  // after Pacific Nov 13 end. No new voice/speech rooms via discover or
-  // voiceaispace / Deepgram / AGI House / Antler / vendor cals. OpenRouter
-  // × ElevenLabs still the tracked discover voice hit. AGI House cal still
-  // only Peptides Nov 29 — skip. Year traps: the-audio-layer + Rime×Rasa
-  // a05j8jv0 are 2025. Skipped: Telnyx SF Happy Hour / HLTH / Braintrust /
-  // DNAForge / She Builds / ElevenCreative SF+LA+Bhopal / WAVE / MEF /
-  // Cartesia Agent's Table + Coffee CARTesia + Agent Soundcheck karaoke /
-  // Speechmatics Women in Tech (xqndyvrv) / Vapi dinner+afterparty /
-  // LiveKit Colorado Robotics / Murf Falcon India (lo3o0ypn + falcon-83vx) /
-  // Sierra Summit / Wispr SPC / Vertical Agent Meetup / ElevenLabs LATAM
-  // + Seoul / Adopt AI Paris / Voice Connect Dubai / Voice AI Space dinner
-  // London + Voice AI Day global mixers / CTOs Pitch Engineers /
-  // Cashfree×Sarvam / n8n×Vercel Builder Night / Backprop Summit /
-  // Antler Claude Impact Lab + OpenRouter lunch / Agentic Web browser
-  // runtime / Who's Watching the Agents? / SF Non-Slop Hackathon /
-  // Great Business Bake Off agent hack / AdaL Multimodal Full-Stack Agents /
-  // What to Build What to Trust London.
+  // listings. 65 discover entries across 3 pages. VexoHacks (chgfm6ec)
+  // → pastEvents2026 after Pacific Nov 14 end. No new voice/speech rooms
+  // via discover or voiceaispace / Deepgram / AGI House / Antler / vendor
+  // cals. OpenRouter × ElevenLabs still the tracked discover voice hit.
+  // AGI House cal still only Peptides Nov 29 — skip. Year traps:
+  // the-audio-layer + Rime×Rasa a05j8jv0 are 2025. Skipped: Telnyx SF Happy
+  // Hour / HLTH / Braintrust / DNAForge / She Builds / ElevenCreative
+  // SF+LA+Bhopal / WAVE / MEF / Cartesia Agent's Table + Coffee CARTesia +
+  // Agent Soundcheck karaoke / Speechmatics Women in Tech (xqndyvrv) /
+  // Vapi dinner+afterparty / LiveKit Colorado Robotics / Murf Falcon India
+  // (lo3o0ypn + falcon-83vx) / Sierra Summit / Wispr SPC / Vertical Agent
+  // Meetup / ElevenLabs LATAM + Seoul / Adopt AI Paris / Voice Connect
+  // Dubai / Voice AI Space dinner London + Voice AI Day global mixers /
+  // CTOs Pitch Engineers / Cashfree×Sarvam / n8n×Vercel Builder Night /
+  // Backprop Summit / Antler Claude Impact Lab + OpenRouter lunch /
+  // Agentic Web browser runtime / Who's Watching the Agents? / SF Non-Slop
+  // Hackathon / Great Business Bake Off agent hack / AdaL Multimodal
+  // Full-Stack Agents / What to Build What to Trust London.
   {
     id: "rasa-founding-builders-voice-agent-hackathon-paris",
     name: "Rasa Founding Builders — Voice Agent Hackathon (Paris)",
@@ -106,24 +105,6 @@ const scrapedEvents: CalEvent[] = [
     topics: ["voice-agents", "stt", "streaming"],
     topicNote:
       "Dedicated phone voice-agent build night co-hosted by Deepgram and Vapi — direct STT + voice-agent platform mindshare vs AssemblyAI builders.",
-  },
-  {
-    id: "vexohacks-ai-wearables-hackathon-yc-sf",
-    name: "VexoHacks: An AI Wearables Hackathon",
-    category: "hackathon",
-    status: "confirmed",
-    dateLabel: "Nov 14, 9am–9pm PT",
-    sortDate: "2026-11-14",
-    month: "2026-11",
-    location: "Y Combinator, San Francisco (address on acceptance)",
-    description:
-      "One-day Vexo wearables hackathon at Y Combinator — Voice / Vision / Ambient tracks, optional Vexo bracelet voice builds, $15k+ prizes plus a YC final interview. Sponsored by OpenAI, ElevenLabs, Stripe, Mastra, and Brex. Day after Multi-Modal Education Hackathon @ Snowflake; strong Bay Area speech-input / wearable-voice builder room (luma.com/chgfm6ec + vexoai.com/hackathon as of 2026-11-03).",
-    sourceUrl: "https://luma.com/chgfm6ec",
-    sourceLabel: "luma.com",
-    note: "Registration requires approval; in-person SF only",
-    topics: ["voice-agents", "tts"],
-    topicNote:
-      "Explicit Voice track plus wearable speech builds; ElevenLabs is a named sponsor — TTS / voice-interface mindshare, not an STT benchmark session.",
   },
   {
     id: "openrouter-elevenlabs-in-production-sf",
@@ -312,6 +293,8 @@ export const directSubmissions: CalEvent[] = [
   // 2026-11-14: Do Not Disturb Phone Use (advrricd) + Snowflake multimodal
   // (beta-3ue5) → pastEvents2026 after Pacific Nov 13 end; VexoHacks still
   // live today; AssemblyAI cal still 5b3cjgix + m6gcrmm7; no new owned rooms.
+  // 2026-11-15: VexoHacks (chgfm6ec) → pastEvents2026 after Pacific Nov 14
+  // end; AssemblyAI cal still 5b3cjgix + m6gcrmm7; no new owned rooms.
   {
     id: "assemblyai-parallel-build-night-voice-agent-sf-nov2026",
     name: "Build Night: Parallel × AssemblyAI",
@@ -472,7 +455,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Re-checked 2026-11-13: public Luma calendar cal-Lv1pgYv5ITFR4tC now lists only SF × MIT Hack Day: Peptides (Nov 29) — skipped (not voice/agent DevRel); Formalizing Bioelectricity (Nov 12) dropped after Pacific end. Voice AI Hackathon (Sep 19) + AI Debates (aidebates still 404) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice rooms this pass.",
+      "Re-checked 2026-11-15: public Luma calendar cal-Lv1pgYv5ITFR4tC still lists only SF × MIT Hack Day: Peptides (Nov 29) — skipped (not voice/agent DevRel). Voice AI Hackathon (Sep 19) + AI Debates (aidebates still 404) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice rooms this pass.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -507,11 +490,18 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://www.voiceaispace.com/events",
     sourceLabel: "voiceaispace.com",
     watchNote:
-      "Re-checked 2026-11-14 (PST): Discover 69/3 pages. Do Not Disturb Phone Use (advrricd) + Snowflake multimodal (beta-3ue5) → pastEvents2026 after Pacific Nov 13 end. No new voice/speech rooms via discover, voiceaispace, Deepgram, AGI House, or vendor cals. Voice AI Day SF Dec 10 + global VAD city mixers still skipped (no talks/demos/agenda). Ahead: VexoHacks today (Nov 14), Nov 17 stack (owned Parallel build + OpenRouter×ElevenLabs + Deepgram×Vapi SF + EliseAI×OpenAI + Cartesia Managed Agents webinar + Agora×DeepMind NYC / ElevenAgents London), Speech to Ship + Bolna Symphony Nov 20, Rasa Paris Nov 24, owned Topgolf Nov 30 + Deepgram AIM382-S voice-agent breakout Nov 30 + Cartesia Super Car-tesia Dec 1 morning + Deepgram Speak Easy Dec 1 evening + ElevenLabs re:Invent booth Dec 1–3 + Twilio London Dec 2 + Deepgram HealthTech Dec 3 + Antler After Dark Dec 3 + Rime Prism Dec 5 + NYC Dec 9 double-stack (Agora Scaling + Vapi×LangChain). Skip Telnyx HH / HLTH / Speechmatics Women in Tech xqndyvrv / Cartesia Agent's Table + Coffee CARTesia + Agent Soundcheck karaoke / ElevenCreative After Hours SF+LA+Bhopal / Vapi dinner+afterparty / LiveKit Colorado Robotics / Murf Falcon India / Sierra Summit / Wispr SPC / Vertical Agent Meetup / ElevenLabs LATAM + Seoul / Adopt AI Paris / Voice Connect Dubai / Voice AI Space dinner London / Cashfree×Sarvam / AdaL Multimodal Full-Stack Agents / the-audio-layer + a05j8jv0 2025 year traps / ElevenAgents Build Series 404. Beyond the Cloud still 404.",
+      "Re-checked 2026-11-15 (PST): Discover 65/3 pages. VexoHacks (chgfm6ec) → pastEvents2026 after Pacific Nov 14 end. No new voice/speech rooms via discover, voiceaispace, Deepgram, AGI House, or vendor cals. Voice AI Day SF Dec 10 + global VAD city mixers still skipped (no talks/demos/agenda). Ahead: Nov 17 stack (owned Parallel build + OpenRouter×ElevenLabs + Deepgram×Vapi SF + EliseAI×OpenAI + Cartesia Managed Agents webinar + Agora×DeepMind NYC / ElevenAgents London), Speech to Ship + Bolna Symphony Nov 20, Rasa Paris Nov 24, owned Topgolf Nov 30 + Deepgram AIM382-S voice-agent breakout Nov 30 + Cartesia Super Car-tesia Dec 1 morning + Deepgram Speak Easy Dec 1 evening + ElevenLabs re:Invent booth Dec 1–3 + Twilio London Dec 2 + Deepgram HealthTech Dec 3 + Antler After Dark Dec 3 + Rime Prism Dec 5 + NYC Dec 9 double-stack (Agora Scaling + Vapi×LangChain). Skip Telnyx HH / HLTH / Speechmatics Women in Tech xqndyvrv / Cartesia Agent's Table + Coffee CARTesia + Agent Soundcheck karaoke / ElevenCreative After Hours SF+LA+Bhopal / Vapi dinner+afterparty / LiveKit Colorado Robotics / Murf Falcon India / Sierra Summit / Wispr SPC / Vertical Agent Meetup / ElevenLabs LATAM + Seoul / Adopt AI Paris / Voice Connect Dubai / Voice AI Space dinner London / Cashfree×Sarvam / AdaL Multimodal Full-Stack Agents / the-audio-layer + a05j8jv0 2025 year traps / ElevenAgents Build Series 404. Beyond the Cloud still 404.",
   },
 ];
 
 export const pastEvents2026: PastEvent[] = [
+  {
+    id: "vexohacks-ai-wearables-hackathon-yc-sf",
+    name: "VexoHacks: An AI Wearables Hackathon",
+    dateLabel: "Nov 14",
+    location: "Y Combinator, San Francisco",
+    note: "One-day Vexo wearables hackathon at YC with explicit Voice / Vision / Ambient tracks + ElevenLabs sponsorship (luma.com/chgfm6ec; ended Nov 14 9pm PT) — kept for Bay Area wearable-voice / speech-input hackathon recurrence watch",
+  },
   {
     id: "do-not-disturb-phone-use-hackathon-sf-nov2026",
     name: "Do Not Disturb Hackathon x Phone Use",
@@ -1004,4 +994,4 @@ export const pastEvents2026: PastEvent[] = [
   },
 ];
 
-export const researchDate = "2026-11-14";
+export const researchDate = "2026-11-15";
