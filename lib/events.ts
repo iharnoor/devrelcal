@@ -46,31 +46,34 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-11-15. Dates and venues sourced from
+ * Confirmed research date: 2026-11-17. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // 2026-11-15 (~08:02 PST / 16:02 UTC). (api.luma.com/discover, place
+  // 2026-11-17 (~08:02 PST / 16:02 UTC). (api.luma.com/discover, place
   // discplace-BDj7GNbGlsF7Cka), filtered to AI / voice-agent-relevant
-  // listings. 65 discover entries across 3 pages. VexoHacks (chgfm6ec)
-  // → pastEvents2026 after Pacific Nov 14 end. No new voice/speech rooms
-  // via discover or voiceaispace / Deepgram / AGI House / Antler / vendor
-  // cals. OpenRouter × ElevenLabs still the tracked discover voice hit.
-  // AGI House cal still only Peptides Nov 29 — skip. Year traps:
-  // the-audio-layer + Rime×Rasa a05j8jv0 are 2025. Skipped: Telnyx SF Happy
-  // Hour / HLTH / Braintrust / DNAForge / She Builds / ElevenCreative
-  // SF+LA+Bhopal / WAVE / MEF / Cartesia Agent's Table + Coffee CARTesia +
-  // Agent Soundcheck karaoke / Speechmatics Women in Tech (xqndyvrv) /
-  // Vapi dinner+afterparty / LiveKit Colorado Robotics / Murf Falcon India
-  // (lo3o0ypn + falcon-83vx) / Sierra Summit / Wispr SPC / Vertical Agent
-  // Meetup / ElevenLabs LATAM + Seoul / Adopt AI Paris / Voice Connect
-  // Dubai / Voice AI Space dinner London + Voice AI Day global mixers /
-  // CTOs Pitch Engineers / Cashfree×Sarvam / n8n×Vercel Builder Night /
-  // Backprop Summit / Antler Claude Impact Lab + OpenRouter lunch /
-  // Agentic Web browser runtime / Who's Watching the Agents? / SF Non-Slop
-  // Hackathon / Great Business Bake Off agent hack / AdaL Multimodal
-  // Full-Stack Agents / What to Build What to Trust London.
+  // listings. 64 discover entries across 3 pages. No new Bay Area
+  // voice/speech rooms via discover; OpenRouter × ElevenLabs + owned
+  // Parallel × AssemblyAI still the tracked discover voice hits for
+  // tonight's Nov 17 stack. Cartesia Managed Agents (94y4it1j) moved off
+  // Nov 17 morning → Dec 8 (vendorEvents). NEW Deepgram×AWS SageMaker VPC
+  // webinar Nov 18 (vendorEvents only). AGI House cal still only Peptides
+  // Nov 29 — skip. Year traps: the-audio-layer + Rime×Rasa a05j8jv0 are
+  // 2025. Skipped: Telnyx SF Happy Hour / HLTH / Braintrust / DNAForge /
+  // She Builds / ElevenCreative SF+LA+Bhopal / WAVE / MEF / Cartesia
+  // Agent's Table + Coffee CARTesia + Agent Soundcheck karaoke /
+  // Speechmatics Women in Tech (xqndyvrv) / Vapi dinner+afterparty /
+  // LiveKit Colorado Robotics / Murf Falcon India (lo3o0ypn + falcon-83vx)
+  // / Sierra Summit / Wispr SPC / Vertical Agent Meetup / ElevenLabs LATAM
+  // + Seoul / Adopt AI Paris / Voice Connect Dubai / Voice AI Space dinner
+  // London + Voice AI Day global mixers / CTOs Pitch Engineers /
+  // Cashfree×Sarvam / n8n×Vercel Builder Night / Backprop Summit / Antler
+  // Claude Impact Lab + OpenRouter lunch / Agentic Web browser runtime /
+  // Who's Watching the Agents? / SF Non-Slop Hackathon / Great Business
+  // Bake Off agent hack / AdaL Multimodal Full-Stack Agents / What to
+  // Build What to Trust London / Women in AI Beyond the Prompt creative
+  // tools salon (5i8fnr3e — aggregator falsely describes voice architecture).
   {
     id: "rasa-founding-builders-voice-agent-hackathon-paris",
     name: "Rasa Founding Builders — Voice Agent Hackathon (Paris)",
@@ -134,7 +137,7 @@ const scrapedEvents: CalEvent[] = [
     month: "2026-11",
     location: "San Francisco, CA (China Basin; exact venue on registration)",
     description:
-      "EliseAI × OpenAI SF panel on full-duplex GPT‑Live‑1 in production voice agents — OpenAI GPT‑Live‑1 eng lead plus EliseAI CTO/staff eng on interruptions, latency, noise, and backend-agent handoff from real healthcare/housing calls. NEW 2026-11-07 via voiceaispace (luma.com/2cbcy58l; not on Bay Area discover). Same SF evening as owned Parallel × AssemblyAI Build Night, Deepgram × Vapi phone workshop, and OpenRouter × ElevenLabs — expands Nov 17 into a five-way Bay Area voice-agent conflict stack.",
+      "EliseAI × OpenAI SF panel on full-duplex GPT‑Live‑1 in production voice agents — OpenAI GPT‑Live‑1 eng lead plus EliseAI CTO/staff eng on interruptions, latency, noise, and backend-agent handoff from real healthcare/housing calls. NEW 2026-11-07 via voiceaispace (luma.com/2cbcy58l; not on Bay Area discover). Same SF evening as owned Parallel × AssemblyAI Build Night, Deepgram × Vapi phone workshop, and OpenRouter × ElevenLabs — Nov 17 Bay Area voice-agent conflict stack (Cartesia Managed Agents webinar no longer same morning; moved to Dec 8).",
     sourceUrl: "https://luma.com/2cbcy58l",
     sourceLabel: "luma.com",
     topics: ["voice-agents", "streaming", "audio-intel"],
@@ -490,7 +493,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://www.voiceaispace.com/events",
     sourceLabel: "voiceaispace.com",
     watchNote:
-      "Re-checked 2026-11-15 (PST): Discover 65/3 pages. VexoHacks (chgfm6ec) → pastEvents2026 after Pacific Nov 14 end. No new voice/speech rooms via discover, voiceaispace, Deepgram, AGI House, or vendor cals. Voice AI Day SF Dec 10 + global VAD city mixers still skipped (no talks/demos/agenda). Ahead: Nov 17 stack (owned Parallel build + OpenRouter×ElevenLabs + Deepgram×Vapi SF + EliseAI×OpenAI + Cartesia Managed Agents webinar + Agora×DeepMind NYC / ElevenAgents London), Speech to Ship + Bolna Symphony Nov 20, Rasa Paris Nov 24, owned Topgolf Nov 30 + Deepgram AIM382-S voice-agent breakout Nov 30 + Cartesia Super Car-tesia Dec 1 morning + Deepgram Speak Easy Dec 1 evening + ElevenLabs re:Invent booth Dec 1–3 + Twilio London Dec 2 + Deepgram HealthTech Dec 3 + Antler After Dark Dec 3 + Rime Prism Dec 5 + NYC Dec 9 double-stack (Agora Scaling + Vapi×LangChain). Skip Telnyx HH / HLTH / Speechmatics Women in Tech xqndyvrv / Cartesia Agent's Table + Coffee CARTesia + Agent Soundcheck karaoke / ElevenCreative After Hours SF+LA+Bhopal / Vapi dinner+afterparty / LiveKit Colorado Robotics / Murf Falcon India / Sierra Summit / Wispr SPC / Vertical Agent Meetup / ElevenLabs LATAM + Seoul / Adopt AI Paris / Voice Connect Dubai / Voice AI Space dinner London / Cashfree×Sarvam / AdaL Multimodal Full-Stack Agents / the-audio-layer + a05j8jv0 2025 year traps / ElevenAgents Build Series 404. Beyond the Cloud still 404.",
+      "Re-checked 2026-11-17 (PST): Discover 64/3 pages. No new Bay Area voice/speech rooms via discover; Voice AI Day SF Dec 10 + global VAD city mixers still skipped. Cartesia Managed Agents (94y4it1j) DATE CORRECTION → Dec 8 10–11am PT (off Nov 17 morning). NEW Deepgram×AWS SageMaker VPC webinar Nov 18 (vendorEvents). Ahead tonight: Nov 17 SF QUINT (owned Parallel build + OpenRouter×ElevenLabs + Deepgram×Vapi SF + EliseAI×OpenAI) + Agora×DeepMind NYC / ElevenAgents London; then Speech to Ship + Bolna Symphony Nov 20, Rasa Paris Nov 24, owned Topgolf Nov 30 + Deepgram AIM382-S Nov 30 + Cartesia Super Car-tesia Dec 1 morning + Deepgram Speak Easy Dec 1 evening + ElevenLabs re:Invent booth Dec 1–3 + Twilio London Dec 2 + Deepgram HealthTech Dec 3 + Antler After Dark Dec 3 + Rime Prism Dec 5 + Cartesia Managed Agents Dec 8 + NYC Dec 9 double-stack (Agora Scaling + Vapi×LangChain). Skip Telnyx HH / HLTH / Speechmatics Women in Tech xqndyvrv / Cartesia Agent's Table + Coffee CARTesia + Agent Soundcheck karaoke / ElevenCreative After Hours SF+LA+Bhopal / Vapi dinner+afterparty / LiveKit Colorado Robotics / Murf Falcon India / Sierra Summit / Wispr SPC / Vertical Agent Meetup / ElevenLabs LATAM + Seoul / Adopt AI Paris / Voice Connect Dubai / Voice AI Space dinner London / Cashfree×Sarvam / AdaL Multimodal Full-Stack Agents / Women in AI Beyond the Prompt creative-tools salon (5i8fnr3e) / the-audio-layer + a05j8jv0 2025 year traps / ElevenAgents Build Series 404. Beyond the Cloud still 404. Next prune: after Pacific Nov 17 end.",
   },
 ];
 
