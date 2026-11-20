@@ -30,7 +30,7 @@ export interface VendorGroup {
 
 /**
  * Speech / voice-AI vendor events — competitive & partnership tracking for
- * AssemblyAI. Re-researched 2026-11-19 (~08:05 PST) against each vendor's own events page.
+ * AssemblyAI. Re-researched 2026-11-20 (~08:05 PST) against each vendor's own events page.
  * These are companies that compete or overlap on STT, TTS, streaming audio, or
  * voice-agent platforms — not the Bay Area builder calendar (see events.ts).
  */
@@ -113,7 +113,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Re-checked 2026-11-19 (PST): Speak '26 + VapiCon + VexoHacks + Deepgram×Vapi SF phone workshop (deepgram-2jm5) + SageMaker VPC webinar Nov 18 remain in pastEvents2026. Deepgram Luma cal-qHEDltsO0Gr0WtD still 2 rooms (Speak Easy Dec 1 + HealthTech London Dec 3). AIM382-S + NEW Startup Plaza hands-on demos Dec 2–3 still on deepgram.com/events/aws-reinvent. deepgram.com/events also lists HLTH / AI+ Care / Evolve Manila / Health Agents Forum Nashville — skip trade-show / far-future rows. workshops.deepgram.com self-paced Voice Agent workshop is evergreen content (not a dated event). Cartesia Super Car-tesia + ElevenLabs re:Invent booth same Dec 1 window as Speak Easy. Bolna Symphony Nov 20 partner. Adjacent: Speech to Ship Nov 20 (1netrne6) + Rime Prism S2S Dec 5 (9q4bvnmt) + pyannoteAI speaker-intel webinar Dec 1. Beyond the Cloud still HTTP 404. Skip GRAM JAM + year traps.",
+      "Re-checked 2026-11-20 (PST): Speak '26 + VapiCon + VexoHacks + Deepgram×Vapi SF phone workshop (deepgram-2jm5) + SageMaker VPC webinar Nov 18 remain in pastEvents2026. Deepgram Luma cal-qHEDltsO0Gr0WtD still 2 rooms (Speak Easy Dec 1 + HealthTech London Dec 3). AIM382-S + Startup Plaza hands-on demos Dec 2–3 still on deepgram.com/events/aws-reinvent. deepgram.com/events also lists HLTH / AI+ Care / Evolve Manila / Health Agents Forum Nashville — skip trade-show / far-future rows. workshops.deepgram.com self-paced Voice Agent workshop is evergreen content (not a dated event). Cartesia Super Car-tesia + ElevenLabs re:Invent booth same Dec 1 window as Speak Easy; Cartesia also adds NeurIPS Sydney After Hours Dec 8 (same day as Managed Agents webinar). Bolna Symphony + Speech to Ship still live Pacific Nov 20. Adjacent: Rime Prism S2S Dec 5 (9q4bvnmt) + pyannoteAI speaker-intel webinar Dec 1. Beyond the Cloud still HTTP 404. Skip GRAM JAM + year traps.",
   },
   {
     id: "cartesia",
@@ -136,13 +136,27 @@ export const vendorGroups: VendorGroup[] = [
         topics: ["tts", "voice-agents"],
       },
       {
+        id: "cartesia-neurips-after-hours-sydney",
+        name: "Cartesia x NeurIPS: After Hours",
+        dateLabel: "Dec 8, 8pm–12am AEDT",
+        sortDate: "2026-12-08",
+        format: "in-person",
+        location: "Darling Harbour / near ICC Sydney, Sydney, Australia (exact venue on approval)",
+        description:
+          "NEW 2026-11-20 on Cartesia Luma cal-EeDJt2cPbgGca1W: approval-gated NeurIPS Sydney rooftop after-hours with Cartesia research (H-net / Mamba) plus frontier-lab researchers — drinks/bites hospitality framed around realtime voice AI. Same calendar day as Cartesia Managed Agents webinar (94y4it1j, 10–11am PT); competitive NeurIPS research/voice mindshare room more than a hands-on workshop (luma.com/cartesia-jic4).",
+        status: "confirmed",
+        sourceUrl: "https://luma.com/cartesia-jic4",
+        sourceLabel: "luma.com",
+        topics: ["tts", "voice-agents"],
+      },
+      {
         id: "cartesia-managed-agents-webinar",
         name: "[Webinar] Introducing Managed Agents — Cartesia",
         dateLabel: "Dec 8, 10–11am PT",
         sortDate: "2026-12-08",
         format: "virtual",
         description:
-          "Cartesia product webinar launching Managed Agents — packaging STT/LLM/TTS, latency, interruptions, and turn-taking so teams ship voice agents without assembling the stack. Live zero-to-conversation demo plus early builder use cases. DATE CORRECTION 2026-11-17: live event/get (94y4it1j) + Cartesia cal-EeDJt2cPbgGca1W moved this from Nov 17 9:30–10:30am PT to Dec 8 18:00–19:00 UTC / 10–11am PT (prior 2026-11-10 correction had been Nov 17; earlier Nov 10 listing also obsolete).",
+          "Cartesia product webinar launching Managed Agents — packaging STT/LLM/TTS, latency, interruptions, and turn-taking so teams ship voice agents without assembling the stack. Live zero-to-conversation demo plus early builder use cases. DATE CORRECTION 2026-11-17: live event/get (94y4it1j) + Cartesia cal-EeDJt2cPbgGca1W moved this from Nov 17 9:30–10:30am PT to Dec 8 18:00–19:00 UTC / 10–11am PT (prior 2026-11-10 correction had been Nov 17; earlier Nov 10 listing also obsolete). Same Dec 8 as NEW Cartesia × NeurIPS Sydney After Hours.",
         status: "confirmed",
         sourceUrl: "https://luma.com/94y4it1j",
         sourceLabel: "luma.com",
@@ -150,7 +164,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Re-checked 2026-11-19: Cartesia Luma cal-EeDJt2cPbgGca1W unchanged — Super Car-tesia Dec 1 morning (dztqp1c4) + Managed Agents webinar Dec 8 10–11am PT (94y4it1j). Coffee CARTesia NYC (0960vqe8) still skip if resurfaced (voiceaispace mislabels as Multimodal Research Panel). First Look Multimodal (xrj6gzm2) + VapiCon remain in pastEvents2026. Skip Agent’s Table (srbdv0c2) + Agent Soundcheck karaoke. Bolna Symphony Nov 20 partner. Same Dec 1 window still stacks vs ElevenLabs re:Invent booth 2030 + Deepgram Speak Easy + pyannoteAI speaker-intel webinar.",
+      "Re-checked 2026-11-20: Cartesia Luma cal-EeDJt2cPbgGca1W now 3 rooms — Super Car-tesia Dec 1 morning (dztqp1c4) + NEW NeurIPS Sydney After Hours Dec 8 (cartesia-jic4) + Managed Agents webinar Dec 8 10–11am PT (94y4it1j). Coffee CARTesia NYC (0960vqe8) still skip if resurfaced (voiceaispace mislabels as Multimodal Research Panel). First Look Multimodal (xrj6gzm2) + VapiCon remain in pastEvents2026. Skip Agent’s Table (srbdv0c2) + Agent Soundcheck karaoke. Bolna Symphony Nov 20 partner. Same Dec 1 window still stacks vs ElevenLabs re:Invent booth 2030 + Deepgram Speak Easy + pyannoteAI speaker-intel webinar.",
   },
   {
     id: "elevenlabs",
@@ -202,7 +216,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Re-checked 2026-11-19: Summit NYC (Nov 11) + VapiCon + OpenRouter × ElevenLabs In Production SF (wvw8xwsi) + ElevenAgents Hackathon London (Nov 17–18) remain in pastEvents2026. elevenlabs.io/events/elevenagents-hackathon-london still HTTP 200 (ended); Build Series slugs still 404 — do not add. Chatbot Summit Amsterdam partner page still 200 (elevenlabs.io/events/chatbot-summit-amsterdam still 404 — keep partner URL). Antler SF After Dark V2 Dec 3 (antlerus-fd0t) + re:Invent booth meetings Dec 1–3 (elevenlabs.io/events/reinvent-2026). Skip Seoul meetup (eleven-zf2d) + ElevenCreative After Hours SF/LA/Bhopal + LATAM / Adopt AI Paris / Raise / Adweek / Finovate / Customer Impact Summit. Dec 1–3 re:Invent booth vs Deepgram Speak Easy / Cartesia Super Car-tesia / owned Topgolf; Dec 3 Antler SF vs Deepgram HealthTech London; adjacent Bay Area Dec 5 Rime Prism S2S (9q4bvnmt).",
+      "Re-checked 2026-11-20: Summit NYC (Nov 11) + VapiCon + OpenRouter × ElevenLabs In Production SF (wvw8xwsi) + ElevenAgents Hackathon London (Nov 17–18) remain in pastEvents2026. elevenlabs.io/events/elevenagents-hackathon-london still HTTP 200 (ended); Build Series slugs still 404 — do not add. Chatbot Summit Amsterdam partner page still 200 (elevenlabs.io/events/chatbot-summit-amsterdam still 404 — keep partner URL). Antler SF After Dark V2 Dec 3 (antlerus-fd0t) + re:Invent booth meetings Dec 1–3 (elevenlabs.io/events/reinvent-2026). Skip Seoul meetup (eleven-zf2d) + ElevenCreative After Hours SF/LA (laafterhours weather-moved to Nov 20) / Bhopal + LATAM / Adopt AI Paris / Raise / Adweek / Finovate / Customer Impact Summit. Dec 1–3 re:Invent booth vs Deepgram Speak Easy / Cartesia Super Car-tesia / owned Topgolf; Dec 3 Antler SF vs Deepgram HealthTech London; adjacent Bay Area Dec 5 Rime Prism S2S (9q4bvnmt).",
   },
   {
     id: "vapi",
@@ -226,7 +240,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Re-checked 2026-11-19: VapiCon 2026 (vapi-9sdp) + Deepgram × Vapi phone workshop SF (deepgram-2jm5) remain in pastEvents2026. Vapi Luma cal-9jzVoVZclDCewDU still only THE AI SUMMIT After hours NYC Dec 9 (same evening as Agora Scaling Voice AI agora-ai-summit-nyc); healthcare dinner / Nov 17 rooms still dropped. Skip VapiCon afterparty.",
+      "Re-checked 2026-11-20: VapiCon 2026 (vapi-9sdp) + Deepgram × Vapi phone workshop SF (deepgram-2jm5) remain in pastEvents2026. Vapi Luma cal-9jzVoVZclDCewDU still only THE AI SUMMIT After hours NYC Dec 9 (same evening as Agora Scaling Voice AI agora-ai-summit-nyc); healthcare dinner / Nov 17 rooms still dropped. Skip VapiCon afterparty.",
   },
   {
     id: "regal",
@@ -251,7 +265,7 @@ export const vendorGroups: VendorGroup[] = [
         format: "in-person",
         location: "London, United Kingdom",
         description:
-          "Twilio UK builder community meetup (London December edition) on conversations in the AI era — continuing the Oct 14 London / Nov 4 Manchester series for communications + AI agent builders. DATE CORRECTION 2026-10-22: live event/get + Twilio UK cal-hoJOad2gnCAn32t moved this from Dec 3 to Dec 2 (luma.com/9xwcwwxz).",
+          "Twilio London calendar meetup on conversations in the AI era (chat/voice/messaging builders). HOST REFRESH 2026-11-20: live event/get hosts are now Speechmatics + Voice AI Space (still on Twilio London cal-hoJOad2gnCAn32t) — strongest near-term Speechmatics×Twilio London co-distribution signal after Better Every Call? DATE CORRECTION 2026-10-22: moved from Dec 3 to Dec 2 (luma.com/9xwcwwxz).",
         status: "confirmed",
         sourceUrl: "https://luma.com/9xwcwwxz",
         sourceLabel: "luma.com",
@@ -259,7 +273,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Twilio UK Luma calendar cal-hoJOad2gnCAn32t (2026-11-19): next dated room still London Dec 2 (9xwcwwxz); cal still lists 2027 Manchester Jan 14 + London Feb 2 + Manchester Mar 4 — watch, do not invent US rows. Deepgram Speak Easy re:Invent Dec 1 still co-hosted by Krisp & Twilio (booth #1962 — tracked under Deepgram); owned AssemblyAI Topgolf Nov 30 + Deepgram AIM382-S breakout precede that lounge; Cartesia Super Car-tesia + ElevenLabs booth 2030 same Dec 1 window. Deepgram HealthTech London Dec 3 still day-after Twilio London Dec 2 (same day as Antler × ElevenLabs SF After Dark). Watch twilio.com for US/Bay Area Assemble dates.",
+      "Twilio UK Luma calendar cal-hoJOad2gnCAn32t (2026-11-20): next dated room still London Dec 2 (9xwcwwxz) with Speechmatics + Voice AI Space now listed as hosts; cal forward room London Feb 2 2027 (v17jb62l) — watch, do not invent US rows. Deepgram Speak Easy re:Invent Dec 1 still co-hosted by Krisp & Twilio (booth #1962 — tracked under Deepgram); owned AssemblyAI Topgolf Nov 30 + Deepgram AIM382-S breakout precede that lounge; Cartesia Super Car-tesia + ElevenLabs booth 2030 same Dec 1 window. Deepgram HealthTech London Dec 3 still day-after Twilio London Dec 2 (same day as Antler × ElevenLabs SF After Dark). Watch twilio.com for US/Bay Area Assemble dates.",
   },
   {
     id: "agora",
@@ -283,7 +297,7 @@ export const vendorGroups: VendorGroup[] = [
       },
     ],
     watchNote:
-      "Re-checked 2026-11-19: cal-wYHDiuJD5JdAolS still only NYC Scaling Voice AI (agora-ai-summit-nyc, Dec 9 6–9pm ET — same evening as Vapi×LangChain after hours). Lisbon Scaling Voice AI (wqg33o39) + NYC Gemini Voice AI Workshop (voiceai-workshop-nyc-nov17) remain in pastEvents2026. Watch agora.io + Luma for the next SF realtime voice-agent builder night.",
+      "Re-checked 2026-11-20: cal-wYHDiuJD5JdAolS still only NYC Scaling Voice AI (agora-ai-summit-nyc, Dec 9 6–9pm ET — same evening as Vapi×LangChain after hours). Lisbon Scaling Voice AI (wqg33o39) + NYC Gemini Voice AI Workshop (voiceai-workshop-nyc-nov17) remain in pastEvents2026. Watch agora.io + Luma for the next SF realtime voice-agent builder night.",
   },
   {
     id: "signalwire",
@@ -301,7 +315,7 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://livekit.io/",
     events: [],
     watchNote:
-      "Re-checked 2026-11-19: Luma cal-G3PEa5PrYXwKXx6 still lists LiveKit Colorado Robotics Meetup (livekit-gwss, Nov 19 Golden CO) — skipped (robotics brewery meetup, not voice-agent DevRel; live today). Past Audio Layer × LiveKit (audio-layer-ai-coustics-livekit, Mar 11) and 2025 the-audio-layer year trap stay skip/past. SF Tech Week co-host Solving 'voice' as an interface (Oct 7) remains in pastEvents2026. livekit.io/events still 404. No new dated LiveKit-owned voice rooms — surfaces via partner nights; VapiCon now past. LiveKit sponsors Voice AI Day mixers (still skipped — no talks/demos).",
+      "Re-checked 2026-11-20: Luma cal-G3PEa5PrYXwKXx6 now empty (Colorado Robotics Meetup livekit-gwss ended Nov 19 — still skip retrospectively). Past Audio Layer × LiveKit (audio-layer-ai-coustics-livekit, Mar 11) and 2025 the-audio-layer year trap stay skip/past. SF Tech Week co-host Solving 'voice' as an interface (Oct 7) remains in pastEvents2026. livekit.io/events still 404. No new dated LiveKit-owned voice rooms — surfaces via partner nights; VapiCon now past. LiveKit sponsors Voice AI Day mixers (still skipped — no talks/demos).",
   },
   {
     id: "retell",
@@ -328,7 +342,7 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://pipecat.ai/",
     events: [],
     watchNote:
-      "pipecat.ai/events still shows no upcoming dated public meetups as of 2026-11-19; Daily Luma cal-9UmQbmvz8qvnCK3 empty. Adjacent: Deepgram×AWS SageMaker VPC webinar Nov 18 (→ pastEvents2026) referenced the AWS Guidance Pipecat-on-ECS voice-agent path; AIM382-S re:Invent Nov 30 continues that Deepgram×AWS builder thread. Past: Deepgram × Daily Flux TTS on Pipecat webinar (Sep 29) + Pipecat London CX session (Oct 1, prkbq50k). Daily/Pipecat CEO was on Speak '26 and VapiCon (both → pastEvents2026). Watch Speechmatics / LiveKit / Deepgram calendars and daily.co changelog.",
+      "pipecat.ai/events still shows no upcoming dated public meetups as of 2026-11-20; Daily Luma cal-9UmQbmvz8qvnCK3 empty. Adjacent: Deepgram×AWS SageMaker VPC webinar Nov 18 (→ pastEvents2026) referenced the AWS Guidance Pipecat-on-ECS voice-agent path; AIM382-S re:Invent Nov 30 continues that Deepgram×AWS builder thread. Past: Deepgram × Daily Flux TTS on Pipecat webinar (Sep 29) + Pipecat London CX session (Oct 1, prkbq50k). Daily/Pipecat CEO was on Speak '26 and VapiCon (both → pastEvents2026). Watch Speechmatics / LiveKit / Deepgram calendars and daily.co changelog.",
   },
   {
     id: "speechmatics",
@@ -337,7 +351,7 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://www.speechmatics.com/community",
     events: [],
     watchNote:
-      "Re-checked 2026-11-19: Better Every Call? (c0iiab0e, Nov 5 London with Roark) remains in pastEvents2026. Speechmatics Luma cal-ZYr28XXq5fyMAym — What Did Your Agent Learn This Week? Voice AI Leaders Dinner (59dy3crh, Nov 10 SF) past; Understanding Every Voice: Women in Tech (xqndyvrv, Nov 26 London) still skipped (community/DEI networking, no confirmed STT builder agenda). HLTH Las Vegas Nov 15–18 past — still skipped (healthcare trade show). No dated developer rooms currently confirmed — watch for the next London improvement-loop / Tuner-style builder night.",
+      "Re-checked 2026-11-20: Better Every Call? (c0iiab0e, Nov 5 London with Roark) remains in pastEvents2026. Speechmatics Luma cal-ZYr28XXq5fyMAym empty — Women in Tech (xqndyvrv) no longer listed (still skip if resurfaced). NEW signal: Speechmatics is now a named host on Twilio London builder meetup Dec 2 (9xwcwwxz — tracked under Twilio). HLTH Las Vegas Nov 15–18 past — still skipped. No owned dated developer rooms currently confirmed — watch for the next London improvement-loop / Tuner-style builder night.",
   },
   {
     id: "gladia",
@@ -391,7 +405,7 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://cloud.google.com/speech-to-text",
     events: [],
     watchNote:
-      "Re-checked 2026-11-19: Gemini Audio | At Night (Sep 24) + Agora × Google DeepMind Gemini Voice AI Workshop NYC (voiceai-workshop-nyc-nov17) remain in pastEvents2026. No new dated Google Cloud Speech / Gemini Live Bay Area builder rooms on DeepMind Luma cal-7Q5A70Bz5Idxopu (Gemini 4 NYC Hackathon / BIG BERLIN HACK / Physical AI Hack / JustBuildLah / AI Engineer Europe 2027 skipped as non-speech or generic rooms). Adjacent SF signal: EliseAI × OpenAI GPT‑Live‑1 panel Nov 17 (2cbcy58l → pastEvents2026) was OpenAI realtime-voice mindshare. Watch Google Cloud events and Gemini Live launch webinars for follow-ons.",
+      "Re-checked 2026-11-20: Gemini Audio | At Night (Sep 24) + Agora × Google DeepMind Gemini Voice AI Workshop NYC (voiceai-workshop-nyc-nov17) remain in pastEvents2026. No new dated Google Cloud Speech / Gemini Live Bay Area builder rooms on DeepMind Luma cal-7Q5A70Bz5Idxopu (Gemini 4 NYC Hackathon / BIG BERLIN HACK / Physical AI Hack / JustBuildLah / AI Engineer Europe 2027 skipped as non-speech or generic rooms). Adjacent SF signal: EliseAI × OpenAI GPT‑Live‑1 panel Nov 17 (2cbcy58l → pastEvents2026) was OpenAI realtime-voice mindshare. Watch Google Cloud events and Gemini Live launch webinars for follow-ons.",
   },
   {
     id: "azure-ai-speech",
@@ -409,6 +423,6 @@ export const vendorGroups: VendorGroup[] = [
     homepageUrl: "https://aws.amazon.com/transcribe/",
     events: [],
     watchNote:
-      "No Transcribe-owned dated Jul–Dec 2026 events confirmed as of 2026-11-19. Adjacent Deepgram×AWS builder education: SageMaker VPC webinar Nov 18 (→ pastEvents2026) + AIM382-S re:Invent breakout Nov 30 + Startup Plaza demos Dec 2–3 (tracked under Deepgram). Multi-Model Hackathon + AGNTCon + Snowflake multimodal + Do Not Disturb Phone Use remain in pastEvents2026. Adjacent Bay Area: Speech to Ship Nov 20 (1netrne6) + Rime Prism S2S Dec 5 (9q4bvnmt) + pyannoteAI speaker-intel webinar Dec 1. Adjacent re:Invent: owned Topgolf Nov 30 (m6gcrmm7) + Deepgram Speak Easy Dec 1 + Cartesia Super Car-tesia Dec 1 + ElevenLabs booth 2030 Dec 1–3. Watch AWS Gen AI Loft SF for Amazon Connect / contact-center voice sessions. Skip Women in AI Beyond the Prompt creative-tools salon Dec 7 (5i8fnr3e — aggregator copy falsely describes voice-agent architecture) + stale Deepgram×Daily Jul 2025 year trap.",
+      "No Transcribe-owned dated Jul–Dec 2026 events confirmed as of 2026-11-20. Adjacent Deepgram×AWS builder education: SageMaker VPC webinar Nov 18 (→ pastEvents2026) + AIM382-S re:Invent breakout Nov 30 + Startup Plaza demos Dec 2–3 (tracked under Deepgram). Multi-Model Hackathon + AGNTCon + Snowflake multimodal + Do Not Disturb Phone Use remain in pastEvents2026. Adjacent Bay Area: Speech to Ship Nov 20 (1netrne6) + Rime Prism S2S Dec 5 (9q4bvnmt) + pyannoteAI speaker-intel webinar Dec 1. Adjacent re:Invent: owned Topgolf Nov 30 (m6gcrmm7) + Deepgram Speak Easy Dec 1 + Cartesia Super Car-tesia Dec 1 + ElevenLabs booth 2030 Dec 1–3. Watch AWS Gen AI Loft SF for Amazon Connect / contact-center voice sessions. Skip Women in AI Beyond the Prompt creative-tools salon Dec 7 (5i8fnr3e — aggregator/trymimetic copy falsely describes voice-agent architecture; live title is creative-tools salon) + stale Deepgram×Daily Jul 2025 year trap.",
   },
 ];
