@@ -46,18 +46,19 @@ export interface PastEvent {
 }
 
 /**
- * Confirmed research date: 2026-11-20. Dates and venues sourced from
+ * Confirmed research date: 2026-11-21. Dates and venues sourced from
  * organizer domains — see sourceUrl on each event.
  */
 const scrapedEvents: CalEvent[] = [
   // Sourced live from Luma's San Francisco Bay Area discover feed, refreshed
-  // 2026-11-20 (~08:05 PST / 16:05 UTC). (api.luma.com/discover, place
+  // 2026-11-21 (~08:05 PST / 16:05 UTC). (api.luma.com/discover, place
   // discplace-BDj7GNbGlsF7Cka), filtered to AI / voice-agent-relevant
-  // listings. 36 discover entries across 2 pages. No new Bay Area
-  // voice/speech rooms via discover. NEW Cartesia × NeurIPS Sydney After
-  // Hours Dec 8 (cartesia-jic4) → vendorEvents. Speech to Ship + Bolna
-  // Symphony still live (prune after Pacific Nov 20 end). AGI House cal
-  // still only Peptides Nov 29 — skip. Year traps: the-audio-layer +
+  // listings. 37 discover entries across 2 pages. No new Bay Area
+  // voice/speech rooms via discover (Antler After Dark already tracked).
+  // NEW Agora × Cartesia × PingCAP Voice AI Mixer @ re:Invent Dec 2
+  // (voice-ai-mixer-awsreinvent) → vendorEvents. Speech to Ship (1netrne6)
+  // + Bolna Symphony → pastEvents2026 after Pacific Nov 20 end. AGI House
+  // cal still only Peptides Nov 29 — skip. Year traps: the-audio-layer +
   // Rime×Rasa a05j8jv0 are 2025. Skipped: Telnyx Contact Center Expo /
   // HLTH / Braintrust / DNAForge / She Builds / ElevenCreative SF+LA
   // (laafterhours weather-moved to Nov 20)+Bhopal / WAVE / MEF /
@@ -75,7 +76,8 @@ const scrapedEvents: CalEvent[] = [
   // Multimodal Full-Stack Agents / What to Build What to Trust (5ie1odh0) /
   // Women in AI Beyond the Prompt creative tools salon (5i8fnr3e —
   // aggregator/trymimetic falsely describes voice architecture) /
-  // EliseAI Building with Jev (ach582pi) / Durable AI Meetup.
+  // EliseAI Building with Jev (ach582pi) / Durable AI Meetup /
+  // AI Infrastructure Night (z4b3wb9d) / Agora Physical AI Malaysia.
   {
     id: "rasa-founding-builders-voice-agent-hackathon-paris",
     name: "Rasa Founding Builders — Voice Agent Hackathon (Paris)",
@@ -93,24 +95,6 @@ const scrapedEvents: CalEvent[] = [
     topics: ["voice-agents"],
     topicNote:
       "Full-day hands-on voice-agent hackathon on Rasa Builder — CX voice-agent DevRel room, not an STT benchmark session.",
-  },
-  {
-    id: "speech-to-ship-hackathon-sf-nov2026",
-    name: "Speech to Ship Hackathon: Speak It, Build It, Ship It.",
-    category: "hackathon",
-    status: "confirmed",
-    dateLabel: "Nov 20, 9am–8pm PT",
-    sortDate: "2026-11-20",
-    month: "2026-11",
-    location: "Emergent HQ, San Francisco (exact address on approval)",
-    description:
-      "One-day Willow × Emergent × You.com SF hackathon — builders ship a full app using only speech (Willow dictation → Emergent codegen → You.com realtime web search), with a kickoff city/business/customer draw so teams start hacking immediately. Same calendar day as Bolna Symphony Bengaluru; strongest near-term Bay Area speech-input / dictation-STT builder room after VexoHacks (luma.com/1netrne6 as of 2026-11-08; missed Bay Area discover).",
-    sourceUrl: "https://luma.com/1netrne6",
-    sourceLabel: "luma.com",
-    note: "Registration requires approval; capped capacity",
-    topics: ["stt"],
-    topicNote:
-      "Dedicated speech-first app-building hackathon centered on voice dictation / speech-to-text input — STT pitch room, not a phone voice-agent platform session.",
   },
   {
     id: "antler-sf-after-dark-v2-building-with-voice",
@@ -278,6 +262,10 @@ export const directSubmissions: CalEvent[] = [
   // 2026-11-20: no new owned AssemblyAI rooms (cal still only m6gcrmm7);
   // NEW Cartesia × NeurIPS Sydney After Hours (cartesia-jic4) → vendorEvents;
   // Speech to Ship + Bolna still live Pacific morning; discover 36/2.
+  // 2026-11-21: Speech to Ship + Bolna → pastEvents2026 after Pacific Nov 20
+  // end; NEW Agora × Cartesia × PingCAP Voice AI Mixer re:Invent Dec 2
+  // (voice-ai-mixer-awsreinvent) → vendorEvents; AssemblyAI cal still only
+  // m6gcrmm7 (hosts now AssemblyAI + Vapi Events); discover 37/2.
   {
     id: "assemblyai-reinvent-voice-ai-happy-hour-topgolf-2026",
     name: "re:Invent Voice AI Happy Hour @ Topgolf",
@@ -288,7 +276,7 @@ export const directSubmissions: CalEvent[] = [
     month: "2026-11",
     location: "Topgolf Las Vegas at MGM Grand — Level 2 Birdie Lounge",
     description:
-      "Owned AssemblyAI re:Invent Voice AI happy hour at Topgolf Las Vegas — drinks and informal networking with teams building voice products during AWS re:Invent week. Night before Deepgram Speak Easy (Krisp × Twilio lounge, Dec 1); strongest owned re:Invent distribution counter-move this window (luma.com/m6gcrmm7 on AssemblyAI cal-R9IQUb53FUrolUF as of 2026-11-04).",
+      "Owned AssemblyAI re:Invent Voice AI happy hour at Topgolf Las Vegas — drinks and informal networking with teams building voice products during AWS re:Invent week. Night before Deepgram Speak Easy (Krisp × Twilio lounge, Dec 1); strongest owned re:Invent distribution counter-move this window (luma.com/m6gcrmm7 on AssemblyAI cal-R9IQUb53FUrolUF as of 2026-11-04; hosts AssemblyAI + Vapi Events as of 2026-11-21).",
     sourceUrl: "https://luma.com/m6gcrmm7",
     sourceLabel: "luma.com",
     note: "Registration requires approval; limited capacity",
@@ -420,7 +408,7 @@ export const recurringSeries: RecurringSeries[] = [
     sourceUrl: "https://luma.com/agi-house",
     sourceLabel: "luma.com/agi-house",
     watchNote:
-      "Re-checked 2026-11-20: public Luma calendar cal-Lv1pgYv5ITFR4tC still lists only SF × MIT Hack Day: Peptides (Nov 29) — skipped (not voice/agent DevRel). Voice AI Hackathon (Sep 19) + AI Debates (aidebates still 404) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice rooms this pass.",
+      "Re-checked 2026-11-21: public Luma calendar cal-Lv1pgYv5ITFR4tC still lists only SF × MIT Hack Day: Peptides (Nov 29) — skipped (not voice/agent DevRel). Voice AI Hackathon (Sep 19) + AI Debates (aidebates still 404) remain in pastEvents2026 for voice-format recurrence watch; no new AGI House voice rooms this pass.",
   },
   {
     id: "lablab-ai-hackathons",
@@ -460,6 +448,20 @@ export const recurringSeries: RecurringSeries[] = [
 ];
 
 export const pastEvents2026: PastEvent[] = [
+  {
+    id: "speech-to-ship-hackathon-sf-nov2026",
+    name: "Speech to Ship Hackathon: Speak It, Build It, Ship It.",
+    dateLabel: "Nov 20",
+    location: "Emergent HQ, San Francisco",
+    note: "Willow × Emergent × You.com SF speech-first app hackathon (luma.com/1netrne6; ended Nov 20 8pm PT) — kept for Bay Area dictation-STT / speech-input hackathon recurrence watch",
+  },
+  {
+    id: "bolna-symphony-india-voice-ai-ecosystem-2026",
+    name: "Symphony 2026: India's Voice AI Ecosystem (Bolna)",
+    dateLabel: "Nov 20",
+    location: "The Lalit Ashok, Bengaluru, India",
+    note: "Bolna India Voice AI ecosystem conference (~1,000; Deepgram/Cartesia/Google Cloud/OpenAI/Plivo partners; bolna.ai/symphony) — ended Nov 20; kept for India voice-AI developer/operator conference + Deepgram partner-distribution recurrence watch",
+  },
   {
     id: "deepgram-sagemaker-vpc-voice-agent-webinar-nov18",
     name: "A voice agent that sounds human and stays in your VPC — Deepgram × AWS",
